@@ -697,8 +697,9 @@
     }
   ],
   "tickerBanner": {
-    "text": "Planning a new kitchen or bathroom? Talk to our design team about layouts, finishes and budget.",
-    "ctaText": "Book a consultation"
+    "desktopImg": "https://interio.com/media/wysiwyg/Big-Billion-Day_Ticker_Desktop-Size.jpg",
+    "mobileImg": "https://interio.com/media/wysiwyg/Big-Billion-Day_Ticker_Mobile-Size.jpg",
+    "link": "#curated-products"
   },
   "serviceStrip": {
     "title": "Everything for your kitchen & bath",

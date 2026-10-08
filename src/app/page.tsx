@@ -68,7 +68,7 @@ export default function Home() {
           }}
         />
 
-        {/* 2. Consultation strip */}
+        {/* 2. Promotional Bank Offer Ticker Banner */}
         <TickerBanner />
 
         {/* 3. How can we help you? (6 category tabs: kitchens, bathrooms, wardrobes, doors & windows, appliances, accessories) */}
