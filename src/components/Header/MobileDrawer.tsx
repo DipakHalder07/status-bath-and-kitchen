@@ -63,6 +63,7 @@ export default function MobileDrawer({
                     setExpandedCat(isExpanded ? null : cat.id)
                   }
                   className="w-full flex items-center justify-between py-2.5 px-2 text-sm font-semibold text-gray-800 hover:text-[#c0262d] rounded-lg transition-colors"
+                  aria-expanded={isExpanded}
                 >
                   <span>{cat.title}</span>
                   {cat.subsections.length > 0 ? (
@@ -112,12 +113,14 @@ export default function MobileDrawer({
         <div className="p-4 border-t border-gray-100 bg-gray-50 text-xs text-gray-600 space-y-2">
           <div className="flex items-center gap-2">
             <Phone className="w-4 h-4 text-[#c0262d]" />
-            <span>1800-267-1122 (Toll Free)</span>
+            <a href={siteBrand.phoneHref || "#contact"} onClick={onClose} className="hover:underline">
+              {siteBrand.phone}
+            </a>
           </div>
           <div className="flex items-center gap-2">
             <MapPin className="w-4 h-4 text-[#c0262d]" />
             <a href="#store-locator" onClick={onClose} className="hover:underline">
-              Find Stores Across India
+              Visit our experience studio
             </a>
           </div>
         </div>

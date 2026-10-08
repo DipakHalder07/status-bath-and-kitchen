@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { X, Calendar, ChefHat, Sparkles, CheckCircle2 } from "lucide-react";
+import { X, CheckCircle2 } from "lucide-react";
 import { useCart } from "@/context/CartContext";
+import { siteBrand } from "@/data/interioData";
 
 export default function ConsultationModal() {
   const { isConsultationOpen, closeConsultation, consultationType, showToast } =
@@ -10,8 +11,8 @@ export default function ConsultationModal() {
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const [city, setCity] = useState("Mumbai");
-  const [mode, setMode] = useState("Online 3D Visualizer");
+  const [city, setCity] = useState("");
+  const [mode, setMode] = useState("Home visit");
   const [submitted, setSubmitted] = useState(false);
 
   if (!isConsultationOpen) return null;
@@ -23,7 +24,7 @@ export default function ConsultationModal() {
       return;
     }
     setSubmitted(true);
-    showToast(`Consultation booked! A Godrej design expert will call ${phone} shortly.`);
+    showToast(`Thank you! Our design team will call you on ${phone}.`);
     setTimeout(() => {
       setSubmitted(false);
       closeConsultation();
@@ -53,27 +54,27 @@ export default function ConsultationModal() {
               <CheckCircle2 className="w-8 h-8" />
             </div>
             <h3 className="text-xl font-bold text-gray-900">
-              Appointment Confirmed!
+              Request Received!
             </h3>
             <p className="text-xs text-gray-600 max-w-sm mx-auto">
-              Thank you, {name}. Our senior design consultant for{" "}
+              Thank you, {name}. Our design team will get in touch about your{" "}
               <span className="font-semibold text-gray-800">
                 {consultationType}
               </span>{" "}
-              will reach out to you within 2 hours.
+              enquiry.
             </p>
           </div>
         ) : (
           <div className="space-y-4">
             <div>
               <span className="text-[11px] font-bold text-[#c0262d] uppercase tracking-wider">
-                Free Design Consultation
+                Design Consultation
               </span>
               <h3 className="text-xl sm:text-2xl font-extrabold text-gray-900 mt-0.5">
                 Book a consultation for {consultationType}
               </h3>
               <p className="text-xs text-gray-500 mt-1">
-                Get customized 3D floor plans, material estimates, and expert guidance at zero cost.
+                Tell us a little about your project and our design team will call you back to plan the next steps.
               </p>
             </div>
 
@@ -111,22 +112,15 @@ export default function ConsultationModal() {
                 </div>
                 <div>
                   <label className="block text-xs font-semibold text-gray-700 mb-1">
-                    City
+                    City / Area
                   </label>
-                  <select
+                  <input
+                    type="text"
+                    placeholder="e.g. Your city"
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
-                    className="w-full px-3 py-2.5 rounded-xl border border-gray-300 text-xs text-gray-900 focus:border-[#c0262d] focus:outline-hidden"
-                  >
-                    <option value="Mumbai">Mumbai</option>
-                    <option value="Delhi NCR">Delhi NCR</option>
-                    <option value="Bengaluru">Bengaluru</option>
-                    <option value="Pune">Pune</option>
-                    <option value="Kolkata">Kolkata</option>
-                    <option value="Hyderabad">Hyderabad</option>
-                    <option value="Chennai">Chennai</option>
-                    <option value="Ahmedabad">Ahmedabad</option>
-                  </select>
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 text-xs text-gray-900 focus:border-[#c0262d] focus:outline-hidden"
+                  />
                 </div>
               </div>
 
@@ -135,7 +129,7 @@ export default function ConsultationModal() {
                   Preferred Consultation Mode
                 </label>
                 <div className="grid grid-cols-3 gap-2">
-                  {["Online 3D Visualizer", "Home Visit", "Nearest Store"].map(
+                  {["Home visit", "Studio visit", "Video call"].map(
                     (m) => (
                       <button
                         key={m}
@@ -159,12 +153,12 @@ export default function ConsultationModal() {
                   type="submit"
                   className="w-full py-3 bg-[#c0262d] hover:bg-[#a11c22] text-white text-xs font-bold rounded-xl transition-all shadow-md shadow-red-600/20"
                 >
-                  Confirm Free Consultation
+                  Request a Call Back
                 </button>
               </div>
 
               <p className="text-[10px] text-gray-400 text-center">
-                By booking, you agree to Godrej Interio privacy policy & terms of service.
+                By submitting, you agree to be contacted by {siteBrand.name} about your enquiry.
               </p>
             </form>
           </div>

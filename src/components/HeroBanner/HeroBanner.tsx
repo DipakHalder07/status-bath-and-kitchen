@@ -55,7 +55,7 @@ export default function HeroBanner({ onCtaClick }: HeroBannerProps) {
         ))}
       </div>
 
-      {/* Explore Sofas & Loungers Button (Over Sofa on bottom-left, matching live site) */}
+      {/* Hero CTA button (bottom-left) */}
       <div className="absolute bottom-10 sm:bottom-16 md:bottom-20 left-5 sm:left-10 lg:left-20 z-20">
         <button
           type="button"

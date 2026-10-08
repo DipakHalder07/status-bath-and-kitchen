@@ -1,21 +1,48 @@
 "use client";
 
-import React, { useState, useRef } from "react";
-import Image from "next/image";
+import React, { useState, useRef, useEffect } from "react";
 import { howCanWeHelpTabs } from "@/data/interioData";
 import { useCart } from "@/context/CartContext";
 
 interface CategoryGridProps {
   onSelectCategory?: (categoryName: string) => void;
+  // Set from the header menu / search; `key` changes on every request so repeat clicks still apply
+  selection?: { name: string; key: number } | null;
 }
 
-export default function CategoryGrid({ onSelectCategory }: CategoryGridProps) {
+const displayTabs = howCanWeHelpTabs.slice(0, 6);
+
+function findTabIndex(name: string) {
+  const query = name.trim().toLowerCase();
+  return displayTabs.findIndex(
+    (tab) =>
+      tab.tabName.toLowerCase() === query ||
+      tab.aliases?.some((alias) => alias.toLowerCase() === query) ||
+      tab.items.some((item) => item.name.toLowerCase() === query)
+  );
+}
+
+export default function CategoryGrid({ selection }: CategoryGridProps) {
   const [activeTabIdx, setActiveTabIdx] = useState(0);
+  const [appliedSelectionKey, setAppliedSelectionKey] = useState<number | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(20);
-  const { showToast } = useCart();
+  const { openConsultation } = useCart();
 
-  const displayTabs = howCanWeHelpTabs.slice(0, 6);
+  // Switch to the tab requested from the header menu / search
+  if (selection && selection.key !== appliedSelectionKey) {
+    setAppliedSelectionKey(selection.key);
+    const idx = findTabIndex(selection.name);
+    if (idx >= 0) {
+      setActiveTabIdx(idx);
+      setScrollProgress(20);
+    }
+  }
+
+  useEffect(() => {
+    if (scrollRef.current) scrollRef.current.scrollLeft = 0;
+  }, [activeTabIdx]);
+
   const currentTab = displayTabs[activeTabIdx] || displayTabs[0];
 
   const handleScroll = () => {
@@ -29,15 +56,8 @@ export default function CategoryGrid({ onSelectCategory }: CategoryGridProps) {
     }
   };
 
-  const handleCardClick = (item: { name: string; link: string }) => {
-    showToast(`Viewing collection: ${item.name}`);
-    if (onSelectCategory) {
-      onSelectCategory(item.name);
-    }
-    const elem = document.querySelector("#curated-products");
-    if (elem) {
-      elem.scrollIntoView({ behavior: "smooth" });
-    }
+  const handleCardClick = (item: { name: string }) => {
+    openConsultation(item.name);
   };
 
   return (
@@ -62,7 +82,6 @@ export default function CategoryGrid({ onSelectCategory }: CategoryGridProps) {
                   onClick={() => {
                     setActiveTabIdx(idx);
                     setScrollProgress(20);
-                    if (scrollRef.current) scrollRef.current.scrollLeft = 0;
                   }}
                   className={`relative py-3.5 px-2 text-center text-sm font-semibold transition-colors cursor-pointer ${
                     isActive
@@ -110,6 +129,7 @@ export default function CategoryGrid({ onSelectCategory }: CategoryGridProps) {
                     {item.name}
                   </h3>
                   <div className="w-6 h-0.5 bg-[#c0262d] mt-1 group-hover:w-12 transition-all duration-300" />
+                  <p className="text-xs text-gray-500 mt-2">Enquire now</p>
                 </div>
               </div>
             )

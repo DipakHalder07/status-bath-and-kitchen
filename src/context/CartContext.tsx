@@ -29,27 +29,9 @@ interface CartContextType {
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
-  const [cart, setCart] = useState<CartItem[]>([
-    // Initialize with 1 sample item so user can immediately see the rich cart state
-    {
-      product: {
-        id: "cur-sofa-2",
-        name: "Bevelark 3-Seater Fabric Sofa",
-        category: "Living room",
-        price: 38990,
-        mrp: 54990,
-        discount: "29% OFF",
-        image: "https://interio.com/media/wysiwyg/Curated-for-you/1.jpg",
-        warranty: "3-Years Warranty",
-        material: "Pinewood Frame & Fabric",
-        color: "Forest Green",
-        rating: 4.9,
-      },
-      quantity: 1,
-    },
-  ]);
+  const [cart, setCart] = useState<CartItem[]>([]);
 
-  const [wishlist, setWishlist] = useState<string[]>(["cur-bed-2"]);
+  const [wishlist, setWishlist] = useState<string[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isConsultationOpen, setIsConsultationOpen] = useState(false);
   const [consultationType, setConsultationType] = useState("Modular Kitchen");

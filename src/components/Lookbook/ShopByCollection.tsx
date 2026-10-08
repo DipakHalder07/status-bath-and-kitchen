@@ -11,9 +11,19 @@ export default function ShopByCollection() {
   const [selectedIdx, setSelectedIdx] = useState(0);
   const [activeHotspot, setActiveHotspot] = useState<Hotspot | null>(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const { addToCart, showToast } = useCart();
+  const { addToCart, showToast, openConsultation } = useCart();
 
   const currentCollection = collectionSets[selectedIdx] || collectionSets[0];
+
+  // Items without a listed price are quoted on enquiry
+  const handleItemAction = (item: Hotspot) => {
+    if (item.price > 0) {
+      handleAddToCart(item);
+    } else {
+      setIsDrawerOpen(false);
+      openConsultation(item.name);
+    }
+  };
 
   const handleNext = () => {
     setActiveHotspot(null);
@@ -32,10 +42,11 @@ export default function ShopByCollection() {
       category: "Collection",
       price: item.price,
       mrp: item.mrp,
-      discount: `${Math.round(((item.mrp - item.price) / item.mrp) * 100)}% OFF`,
+      discount:
+        item.mrp > item.price
+          ? `${Math.round(((item.mrp - item.price) / item.mrp) * 100)}% OFF`
+          : "",
       image: item.image,
-      warranty: "1-Year Warranty",
-      rating: 4.9,
     });
     showToast(`Added ${item.name} to bag!`);
   };
@@ -48,6 +59,9 @@ export default function ShopByCollection() {
           <h2 className="text-3xl sm:text-4xl font-bold text-[#1c1c1c] tracking-tight">
             Shop by collection
           </h2>
+          <p className="mt-2 text-sm sm:text-base text-gray-600">
+            {currentCollection.subtitle}
+          </p>
         </div>
 
         {/* Lookbook Main Slider Frame */}
@@ -93,9 +107,13 @@ export default function ShopByCollection() {
                 <span className="absolute inset-0 rounded-full border border-white animate-ping opacity-75 pointer-events-none" />
               </button>
 
-              {/* Hotspot Hover Popover */}
+              {/* Hotspot Hover Popover (opens downward for spots in the upper half so it is not clipped) */}
               {activeHotspot?.id === spot.id && (
-                <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-3 w-56 sm:w-64 bg-white rounded-xl shadow-2xl border border-gray-100 p-3 z-30 animate-in fade-in duration-200 text-left">
+                <div
+                  className={`absolute left-1/2 -translate-x-1/2 ${
+                    spot.x < 50 ? "top-full mt-3" : "bottom-full mb-3"
+                  } w-56 sm:w-64 bg-white rounded-xl shadow-2xl border border-gray-100 p-3 z-30 animate-in fade-in duration-200 text-left`}
+                >
                   <div className="relative w-full h-28 rounded-lg overflow-hidden bg-stone-50 mb-2">
                     <img
                       src={spot.image}
@@ -108,15 +126,26 @@ export default function ShopByCollection() {
                   </h4>
                   <div className="mt-1 flex items-center justify-between">
                     <span className="text-sm font-bold text-gray-900">
-                      ₹{spot.price.toLocaleString("en-IN")}
+                      {spot.price > 0
+                        ? `₹${spot.price.toLocaleString("en-IN")}`
+                        : "Price on request"}
                     </span>
-                    <button
-                      onClick={() => handleAddToCart(spot)}
-                      className="p-1.5 bg-[#c0262d] text-white rounded-md hover:bg-[#a11c22] transition-colors cursor-pointer"
-                      title="Add to cart"
-                    >
-                      <ShoppingBag className="w-3.5 h-3.5" />
-                    </button>
+                    {spot.price > 0 ? (
+                      <button
+                        onClick={() => handleItemAction(spot)}
+                        className="p-1.5 bg-[#c0262d] text-white rounded-md hover:bg-[#a11c22] transition-colors cursor-pointer"
+                        title="Add to cart"
+                      >
+                        <ShoppingBag className="w-3.5 h-3.5" />
+                      </button>
+                    ) : (
+                      <button
+                        onClick={() => handleItemAction(spot)}
+                        className="px-2.5 py-1 bg-[#c0262d] text-white rounded-md hover:bg-[#a11c22] text-[11px] font-semibold transition-colors cursor-pointer"
+                      >
+                        Enquire
+                      </button>
+                    )}
                   </div>
                 </div>
               )}
@@ -136,7 +165,7 @@ export default function ShopByCollection() {
               onClick={() => setIsDrawerOpen(true)}
               className="flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white text-gray-900 hover:bg-stone-50 font-semibold text-xs sm:text-sm shadow-md transition-transform hover:scale-103 cursor-pointer"
             >
-              <span>View all products</span>
+              <span>View all items</span>
               <LayoutGrid className="w-4 h-4 text-gray-700" />
             </button>
           </div>
@@ -165,7 +194,7 @@ export default function ShopByCollection() {
                 {currentCollection.name}
               </h3>
               <p className="text-xs text-gray-500 mb-6">
-                All furniture pieces included in this coordinated room ensemble
+                Everything featured in this look. Enquire about any item and we will help you plan it for your home.
               </p>
 
               <div className="space-y-4">
@@ -183,15 +212,17 @@ export default function ShopByCollection() {
                       <div>
                         <h4 className="text-sm font-semibold text-gray-900">{item.name}</h4>
                         <span className="text-xs font-bold text-gray-700">
-                          ₹{item.price.toLocaleString("en-IN")}
+                          {item.price > 0
+                            ? `₹${item.price.toLocaleString("en-IN")}`
+                            : "Price on request"}
                         </span>
                       </div>
                     </div>
                     <button
-                      onClick={() => handleAddToCart(item)}
+                      onClick={() => handleItemAction(item)}
                       className="px-3.5 py-1.5 rounded-lg bg-[#c0262d] text-white hover:bg-[#a11c22] text-xs font-semibold transition-colors cursor-pointer"
                     >
-                      Add to Bag
+                      {item.price > 0 ? "Add to Bag" : "Enquire"}
                     </button>
                   </div>
                 ))}

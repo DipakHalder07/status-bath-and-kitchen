@@ -25,7 +25,7 @@ export default function ProductCarousel({
 }: ProductCarouselProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(25);
-  const { addToCart, toggleWishlist, isWishlisted, showToast } = useCart();
+  const { addToCart, toggleWishlist, isWishlisted, showToast, openConsultation } = useCart();
 
   const handleScroll = () => {
     if (scrollRef.current) {
@@ -70,7 +70,12 @@ export default function ProductCarousel({
                 key={product.id}
                 className="w-72 sm:w-80 shrink-0 flex flex-col group cursor-pointer"
                 onClick={() => {
-                  addToCart(product);
+                  // Products without a listed price are quoted on enquiry
+                  if (product.price > 0) {
+                    addToCart(product);
+                  } else {
+                    openConsultation(product.name);
+                  }
                 }}
               >
                 {/* Clean Off-white Image Container */}
@@ -117,26 +122,37 @@ export default function ProductCarousel({
                       {product.name}
                     </h3>
                     <p className="text-xs text-gray-500 mt-1 truncate">
-                      {product.dimensions || "1-Year Warranty, Solid Wood"}
+                      {product.dimensions || product.category}
                     </p>
                   </div>
 
                   {/* Right Column: Prices & Discount */}
-                  <div className="text-right shrink-0">
-                    <div className="text-sm font-bold text-gray-900">
-                      ₹{product.price.toLocaleString("en-IN")}
+                  {product.price > 0 ? (
+                    <div className="text-right shrink-0">
+                      <div className="text-sm font-bold text-gray-900">
+                        ₹{product.price.toLocaleString("en-IN")}
+                      </div>
+                      {product.mrp > product.price && (
+                        <div className="text-xs text-gray-400 line-through">
+                          ₹{product.mrp.toLocaleString("en-IN")}
+                        </div>
+                      )}
+                      {product.discount && (
+                        <div className="text-xs font-semibold text-[#c0262d]">
+                          {product.discount}
+                        </div>
+                      )}
                     </div>
-                    {product.mrp && product.mrp > product.price && (
-                      <div className="text-xs text-gray-400 line-through">
-                        ₹{product.mrp.toLocaleString("en-IN")}
+                  ) : (
+                    <div className="text-right shrink-0">
+                      <div className="text-xs font-semibold text-gray-900">
+                        Price on request
                       </div>
-                    )}
-                    {product.discount && (
-                      <div className="text-xs font-semibold text-[#c0262d]">
-                        {product.discount}
+                      <div className="text-xs font-semibold text-[#c0262d] mt-0.5">
+                        Get a quote
                       </div>
-                    )}
-                  </div>
+                    </div>
+                  )}
                 </div>
               </div>
             );

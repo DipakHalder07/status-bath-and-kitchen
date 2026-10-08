@@ -23,23 +23,24 @@ import Footer from "@/components/Footer/Footer";
 import CartDrawer from "@/components/Cart/CartDrawer";
 import ConsultationModal from "@/components/Modals/ConsultationModal";
 import Toast from "@/components/UI/Toast";
-import { justArrivedProducts, mostLovedProducts } from "@/data/interioData";
+import { justArrivedProducts } from "@/data/interioData";
 import { useCart } from "@/context/CartContext";
 
 export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [categorySelection, setCategorySelection] = useState<{ name: string; key: number } | null>(null);
   const { showToast } = useCart();
 
+  // Opens the matching tab in "How can we help you?" and scrolls to it
   const handleCategorySelect = (categoryName: string) => {
-    showToast(`Viewing collection: ${categoryName}`);
-    const elem = document.querySelector("#curated-products");
+    setCategorySelection({ name: categoryName, key: Date.now() });
+    const elem = document.querySelector("#categories");
     if (elem) elem.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleSearchSubmit = (query: string) => {
     showToast(`Showing results for "${query}"`);
-    const elem = document.querySelector("#curated-products");
-    if (elem) elem.scrollIntoView({ behavior: "smooth" });
+    handleCategorySelect(query);
   };
 
   return (
@@ -67,57 +68,61 @@ export default function Home() {
           }}
         />
 
-        {/* 2. Promotional Bank Offer Ticker Banner */}
+        {/* 2. Consultation strip */}
         <TickerBanner />
 
-        {/* 3. How can we help you? (Warm #f5f0ea, 6 segmented tabs with red indicator, cards with red underlines, progress bar) */}
-        <CategoryGrid onSelectCategory={handleCategorySelect} />
-
-        {/* 4. Just arrived Carousel (Clean off-white cards, bottom-right heart, 2-col pricing) */}
-        <ProductCarousel
-          id="just-arrived"
-          title="Just arrived"
-          products={justArrivedProducts}
+        {/* 3. How can we help you? (6 category tabs: kitchens, bathrooms, wardrobes, doors & windows, appliances, accessories) */}
+        <CategoryGrid
+          onSelectCategory={handleCategorySelect}
+          selection={categorySelection}
         />
 
-        {/* 5. Deals Banner (Deal of the Week & Deal of the Month side-by-side) */}
+        {/* 4. Appliances & fittings carousel */}
+        <ProductCarousel
+          id="appliances"
+          title="Appliances & fittings"
+          products={justArrivedProducts}
+          viewAllLink="#categories"
+        />
+
+        {/* 5. Kitchen & bathroom feature banners */}
         <DealsBanner
           onDealClick={(deal) => {
             showToast(`Exploring ${deal}`);
           }}
         />
 
-        {/* 6. Upmods. Your Sofa, Your Way! (Clean video facade with red play button) */}
+        {/* 6. Your kitchen, your way banner */}
         <UpmodsBanner />
 
-        {/* 7. Curated for you (Warm #f5f0ea, segmented tabs, red underlines, progress bar) */}
+        {/* 7. Design ideas (kitchen, bathroom, doors & windows styles) */}
         <CuratedSection />
 
-        {/* 8. Shop by collection (Full-width lookbook slider with hotspots & in-image CTA) */}
+        {/* 8. Shop by collection (room lookbook with hotspots) */}
         <ShopByCollection />
 
-        {/* 9. Promotional Split Blocks (Kitchens & Home Interiors with frosted glass center cards, Exchange Banner) */}
+        {/* 9. Consultation banners (kitchens, bathrooms, renovation) */}
         <PromoBanners />
 
-        {/* 10. Interio for India (Vibrant #ff5c47 coral background, 30+, 17,000+, 1000+) */}
+        {/* 10. Everything we do (coral services strip) */}
         <InterioStats />
 
-        {/* 11. Find a store near you (Untitled_design_17__1.jpg with frosted dark card on right) */}
+        {/* 11. Visit our experience studio */}
         <StoreLocatorSection />
 
-        {/* 12. Furniture care services (3 bordered white cards with #ff5247 titles) */}
+        {/* 12. Our services */}
         <CareServices />
 
-        {/* 13. Customer Reviews / Testimonials (Large quote marks, highlighted card, progress bar) */}
+        {/* 13. Why choose Status */}
         <Testimonials />
 
-        {/* 14. Brand Philosophy & Commercial B2B Solutions */}
+        {/* 14. Builders, architects & designers */}
         <PhilosophySection />
 
-        {/* 15. Interio in Everyday Living (Instagram user gallery matching live site) */}
+        {/* 15. Inspiration gallery */}
         <EverydayLiving />
 
-        {/* 16. How can we assist you? (FAQs & SEO Rich Content) */}
+        {/* 16. FAQs & SEO content */}
         <FaqAccordion />
       </main>
 

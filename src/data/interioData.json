@@ -1,1137 +1,611 @@
 {
   "brand": {
-    "name": "Status Doors & Windows",
-    "whiteLogo": "/images/status-logo-white.png",
-    "colorLogo": "/images/status-logo-dark.png",
-    "favicon": "/images/status-logo-dark.png",
-    "tollFree": "1800-267-1122",
-    "storeCount": "1000+",
-    "pinCodes": "17,000+",
-    "states": "30"
+    "name": "Status Bath and Kitchen",
+    "shortName": "Status",
+    "tagline": "Modular Kitchens • Wardrobes • Doors • Windows • Appliances • Kitchen Accessories & more",
+    "whiteLogo": "/images/status-bk-logo-white.png",
+    "colorLogo": "/images/status-bk-logo-dark.png",
+    "favicon": "/images/status-bk-icon.png",
+    "phone": "+91 XXXXX XXXXX",
+    "phoneHref": "",
+    "email": "hello@your-domain.com",
+    "address": "Your showroom address, City, State – PIN code",
+    "hours": "Add your opening hours",
+    "social": {
+      "instagram": "",
+      "facebook": "",
+      "youtube": "",
+      "linkedin": "",
+      "pinterest": ""
+    }
   },
   "heroSlides": [
     {
-      "id": "sofas",
-      "title": "Contemporary Living, Redefined",
-      "subtitle": "Explore Sofas & Loungers crafted for ergonomic comfort and modern aesthetics",
-      "desktopImg": "https://interio.com/media/wysiwyg/Sofas_11.jpg",
-      "mobileImg": "https://interio.com/media/wysiwyg/Sofas_2__1.jpg",
-      "link": "/all-products/sofas-loungers",
-      "ctaText": "Explore Sofas & Loungers",
-      "tag": "New Season Collection"
-    },
-    {
-      "id": "beds",
-      "title": "Engineered For Restful Nights",
-      "subtitle": "Beds with smart hydraulic, box, and motorized storage innovations",
-      "desktopImg": "https://interio.com/media/wysiwyg/Beds_19.jpg",
-      "mobileImg": "https://interio.com/media/wysiwyg/Beds_18.jpg",
-      "link": "/all-products/beds",
-      "ctaText": "Explore Beds",
-      "tag": "Master Bedroom Luxury"
-    },
-    {
-      "id": "wardrobes",
-      "title": "Spacious. Elegant. Built to Last.",
-      "subtitle": "Iconic steel almirahs and contemporary modular wooden wardrobes",
-      "desktopImg": "https://interio.com/media/wysiwyg/Almirahs_6.jpg",
-      "mobileImg": "https://interio.com/media/wysiwyg/Almirahs_7.jpg",
-      "link": "/all-products/almirahs-wardrobes",
-      "ctaText": "Explore Almirahs & Wardrobes",
-      "tag": "Godrej Trust Since 1923"
-    },
-    {
       "id": "kitchens",
-      "title": "Custom Modular Kitchens",
-      "subtitle": "Tailored layouts, rust-free galvanized steel, and soft-close German fittings",
-      "desktopImg": "https://interio.com/media/wysiwyg/Kitchen_9.jpg",
-      "mobileImg": "https://interio.com/media/wysiwyg/Kitchen_2__3.jpg",
-      "link": "/modular-kitchen",
-      "ctaText": "Explore our Kitchens",
-      "tag": "Free 3D Design Consultation"
-    },
-    {
-      "id": "nook",
-      "title": "NOOK – Curated Design Edition",
-      "subtitle": "Fresh interior perspectives, styling tips, and statement accent pieces",
-      "desktopImg": "https://interio.com/media/wysiwyg/Issue_2_Website_banner_Desktop_V1_1.jpg",
-      "mobileImg": "https://interio.com/media/wysiwyg/Issue_2_Website_banner_Mobile.jpg",
-      "link": "/nook",
-      "ctaText": "Explore Nook Magazine",
-      "tag": "Vol. 02 Now Live"
+      "title": "Modular Kitchens, Made for You",
+      "subtitle": "Kitchens, bathrooms, wardrobes, doors and windows — designed, supplied and installed by one team",
+      "desktopImg": "/images/hero-kitchen.jpg",
+      "mobileImg": "/images/hero-kitchen.jpg",
+      "link": "#curated-products",
+      "ctaText": "Explore Modular Kitchens",
+      "tag": "Status Bath and Kitchen"
     }
   ],
   "categories": [
     {
-      "id": "living",
-      "name": "Living Room",
-      "image": "https://interio.com/media/wysiwyg/Mega-Menu/1_1.jpg",
-      "count": "420+ Items",
-      "featured": [
-        "Sofas & Loungers",
-        "Coffee Tables",
-        "TV Units",
-        "Recliners",
-        "Display Cabinets",
-        "Rugs"
-      ]
+      "id": "kitchens",
+      "name": "Modular Kitchens",
+      "image": "/images/site/cat-kitchen-island.jpg",
+      "count": "5 layouts",
+      "featured": ["L-Shaped Kitchens", "U-Shaped Kitchens", "Island Kitchens", "Parallel Kitchens", "Straight Kitchens"]
     },
     {
-      "id": "bedroom",
-      "name": "Bedroom",
-      "image": "https://interio.com/media/wysiwyg/Mega-Menu/King_Beds.jpg",
-      "count": "380+ Items",
-      "featured": [
-        "King Size Beds",
-        "Queen Size Beds",
-        "Steel Almirahs",
-        "Wooden Wardrobes",
-        "Bedside Tables"
-      ]
+      "id": "bathrooms",
+      "name": "Bathrooms",
+      "image": "/images/site/cat-bath-vanity.jpg",
+      "count": "6 solutions",
+      "featured": ["Vanity Units", "Shower Enclosures", "Bathtubs", "Taps & Showers", "Sanitaryware", "Bathroom Storage"]
     },
     {
-      "id": "dining",
-      "name": "Dining Room",
-      "image": "https://interio.com/media/wysiwyg/Mega-Menu/dining_set.png",
-      "count": "150+ Items",
-      "featured": [
-        "Dining Sets",
-        "Solid Wood Tables",
-        "Marble Tables",
-        "Dining Chairs",
-        "Dining Benches"
-      ]
+      "id": "wardrobes",
+      "name": "Wardrobes",
+      "image": "/images/site/cat-wardrobe-walkin.jpg",
+      "count": "4 types",
+      "featured": ["Fitted Wardrobes", "Hinged Wardrobes", "Walk-in Wardrobes", "Wardrobe Interiors"]
     },
     {
-      "id": "mattresses",
-      "name": "Mattresses",
-      "image": "https://interio.com/media/wysiwyg/Mega-Menu/King_Mattresses.jpg",
-      "count": "95+ Items",
-      "featured": [
-        "Orthopedic Mattresses",
-        "Pocket Spring",
-        "Memory Foam",
-        "Dual Comfort",
-        "King & Queen"
-      ]
+      "id": "doors",
+      "name": "Doors",
+      "image": "/images/site/cat-door-entrance.jpg",
+      "count": "4 types",
+      "featured": ["Entrance Doors", "Interior Doors", "Sliding Glass Doors", "Smart Locks & Hardware"]
     },
     {
-      "id": "office",
-      "name": "Office & Study",
-      "image": "https://interio.com/media/wysiwyg/Mega-Menu/Work_desks_Study_tables_1.jpg",
-      "count": "210+ Items",
-      "featured": [
-        "Ergonomic Chairs",
-        "Study Tables",
-        "Filing Cabinets",
-        "Book Shelves",
-        "Height Adjustable Desks"
-      ]
+      "id": "windows",
+      "name": "Windows",
+      "image": "/images/site/cat-window-casement.jpg",
+      "count": "4 types",
+      "featured": ["Sliding Windows", "Casement Windows", "Bay & Picture Windows", "Arched Windows"]
     },
     {
-      "id": "storage",
-      "name": "Storage & Lockers",
-      "image": "https://interio.com/media/wysiwyg/Mega-Menu/Mega_Menu_Digital_Lockers.jpg",
-      "count": "130+ Items",
-      "featured": [
-        "Digital Safes",
-        "Biometric Lockers",
-        "Shoe Racks",
-        "Book Shelves",
-        "Crockery Units"
-      ]
+      "id": "appliances",
+      "name": "Appliances",
+      "image": "/images/site/cat-app-chimney.jpg",
+      "count": "7 types",
+      "featured": ["Chimneys", "Hobs & Cooking Ranges", "Built-in Ovens", "Microwaves", "Dishwashers", "Refrigerators", "Washing Machines"]
     },
     {
-      "id": "kitchen",
-      "name": "Modular Kitchen",
-      "image": "https://interio.com/media/wysiwyg/Modular_Kitchen_MK.jpg",
-      "count": "Custom Modular",
-      "featured": [
-        "L-Shaped Kitchens",
-        "Island Kitchens",
-        "Parallel Kitchens",
-        "Steel Cabinets",
-        "Pantry Units"
-      ]
-    },
-    {
-      "id": "decor",
-      "name": "Soft Furnishings",
-      "image": "https://interio.com/media/wysiwyg/Mega-Menu/1.jpg",
-      "count": "190+ Items",
-      "featured": [
-        "Cushion Covers",
-        "Designer Throws",
-        "Luxury Rugs",
-        "Pillows",
-        "Bed Linen"
-      ]
+      "id": "accessories",
+      "name": "Kitchen Accessories",
+      "image": "/images/site/cat-acc-sink.jpg",
+      "count": "5 types",
+      "featured": ["Sinks", "Faucets", "Tall Pantry Units", "Wall Rail Systems", "Spice & Bottle Organisers"]
     }
   ],
   "curatedTabs": {
-    "sofas": {
-      "label": "Sofas & Recliners",
+    "kitchens": {
+      "label": "Kitchen styles",
       "products": [
         {
-          "id": "cur-sofas-1",
-          "name": "Parana L-Shape Leather Manual Recliner Sofa",
-          "category": "Living room",
+          "id": "cur-k-handleless",
+          "name": "Handleless White & Oak",
+          "category": "Modular Kitchens",
           "price": 0,
           "mrp": 0,
           "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/5.jpg",
-          "dimensions": "1-Year Warranty, Beige"
+          "image": "/images/site/cur-k-handleless.jpg",
+          "dimensions": "Island kitchen with matte white shutters and oak accents"
         },
         {
-          "id": "cur-sofas-2",
-          "name": "Bevelark 3-Seater Fabric Sofa",
-          "category": "Living room",
+          "id": "cur-k-shaker",
+          "name": "Classic Shaker Kitchen",
+          "category": "Modular Kitchens",
           "price": 0,
           "mrp": 0,
           "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/1.jpg",
-          "dimensions": "3-Years Warranty, Pinewood, Green"
+          "image": "/images/site/cur-k-shaker.jpg",
+          "dimensions": "Framed shutters, a marble-look island and a range hood"
         },
         {
-          "id": "cur-sofas-3",
-          "name": "Vespera 3-Seater Synthetic Leather Sofa",
-          "category": "Living room",
+          "id": "cur-k-sage",
+          "name": "Soft Sage Kitchen",
+          "category": "Modular Kitchens",
           "price": 0,
           "mrp": 0,
           "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/2.jpg",
-          "dimensions": "3-Years Warranty, Solid Wood, Pebble"
+          "image": "/images/site/cur-k-sage.jpg",
+          "dimensions": "Muted green shutters around a garden-view window"
         },
         {
-          "id": "cur-sofas-4",
-          "name": "Twogether Diwan Fabric Sofa Cum Bed with Mattress",
-          "category": "Living room",
+          "id": "cur-k-dark",
+          "name": "Dark Oak & Glass Kitchen",
+          "category": "Modular Kitchens",
           "price": 0,
           "mrp": 0,
           "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/4.jpg",
-          "dimensions": "1-Year Warranty, Engineered Wood"
+          "image": "/images/site/cur-k-dark.jpg",
+          "dimensions": "Fluted panels, a glass-front tall unit and a breakfast counter"
         },
         {
-          "id": "cur-sofas-5",
-          "name": "Omak Motorised 1-Seater Fabric Recliner Chair",
-          "category": "Living room",
+          "id": "cur-k-wood",
+          "name": "Warm Wood Tall-Unit Kitchen",
+          "category": "Modular Kitchens",
           "price": 0,
           "mrp": 0,
           "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/3.jpg",
-          "dimensions": "3-Year Warranty, Blue, Lift-up Mechanism"
+          "image": "/images/site/cur-k-wood.jpg",
+          "dimensions": "Built-in oven column with white wall cabinets"
         },
         {
-          "id": "cur-sofas-6",
-          "name": "Bayflow 5-Seater Synthetic Leather Sofa Set",
-          "category": "Living room",
+          "id": "cur-k-diner",
+          "name": "Open Kitchen-Diner",
+          "category": "Modular Kitchens",
           "price": 0,
           "mrp": 0,
           "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/9.jpg",
-          "dimensions": "3-Years Warranty, Pinewood, Toffee Beige"
-        },
-        {
-          "id": "cur-sofas-7",
-          "name": "Nurest Manual 3 Seater Fabric Recliner",
-          "category": "Living room",
-          "price": 0,
-          "mrp": 0,
-          "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/7.jpg",
-          "dimensions": "3-Years Warranty, Tan and Peanut"
+          "image": "/images/site/cur-k-diner.jpg",
+          "dimensions": "Wall rail system, open shelf and a family dining table"
         }
       ]
     },
-    "beds": {
-      "label": "Beds",
+    "bathrooms": {
+      "label": "Bathroom styles",
       "products": [
         {
-          "id": "cur-beds-1",
-          "name": "Doze Nx Regular Height King Size Bed with Pull-Out Storage",
-          "category": "Bedroom",
+          "id": "cur-b-marble",
+          "name": "Marble & Brass Basin Wall",
+          "category": "Bathrooms",
           "price": 0,
           "mrp": 0,
           "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/16.jpg",
-          "dimensions": "1-Year Warranty, Brown"
+          "image": "/images/site/cur-b-marble.jpg",
+          "dimensions": "Vessel basin, brass mixer and a round mirror"
         },
         {
-          "id": "cur-beds-2",
-          "name": "Zion Advance King Size Bed with Hydraulic Storage",
-          "category": "Bedroom",
+          "id": "cur-b-spa",
+          "name": "Spa-Inspired Bathroom",
+          "category": "Bathrooms",
           "price": 0,
           "mrp": 0,
           "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/15.jpg",
-          "dimensions": "1-Year Warranty, Brown"
+          "image": "/images/site/cur-b-spa.jpg",
+          "dimensions": "Freestanding tub, vessel basin and plenty of greenery"
         },
         {
-          "id": "cur-beds-3",
-          "name": "Goldust V2 King Size Bed with Hydraulic Storage",
-          "category": "Bedroom",
+          "id": "cur-b-wood",
+          "name": "Floating Oak Vanity",
+          "category": "Bathrooms",
           "price": 0,
           "mrp": 0,
           "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/14.jpg",
-          "dimensions": "1-Year Warranty, Fine Walnut"
+          "image": "/images/site/cur-b-wood.jpg",
+          "dimensions": "Wall-hung vanity with marble-look tiles"
         },
         {
-          "id": "cur-beds-4",
-          "name": "Upmods Electra King Size Bed with Box Storage",
-          "category": "Bedroom",
+          "id": "cur-b-dark",
+          "name": "Dark & Moody Bathroom",
+          "category": "Bathrooms",
           "price": 0,
           "mrp": 0,
           "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/17.jpg",
-          "dimensions": "1-Year Warranty, Brown & Cream"
+          "image": "/images/site/cur-b-dark.jpg",
+          "dimensions": "Matte black fittings and a walk-in shower"
         },
         {
-          "id": "cur-beds-5",
-          "name": "Eden V2 King Size Wooden Bed with Pullout Storage",
-          "category": "Bedroom",
+          "id": "cur-b-bright",
+          "name": "Bright Shower Room",
+          "category": "Bathrooms",
           "price": 0,
           "mrp": 0,
           "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/12.jpg",
-          "dimensions": "1-Year Warranty, Walnut"
+          "image": "/images/site/cur-b-bright.jpg",
+          "dimensions": "Glass shower enclosure and a long double vanity"
         },
         {
-          "id": "cur-beds-6",
-          "name": "Upmods Trio King Size Bed with Box Storage",
-          "category": "Bedroom",
+          "id": "cur-b-tub",
+          "name": "Statement Copper Tub",
+          "category": "Bathrooms",
           "price": 0,
           "mrp": 0,
           "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Homepage-product-collection-section/uptriokboxb01_a2_1440x810.jpg",
-          "dimensions": "1-Year Warranty, Brown"
-        },
-        {
-          "id": "cur-beds-7",
-          "name": "Ray King Size Bed with Motorized Storage",
-          "category": "Bedroom",
-          "price": 0,
-          "mrp": 0,
-          "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Homepage-product-collection-section/56101515SD00425_A2_1920_1080.jpg",
-          "dimensions": "1-Year Warranty, Swiss White"
+          "image": "/images/site/cur-b-tub.jpg",
+          "dimensions": "A freestanding focal point by the window"
         }
       ]
     },
-    "dining": {
-      "label": "Dining",
+    "doors-windows": {
+      "label": "Doors & windows",
       "products": [
         {
-          "id": "cur-dining-1",
-          "name": "Thyme Rectangular 4-Seater Solid Wood Dining Set",
-          "category": "Dining",
+          "id": "cur-d-glass",
+          "name": "Floor-to-Ceiling Glazing",
+          "category": "Windows",
           "price": 0,
           "mrp": 0,
           "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/26.jpg",
-          "dimensions": "1-Year Warranty, White, with 4 Chairs"
+          "image": "/images/site/cur-d-glass.jpg",
+          "dimensions": "Large fixed panels that bring the garden indoors"
         },
         {
-          "id": "cur-dining-2",
-          "name": "Elixir 4-Seater Marble Circular Dining Table",
-          "category": "Dining",
+          "id": "cur-d-black",
+          "name": "Black-Frame Glass Doors",
+          "category": "Doors",
           "price": 0,
           "mrp": 0,
           "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Homepage-product-collection-section/56101543sd00173_feature_a2_1920_1080.jpg",
-          "dimensions": "1-Year Warranty, Walnut"
+          "image": "/images/site/cur-d-black.jpg",
+          "dimensions": "Slim frames for bedrooms and balconies"
         },
         {
-          "id": "cur-dining-3",
-          "name": "Oregano Rectangular 4-Seater Solid Wood Dining Set",
-          "category": "Dining",
+          "id": "cur-d-garden",
+          "name": "Sliding Doors to the Deck",
+          "category": "Doors",
           "price": 0,
           "mrp": 0,
           "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/25.jpg",
-          "dimensions": "1-Year Warranty, Grey, with 4 Chairs"
+          "image": "/images/site/cur-d-garden.jpg",
+          "dimensions": "Wide openings for indoor–outdoor living"
         },
         {
-          "id": "cur-dining-4",
-          "name": "Aurelia Leatherette Dining Chair (Set of 2)",
-          "category": "Dining",
+          "id": "cur-d-arched",
+          "name": "Arched Windows",
+          "category": "Windows",
           "price": 0,
           "mrp": 0,
           "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/24.jpg",
-          "dimensions": "Grey With Pattern"
+          "image": "/images/site/cur-d-arched.jpg",
+          "dimensions": "Classic arches with slim black frames"
         },
         {
-          "id": "cur-dining-5",
-          "name": "Mod Knight 6-Seater Tempered Glass Rectangular Dining Table",
-          "category": "Dining",
+          "id": "cur-d-facade",
+          "name": "Contemporary Facades",
+          "category": "Doors",
           "price": 0,
           "mrp": 0,
           "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/23.jpg",
-          "dimensions": "1-Year Warranty, Black"
+          "image": "/images/site/cur-d-facade.jpg",
+          "dimensions": "Entrance doors and windows planned together"
         },
         {
-          "id": "cur-dining-6",
-          "name": "Bliss V2 Fabric Dining Chair (Set of 2)",
-          "category": "Dining",
+          "id": "cur-d-bay",
+          "name": "Bay Window Seat",
+          "category": "Windows",
           "price": 0,
           "mrp": 0,
           "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/21.jpg",
-          "dimensions": "1-Year Warranty, Beige"
-        },
-        {
-          "id": "cur-dining-7",
-          "name": "Bliss V2 8 Seater Solid Wood Rectangular Dining Table",
-          "category": "Dining",
-          "price": 0,
-          "mrp": 0,
-          "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/20.jpg",
-          "dimensions": "1-Year Warranty, Walnut"
-        },
-        {
-          "id": "cur-dining-8",
-          "name": "Jack 6-Seater Engineered Wood Rectangular Dining Set",
-          "category": "Dining",
-          "price": 0,
-          "mrp": 0,
-          "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/19.jpg",
-          "dimensions": "1-Year Warranty, Table with 6 Chairs"
-        },
-        {
-          "id": "cur-dining-9",
-          "name": "Premio 6-Seater Rubber Wood Rectangular Dining Table",
-          "category": "Dining",
-          "price": 0,
-          "mrp": 0,
-          "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/22.jpg",
-          "dimensions": "1-Year Warranty, Mahogany"
-        }
-      ]
-    },
-    "coffee": {
-      "label": "Coffee Tables",
-      "products": [
-        {
-          "id": "cur-coffee-1",
-          "name": "Skyline Prelaminated Particle Board Coffee Table",
-          "category": "Living room",
-          "price": 0,
-          "mrp": 0,
-          "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/27.jpg",
-          "dimensions": "1-Year Warranty, Black, Knock Down"
-        },
-        {
-          "id": "cur-coffee-2",
-          "name": "Raffin Multi-Purpose Coffee Table",
-          "category": "Living room",
-          "price": 0,
-          "mrp": 0,
-          "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/28.jpg",
-          "dimensions": "1-Year Warranty, Black, Knock Down"
-        },
-        {
-          "id": "cur-coffee-3",
-          "name": "Jaxon Large Convertible Coffee Table",
-          "category": "Living room",
-          "price": 0,
-          "mrp": 0,
-          "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/30.jpg",
-          "dimensions": "1-Year Warranty, Remini Walnut"
-        },
-        {
-          "id": "cur-coffee-4",
-          "name": "Gayle Tempered Glass Coffee Table",
-          "category": "Living room",
-          "price": 0,
-          "mrp": 0,
-          "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/29.jpg",
-          "dimensions": "1-Year Warranty, Black, Knock Down"
-        },
-        {
-          "id": "cur-coffee-5",
-          "name": "Diante Engineered Wood Coffee Table",
-          "category": "Living room",
-          "price": 0,
-          "mrp": 0,
-          "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/33.jpg",
-          "dimensions": "1-Year Warranty, Black & White, Knock Down"
-        },
-        {
-          "id": "cur-coffee-6",
-          "name": "Meraki Particle Board Coffee Table",
-          "category": "Living room",
-          "price": 0,
-          "mrp": 0,
-          "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/32.jpg",
-          "dimensions": "1-Year Warranty, Brown, Knock Down"
-        },
-        {
-          "id": "cur-coffee-7",
-          "name": "Transpose V2 Engineered Wood Convertible Coffee Table",
-          "category": "Living room",
-          "price": 0,
-          "mrp": 0,
-          "discount": "",
-          "image": "https://interio.com/media/wysiwyg/Curated-for-you/31.jpg",
-          "dimensions": "1-Year Warranty, Cola Rain, Knock Down"
+          "image": "/images/site/cur-d-bay.jpg",
+          "dimensions": "A reading corner built into the window"
         }
       ]
     }
   },
   "justArrived": [
     {
-      "id": "ja-1",
-      "name": "Tycoon Ultra 3 Seater Synthetic Leather Sofa",
-      "price": 36590,
-      "mrp": 52257,
-      "discount": "30% OFF",
-      "image": "https://interio.com/media/catalog/product/5/6/56101502sd05210_01_1920x1080.jpg?width=500&height=500&optimize=high&bg-color=255,255,255&fit=bounds",
-      "category": "Living room",
-      "warranty": "1-Year Warranty",
-      "color": "Burgandy",
-      "dimensions": "181 x 87 x 81 cm",
-      "badge": "New Launch"
+      "id": "app-chimney",
+      "name": "Island Kitchen Chimney",
+      "price": 0,
+      "mrp": 0,
+      "discount": "",
+      "image": "/images/site/prod-chimney.jpg",
+      "category": "Appliances",
+      "dimensions": "Glass canopy, stainless steel finish",
+      "badge": "Appliances"
     },
     {
-      "id": "ja-2",
-      "name": "Flynn NX 2-Door Steel Almirah with Mirror",
-      "price": 31690,
-      "mrp": 45675,
-      "discount": "31% OFF",
-      "image": "https://interio.com/media/catalog/product/f/l/flynnnxsp166_01_1920x1080.jpg?width=500&height=500&optimize=high&bg-color=255,255,255&fit=bounds",
-      "category": "Bedroom",
-      "warranty": "1-Year Warranty",
-      "color": "Textured Seapine",
-      "dimensions": "90 x 195 x 50 cm",
-      "badge": "Signature Steel"
+      "id": "app-hob",
+      "name": "Gas Hob & Cooking Range",
+      "price": 0,
+      "mrp": 0,
+      "discount": "",
+      "image": "/images/site/prod-hob.jpg",
+      "category": "Appliances",
+      "dimensions": "Cast-iron pan supports, front controls",
+      "badge": "Appliances"
     },
     {
-      "id": "ja-3",
-      "name": "Paramount L-Shape 3 Seater RHS Fabric Sofa",
-      "price": 35990,
-      "mrp": 102306,
-      "discount": "65% OFF",
-      "image": "https://interio.com/media/catalog/product/5/6/56101502sd05043_01_1920x1080.jpg",
-      "category": "Living room",
-      "warranty": "1-Year Warranty",
-      "color": "Ocean Blue",
-      "dimensions": "210 x 140 x 85 cm",
-      "badge": "Mega Saver"
+      "id": "app-oven",
+      "name": "Built-in Oven",
+      "price": 0,
+      "mrp": 0,
+      "discount": "",
+      "image": "/images/site/prod-oven.jpg",
+      "category": "Appliances",
+      "dimensions": "Fits a tall unit or under the counter",
+      "badge": "Built-in"
     },
     {
-      "id": "ja-4",
-      "name": "Peach Frame Abstract Printed Cushion Cover",
-      "price": 490,
-      "mrp": 682,
-      "discount": "28% OFF",
-      "image": "https://interio.com/media/catalog/product/5/2/52121512sd02582_01_1920x1080.jpg?width=500&height=500&optimize=high&bg-color=255,255,255&fit=bounds",
-      "category": "Soft furnishing",
-      "warranty": "Quality Assured",
-      "color": "Peach & Indigo",
-      "dimensions": "40 x 40 cm",
-      "badge": "Decor"
+      "id": "app-fridge",
+      "name": "French-Door Refrigerator",
+      "price": 0,
+      "mrp": 0,
+      "discount": "",
+      "image": "/images/site/prod-fridge.jpg",
+      "category": "Appliances",
+      "dimensions": "Planned into your kitchen layout",
+      "badge": "Appliances"
     },
     {
-      "id": "ja-5",
-      "name": "Storo Quick Lockable Vertical Filing Cabinet 4-Drawer",
-      "price": 29653,
-      "mrp": 29653,
-      "discount": "Assured Price",
-      "image": "https://interio.com/media/catalog/product/5/6/56101702sd01007_01_1920x1080.jpg?width=500&height=500&optimize=high&bg-color=255,255,255&fit=bounds",
-      "category": "Office",
-      "warranty": "Godrej Security Lock",
-      "color": "Putty Grey",
-      "dimensions": "46 x 132 x 62 cm",
-      "badge": "Office Essential"
+      "id": "acc-sink",
+      "name": "Stainless Steel Kitchen Sink",
+      "price": 0,
+      "mrp": 0,
+      "discount": "",
+      "image": "/images/site/prod-sink.jpg",
+      "category": "Kitchen Accessories",
+      "dimensions": "Double bowl with a high-arc faucet",
+      "badge": "Accessories"
+    },
+    {
+      "id": "bath-mixer",
+      "name": "Basin Mixer Tap",
+      "price": 0,
+      "mrp": 0,
+      "discount": "",
+      "image": "/images/site/prod-basin-mixer.jpg",
+      "category": "Bathrooms",
+      "dimensions": "Single-lever mixer for vanity basins",
+      "badge": "Bath fittings"
     }
   ],
   "mostLoved": [
     {
-      "id": "ml-1",
-      "name": "Ewa 2-Door Wooden Wardrobe/Almirah with Mirror",
-      "price": 16790,
-      "mrp": 47137,
-      "discount": "64% OFF",
-      "image": "https://interio.com/media/catalog/product/5/6/56101509sd00762_01_1920x1080.jpg?width=500&height=500&optimize=high&bg-color=255,255,255&fit=bounds",
-      "category": "Bedroom",
-      "rating": 4.9,
-      "reviews": 240,
-      "color": "Walnut Brown",
-      "badge": "#1 Bestseller"
+      "id": "ml-microwave",
+      "name": "Built-in Microwave",
+      "price": 0,
+      "mrp": 0,
+      "discount": "",
+      "image": "/images/site/cat-app-microwave.jpg",
+      "category": "Appliances",
+      "badge": "Appliances"
     },
     {
-      "id": "ml-2",
-      "name": "Vurv Wooden Diwan Sofa Bed with Queen Size Mattress",
-      "price": 39490,
-      "mrp": 113966,
-      "discount": "65% OFF",
-      "image": "https://interio.com/media/catalog/product/5/6/56101502sd04423_01_1920x1080.jpg?width=500&height=500&optimize=high&bg-color=255,255,255&fit=bounds",
-      "category": "Living room",
-      "rating": 4.8,
-      "reviews": 185,
-      "color": "Warm Oak",
-      "badge": "Customer Choice"
+      "id": "ml-dishwasher",
+      "name": "Dishwasher",
+      "price": 0,
+      "mrp": 0,
+      "discount": "",
+      "image": "/images/site/cat-app-dishwasher.jpg",
+      "category": "Appliances",
+      "badge": "Appliances"
     },
     {
-      "id": "ml-3",
-      "name": "Slimline 2-Door Steel Almirah (Royal Ivory)",
-      "price": 26390,
-      "mrp": 33661,
-      "discount": "22% OFF",
-      "image": "https://interio.com/media/catalog/product/s/l/slim00001_01_1920x1080.jpg?width=500&height=500&optimize=high&bg-color=255,255,255&fit=bounds",
-      "category": "Bedroom",
-      "rating": 5.0,
-      "reviews": 310,
-      "color": "Royal Ivory",
-      "badge": "Iconic Model"
-    },
-    {
-      "id": "ml-4",
-      "name": "Greta 2.0 High Back Fabric Ergonomic Office Chair",
-      "price": 17890,
-      "mrp": 17899,
-      "discount": "Best Value",
-      "image": "https://interio.com/media/catalog/product/g/r/greta0003_01_1920x1080.jpg?width=500&height=500&optimize=high&bg-color=255,255,255&fit=bounds",
-      "category": "Office",
-      "rating": 4.9,
-      "reviews": 142,
-      "color": "Black Ink & White Body",
-      "badge": "Ergo Choice"
-    },
-    {
-      "id": "ml-5",
-      "name": "Step-In 16-Pairs Steel Shoe Cabinet",
-      "price": 18390,
-      "mrp": 21220,
-      "discount": "13% OFF",
-      "image": "https://interio.com/media/catalog/product/5/6/56101531sd00041_01_1920x1080.jpg?width=500&height=500&optimize=high&bg-color=255,255,255&fit=bounds",
-      "category": "Storage",
-      "rating": 4.8,
-      "reviews": 96,
-      "color": "Slate Grey",
-      "badge": "Compact Storage"
+      "id": "ml-pantry",
+      "name": "Tall Pantry Unit",
+      "price": 0,
+      "mrp": 0,
+      "discount": "",
+      "image": "/images/site/cat-acc-pantry.jpg",
+      "category": "Kitchen Accessories",
+      "badge": "Accessories"
     }
   ],
   "collections": [
     {
-      "id": "magnate",
-      "name": "Magnate Sofa Set Collection",
-      "subtitle": "Sophisticated modular comfort designed for hosting and relaxation",
-      "roomImage": "https://interio.com/media/wysiwyg/CLP/Untitled_design_19_.jpg",
+      "id": "monochrome-kitchen",
+      "name": "The Monochrome Kitchen",
+      "subtitle": "Gloss grey shutters, a quartz waterfall island and built-in appliances",
+      "roomImage": "/images/site/look-kitchen.jpg",
       "hotspots": [
-        {
-          "id": "mag-1",
-          "name": "Magnate 3-Seater Fabric Sofa",
-          "price": 23490,
-          "mrp": 49278,
-          "x": 32,
-          "y": 62,
-          "image": "https://interio.com/media/catalog/product/5/6/56101502sd04774_01_413x440.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=300&width=273"
-        },
-        {
-          "id": "mag-2",
-          "name": "Magnate 2-Seater Fabric Sofa",
-          "price": 18990,
-          "mrp": 39990,
-          "x": 72,
-          "y": 55,
-          "image": "https://interio.com/media/catalog/product/5/6/56101502sd04773_01_413x440.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=300&width=273"
-        },
-        {
-          "id": "mag-3",
-          "name": "Europa Engineered Wood Display Unit",
-          "price": 15490,
-          "mrp": 28990,
-          "x": 86,
-          "y": 25,
-          "image": "https://interio.com/media/catalog/product/5/6/56101505sd00177_01_413x440.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=300&width=273"
-        }
+        { "id": "mk-chimney", "name": "Wall-mounted chimney", "price": 0, "mrp": 0, "x": 27, "y": 58, "image": "/images/site/hs-k-chimney.jpg" },
+        { "id": "mk-oven", "name": "Built-in oven", "price": 0, "mrp": 0, "x": 72, "y": 59, "image": "/images/site/hs-k-oven.jpg" },
+        { "id": "mk-island", "name": "Quartz waterfall island", "price": 0, "mrp": 0, "x": 78, "y": 80, "image": "/images/site/hs-k-island.jpg" },
+        { "id": "mk-tall", "name": "Tall refrigerator unit", "price": 0, "mrp": 0, "x": 55, "y": 33, "image": "/images/site/hs-k-tall.jpg" }
       ]
     },
     {
-      "id": "ray",
-      "name": "Ray Bedroom Suite",
-      "subtitle": "Integrated motorized convenience meets Scandinavian minimalism",
-      "roomImage": "https://interio.com/media/wysiwyg/CLP/Untitled_design_20_.jpg",
+      "id": "marble-brass-bath",
+      "name": "The Marble & Brass Bathroom",
+      "subtitle": "A double vanity with brass fittings, round mirrors and a bright window",
+      "roomImage": "/images/site/look-bath.jpg",
       "hotspots": [
-        {
-          "id": "ray-1",
-          "name": "Ray Queen Size Wooden Bed with Motorized Storage",
-          "price": 64990,
-          "mrp": 89900,
-          "x": 45,
-          "y": 60,
-          "image": "https://interio.com/media/catalog/product/5/6/56101515sd00425_01_413x440.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=300&width=273"
-        },
-        {
-          "id": "ray-2",
-          "name": "Ray Prelaminated Bedside Table",
-          "price": 5990,
-          "mrp": 9900,
-          "x": 18,
-          "y": 52,
-          "image": "https://interio.com/media/catalog/product/5/6/56101719sd00106_01_413x440.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=300&width=273"
-        }
+        { "id": "mb-mirror", "name": "Round brass-frame mirror", "price": 0, "mrp": 0, "x": 38, "y": 26, "image": "/images/site/hs-b-mirror.jpg" },
+        { "id": "mb-mixer", "name": "Brass basin mixer", "price": 0, "mrp": 0, "x": 68, "y": 28, "image": "/images/site/hs-b-mixer.jpg" },
+        { "id": "mb-vanity", "name": "Shaker-style vanity unit", "price": 0, "mrp": 0, "x": 85, "y": 55, "image": "/images/site/hs-b-vanity.jpg" },
+        { "id": "mb-window", "name": "Bathroom window", "price": 0, "mrp": 0, "x": 38, "y": 74, "image": "/images/site/hs-b-window.jpg" }
       ]
     },
     {
-      "id": "garnet",
-      "name": "Garnet Dining Ensemble",
-      "subtitle": "Timeless solid wood dining built for intimate dinners and celebrations",
-      "roomImage": "https://interio.com/media/wysiwyg/B2C-Homepage/Untitled_design_47_.jpg",
+      "id": "glass-wall-living",
+      "name": "The Glass-Wall Living Room",
+      "subtitle": "Slim-frame sliding doors and picture windows that open onto the deck",
+      "roomImage": "/images/site/look-living.jpg",
       "hotspots": [
-        {
-          "id": "gar-1",
-          "name": "Garnet 6-Seater Solid Wood Dining Table",
-          "price": 39990,
-          "mrp": 58000,
-          "x": 50,
-          "y": 65,
-          "image": "https://interio.com/media/catalog/product/5/6/56101543sd00413_01_413x440.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=300&width=273"
-        },
-        {
-          "id": "gar-2",
-          "name": "Garnet Fabric Dining Chair (Set of 2)",
-          "price": 12490,
-          "mrp": 18000,
-          "x": 25,
-          "y": 55,
-          "image": "https://interio.com/media/catalog/product/5/6/56101522sd05524_01_413x440.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=300&width=273"
-        }
+        { "id": "gl-sliding", "name": "Slim-frame sliding doors", "price": 0, "mrp": 0, "x": 40, "y": 76, "image": "/images/site/hs-l-sliding.jpg" },
+        { "id": "gl-window", "name": "Fixed picture window", "price": 0, "mrp": 0, "x": 30, "y": 55, "image": "/images/site/hs-l-window.jpg" },
+        { "id": "gl-bench", "name": "Built-in bench storage", "price": 0, "mrp": 0, "x": 62, "y": 29, "image": "/images/site/hs-l-bench.jpg" }
       ]
     }
   ],
-  "testimonials": [
+  "promises": [
     {
-      "quote": "Accessories in the kitchen are very attractive like the pantry, the rolling shutter, and the pullout wicker baskets. I can arrange and manage my things in an easier way.",
-      "author": "Nazmin Khan",
-      "location": "Mumbai",
-      "product": "Relish Modular Kitchen"
+      "title": "One team, start to finish",
+      "description": "Design, supply and installation for your kitchen, bathroom, wardrobes, doors and windows, with one point of contact throughout."
     },
     {
-      "quote": "This is my second purchase from Godrej Interio online, the product quality and service is very good.",
-      "author": "Deepak Vyas",
-      "location": "Bengaluru",
-      "product": "Zion Hydraulic Bed"
+      "title": "Designed for how you live",
+      "description": "We plan around your space, your routine and your budget instead of fitting you into a catalogue layout."
     },
     {
-      "quote": "The tranquil drawer unit made storing our essentials a breezy affair. And we were mesmerised with the amazing modular, under mount kitchen sink.",
-      "author": "Pankaj & Shruti Mahajan",
-      "location": "Pune",
-      "product": "Custom Modular Kitchen"
+      "title": "See it before it's built",
+      "description": "You approve the layout, materials and finishes before any work begins on site."
     },
     {
-      "quote": "It is a pleasant surprise to see that Godrej has so many types of furniture now. The variety and range is good and there is something for everyone. Got a good sleek cupboard with quick delivery.",
-      "author": "Anurag Gupta",
-      "location": "Delhi NCR",
-      "product": "Slimline Steel Almirah"
+      "title": "Clear, itemised quotations",
+      "description": "Every quotation lists products, finishes and installation separately, so you know exactly what you are paying for."
     },
     {
-      "quote": "Very good product. Overall happy with the technician who came to install the almirah. Wonderful job!",
-      "author": "Wanlamlin",
-      "location": "Shillong",
-      "product": "Flynn NX Steel Almirah"
-    },
-    {
-      "quote": "Godrej Interio came in, making our wishes come true. They tend to understand their clients well and they use the functionality, space and colour themes smartly and beautifully.",
-      "author": "Purvdeep Mhatre",
-      "location": "Thane",
-      "product": "Home Interiors Consultation"
-    },
-    {
-      "quote": "Great bed installation service and the product is excellent. Great work done!",
-      "author": "Rajkumar Tekchandani",
-      "location": "Ahmedabad",
-      "product": "Eden V2 King Bed"
-    },
-    {
-      "quote": "2 door Almirah fittings - quality is very good, delivery is very fast and installation was done within 2 days of ordering. Overall service is very good.",
-      "author": "Sumedha Chakraborty",
-      "location": "Kolkata",
-      "product": "Ewa 2-Door Wardrobe"
-    },
-    {
-      "quote": "I am extremely grateful and thankful to the entire Godrej Interio team for making my dream kitchen come into reality... the relish kitchen is more than just beautiful, it is incredibly practical.",
-      "author": "Manasi Naik",
-      "location": "Hyderabad",
-      "product": "Relish Kitchen"
+      "title": "Support after handover",
+      "description": "Need a hinge adjusted or a service visit later? Call us and we will take care of it."
     }
   ],
   "services": [
     {
-      "id": "reupholstery",
-      "title": "Reupholstery",
-      "description": "Give your favorite sofas, recliners, and dining chairs a refreshed, brand-new look with premium Godrej fabrics and cushioning.",
-      "image": "https://interio.com/media/.renditions/wysiwyg/B2C-Homepage/Reupholstery_Sofa.png",
-      "tag": "Revitalize"
+      "id": "consultation",
+      "title": "Design consultation",
+      "description": "Share your floor plan and how you use the space. We suggest layouts, materials and finishes that suit your budget.",
+      "icon": "consultation",
+      "tag": "Plan"
     },
     {
-      "id": "cleaning",
-      "title": "Deep Cleaning & Sanitization",
-      "description": "Professional eco-safe sanitization and deep fabric steam cleaning for sofas, mattresses, and upholstered beds.",
-      "image": "https://interio.com/media/wysiwyg/Curated-for-you/1.jpg",
-      "tag": "Hygiene First"
+      "id": "measurement",
+      "title": "Site measurement",
+      "description": "We measure on site so kitchens, wardrobes, doors and windows are made to fit your walls, not a standard size.",
+      "icon": "measurement",
+      "tag": "Measure"
     },
     {
-      "id": "repainting",
-      "title": "Repainting & Restoration",
-      "description": "High-precision epoxy powder coating and wood polishing to restore your steel almirahs and wooden heirlooms.",
-      "image": "https://interio.com/media/wysiwyg/Mega-Menu/4.jpg",
-      "tag": "Factory Finish"
+      "id": "installation",
+      "title": "Installation",
+      "description": "Our team installs and aligns everything, then walks you through how to use and care for it.",
+      "icon": "installation",
+      "tag": "Install"
+    },
+    {
+      "id": "support",
+      "title": "After-sales support",
+      "description": "Adjustments, part replacements and servicing whenever you need them after handover.",
+      "icon": "support",
+      "tag": "Support"
     }
   ],
   "articles": [
     {
-      "title": "10 Clever Small Living Room Layouts for Modern Apartments",
-      "category": "Living Room",
-      "readTime": "4 min read",
-      "image": "https://interio.com/media/.renditions/wysiwyg/B2C-Homepage/Get_inspired_522x300px.jpg"
-    },
-    {
-      "title": "How to Choose the Right Mattress for Optimal Spinal Support",
-      "category": "Sleep Science",
-      "readTime": "6 min read",
-      "image": "https://interio.com/media/wysiwyg/Mega-Menu/King_Mattresses.jpg"
-    },
-    {
-      "title": "Modular Kitchen Ergonomics: The Golden Triangle Explained",
+      "title": "Choosing the Right Kitchen Layout: L, U, Parallel or Island?",
       "category": "Kitchen Guide",
       "readTime": "5 min read",
-      "image": "https://interio.com/media/wysiwyg/Modular_Kitchen_MK.jpg"
+      "image": "/images/site/cat-kitchen-island.jpg"
+    },
+    {
+      "title": "Planning a Bathroom That Stays Easy to Clean",
+      "category": "Bathroom Guide",
+      "readTime": "4 min read",
+      "image": "/images/site/cat-bath-shower.jpg"
+    },
+    {
+      "title": "Sliding or Hinged? Picking the Right Wardrobe Doors",
+      "category": "Wardrobe Guide",
+      "readTime": "4 min read",
+      "image": "/images/site/cat-wardrobe-fitted.jpg"
     }
   ],
   "megaMenu": [
-    {
-      "id": "living",
-      "title": "Living room",
-      "subsections": [
-        {
-          "name": "Sofas & Loungers",
-          "items": [
-            {
-              "name": "Sofas",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/1_1.jpg"
-            },
-            {
-              "name": "Sofa sets",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/2_1.jpg"
-            },
-            {
-              "name": "Sofa cum beds",
-              "image": "https://interio.com/media/wysiwyg/Untitled_design_40_.jpg"
-            },
-            {
-              "name": "Recliner Sofas",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/Recliner.png"
-            },
-            {
-              "name": "L-shaped & corner sofas",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/5.jpg"
-            }
-          ]
-        },
-        {
-          "name": "Tables",
-          "items": [
-            {
-              "name": "Coffee Tables",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/Coffee_Tables.jpg"
-            },
-            {
-              "name": "Corner Tables",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/Corner_Tables.jpg"
-            }
-          ]
-        },
-        {
-          "name": "Cabinets & Storage",
-          "items": [
-            {
-              "name": "Display Units",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/Display_Unit.jpg"
-            },
-            {
-              "name": "Book Shelves",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/Book_shelves.jpg"
-            },
-            {
-              "name": "TV Units",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/TV_Units.jpg"
-            },
-            {
-              "name": "Shoe Racks",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/Shoe_Racks_1.jpg"
-            }
-          ]
-        },
-        {
-          "name": "Chairs & Soft Furnishings",
-          "items": [
-            {
-              "name": "Leisure Chairs",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/Untitled_design_30_.jpg"
-            },
-            {
-              "name": "Ottomans & Pouffes",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/3_1.jpg"
-            },
-            {
-              "name": "Pillows & Cushions",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/Pillows.jpg"
-            },
-            {
-              "name": "Designer Throws & Rugs",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/1.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "bedroom",
-      "title": "Bedroom",
-      "subsections": [
-        {
-          "name": "Beds",
-          "items": [
-            {
-              "name": "King Size Beds",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/King_Beds.jpg"
-            },
-            {
-              "name": "Queen Size Beds",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/Queen_Beds.jpg"
-            },
-            {
-              "name": "Single Beds",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/Single_Beds.jpg"
-            },
-            {
-              "name": "Hydraulic & Motorized Storage",
-              "image": "https://interio.com/media/wysiwyg/Homepage-product-collection-section/56101515SD00425_A2_1920_1080.jpg"
-            }
-          ]
-        },
-        {
-          "name": "Almirahs & Wardrobes",
-          "items": [
-            {
-              "name": "Steel Almirahs",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/4.jpg"
-            },
-            {
-              "name": "Wooden Wardrobes",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/Wooden_Wardrobes.jpg"
-            },
-            {
-              "name": "2-Door Wardrobes",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/2_Door_1_.jpg"
-            },
-            {
-              "name": "3-Door & 4-Door Wardrobes",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/4_Door.jpg"
-            }
-          ]
-        },
-        {
-          "name": "Mattresses",
-          "items": [
-            {
-              "name": "King Mattresses",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/King_Mattresses.jpg"
-            },
-            {
-              "name": "Queen Mattresses",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/Queen_Mattresses.jpg"
-            },
-            {
-              "name": "Single & Double Mattresses",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/Double_Mattresses.jpg"
-            }
-          ]
-        },
-        {
-          "name": "Bedroom Tables & Lockers",
-          "items": [
-            {
-              "name": "Bedside Tables",
-              "image": "https://interio.com/media/catalog/product/5/6/56101719sd00106_01_413x440.jpg"
-            },
-            {
-              "name": "Dressing Tables",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/Dressing_Tables.jpg"
-            },
-            {
-              "name": "Digital & Biometric Safes",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/Mega_Menu_Digital_Lockers.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "dining",
-      "title": "Dining room",
-      "subsections": [
-        {
-          "name": "Dining Sets",
-          "items": [
-            {
-              "name": "4-Seater Dining Sets",
-              "image": "https://interio.com/media/wysiwyg/Curated-for-you/26.jpg"
-            },
-            {
-              "name": "6-Seater Dining Sets",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/dining_set.png"
-            },
-            {
-              "name": "8-Seater Grand Sets",
-              "image": "https://interio.com/media/wysiwyg/Curated-for-you/20.jpg"
-            }
-          ]
-        },
-        {
-          "name": "Dining Tables & Chairs",
-          "items": [
-            {
-              "name": "Solid Wood Tables",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/Dining_table.png"
-            },
-            {
-              "name": "Marble Dining Tables",
-              "image": "https://interio.com/media/wysiwyg/Homepage-product-collection-section/56101543sd00173_feature_a2_1920_1080.jpg"
-            },
-            {
-              "name": "Upholstered Chairs (Sets)",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/Dining_Chairs_1_.jpg"
-            },
-            {
-              "name": "Dining Benches",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/bench.png"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "office",
-      "title": "Office and Study",
-      "subsections": [
-        {
-          "name": "Work from Home",
-          "items": [
-            {
-              "name": "Ergonomic Office Chairs",
-              "image": "https://interio.com/media/catalog/product/g/r/greta0003_01_1920x1080.jpg"
-            },
-            {
-              "name": "Study & Work Desks",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/Work_desks_Study_tables_1.jpg"
-            },
-            {
-              "name": "Storage Cabinets",
-              "image": "https://interio.com/media/catalog/product/5/6/56101702sd01007_01_1920x1080.jpg"
-            }
-          ]
-        }
-      ]
-    },
     {
       "id": "kitchens",
       "title": "Modular Kitchens",
       "subsections": [
         {
-          "name": "Kitchen Solutions",
+          "name": "Layouts",
           "items": [
-            {
-              "name": "Modular Kitchen Designs",
-              "image": "https://interio.com/media/wysiwyg/Modular_Kitchen_MK.jpg"
-            },
-            {
-              "name": "Steel Kitchen Cabinets",
-              "image": "https://interio.com/media/wysiwyg/Kitchen_9.jpg"
-            },
-            {
-              "name": "Book Free Consultation",
-              "image": "https://interio.com/media/wysiwyg/Kitchen_2__3.jpg"
-            }
+            { "name": "L-Shaped Kitchens", "image": "/images/site/cat-kitchen-l-shaped.jpg" },
+            { "name": "U-Shaped Kitchens", "image": "/images/site/cat-kitchen-u-shaped.jpg" },
+            { "name": "Island Kitchens", "image": "/images/site/cat-kitchen-island.jpg" },
+            { "name": "Parallel Kitchens", "image": "/images/site/cat-kitchen-parallel.jpg" },
+            { "name": "Straight Kitchens", "image": "/images/site/cat-kitchen-straight.jpg" }
+          ]
+        },
+        {
+          "name": "Styles",
+          "items": [
+            { "name": "Handleless Kitchens", "image": "/images/site/cur-k-handleless.jpg" },
+            { "name": "Classic Shaker Kitchens", "image": "/images/site/cur-k-shaker.jpg" },
+            { "name": "Two-Tone Kitchens", "image": "/images/site/cur-k-sage.jpg" },
+            { "name": "Dark & Wood Kitchens", "image": "/images/site/cur-k-dark.jpg" }
           ]
         }
       ]
     },
     {
-      "id": "all-products",
-      "title": "All Products",
+      "id": "bathrooms",
+      "title": "Bathrooms",
       "subsections": [
         {
-          "name": "Browse All Categories",
+          "name": "Bathroom Solutions",
           "items": [
-            {
-              "name": "Living Room Furniture",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/1_1.jpg"
-            },
-            {
-              "name": "Bedroom Furniture",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/Bed.jpg"
-            },
-            {
-              "name": "Dining Room Furniture",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/Dining_Tables.jpg"
-            },
-            {
-              "name": "Office & Study Furniture",
-              "image": "https://interio.com/media/wysiwyg/Mega-Menu/Office_Chairs.jpg"
-            }
+            { "name": "Vanity Units", "image": "/images/site/cat-bath-vanity.jpg" },
+            { "name": "Shower Enclosures", "image": "/images/site/cat-bath-shower.jpg" },
+            { "name": "Bathtubs", "image": "/images/site/cat-bath-tub.jpg" },
+            { "name": "Taps & Showers", "image": "/images/site/cat-bath-fittings.jpg" },
+            { "name": "Sanitaryware", "image": "/images/site/cat-bath-sanitaryware.jpg" },
+            { "name": "Bathroom Storage", "image": "/images/site/cat-bath-storage.jpg" }
           ]
         }
       ]
     },
     {
-      "id": "offers",
-      "title": "Offers",
+      "id": "wardrobes",
+      "title": "Wardrobes",
       "subsections": [
         {
-          "name": "Festive Deals",
+          "name": "Wardrobes",
           "items": [
-            {
-              "name": "Up to 65% Off Festive Offers",
-              "image": "https://interio.com/media/wysiwyg/Big-Billion-Day_Ticker_Desktop-Size.jpg"
-            },
-            {
-              "name": "Furniture Exchange - Save Up to ₹5,000",
-              "image": "https://interio.com/media/wysiwyg/Untitled_design_18__1.jpg"
-            }
+            { "name": "Fitted Wardrobes", "image": "/images/site/cat-wardrobe-fitted.jpg" },
+            { "name": "Hinged Wardrobes", "image": "/images/site/cat-wardrobe-hinged.jpg" },
+            { "name": "Walk-in Wardrobes", "image": "/images/site/cat-wardrobe-walkin.jpg" },
+            { "name": "Wardrobe Interiors", "image": "/images/site/cat-wardrobe-interiors.jpg" }
           ]
         }
       ]
     },
     {
-      "id": "nook",
-      "title": "Nook Magazine",
+      "id": "doors",
+      "title": "Doors",
       "subsections": [
         {
-          "name": "Design Editions",
+          "name": "Doors",
           "items": [
-            {
-              "name": "Issue 2: Modern Sanctuary",
-              "image": "https://interio.com/media/wysiwyg/Issue_2_Website_banner_Desktop_V1_1.jpg"
-            },
-            {
-              "name": "Design Philosophy: Modern, Modular, Made to Last",
-              "image": "https://interio.com/media/wysiwyg/Home_Interiors_HI.jpg"
-            }
+            { "name": "Entrance Doors", "image": "/images/site/cat-door-entrance.jpg" },
+            { "name": "Interior Doors", "image": "/images/site/cat-door-interior.jpg" },
+            { "name": "Sliding Glass Doors", "image": "/images/site/cat-door-sliding.jpg" },
+            { "name": "Smart Locks & Hardware", "image": "/images/site/cat-door-smart-lock.jpg" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "windows",
+      "title": "Windows",
+      "subsections": [
+        {
+          "name": "Windows",
+          "items": [
+            { "name": "Sliding Windows", "image": "/images/site/cat-window-sliding.jpg" },
+            { "name": "Casement Windows", "image": "/images/site/cat-window-casement.jpg" },
+            { "name": "Bay & Picture Windows", "image": "/images/site/cur-d-bay.jpg" },
+            { "name": "Arched Windows", "image": "/images/site/cur-d-arched.jpg" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "appliances",
+      "title": "Appliances",
+      "subsections": [
+        {
+          "name": "Kitchen Appliances",
+          "items": [
+            { "name": "Chimneys", "image": "/images/site/cat-app-chimney.jpg" },
+            { "name": "Hobs & Cooking Ranges", "image": "/images/site/cat-app-hob.jpg" },
+            { "name": "Built-in Ovens", "image": "/images/site/cat-app-oven.jpg" },
+            { "name": "Microwaves", "image": "/images/site/cat-app-microwave.jpg" },
+            { "name": "Dishwashers", "image": "/images/site/cat-app-dishwasher.jpg" },
+            { "name": "Refrigerators", "image": "/images/site/cat-app-fridge.jpg" },
+            { "name": "Washing Machines", "image": "/images/site/cat-app-washer.jpg" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "accessories",
+      "title": "Kitchen Accessories",
+      "subsections": [
+        {
+          "name": "Accessories",
+          "items": [
+            { "name": "Sinks", "image": "/images/site/cat-acc-sink.jpg" },
+            { "name": "Faucets", "image": "/images/site/cat-acc-faucet.jpg" },
+            { "name": "Tall Pantry Units", "image": "/images/site/cat-acc-pantry.jpg" },
+            { "name": "Wall Rail Systems", "image": "/images/site/cat-acc-rail.jpg" },
+            { "name": "Spice & Bottle Organisers", "image": "/images/site/cat-acc-spice.jpg" }
           ]
         }
       ]
@@ -1139,253 +613,134 @@
   ],
   "faqs": [
     {
-      "question": "Why choose Interio by Godrej for your home furniture?",
-      "answer": "With over 100 years of Godrej trust and manufacturing excellence in India, Interio by Godrej brings together ergonomic design, sustainable materials, state-of-the-art durability, free doorstep delivery, and expert assembly across 17,000+ pin codes."
+      "question": "What does Status Bath and Kitchen offer?",
+      "answer": "Modular kitchens, bathrooms, wardrobes, doors and windows, along with kitchen appliances and accessories — designed, supplied and installed by one team."
     },
     {
-      "question": "How does Godrej Interio Furniture Exchange work?",
-      "answer": "You can trade in your old furniture of any brand and receive instant exchange discounts of up to ₹5,000 on your new Godrej Interio order, along with hassle-free doorstep pickup."
+      "question": "Can I see the design before I confirm?",
+      "answer": "Yes. We share the layout, materials and finishes with you for approval before any work begins."
     },
     {
-      "question": "Do you offer customization for modular kitchens and wardrobes?",
-      "answer": "Yes! Our design experts provide end-to-end 3D visualization, material customization, and on-site measurement consultations. We use 100% rust-free galvanized steel frames and premium soft-close German hardware."
-    },
-    {
-      "question": "What warranties are offered on Godrej Interio products?",
-      "answer": "Godrej Interio provides up to 10 years of structural warranty on steel almirahs and modular kitchens, and comprehensive 1-to-3 year warranties on sofas, solid wood sets, and motorized storage beds."
-    },
-    {
-      "question": "Is free delivery and professional installation included?",
-      "answer": "Yes, all eligible furniture orders include free delivery and white-glove assembly by certified Godrej technicians."
+      "question": "What warranty do I get?",
+      "answer": "Warranty depends on the product and the brand. The exact terms for every item are listed in your quotation and invoice."
     }
   ],
   "howCanWeHelpTabs": [
     {
-      "tabName": "Sofas & Recliners",
+      "tabName": "Modular Kitchens",
+      "aliases": ["Kitchens", "Handleless Kitchens", "Classic Shaker Kitchens", "Two-Tone Kitchens", "Dark & Wood Kitchens"],
       "items": [
-        {
-          "name": "Sofas",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/1_1.jpg",
-          "link": "https://interio.com/all-products/sofas-loungers/sofas/"
-        },
-        {
-          "name": "Sofa Sets",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/2_1.jpg",
-          "link": "https://interio.com/all-products/sofas-loungers/sofa-sets/"
-        },
-        {
-          "name": "Recliner Sofas",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/Recliner.png",
-          "link": "https://interio.com/all-products/sofas-loungers/recliner-sofas/"
-        },
-        {
-          "name": "Sofa cum Beds",
-          "image": "https://interio.com/media/wysiwyg/Untitled_design_40_.jpg",
-          "link": "https://interio.com/all-products/sofas-loungers/sofa-cum-beds/"
-        },
-        {
-          "name": "L-Shaped and Corner Sofas",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/5.jpg",
-          "link": "https://interio.com/all-products/sofas-loungers/l-shaped-and-corner-sofa/"
-        }
+        { "name": "L-Shaped Kitchens", "image": "/images/site/cat-kitchen-l-shaped.jpg", "link": "#categories" },
+        { "name": "U-Shaped Kitchens", "image": "/images/site/cat-kitchen-u-shaped.jpg", "link": "#categories" },
+        { "name": "Island Kitchens", "image": "/images/site/cat-kitchen-island.jpg", "link": "#categories" },
+        { "name": "Parallel Kitchens", "image": "/images/site/cat-kitchen-parallel.jpg", "link": "#categories" },
+        { "name": "Straight Kitchens", "image": "/images/site/cat-kitchen-straight.jpg", "link": "#categories" }
       ]
     },
     {
-      "tabName": "Beds",
+      "tabName": "Bathrooms",
+      "aliases": ["Bath", "Bathroom"],
       "items": [
-        {
-          "name": "King Beds",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/King_Beds.jpg",
-          "link": "https://interio.com/all-products/beds/king-beds/"
-        },
-        {
-          "name": "Queen Beds",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/Queen_Beds.jpg",
-          "link": "https://interio.com/all-products/beds/queen-beds/"
-        },
-        {
-          "name": "Single Beds",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/Single_Beds.jpg",
-          "link": "https://interio.com/all-products/beds/single-beds/"
-        }
+        { "name": "Vanity Units", "image": "/images/site/cat-bath-vanity.jpg", "link": "#categories" },
+        { "name": "Shower Enclosures", "image": "/images/site/cat-bath-shower.jpg", "link": "#categories" },
+        { "name": "Bathtubs", "image": "/images/site/cat-bath-tub.jpg", "link": "#categories" },
+        { "name": "Taps & Showers", "image": "/images/site/cat-bath-fittings.jpg", "link": "#categories" },
+        { "name": "Sanitaryware", "image": "/images/site/cat-bath-sanitaryware.jpg", "link": "#categories" },
+        { "name": "Bathroom Storage", "image": "/images/site/cat-bath-storage.jpg", "link": "#categories" }
       ]
     },
     {
-      "tabName": "Almirahs & Wardrobes",
+      "tabName": "Wardrobes",
+      "aliases": ["Wardrobe"],
       "items": [
-        {
-          "name": "Steel Almirahs",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/4.jpg",
-          "link": "https://interio.com/all-products/almirahs-wardrobes/steel-almirahs/"
-        },
-        {
-          "name": "Wooden Wardrobes",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/Wooden_Wardrobes.jpg",
-          "link": "https://interio.com/all-products/almirahs-wardrobes/wooden-wardrobes/"
-        },
-        {
-          "name": "2 Door Wardrobes",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/2_Door_1_.jpg",
-          "link": "https://interio.com/all-products/almirahs-wardrobes/two-door-wardrobes/"
-        },
-        {
-          "name": "3 Door Wardrobes",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/s_door_almirah.png",
-          "link": "https://interio.com/all-products/almirahs-wardrobes/three-door-wardrobes/"
-        },
-        {
-          "name": "4 Door Wardrobes",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/4_Door.jpg",
-          "link": "https://interio.com/all-products/almirahs-wardrobes/four-door-wardrobes/"
-        }
+        { "name": "Fitted Wardrobes", "image": "/images/site/cat-wardrobe-fitted.jpg", "link": "#categories" },
+        { "name": "Hinged Wardrobes", "image": "/images/site/cat-wardrobe-hinged.jpg", "link": "#categories" },
+        { "name": "Walk-in Wardrobes", "image": "/images/site/cat-wardrobe-walkin.jpg", "link": "#categories" },
+        { "name": "Wardrobe Interiors", "image": "/images/site/cat-wardrobe-interiors.jpg", "link": "#categories" }
       ]
     },
     {
-      "tabName": "Dining",
+      "tabName": "Doors & Windows",
+      "aliases": ["Doors", "Windows", "Door", "Window", "Bay & Picture Windows", "Arched Windows"],
       "items": [
-        {
-          "name": "Dining Sets",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/dining_set.png",
-          "link": "https://interio.com/all-products/dining-furniture/dining-sets/"
-        },
-        {
-          "name": "Dining Tables",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/Dining_table.png",
-          "link": "https://interio.com/all-products/dining-furniture/dining-tables/"
-        },
-        {
-          "name": "Dining Chairs",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/Dining_Chairs_1_.jpg",
-          "link": "https://interio.com/all-products/dining-furniture/dining-chairs/"
-        },
-        {
-          "name": "Dining Benches",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/bench.png",
-          "link": "https://interio.com/all-products/dining-furniture/dining-benches/"
-        }
+        { "name": "Entrance Doors", "image": "/images/site/cat-door-entrance.jpg", "link": "#categories" },
+        { "name": "Interior Doors", "image": "/images/site/cat-door-interior.jpg", "link": "#categories" },
+        { "name": "Sliding Glass Doors", "image": "/images/site/cat-door-sliding.jpg", "link": "#categories" },
+        { "name": "Sliding Windows", "image": "/images/site/cat-window-sliding.jpg", "link": "#categories" },
+        { "name": "Casement Windows", "image": "/images/site/cat-window-casement.jpg", "link": "#categories" },
+        { "name": "Smart Locks & Hardware", "image": "/images/site/cat-door-smart-lock.jpg", "link": "#categories" }
       ]
     },
     {
-      "tabName": "Mattresses",
+      "tabName": "Appliances",
+      "aliases": ["Appliance", "Kitchen Appliances"],
       "items": [
-        {
-          "name": "King Size Mattresses",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/King_Mattresses.jpg",
-          "link": "https://interio.com/all-products/mattresses/king-size-mattresses/"
-        },
-        {
-          "name": "Queen Size Mattresses",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/Queen_Mattresses.jpg",
-          "link": "https://interio.com/all-products/mattresses/queen-size-mattresses/"
-        },
-        {
-          "name": "Single Size Mattresses",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/Single_Mattresses.jpg",
-          "link": "https://interio.com/all-products/mattresses/single-mattresses/"
-        },
-        {
-          "name": "Double Size Mattresses",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/Double_Mattresses.jpg",
-          "link": "https://interio.com/all-products/mattresses/double-mattresses/"
-        }
+        { "name": "Chimneys", "image": "/images/site/cat-app-chimney.jpg", "link": "#categories" },
+        { "name": "Hobs & Cooking Ranges", "image": "/images/site/cat-app-hob.jpg", "link": "#categories" },
+        { "name": "Built-in Ovens", "image": "/images/site/cat-app-oven.jpg", "link": "#categories" },
+        { "name": "Microwaves", "image": "/images/site/cat-app-microwave.jpg", "link": "#categories" },
+        { "name": "Dishwashers", "image": "/images/site/cat-app-dishwasher.jpg", "link": "#categories" },
+        { "name": "Refrigerators", "image": "/images/site/cat-app-fridge.jpg", "link": "#categories" },
+        { "name": "Washing Machines", "image": "/images/site/cat-app-washer.jpg", "link": "#categories" }
       ]
     },
     {
-      "tabName": "Cabinets",
+      "tabName": "Kitchen Accessories",
+      "aliases": ["Accessories", "Kitchen Accessory"],
       "items": [
-        {
-          "name": "Display Units",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/Display_Unit.jpg",
-          "link": "https://interio.com/all-products/cabinets/display-units/"
-        },
-        {
-          "name": "TV Units",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/TV_Units.jpg",
-          "link": "https://interio.com/all-products/cabinets/tv-units/"
-        },
-        {
-          "name": "Shoe Racks",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/Shoe_Racks_1.jpg",
-          "link": "https://interio.com/all-products/cabinets/shoe-racks/"
-        },
-        {
-          "name": "Book Shelves",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/Book_shelves.jpg",
-          "link": "https://interio.com/living-room/cabinets/book-shelves/"
-        }
-      ]
-    },
-    {
-      "tabName": "Tables",
-      "items": [
-        {
-          "name": "Coffee Tables",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/Coffee_Tables.jpg",
-          "link": "https://interio.com/all-products/tables/coffee-tables/"
-        },
-        {
-          "name": "Corner Tables",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/Corner_Tables.jpg",
-          "link": "https://interio.com/all-products/tables/corner-tables/"
-        },
-        {
-          "name": "Dressing Tables",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/Dressing_Tables.jpg",
-          "link": "https://interio.com/all-products/tables/dressing-tables/"
-        },
-        {
-          "name": "Work Desks & Study Tables",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/Work_desks_Study_tables_1.jpg",
-          "link": "https://interio.com/all-products/tables/work-desks-study-tables/"
-        }
-      ]
-    },
-    {
-      "tabName": "Home Lockers",
-      "items": [
-        {
-          "name": "Digital Lockers",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/Mega_Menu_Digital_Lockers.jpg",
-          "link": "https://interio.com/all-products/home-lockers/digital-lockers/"
-        },
-        {
-          "name": "Biometric Lockers",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/Mega_Menu_Biometric_Lockers.jpg",
-          "link": "https://interio.com/all-products/home-lockers/biometric-lockers/"
-        },
-        {
-          "name": "Manual Lockers",
-          "image": "https://interio.com/media/wysiwyg/Mega-Menu/Mega_Menu_Manual_Lockers.jpg",
-          "link": "https://interio.com/all-products/home-lockers/manual-lockers/"
-        }
+        { "name": "Sinks", "image": "/images/site/cat-acc-sink.jpg", "link": "#categories" },
+        { "name": "Faucets", "image": "/images/site/cat-acc-faucet.jpg", "link": "#categories" },
+        { "name": "Tall Pantry Units", "image": "/images/site/cat-acc-pantry.jpg", "link": "#categories" },
+        { "name": "Wall Rail Systems", "image": "/images/site/cat-acc-rail.jpg", "link": "#categories" },
+        { "name": "Spice & Bottle Organisers", "image": "/images/site/cat-acc-spice.jpg", "link": "#categories" }
       ]
     }
   ],
   "tickerBanner": {
-    "desktopImg": "https://interio.com/media/wysiwyg/Big-Billion-Day_Ticker_Desktop-Size.jpg",
-    "mobileImg": "https://interio.com/media/wysiwyg/Big-Billion-Day_Ticker_Mobile-Size.jpg",
-    "link": "#curated-products"
+    "text": "Planning a new kitchen or bathroom? Talk to our design team about layouts, finishes and budget.",
+    "ctaText": "Book a consultation"
+  },
+  "serviceStrip": {
+    "title": "Everything for your kitchen & bath",
+    "subtitle": "Modular Kitchens • Wardrobes • Doors • Windows • Appliances • Kitchen Accessories & more",
+    "items": [
+      { "id": "kitchens", "label": "Modular Kitchens" },
+      { "id": "bathrooms", "label": "Bathrooms" },
+      { "id": "wardrobes", "label": "Wardrobes" },
+      { "id": "doors", "label": "Doors" },
+      { "id": "windows", "label": "Windows" },
+      { "id": "appliances", "label": "Appliances" },
+      { "id": "accessories", "label": "Kitchen Accessories" }
+    ]
   },
   "liveFaqs": [
     {
-      "question": "Why should we choose Interio by Godrej for our homes?",
-      "answer": "Interio by Godrej brings smart, stylish, and durable home furniture across living, bedroom, dining, and storage solutions—designed to elevate comfort, maximize space, and complement every modern home with 100+ years of trusted engineering."
+      "question": "What does Status Bath and Kitchen offer?",
+      "answer": "We design, supply and install modular kitchens, bathrooms, wardrobes, doors and windows, along with kitchen appliances and accessories, so you can plan your whole home with one team."
     },
     {
-      "question": "What is covered in the warranty period, and how can I raise a claim?",
-      "answer": "We offer comprehensive warranties ranging up to 10 years on steel structural frames and modular kitchens, and 1 to 3 years on upholstery, motorized mechanisms, and wooden furniture. You can easily raise a claim by calling our toll-free support at 1800-267-1122 or submitting an online service request."
+      "question": "How does a kitchen or bathroom project work?",
+      "answer": "It starts with a consultation to understand your space, needs and budget. We then measure on site and share a design with a detailed quotation. Once you approve it, we prepare everything and install it."
     },
     {
-      "question": "Is there a return or replacement policy?",
-      "answer": "Yes, Godrej Interio offers a transparent replacement and return policy. In the unlikely event of transit damage or manufacturing defect, our technician will inspect and arrange a free replacement or prompt resolution."
+      "question": "Can I see the design before I confirm?",
+      "answer": "Yes. We share the layout, materials and finishes with you for approval before any work begins, and you can ask for changes at that stage."
     },
     {
-      "question": "Which shopping option is right for me - Online or In-Store?",
-      "answer": "Shopping online gives you access to the entire 2000+ product catalog with doorstep delivery across 17,000+ PIN codes. Visiting our 1000+ experience centers allows you to test comfort and consult in-person with 3D design experts."
+      "question": "How long does installation take?",
+      "answer": "It depends on the size of the project and the materials you choose. Your quotation includes an estimated timeline so you can plan around it."
     },
     {
-      "question": "Are the products, prices, and warranty the same online and in-store?",
-      "answer": "Yes, Godrej Interio maintains uniform high standards of manufacturing quality, transparent pricing, and nationwide brand warranty whether you order online or visit any of our authorized retail stores."
+      "question": "Do you supply appliances and accessories too?",
+      "answer": "Yes. We can plan chimneys, hobs, built-in ovens, microwaves, dishwashers and refrigerators into your kitchen, along with sinks, faucets, pantry units and other accessories."
+    },
+    {
+      "question": "What warranty do I get?",
+      "answer": "Warranty depends on the product and the brand. The exact terms for every item are listed in your quotation and invoice."
+    },
+    {
+      "question": "Do you work with builders, architects and interior designers?",
+      "answer": "Yes. We take on project orders for kitchens, wardrobes, doors and windows. Get in touch to discuss your drawings and timelines."
     }
   ]
 }

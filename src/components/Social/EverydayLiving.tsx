@@ -1,7 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { ExternalLink } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { siteBrand } from "@/data/interioData";
+import { useCart } from "@/context/CartContext";
 
 function InstagramIcon({ className = "w-4 h-4" }: { className?: string }) {
   return (
@@ -21,88 +23,79 @@ function InstagramIcon({ className = "w-4 h-4" }: { className?: string }) {
   );
 }
 
-interface SocialPost {
+interface InspirationPost {
   id: string;
   img: string;
   title: string;
   room: string;
-  handle: string;
-  url: string;
 }
 
-const socialPosts: SocialPost[] = [
+const inspirationPosts: InspirationPost[] = [
   {
-    id: "post-1",
-    img: "https://interio.com/media/socialmedia/tmp/18212984938337436.jpg",
-    title: "Minimalist Living Room setup with Godrej Fabric Sofa",
-    room: "Living Room",
-    handle: "@stylingwithanita",
-    url: "https://www.instagram.com/p/DaVJ-0gGFZJ/",
+    id: "idea-1",
+    img: "/images/site/gal-1.jpg",
+    title: "White kitchen with a breakfast island, black pendants and stainless appliances",
+    room: "Kitchen",
   },
   {
-    id: "post-2",
-    img: "https://interio.com/media/socialmedia/tmp/17936415279003635.jpg",
-    title: "Warm bedroom aesthetic featuring motorized storage bed",
-    room: "Master Bedroom",
-    handle: "@homedesign.diaries",
-    url: "https://www.instagram.com/godrejinterioio/",
+    id: "idea-2",
+    img: "/images/site/gal-2.jpg",
+    title: "Floating wood vanity with open shelves for rolled towels",
+    room: "Bathroom",
   },
   {
-    id: "post-3",
-    img: "https://interio.com/media/socialmedia/tmp/18171816193352360.jpg",
-    title: "Cozy reading corner with ergonomic lounge recliner",
-    room: "Reading Nook",
-    handle: "@urbanliving.in",
-    url: "https://www.instagram.com/godrejinterioio/",
+    id: "idea-3",
+    img: "/images/site/gal-3.jpg",
+    title: "Open shelving on white subway tiles keeps everyday pieces in reach",
+    room: "Kitchen",
   },
   {
-    id: "post-4",
-    img: "https://interio.com/media/socialmedia/tmp/18061521476205093.jpg",
-    title: "Elegant solid wood dining space for family gatherings",
-    room: "Dining Room",
-    handle: "@interiorsbymaya",
-    url: "https://www.instagram.com/godrejinterioio/",
+    id: "idea-4",
+    img: "/images/site/gal-4.jpg",
+    title: "Oak double vanity with tall storage and twin vessel basins",
+    room: "Bathroom",
   },
   {
-    id: "post-5",
-    img: "https://interio.com/media/socialmedia/tmp/18115148392444762.jpg",
-    title: "Organized workspace with ergonomic chair and study table",
-    room: "Home Office",
-    handle: "@deskspaces",
-    url: "https://www.instagram.com/godrejinterioio/",
+    id: "idea-5",
+    img: "/images/site/gal-5.jpg",
+    title: "Freestanding tub, wall-hung basin and a stone feature wall",
+    room: "Bathroom",
   },
 ];
 
 export default function EverydayLiving() {
-  const [activePost, setActivePost] = useState<SocialPost | null>(null);
+  const [activePost, setActivePost] = useState<InspirationPost | null>(null);
+  const { openConsultation } = useCart();
 
   return (
-    <section className="py-14 sm:py-20 bg-white border-t border-stone-100">
+    <section id="inspiration" className="py-14 sm:py-20 bg-white border-t border-stone-100">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-12">
           <div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#1c1c1c] tracking-tight">
-              Interio in Everyday Living
+              Ideas for your kitchen &amp; bath
             </h2>
             <p className="mt-2 text-sm sm:text-base text-gray-500 font-normal">
-              Real homes styled with Godrej Interio furniture. Tag <span className="font-semibold text-[#ff5247]">#InterioInEverydayLiving</span> to be featured.
+              A few looks to get you started. Tap one and we will help you plan something similar.
             </p>
           </div>
-          <a
-            href="https://www.instagram.com/godrejinterioio/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 sm:mt-0 inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#ff5247] hover:underline"
-          >
-            <InstagramIcon className="w-4 h-4" />
-            <span>Follow on Instagram</span>
-          </a>
+          {siteBrand.social.instagram && (
+            <a
+              href={siteBrand.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 sm:mt-0 inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#ff5247] hover:underline"
+            >
+              <InstagramIcon className="w-4 h-4" />
+              <span>Follow on Instagram</span>
+            </a>
+          )}
         </div>
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-5">
-          {socialPosts.map((post) => (
+          {inspirationPosts.map((post) => (
             <div
               key={post.id}
               onClick={() => setActivePost(post)}
@@ -113,37 +106,23 @@ export default function EverydayLiving() {
                 alt={post.title}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src =
-                    "https://interio.com/media/wysiwyg/1_12.jpg";
-                }}
               />
 
               {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 text-white">
-                <div className="flex justify-end">
-                  <span className="p-2 bg-white/20 backdrop-blur-md rounded-full">
-                    <InstagramIcon className="w-4 h-4 text-white" />
-                  </span>
-                </div>
-                <div>
-                  <span className="text-[10px] uppercase font-bold tracking-wider text-[#ff7d70] block">
-                    {post.room}
-                  </span>
-                  <p className="text-xs font-semibold line-clamp-2 mt-0.5 leading-snug">
-                    {post.title}
-                  </p>
-                  <p className="text-[11px] text-gray-300 mt-1 font-medium">
-                    {post.handle}
-                  </p>
-                </div>
+              <div className="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
+                <span className="text-[10px] uppercase font-bold tracking-wider text-[#ff7d70] block">
+                  {post.room}
+                </span>
+                <p className="text-xs font-semibold line-clamp-2 mt-0.5 leading-snug">
+                  {post.title}
+                </p>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Post Modal Detail */}
+      {/* Idea Detail Modal */}
       {activePost && (
         <div
           className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4"
@@ -163,35 +142,31 @@ export default function EverydayLiving() {
                 type="button"
                 onClick={() => setActivePost(null)}
                 className="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/50 hover:bg-black/75 text-white flex items-center justify-center text-sm font-bold transition-colors cursor-pointer"
+                aria-label="Close"
               >
                 ✕
               </button>
             </div>
             <div className="p-6">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <InstagramIcon className="w-5 h-5 text-[#ff5247]" />
-                  <span className="text-sm font-bold text-gray-900">
-                    {activePost.handle}
-                  </span>
-                </div>
-                <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-stone-100 text-gray-700">
-                  {activePost.room}
-                </span>
-              </div>
+              <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-stone-100 text-gray-700">
+                {activePost.room}
+              </span>
               <p className="text-sm text-gray-700 mt-3 font-normal leading-relaxed">
                 {activePost.title}
               </p>
               <div className="mt-6 flex gap-3">
-                <a
-                  href={activePost.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center gap-2 py-3 rounded-lg bg-[#ff5247] hover:bg-[#e0453b] text-white font-bold text-xs sm:text-sm transition-colors"
+                <button
+                  type="button"
+                  onClick={() => {
+                    const room = activePost.room;
+                    setActivePost(null);
+                    openConsultation(room);
+                  }}
+                  className="flex-1 inline-flex items-center justify-center gap-2 py-3 rounded-lg bg-[#ff5247] hover:bg-[#e0453b] text-white font-bold text-xs sm:text-sm transition-colors cursor-pointer"
                 >
-                  <span>View on Instagram</span>
-                  <ExternalLink className="w-4 h-4" />
-                </a>
+                  <span>Plan a {activePost.room.toLowerCase()} like this</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
               </div>
             </div>
           </div>

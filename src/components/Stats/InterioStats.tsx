@@ -1,6 +1,27 @@
 "use client";
 
 import React from "react";
+import {
+  ChefHat,
+  Bath,
+  DoorClosed,
+  DoorOpen,
+  AppWindow,
+  Microwave,
+  UtensilsCrossed,
+  type LucideIcon,
+} from "lucide-react";
+import { serviceStrip } from "@/data/interioData";
+
+const icons: Record<string, LucideIcon> = {
+  kitchens: ChefHat,
+  bathrooms: Bath,
+  wardrobes: DoorClosed,
+  doors: DoorOpen,
+  windows: AppWindow,
+  appliances: Microwave,
+  accessories: UtensilsCrossed,
+};
 
 export default function InterioStats() {
   return (
@@ -8,43 +29,27 @@ export default function InterioStats() {
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 text-center">
         {/* Heading */}
         <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
-          Interio for India
+          {serviceStrip.title}
         </h2>
-        <p className="text-sm sm:text-base text-white/95 mt-2 sm:mt-3 font-normal max-w-xl mx-auto">
-          Providing comfort and style for modern living
+        <p className="text-sm sm:text-base text-white/95 mt-2 sm:mt-3 font-normal max-w-2xl mx-auto">
+          {serviceStrip.subtitle}
         </p>
 
-        {/* 3 Metric Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 mt-12 sm:mt-16 max-w-4xl mx-auto">
-          {/* Stat 1 */}
-          <div className="flex flex-col items-center">
-            <div className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight">
-              30<span className="text-3xl sm:text-4xl font-normal ml-0.5">+</span>
-            </div>
-            <p className="text-sm sm:text-base text-white/95 mt-3 font-normal">
-              Innovative products launched every year
-            </p>
-          </div>
-
-          {/* Stat 2 */}
-          <div className="flex flex-col items-center">
-            <div className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight">
-              17,000<span className="text-3xl sm:text-4xl font-normal ml-0.5">+</span>
-            </div>
-            <p className="text-sm sm:text-base text-white/95 mt-3 font-normal">
-              Pin codes serviced
-            </p>
-          </div>
-
-          {/* Stat 3 */}
-          <div className="flex flex-col items-center">
-            <div className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight">
-              1000<span className="text-3xl sm:text-4xl font-normal ml-0.5">+</span>
-            </div>
-            <p className="text-sm sm:text-base text-white/95 mt-3 font-normal">
-              Stores across the country
-            </p>
-          </div>
+        {/* Service Columns */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-8 sm:gap-10 mt-12 sm:mt-16 max-w-6xl mx-auto">
+          {serviceStrip.items.map((item) => {
+            const Icon = icons[item.id] ?? ChefHat;
+            return (
+              <div key={item.id} className="flex flex-col items-center">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-white/80 flex items-center justify-center">
+                  <Icon className="w-7 h-7 sm:w-9 sm:h-9" strokeWidth={1.75} />
+                </div>
+                <p className="text-sm sm:text-base text-white mt-3 font-semibold">
+                  {item.label}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

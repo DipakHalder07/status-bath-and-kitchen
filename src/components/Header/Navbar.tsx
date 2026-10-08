@@ -19,7 +19,7 @@ import {
   Tag,
   Building2,
   Home as HomeIcon,
-  Store,
+  CalendarCheck,
   Wrench,
 } from "lucide-react";
 import { useCart } from "@/context/CartContext";
@@ -36,7 +36,7 @@ export default function Navbar({
   onSearchSubmit,
   onCategorySelect,
 }: NavbarProps) {
-  const { cartCount, cartTotal, openCart, wishlist, showToast } = useCart();
+  const { cartCount, cartTotal, openCart, wishlist, showToast, openConsultation } = useCart();
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -46,20 +46,19 @@ export default function Navbar({
   const [newPincode, setNewPincode] = useState("");
   const [isListening, setIsListening] = useState(false);
   const [activeSegment, setActiveSegment] = useState<"homes" | "business">("homes");
-  const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
 
   const searchRef = useRef<HTMLDivElement>(null);
   const accountRef = useRef<HTMLDivElement>(null);
 
   const popularSearches = [
-    "sofa",
-    "almirah",
-    "bed",
-    "wardrobe",
-    "dining table",
-    "office chair",
-    "recliner",
-    "coffee table",
+    "modular kitchens",
+    "bathrooms",
+    "wardrobes",
+    "doors",
+    "windows",
+    "chimneys",
+    "vanity units",
+    "sinks",
   ];
 
   // Scroll detection for sticky header & transparent hero overlay
@@ -95,14 +94,14 @@ export default function Navbar({
     showToast("Voice search activated. Listening...");
     setTimeout(() => {
       setIsListening(false);
-      setSearchQuery("Recliner Sofa");
-      if (onSearchSubmit) onSearchSubmit("Recliner Sofa");
-      showToast('Recognized: "Recliner Sofa"');
+      setSearchQuery("Modular Kitchens");
+      if (onSearchSubmit) onSearchSubmit("Modular Kitchens");
+      showToast('Recognized: "Modular Kitchens"');
     }, 1800);
   };
 
   const handleCameraSearch = () => {
-    showToast("Visual Image Search ready. Select any room photo to find matching furniture!");
+    showToast("Visual search is coming soon. Share a photo with us during your consultation instead!");
   };
 
   const handleSearchFormSubmit = (e: React.FormEvent) => {
@@ -132,8 +131,6 @@ export default function Navbar({
       showToast("Please enter a valid 6-digit PIN code.");
     }
   };
-
-  const activeCategoryData = megaMenuItems.find((item) => item.id === hoveredCategory);
 
   return (
     <header
@@ -182,15 +179,16 @@ export default function Navbar({
 
           {/* Right Utility Links */}
           <div className="flex items-center space-x-4 sm:space-x-6 text-[11px] sm:text-xs">
-            <a
-              href="#dealer"
-              className={`hidden sm:flex items-center space-x-1.5 transition-colors ${
+            <button
+              type="button"
+              onClick={() => openConsultation("Design Consultation")}
+              className={`hidden sm:flex items-center space-x-1.5 transition-colors cursor-pointer ${
                 isScrolled ? "text-gray-600 hover:text-[#c0262d]" : "text-white/85 hover:text-white"
               }`}
             >
-              <Store className="w-3.5 h-3.5" />
-              <span>Become a dealer</span>
-            </a>
+              <CalendarCheck className="w-3.5 h-3.5" />
+              <span>Book a consultation</span>
+            </button>
             <a
               href="#store-locator"
               className={`flex items-center space-x-1.5 transition-colors ${
@@ -198,7 +196,7 @@ export default function Navbar({
               }`}
             >
               <MapPin className="w-3.5 h-3.5" />
-              <span>Store locator</span>
+              <span>Visit our studio</span>
             </a>
             <a
               href="#contact"
@@ -239,9 +237,10 @@ export default function Navbar({
           </div>
 
           {/* BRAND LOGO (Centered) */}
-          <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center">
+          {/* In flow below lg so it can't overlap the icons on narrow phones; centred on desktop */}
+          <div className="lg:absolute lg:left-1/2 lg:-translate-x-1/2 flex items-center justify-center">
             <a href="/" className="block">
-              <div className="relative w-40 sm:w-52 h-10 sm:h-12">
+              <div className="relative w-28 sm:w-52 h-10 sm:h-12">
                 <Image
                   src={
                     isScrolled
@@ -283,7 +282,7 @@ export default function Navbar({
                         type="text"
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        placeholder="What are you looking for? (e.g. Sofa, Bed, Almirah...)"
+                        placeholder="What are you looking for? (e.g. Kitchens, Wardrobes, Windows...)"
                         autoFocus
                         className="w-full bg-gray-50 text-gray-900 text-sm pl-10 pr-20 py-2.5 rounded-full border border-gray-200 focus:border-[#c0262d] focus:bg-white focus:outline-hidden"
                       />
@@ -361,7 +360,7 @@ export default function Navbar({
               {isAccountOpen && (
                 <div className="absolute right-0 top-full mt-2 w-64 bg-white text-gray-900 rounded-xl shadow-xl border border-gray-100 py-2 z-50 animate-in fade-in duration-150">
                   <div className="px-4 py-3 border-b border-gray-100">
-                    <p className="text-xs text-gray-500">Welcome to Interio</p>
+                    <p className="text-xs text-gray-500">Welcome to Status</p>
                     <p className="text-sm font-semibold text-gray-900">Sign in to your account</p>
                   </div>
                   <div className="p-3">
@@ -443,35 +442,25 @@ export default function Navbar({
         className={`hidden lg:block w-full border-t transition-colors ${
           isScrolled ? "border-gray-100" : "border-white/15"
         }`}
-        onMouseLeave={() => setHoveredCategory(null)}
       >
         <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
           <ul className="flex items-center justify-center space-x-6 xl:space-x-8 text-[13px] font-medium py-2.5">
-            {megaMenuItems.map((cat) => {
-              const isActive = hoveredCategory === cat.id;
-              return (
-                <li key={cat.id} className="relative">
-                  <button
-                                        onClick={() => {
-                      if (onCategorySelect) onCategorySelect(cat.title);
-                      const el = document.querySelector("#curated-products");
-                      if (el) el.scrollIntoView({ behavior: "smooth" });
-                    }}
-                    className={`transition-colors py-1 hover:underline ${
-                      isScrolled
-                        ? isActive
-                          ? "text-[#c0262d] font-semibold"
-                          : "text-gray-800 hover:text-[#c0262d]"
-                        : isActive
-                        ? "text-white font-bold underline"
-                        : "text-white/90 hover:text-white"
-                    }`}
-                  >
-                    {cat.title}
-                  </button>
-                </li>
-              );
-            })}
+            {megaMenuItems.map((cat) => (
+              <li key={cat.id} className="relative">
+                <button
+                  onClick={() => {
+                    if (onCategorySelect) onCategorySelect(cat.title);
+                  }}
+                  className={`transition-colors py-1 hover:underline cursor-pointer ${
+                    isScrolled
+                      ? "text-gray-800 hover:text-[#c0262d]"
+                      : "text-white/90 hover:text-white"
+                  }`}
+                >
+                  {cat.title}
+                </button>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

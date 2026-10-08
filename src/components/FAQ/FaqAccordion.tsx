@@ -7,7 +7,7 @@ import { useCart } from "@/context/CartContext";
 
 export default function FaqAccordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const { showToast } = useCart();
+  const { openConsultation } = useCart();
 
   const toggle = (idx: number) => {
     setOpenIndex(openIndex === idx ? null : idx);
@@ -23,10 +23,10 @@ export default function FaqAccordion() {
               How can we assist you?
             </h2>
             <button
-              onClick={() => showToast("Opening Frequently Asked Questions catalog...")}
+              onClick={() => openConsultation("General Enquiry")}
               className="text-sm font-semibold text-gray-900 border-b-2 border-gray-900 pb-0.5 hover:text-[#c0262d] hover:border-[#c0262d] transition-colors cursor-pointer"
             >
-              View all
+              Ask a question
             </button>
           </div>
 
@@ -61,159 +61,102 @@ export default function FaqAccordion() {
           </div>
         </div>
 
-        {/* SEO Rich Content Section: Explore Interio by Godrej Furniture Online */}
+        {/* SEO Rich Content Section */}
         <div className="w-full pt-10 border-t border-gray-200 text-gray-700 space-y-8">
           <div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1c1c1c] tracking-tight mb-6">
-              Explore Interio by Godrej Furniture Online
+              Modular Kitchens, Bathrooms, Wardrobes, Doors &amp; Windows by Status Bath and Kitchen
             </h2>
             <div className="space-y-6 text-xs sm:text-sm leading-relaxed text-gray-600 font-normal">
               <div>
                 <h3 className="font-bold text-gray-900 mb-1.5 text-sm sm:text-base">
-                  Buy Furniture Online – Transform Your Home with Interio by Godrej
+                  Modular kitchens planned around you
                 </h3>
                 <p>
-                  Welcome to Interio by Godrej, your ultimate destination to buy furniture online. With a legacy of excellence and innovation, we bring you an extensive range of furniture that combines functionality, style, and durability. Explore our vast collection and transform your home into a haven of comfort and elegance. Our mission is to provide you with the best furniture online, making your shopping experience seamless and enjoyable.
+                  A good kitchen starts with how you cook, store and clean. We plan L-shaped, U-shaped, parallel, island and straight kitchens to suit your room, then help you choose shutters, countertops, hardware and lighting. Appliances such as chimneys, hobs, built-in ovens, microwaves and dishwashers can be planned into the design from the start, so everything fits and works together.
                 </p>
               </div>
 
               <div>
                 <h3 className="font-bold text-gray-900 mb-1.5 text-sm sm:text-base">
-                  Why buy Furniture Online?
+                  Bathrooms that are easy to live with
                 </h3>
                 <p>
-                  Wide Selection: Our extensive catalog offers a variety of furniture options to suit different tastes and budgets. Whether you&apos;re looking for an affordable furniture online or a premium furniture, we have something for everyone.
-                </p>
-                <p className="mt-2">
-                  Easy Navigation: Our website is designed for a seamless online shopping experience, allowing you to find and buy furniture online quickly and easily. With detailed product descriptions, high-resolution images, and customer reviews, you can make informed decisions from the comfort of your home.
-                </p>
-                <p className="mt-2">
-                  Secure Transactions: We prioritize your security, offering safe and secure payment options for a hassle-free online furniture shopping experience. Our website uses the latest encryption technology to protect your personal and financial information.
-                </p>
-                <p className="mt-2">
-                  Customer Support: Our dedicated customer support team is always ready to assist you with any queries or concerns, ensuring a smooth shopping journey online. We are committed to providing you with the best shopping experience possible.
+                  From vanity units and shower enclosures to bathtubs, taps, showers and sanitaryware, we help you plan a bathroom that looks calm and stays easy to clean. Wall-hung units, recessed niches and mirror cabinets keep counters clear and make smaller bathrooms feel bigger.
                 </p>
               </div>
 
               <div>
                 <h3 className="font-bold text-gray-900 mb-1.5 text-sm sm:text-base">
-                  Interio by Godrej – Your Trusted Destination for Online Furniture Shopping
+                  Wardrobes, doors and windows
                 </h3>
                 <p>
-                  At Godrej, we understand the importance of online furniture shopping from the comforts of your home. Our commitment to quality and customer satisfaction sets us apart. Here&apos;s why you should buy furniture online from Interio by Godrej:
-                </p>
-                <p className="mt-2">
-                  Unmatched Quality: Our furniture is crafted from premium materials, ensuring long-lasting durability and timeless appeal. Each piece undergoes rigorous quality checks to meet the highest standards.
-                </p>
-                <p className="mt-2">
-                  Innovative Designs: We offer a wide range of innovative designs that cater to various tastes and preferences, making it easy to find furniture that complements your style. From contemporary to classic, our designs are both functional and aesthetically pleasing.
-                </p>
-                <p className="mt-2">
-                  Convenient Shopping Experience: Our user-friendly website allows you to browse and purchase furniture online with ease, from the comfort of your home. With detailed product descriptions, high-resolution images, and customer reviews, making an informed decision while shopping furniture online.
-                </p>
-                <p className="mt-2">
-                  Trusted Brand: With decades of expertise, Godrej is a name you can trust for online furniture shopping. Our reputation for excellence is built on a foundation of quality, innovation, and customer satisfaction.
+                  Fitted, hinged and walk-in wardrobes are planned around what you actually store, with interiors for hanging, folding, shoes and accessories. We also supply and install entrance doors, interior doors, sliding glass doors and windows, so the finishes across your home match.
                 </p>
               </div>
 
               <div>
                 <h3 className="font-bold text-gray-900 mb-1.5 text-sm sm:text-base">
-                  How to Buy the Right Furniture Online
+                  Kitchen accessories that make a difference
                 </h3>
                 <p>
-                  Buying furniture online can be a delightful experience with these simple tips:
-                </p>
-                <p className="mt-2">
-                  Measure Your Space: Ensure the furniture fits perfectly by measuring your space accurately before making a purchase. Consider the dimensions of the room, doorways, and any other obstacles that may affect the delivery and placement of the furniture.
-                </p>
-                <p className="mt-2">
-                  Consider Your Style: While shopping furniture online, choose furniture that aligns with your personal style and complements your existing décor. Whether you prefer contemporary, traditional, or eclectic styles, we have a wide range of options to suit your taste.
-                </p>
-                <p className="mt-2">
-                  Check Product Details: When you are considering to buy furniture online, read product descriptions carefully to understand the materials, dimensions, and features of each item. This will help you make an informed decision and ensure that the furniture meets your expectations. Invest in durable wooden furniture online available at Interio by Godrej website.
-                </p>
-                <p className="mt-2">
-                  Read Reviews: Benefit from the experiences of other customers by reading reviews and ratings. This will give you a better understanding of the quality and performance when you buy furniture online.
+                  Sinks, faucets, tall pantry units, wall rail systems and spice and bottle organisers are small choices that change how a kitchen feels every day. We will suggest the ones that suit your layout and your cooking.
                 </p>
               </div>
 
               <div>
                 <h3 className="font-bold text-gray-900 mb-1.5 text-sm sm:text-base">
-                  Sustainable and Eco-Friendly Options
+                  How to plan your project
                 </h3>
                 <p>
-                  At Interio by Godrej, we are committed to sustainability and eco-friendly practices. Our range includes furniture made from responsibly sourced materials and designed to minimize environmental impact. Choose our eco-friendly furniture online and contribute to a greener planet while enjoying top-notch quality and design.
+                  Measure your space: note wall lengths, ceiling height and the positions of windows, doors, plumbing and electrical points.
                 </p>
                 <p className="mt-2">
-                  Choose Durable Pieces: Invest in high-quality, durable furniture that will last longer and reduce the need for frequent replacements. Our furniture is designed to withstand the test of time, ensuring that you get the best value for your money.
+                  Think about how you use it: who cooks, what you store, and what annoys you about the current space.
+                </p>
+                <p className="mt-2">
+                  Set a budget early: it helps us suggest materials and appliances that give you the most value.
+                </p>
+                <p className="mt-2">
+                  See finishes in person: colours and textures look different under your own lighting, so compare samples before you decide.
                 </p>
               </div>
 
-              <div>
-                <h3 className="font-bold text-gray-900 mb-1.5 text-sm sm:text-base">
-                  Creating a Cohesive Look
-                </h3>
-                <p>
-                  Consistent Style: Stick to a consistent style or theme throughout your home for a harmonious and balanced appearance. Whether you prefer contemporary, traditional, or eclectic styles, choose furniture that complements your overall design scheme.
-                </p>
-                <p className="mt-2">
-                  Mix and Match: Don&apos;t be afraid to mix and match different pieces and styles to add personality and interest to your space. Combine different textures, materials, and patterns to create a unique and personalized look.
-                </p>
-                <p className="mt-2">
-                  Balance: Ensure that the furniture pieces in each room are balanced in terms of size, scale, and proportion. This will create a harmonious and visually appealing space.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-gray-900 mb-1.5 text-sm sm:text-base">
-                  Our Commitment to Customer Satisfaction
-                </h3>
-                <p>
-                  At Interio, customer satisfaction is our top priority. We are dedicated to providing you with the best online furniture shopping experience possible. Here&apos;s how we ensure your satisfaction:
-                </p>
-                <p className="mt-2">
-                  Quality Assurance: Our furniture undergoes rigorous quality checks to ensure it meets the highest standards. We are committed to providing you with durable and stylish furniture that stands the test of time.
-                </p>
-                <p className="mt-2">
-                  Hassle-Free Returns: If you are not completely satisfied with your purchase, our hassle-free return policy allows you to cancel and replace your order within a stipulated timeframe.
-                </p>
-              </div>
-
-              {/* SEO Categories Links Section matching live_vp_v_17.png */}
+              {/* SEO Category Links */}
               <div className="pt-6 border-t border-gray-200 space-y-4">
                 <div>
                   <h4 className="font-bold text-gray-900 mb-1 text-sm">
-                    Explore Living Room Furniture by Interio by Godrej
+                    Explore Modular Kitchens
                   </h4>
                   <p className="text-gray-500 text-xs">
-                    Bean Bags &amp; Pouffes | Coffee Tables | Corner Tables | Leisure Chairs | Display Units | TV Units | Ottomans | Sofas &amp; loungers | Sofas | Recliner Sofa | Sofa Cum Beds | Sofa Sets | L Shaped &amp; Corner Sofa | 1 Seater Sofa | 2 Seater Sofa | 3 Seater Sofa | Fabric Sofa | Leather And Leatherette Sofa | Shoe Racks | Accessories | Soft Furnishings
+                    L-Shaped Kitchens | U-Shaped Kitchens | Island Kitchens | Parallel Kitchens | Straight Kitchens | Handleless Kitchens | Classic Shaker Kitchens | Two-Tone Kitchens
                   </p>
                 </div>
 
                 <div>
                   <h4 className="font-bold text-gray-900 mb-1 text-sm">
-                    Explore Bedroom Furniture by Interio by Godrej
+                    Explore Bathrooms
                   </h4>
                   <p className="text-gray-500 text-xs">
-                    Almirah &amp; Wardrobe | Beds | Mattresses | Home Lockers | Steel Almirah | Wooden Wardrobes | King Size Bed | Queen Size Bed | Single Bed | King Size Mattress | Queen Size Mattress | Single Bed Mattress | Double Bed Mattress | Bedside Tables | Dressing Tables | Chest of Drawers | Digital Lockers | Biometric Lockers | Manual Lockers | Two Door Wardrobe | Three Door Wardrobe | Four Door Wardrobe | Sliding Wardrobe | Wooden Beds | Metal beds | Double Beds | Foam Mattress | Spring Mattress | Ortho Mattress | Bed and Mattress Sets | Cabinets
+                    Vanity Units | Shower Enclosures | Bathtubs | Taps &amp; Showers | Sanitaryware | Bathroom Storage
                   </p>
                 </div>
 
                 <div>
                   <h4 className="font-bold text-gray-900 mb-1 text-sm">
-                    Explore Study &amp; Office Furniture by Interio by Godrej
+                    Explore Wardrobes, Doors &amp; Windows
                   </h4>
                   <p className="text-gray-500 text-xs">
-                    Work Desk &amp; Study Tables | Office Chairs | Gaming Chairs | File Cabinets | Chair Sets | Chairs | Tables | Study Tables
+                    Fitted Wardrobes | Hinged Wardrobes | Walk-in Wardrobes | Wardrobe Interiors | Entrance Doors | Interior Doors | Sliding Glass Doors | Sliding Windows | Casement Windows | Smart Locks &amp; Hardware
                   </p>
                 </div>
 
                 <div>
                   <h4 className="font-bold text-gray-900 mb-1 text-sm">
-                    Explore Dining Room Furniture by Interio by Godrej
+                    Explore Appliances &amp; Kitchen Accessories
                   </h4>
                   <p className="text-gray-500 text-xs">
-                    Dining Furniture | Dining Sets | Dining Tables | Dining Chairs | Dining Benches | Dining Accessories
+                    Chimneys | Hobs &amp; Cooking Ranges | Built-in Ovens | Microwaves | Dishwashers | Refrigerators | Washing Machines | Sinks | Faucets | Tall Pantry Units | Wall Rail Systems | Spice &amp; Bottle Organisers
                   </p>
                 </div>
               </div>

@@ -5,15 +5,16 @@ import Image from "next/image";
 import { curatedTabsData } from "@/data/interioData";
 import { useCart } from "@/context/CartContext";
 
+const tabKeys = Object.keys(curatedTabsData);
+
 export default function CuratedSection() {
-  const [activeTab, setActiveTab] = useState<string>("sofas");
+  const [activeTab, setActiveTab] = useState<string>(tabKeys[0]);
   const scrollRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(25);
-  const { showToast } = useCart();
+  const { openConsultation } = useCart();
 
-  const currentTabData = curatedTabsData[activeTab] || curatedTabsData["sofas"];
+  const currentTabData = curatedTabsData[activeTab] || curatedTabsData[tabKeys[0]];
   const products = currentTabData.products;
-  const tabKeys = Object.keys(curatedTabsData);
 
   const handleScroll = () => {
     if (scrollRef.current) {
@@ -32,8 +33,11 @@ export default function CuratedSection() {
         {/* Section Heading */}
         <div className="mb-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#1c1c1c] tracking-tight">
-            Curated for you
+            Design ideas for you
           </h2>
+          <p className="mt-2 text-sm sm:text-base text-gray-600">
+            Like a look? Tap it and we will help you plan something similar for your home.
+          </p>
         </div>
 
         {/* Segmented Horizontal Tabs (Inline-flex left-aligned border box matching live site) */}
@@ -76,7 +80,7 @@ export default function CuratedSection() {
           {products.map((product) => (
             <div
               key={product.id}
-              onClick={() => showToast(`Selected: ${product.name}`)}
+              onClick={() => openConsultation(product.name)}
               className="w-72 sm:w-80 shrink-0 group cursor-pointer"
             >
               {/* Product Image */}
@@ -96,7 +100,7 @@ export default function CuratedSection() {
                 </h3>
                 <div className="w-8 h-0.5 bg-[#c0262d] mt-1.5 group-hover:w-16 transition-all duration-300" />
                 <p className="text-xs text-gray-500 mt-2">
-                  {product.dimensions || "1-Year Warranty, Solid Wood"}
+                  {product.dimensions || product.category}
                 </p>
               </div>
             </div>

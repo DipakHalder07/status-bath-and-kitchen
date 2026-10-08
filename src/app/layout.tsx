@@ -10,18 +10,22 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "STATUS Doors & Windows | Premium Doors, Windows & Living Solutions",
+  title: "Status Bath and Kitchen | Modular Kitchens, Bathrooms, Wardrobes, Doors & Windows",
   description:
-    "Explore STATUS Doors & Windows. Precision-engineered premium architectural systems, doors, windows, and luxury living solutions crafted with superior quality.",
+    "Status Bath and Kitchen designs, supplies and installs modular kitchens, bathrooms, wardrobes, doors and windows, along with kitchen appliances and accessories.",
   keywords: [
-    "STATUS Doors & Windows",
-    "Luxury Doors",
-    "Architectural Windows",
-    "Premium Living",
-    "Interiors India",
+    "Status Bath and Kitchen",
+    "Modular Kitchens",
+    "Bathrooms",
+    "Wardrobes",
+    "Doors",
+    "Windows",
+    "Kitchen Appliances",
+    "Kitchen Accessories",
   ],
   icons: {
-    icon: "/images/status-logo-dark.png",
+    icon: "/images/status-bk-icon.png",
+    apple: "/images/status-bk-apple-icon.png",
   },
 };
 

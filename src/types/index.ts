@@ -61,12 +61,36 @@ export interface Testimonial {
   product: string;
 }
 
+export interface BrandPromise {
+  title: string;
+  description: string;
+}
+
 export interface CareService {
   id: string;
   title: string;
   description: string;
-  image: string;
+  icon: string;
   tag: string;
+}
+
+export interface CategoryTab {
+  tabName: string;
+  aliases?: string[];
+  items: {
+    name: string;
+    image: string;
+    link: string;
+  }[];
+}
+
+export interface ServiceStrip {
+  title: string;
+  subtitle: string;
+  items: {
+    id: string;
+    label: string;
+  }[];
 }
 
 export interface BlogArticle {
