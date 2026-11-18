@@ -50,21 +50,17 @@
 html, body {
   background-color: #ffffff;
   color: #4a4541;
-  font-family: "Cera Godrej Interio", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Cera Godrej Interio", "Helvetica Neue", Helvetica, Arial, sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Ensure font-sans uses Cera Godrej Interio */
-.font-sans, button, input, select, textarea, p, span, a, h1, h2, h3, h4, h5, h6, div {
-  font-family: "Cera Godrej Interio", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-/* Base Headings matching interio.com */
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Cera Godrej Interio", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #4a4541;
+/* Base Headings & Elements inside @layer base so utility classes (text-white, text-[#ff5d55]) always take precedence */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Cera Godrej Interio", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
 }
 
 /* Asymmetric button styling from interio.com */

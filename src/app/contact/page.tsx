@@ -167,7 +167,7 @@ export default function ContactPage() {
           {/* Red Badge pinned bottom left matching live site */}
           <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 h-full relative">
             <div className="absolute bottom-6 sm:bottom-10 left-5 sm:left-10 lg:left-20">
-              <h2 className="bg-[#ff5d55] text-white font-medium text-2xl sm:text-3xl lg:text-[42px] leading-[46.2px] px-6 sm:px-8 py-3 sm:py-3.5 shadow-md inline-block">
+              <h2 className="bg-[#ff5d55] !text-white font-medium text-2xl sm:text-3xl lg:text-[42px] leading-[46.2px] px-6 sm:px-8 py-3 sm:py-3.5 shadow-md inline-block">
                 Contact Us
               </h2>
             </div>

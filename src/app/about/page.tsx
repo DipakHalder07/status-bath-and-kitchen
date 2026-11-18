@@ -84,7 +84,7 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-black/35" />
 
           <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 h-full relative flex items-end pb-12 sm:pb-16">
-            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-medium leading-[1.1] text-white tracking-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-medium leading-[1.1] !text-white tracking-tight">
               Designed for life
             </h1>
           </div>
@@ -139,7 +139,7 @@ export default function AboutPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
               <div className="absolute bottom-8 left-8 right-8 text-white space-y-3">
-                <h3 className="text-3xl lg:text-[42px] font-medium leading-[46.2px] text-white">
+                <h3 className="text-3xl lg:text-[42px] font-medium leading-[46.2px] !text-white">
                   For home
                 </h3>
                 <div className="text-xs sm:text-sm text-stone-200 flex flex-wrap gap-x-4 gap-y-1">
@@ -174,7 +174,7 @@ export default function AboutPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
               <div className="absolute bottom-8 left-8 right-8 text-white space-y-3">
-                <h3 className="text-3xl lg:text-[42px] font-medium leading-[46.2px] text-white">
+                <h3 className="text-3xl lg:text-[42px] font-medium leading-[46.2px] !text-white">
                   For business
                 </h3>
                 <div className="text-xs sm:text-sm text-stone-200 flex flex-wrap gap-x-4 gap-y-1">
@@ -204,7 +204,7 @@ export default function AboutPage() {
             <span className="text-[13px] text-[#76716d] uppercase tracking-wider font-medium block">
               Our design philosophy
             </span>
-            <h3 className="text-2xl sm:text-3xl lg:text-[42px] font-medium text-[#ff5d55] leading-[46.2px] tracking-tight max-w-4xl">
+            <h3 className="text-2xl sm:text-3xl lg:text-[42px] font-medium !text-[#ff5d55] leading-[46.2px] tracking-tight max-w-4xl">
               We believe that exceptionally crafted furniture is more than just a functional piece, it&apos;s about creating a comfortable space for everyday living and working.
             </h3>
             <p className="text-[15px] text-[#76716d] leading-relaxed max-w-3xl">
@@ -503,7 +503,7 @@ export default function AboutPage() {
             />
             <div className="absolute inset-0 bg-black/50" />
             <div className="absolute inset-0 flex flex-col justify-center items-start px-8 sm:px-16 max-w-2xl text-white space-y-4">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium leading-tight text-white">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium leading-tight !text-white">
                 Shape the future of modern Indian living with us
               </h2>
               <p className="text-xs sm:text-sm text-stone-200 leading-relaxed font-light">
@@ -581,7 +581,7 @@ export default function AboutPage() {
             />
             <div className="absolute inset-0 bg-black/45" />
             <div className="absolute inset-0 flex flex-col justify-center items-start px-8 sm:px-16 max-w-xl text-white space-y-4">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium leading-tight text-white">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium leading-tight !text-white">
                 Find a store near you
               </h2>
               <p className="text-xs sm:text-sm text-stone-200 leading-relaxed font-light">
