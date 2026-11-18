@@ -2,6 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Heart } from "lucide-react";
 import { Product } from "@/types";
 import { useCart } from "@/context/CartContext";
@@ -21,7 +22,7 @@ export default function ProductCarousel({
   tag,
   products,
   id,
-  viewAllLink = "#curated-products",
+  viewAllLink = "/products",
 }: ProductCarouselProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(25);
@@ -66,17 +67,10 @@ export default function ProductCarousel({
             const wishlisted = isWishlisted(product.id);
 
             return (
-              <div
+              <Link
                 key={product.id}
+                href={`/products/${product.id}`}
                 className="w-72 sm:w-80 shrink-0 flex flex-col group cursor-pointer"
-                onClick={() => {
-                  // Products without a listed price are quoted on enquiry
-                  if (product.price > 0) {
-                    addToCart(product);
-                  } else {
-                    openConsultation(product.name);
-                  }
-                }}
               >
                 {/* Clean Off-white Image Container */}
                 <div className="relative w-full aspect-square bg-[#f5f0ea] rounded-xs p-6 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:bg-[#efe9e1]">
@@ -154,7 +148,7 @@ export default function ProductCarousel({
                     </div>
                   )}
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>

@@ -2,19 +2,20 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { X, ChevronDown, ChevronRight, Phone, MapPin, Building2, Home } from "lucide-react";
+import Link from "next/link";
+import { X, ChevronDown, ChevronRight, Phone, MapPin, Building2, Home, Package, Info } from "lucide-react";
 import { megaMenuItems, siteBrand } from "@/data/interioData";
 
 interface MobileDrawerProps {
   isOpen: boolean;
   onClose: () => void;
-  onSelectCategory: (name: string) => void;
+  onSelectCategory?: (name: string) => void;
 }
 
 export default function MobileDrawer({
   isOpen,
   onClose,
-  onSelectCategory,
+  onSelectCategory = () => {},
 }: MobileDrawerProps) {
   const [expandedCat, setExpandedCat] = useState<string | null>(null);
 
@@ -46,6 +47,26 @@ export default function MobileDrawer({
           >
             <X className="w-5 h-5" />
           </button>
+        </div>
+
+        {/* Quick Main Nav */}
+        <div className="p-4 border-b border-gray-100 grid grid-cols-2 gap-2 text-xs font-semibold">
+          <Link
+            href="/products"
+            onClick={onClose}
+            className="flex items-center gap-2 p-2.5 rounded-lg bg-stone-50 hover:bg-red-50 hover:text-[#c0262d] text-gray-800 transition-colors"
+          >
+            <Package className="w-4 h-4 text-[#c0262d]" />
+            <span>All Products</span>
+          </Link>
+          <Link
+            href="/about"
+            onClick={onClose}
+            className="flex items-center gap-2 p-2.5 rounded-lg bg-stone-50 hover:bg-red-50 hover:text-[#c0262d] text-gray-800 transition-colors"
+          >
+            <Info className="w-4 h-4 text-[#c0262d]" />
+            <span>About Us</span>
+          </Link>
         </div>
 
         {/* Categories List */}
@@ -110,18 +131,18 @@ export default function MobileDrawer({
         </div>
 
         {/* Footer Support Info */}
-        <div className="p-4 border-t border-gray-100 bg-gray-50 text-xs text-gray-600 space-y-2">
+        <div className="p-4 border-t border-gray-100 bg-gray-50 text-xs text-gray-600 space-y-2.5">
           <div className="flex items-center gap-2">
             <Phone className="w-4 h-4 text-[#c0262d]" />
-            <a href={siteBrand.phoneHref || "#contact"} onClick={onClose} className="hover:underline">
-              {siteBrand.phone}
-            </a>
+            <Link href="/contact" onClick={onClose} className="font-semibold text-gray-800 hover:text-[#c0262d]">
+              Contact Us: {siteBrand.phone}
+            </Link>
           </div>
           <div className="flex items-center gap-2">
             <MapPin className="w-4 h-4 text-[#c0262d]" />
-            <a href="#store-locator" onClick={onClose} className="hover:underline">
-              Visit our experience studio
-            </a>
+            <Link href="/contact" onClick={onClose} className="hover:underline">
+              Experience Studio &amp; Locations
+            </Link>
           </div>
         </div>
       </div>

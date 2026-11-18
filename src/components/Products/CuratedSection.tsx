@@ -2,6 +2,7 @@
 
 import React, { useState, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { curatedTabsData } from "@/data/interioData";
 import { useCart } from "@/context/CartContext";
 
@@ -78,10 +79,10 @@ export default function CuratedSection() {
           className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth pb-4"
         >
           {products.map((product) => (
-            <div
+            <Link
               key={product.id}
-              onClick={() => openConsultation(product.name)}
-              className="w-72 sm:w-80 shrink-0 group cursor-pointer"
+              href={`/products/${product.id}`}
+              className="w-72 sm:w-80 shrink-0 group cursor-pointer block"
             >
               {/* Product Image */}
               <div className="relative w-full aspect-[16/10] rounded-md overflow-hidden bg-white shadow-2xs group-hover:shadow-md transition-all duration-300">
@@ -103,7 +104,7 @@ export default function CuratedSection() {
                   {product.dimensions || product.category}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 import { howCanWeHelpTabs } from "@/data/interioData";
 import { useCart } from "@/context/CartContext";
 
@@ -108,10 +109,10 @@ export default function CategoryGrid({ selection }: CategoryGridProps) {
         >
           {currentTab.items.map(
             (item: { name: string; image: string; link: string }, i: number) => (
-              <div
+              <Link
                 key={i}
-                onClick={() => handleCardClick(item)}
-                className="shrink-0 w-64 sm:w-72 group cursor-pointer"
+                href={`/products?category=${encodeURIComponent(item.name)}`}
+                className="shrink-0 w-64 sm:w-72 group cursor-pointer block"
               >
                 {/* Rounded rectangular photo */}
                 <div className="relative w-full aspect-[16/10] rounded-md overflow-hidden bg-white shadow-2xs group-hover:shadow-md transition-all duration-300">
@@ -129,9 +130,9 @@ export default function CategoryGrid({ selection }: CategoryGridProps) {
                     {item.name}
                   </h3>
                   <div className="w-6 h-0.5 bg-[#c0262d] mt-1 group-hover:w-12 transition-all duration-300" />
-                  <p className="text-xs text-gray-500 mt-2">Enquire now</p>
+                  <p className="text-xs text-gray-500 mt-2">Explore range &rarr;</p>
                 </div>
-              </div>
+              </Link>
             )
           )}
         </div>

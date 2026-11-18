@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { siteBrand } from "@/data/interioData";
 import { useCart } from "@/context/CartContext";
@@ -115,17 +116,18 @@ export default function Footer() {
               </h4>
               <ul className="space-y-2 text-stone-300">
                 {[
-                  "Modular kitchens",
-                  "Bathrooms",
-                  "Wardrobes",
-                  "Doors & windows",
-                  "Appliances",
-                  "Kitchen accessories",
-                ].map((label) => (
-                  <li key={label}>
-                    <a href="#categories" className="hover:text-white transition-colors">
-                      {label}
-                    </a>
+                  { label: "All Products", href: "/products" },
+                  { label: "Modular kitchens", href: "/products?category=Modular+Kitchens" },
+                  { label: "Bathrooms", href: "/products?category=Bathrooms" },
+                  { label: "Wardrobes", href: "/products?category=Wardrobes" },
+                  { label: "Doors & windows", href: "/products?category=Doors+%26+Windows" },
+                  { label: "Appliances", href: "/products?category=Appliances" },
+                  { label: "Kitchen accessories", href: "/products?category=Kitchen+Accessories" },
+                ].map((item) => (
+                  <li key={item.label}>
+                    <Link href={item.href} className="hover:text-white transition-colors">
+                      {item.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -138,29 +140,29 @@ export default function Footer() {
               </h4>
               <ul className="space-y-2 text-stone-300">
                 <li>
-                  <a href="#why-status" className="hover:text-white transition-colors">
-                    Why Status
-                  </a>
+                  <Link href="/about" className="hover:text-white transition-colors">
+                    About Status
+                  </Link>
                 </li>
                 <li>
-                  <a href="#care-services" className="hover:text-white transition-colors">
-                    Our services
-                  </a>
+                  <Link href="/about#principles" className="hover:text-white transition-colors">
+                    Brand Philosophy
+                  </Link>
                 </li>
                 <li>
-                  <a href="#philosophy" className="hover:text-white transition-colors">
-                    For builders &amp; architects
-                  </a>
+                  <Link href="/about#services" className="hover:text-white transition-colors">
+                    Care &amp; Services
+                  </Link>
                 </li>
                 <li>
-                  <a href="#curated-products" className="hover:text-white transition-colors">
-                    Design ideas
-                  </a>
+                  <Link href="/about#sustainability" className="hover:text-white transition-colors">
+                    Sustainability
+                  </Link>
                 </li>
                 <li>
-                  <a href="#inspiration" className="hover:text-white transition-colors">
-                    Inspiration
-                  </a>
+                  <Link href="/contact" className="hover:text-white transition-colors">
+                    Experience Centres
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -180,19 +182,19 @@ export default function Footer() {
                   </button>
                 </li>
                 <li>
-                  <a href="#store-locator" className="hover:text-white transition-colors">
-                    Visit our studio
-                  </a>
+                  <Link href="/contact" className="hover:text-white transition-colors">
+                    Contact Us &amp; Support
+                  </Link>
                 </li>
                 <li>
-                  <a href="#faqs" className="hover:text-white transition-colors">
-                    FAQ&apos;s
-                  </a>
+                  <Link href="/contact#faq" className="hover:text-white transition-colors">
+                    FAQ&apos;s &amp; Queries
+                  </Link>
                 </li>
                 <li>
-                  <a href="#faqs" className="hover:text-white transition-colors">
-                    Warranty information
-                  </a>
+                  <Link href="/contact" className="hover:text-white transition-colors">
+                    Order Tracking &amp; Escalation
+                  </Link>
                 </li>
               </ul>
             </div>

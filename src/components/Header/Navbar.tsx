@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Search,
   Mic,
@@ -29,15 +30,18 @@ interface NavbarProps {
   onMobileMenuToggle: () => void;
   onSearchSubmit?: (query: string) => void;
   onCategorySelect?: (categoryName: string) => void;
+  forceSolid?: boolean;
 }
 
 export default function Navbar({
   onMobileMenuToggle,
   onSearchSubmit,
   onCategorySelect,
+  forceSolid = false,
 }: NavbarProps) {
   const { cartCount, cartTotal, openCart, wishlist, showToast, openConsultation } = useCart();
   const [isScrolled, setIsScrolled] = useState(false);
+  const isHeaderSolid = forceSolid || isScrolled;
   const [searchQuery, setSearchQuery] = useState("");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isAccountOpen, setIsAccountOpen] = useState(false);
@@ -135,7 +139,7 @@ export default function Navbar({
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
+        isHeaderSolid
           ? "bg-white text-gray-900 shadow-md border-b border-gray-100"
           : "bg-gradient-to-b from-black/70 via-black/30 to-transparent text-white"
       }`}
@@ -143,7 +147,7 @@ export default function Navbar({
       {/* 1. TOP UTILITY BAR */}
       <div
         className={`w-full text-xs transition-colors border-b ${
-          isScrolled
+          isHeaderSolid
             ? "border-gray-100/80 bg-gray-50/80 text-gray-700"
             : "border-white/10 text-white/90"
         }`}
@@ -156,7 +160,7 @@ export default function Navbar({
               className={`px-3 py-1 rounded-full font-medium transition-all ${
                 activeSegment === "homes"
                   ? "bg-[#ff5247] text-white shadow-xs"
-                  : isScrolled
+                  : isHeaderSolid
                   ? "text-gray-700 hover:text-black"
                   : "text-white/80 hover:text-white"
               }`}
@@ -168,7 +172,7 @@ export default function Navbar({
               className={`px-2.5 py-1 text-xs font-medium transition-colors ${
                 activeSegment === "business"
                   ? "text-[#c0262d] font-semibold"
-                  : isScrolled
+                  : isHeaderSolid
                   ? "text-gray-600 hover:text-gray-900"
                   : "text-white/80 hover:text-white"
               }`}
@@ -183,39 +187,39 @@ export default function Navbar({
               type="button"
               onClick={() => openConsultation("Design Consultation")}
               className={`hidden sm:flex items-center space-x-1.5 transition-colors cursor-pointer ${
-                isScrolled ? "text-gray-600 hover:text-[#c0262d]" : "text-white/85 hover:text-white"
+                isHeaderSolid ? "text-gray-600 hover:text-[#c0262d]" : "text-white/85 hover:text-white"
               }`}
             >
               <CalendarCheck className="w-3.5 h-3.5" />
               <span>Book a consultation</span>
             </button>
-            <a
-              href="#store-locator"
+            <Link
+              href="/about"
               className={`flex items-center space-x-1.5 transition-colors ${
-                isScrolled ? "text-gray-600 hover:text-[#c0262d]" : "text-white/85 hover:text-white"
+                isHeaderSolid ? "text-gray-600 hover:text-[#c0262d]" : "text-white/85 hover:text-white"
               }`}
             >
               <MapPin className="w-3.5 h-3.5" />
               <span>Visit our studio</span>
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              href="/contact"
               className={`hidden md:flex items-center space-x-1.5 transition-colors ${
-                isScrolled ? "text-gray-600 hover:text-[#c0262d]" : "text-white/85 hover:text-white"
+                isHeaderSolid ? "text-gray-600 hover:text-[#c0262d]" : "text-white/85 hover:text-white"
               }`}
             >
               <Phone className="w-3.5 h-3.5" />
               <span>Contact us</span>
-            </a>
-            <a
-              href="#care-services"
+            </Link>
+            <Link
+              href="/about"
               className={`hidden md:flex items-center space-x-1.5 transition-colors ${
-                isScrolled ? "text-gray-600 hover:text-[#c0262d]" : "text-white/85 hover:text-white"
+                isHeaderSolid ? "text-gray-600 hover:text-[#c0262d]" : "text-white/85 hover:text-white"
               }`}
             >
               <Wrench className="w-3.5 h-3.5" />
               <span>Services</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -228,7 +232,7 @@ export default function Navbar({
             <button
               onClick={onMobileMenuToggle}
               className={`lg:hidden p-1.5 rounded-md transition-colors ${
-                isScrolled ? "text-gray-800 hover:text-[#c0262d]" : "text-white"
+                isHeaderSolid ? "text-gray-800 hover:text-[#c0262d]" : "text-white"
               }`}
               aria-label="Toggle Navigation"
             >
@@ -237,13 +241,12 @@ export default function Navbar({
           </div>
 
           {/* BRAND LOGO (Centered) */}
-          {/* In flow below lg so it can't overlap the icons on narrow phones; centred on desktop */}
           <div className="lg:absolute lg:left-1/2 lg:-translate-x-1/2 flex items-center justify-center">
-            <a href="/" className="block">
+            <Link href="/" className="block">
               <div className="relative w-28 sm:w-52 h-10 sm:h-12">
                 <Image
                   src={
-                    isScrolled
+                    isHeaderSolid
                       ? siteBrand.colorLogo
                       : siteBrand.whiteLogo
                   }
@@ -254,7 +257,7 @@ export default function Navbar({
                   priority
                 />
               </div>
-            </a>
+            </Link>
           </div>
 
           {/* RIGHT ACTION ICONS */}
@@ -264,7 +267,7 @@ export default function Navbar({
               <button
                 onClick={() => setIsSearchOpen(!isSearchOpen)}
                 className={`p-2 rounded-full transition-colors ${
-                  isScrolled
+                  isHeaderSolid
                     ? "text-gray-700 hover:text-[#c0262d] hover:bg-gray-100"
                     : "text-white hover:text-white hover:bg-white/15"
                 }`}
@@ -348,7 +351,7 @@ export default function Navbar({
               <button
                 onClick={() => setIsAccountOpen(!isAccountOpen)}
                 className={`p-2 rounded-full transition-colors ${
-                  isScrolled
+                  isHeaderSolid
                     ? "text-gray-700 hover:text-[#c0262d] hover:bg-gray-100"
                     : "text-white hover:text-white hover:bg-white/15"
                 }`}
@@ -402,7 +405,7 @@ export default function Navbar({
                 if (el) el.scrollIntoView({ behavior: "smooth" });
               }}
               className={`relative p-2 rounded-full transition-colors ${
-                isScrolled
+                isHeaderSolid
                   ? "text-gray-700 hover:text-[#c0262d] hover:bg-gray-100"
                   : "text-white hover:text-white hover:bg-white/15"
               }`}
@@ -420,7 +423,7 @@ export default function Navbar({
             <button
               onClick={openCart}
               className={`relative p-2 rounded-full transition-colors ${
-                isScrolled
+                isHeaderSolid
                   ? "text-gray-700 hover:text-[#c0262d] hover:bg-gray-100"
                   : "text-white hover:text-white hover:bg-white/15"
               }`}
@@ -440,27 +443,66 @@ export default function Navbar({
       {/* 3. CATEGORIES NAVIGATION BAR (Submenu) */}
       <div
         className={`hidden lg:block w-full border-t transition-colors ${
-          isScrolled ? "border-gray-100" : "border-white/15"
+          isHeaderSolid ? "border-gray-100" : "border-white/15"
         }`}
       >
         <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
           <ul className="flex items-center justify-center space-x-6 xl:space-x-8 text-[13px] font-medium py-2.5">
+            <li className="relative">
+              <Link
+                href="/products"
+                className={`transition-colors py-1 hover:underline cursor-pointer font-semibold ${
+                  isHeaderSolid
+                    ? "text-[#c0262d]"
+                    : "text-white"
+                }`}
+              >
+                All Products
+              </Link>
+            </li>
             {megaMenuItems.map((cat) => (
               <li key={cat.id} className="relative">
-                <button
-                  onClick={() => {
-                    if (onCategorySelect) onCategorySelect(cat.title);
+                <Link
+                  href={`/products?category=${encodeURIComponent(cat.title)}`}
+                  onClick={(e) => {
+                    if (onCategorySelect) {
+                      onCategorySelect(cat.title);
+                    }
                   }}
                   className={`transition-colors py-1 hover:underline cursor-pointer ${
-                    isScrolled
+                    isHeaderSolid
                       ? "text-gray-800 hover:text-[#c0262d]"
                       : "text-white/90 hover:text-white"
                   }`}
                 >
                   {cat.title}
-                </button>
+                </Link>
               </li>
             ))}
+            <li className="relative">
+              <Link
+                href="/about"
+                className={`transition-colors py-1 hover:underline cursor-pointer ${
+                  isHeaderSolid
+                    ? "text-gray-800 hover:text-[#c0262d]"
+                    : "text-white/90 hover:text-white"
+                }`}
+              >
+                About Us
+              </Link>
+            </li>
+            <li className="relative">
+              <Link
+                href="/contact"
+                className={`transition-colors py-1 hover:underline cursor-pointer ${
+                  isHeaderSolid
+                    ? "text-gray-800 hover:text-[#c0262d]"
+                    : "text-white/90 hover:text-white"
+                }`}
+              >
+                Contact Us
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

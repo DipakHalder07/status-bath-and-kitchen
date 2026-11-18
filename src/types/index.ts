@@ -7,6 +7,11 @@ export interface Product {
   mrp: number;
   discount: string;
   image: string;
+  gallery?: string[];
+  description?: string;
+  features?: string[];
+  specifications?: Record<string, string>;
+  finish?: string;
   warranty?: string;
   material?: string;
   color?: string;
@@ -15,6 +20,8 @@ export interface Product {
   reviews?: number;
   tag?: string;
   badge?: string;
+  inStock?: boolean;
+  leadTime?: string;
 }
 
 export interface HeroSlide {

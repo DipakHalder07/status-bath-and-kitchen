@@ -29,3 +29,5 @@ export const serviceStrip: ServiceStrip = rawData.serviceStrip;
 export const liveFaqs: FAQItem[] = rawData.liveFaqs;
 export const faqsList: FAQItem[] = rawData.faqs;
 export const megaMenuItems: MegaMenuItem[] = rawData.megaMenu;
+export * from "./productsData";
+
