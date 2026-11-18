@@ -159,7 +159,7 @@ export default function Navbar({
               onClick={() => setActiveSegment("homes")}
               className={`px-3 py-1 rounded-full font-medium transition-all ${
                 activeSegment === "homes"
-                  ? "bg-[#ff5247] text-white shadow-xs"
+                  ? "bg-[#ff5d55] text-white shadow-xs"
                   : isHeaderSolid
                   ? "text-gray-700 hover:text-black"
                   : "text-white/80 hover:text-white"
@@ -171,7 +171,7 @@ export default function Navbar({
               onClick={() => setActiveSegment("business")}
               className={`px-2.5 py-1 text-xs font-medium transition-colors ${
                 activeSegment === "business"
-                  ? "text-[#c0262d] font-semibold"
+                  ? "text-[#ff5d55] font-semibold"
                   : isHeaderSolid
                   ? "text-gray-600 hover:text-gray-900"
                   : "text-white/80 hover:text-white"
@@ -187,7 +187,7 @@ export default function Navbar({
               type="button"
               onClick={() => openConsultation("Design Consultation")}
               className={`hidden sm:flex items-center space-x-1.5 transition-colors cursor-pointer ${
-                isHeaderSolid ? "text-gray-600 hover:text-[#c0262d]" : "text-white/85 hover:text-white"
+                isHeaderSolid ? "text-gray-600 hover:text-[#ff5d55]" : "text-white/85 hover:text-white"
               }`}
             >
               <CalendarCheck className="w-3.5 h-3.5" />
@@ -196,7 +196,7 @@ export default function Navbar({
             <Link
               href="/about"
               className={`flex items-center space-x-1.5 transition-colors ${
-                isHeaderSolid ? "text-gray-600 hover:text-[#c0262d]" : "text-white/85 hover:text-white"
+                isHeaderSolid ? "text-gray-600 hover:text-[#ff5d55]" : "text-white/85 hover:text-white"
               }`}
             >
               <MapPin className="w-3.5 h-3.5" />
@@ -205,7 +205,7 @@ export default function Navbar({
             <Link
               href="/contact"
               className={`hidden md:flex items-center space-x-1.5 transition-colors ${
-                isHeaderSolid ? "text-gray-600 hover:text-[#c0262d]" : "text-white/85 hover:text-white"
+                isHeaderSolid ? "text-gray-600 hover:text-[#ff5d55]" : "text-white/85 hover:text-white"
               }`}
             >
               <Phone className="w-3.5 h-3.5" />
@@ -214,7 +214,7 @@ export default function Navbar({
             <Link
               href="/about"
               className={`hidden md:flex items-center space-x-1.5 transition-colors ${
-                isHeaderSolid ? "text-gray-600 hover:text-[#c0262d]" : "text-white/85 hover:text-white"
+                isHeaderSolid ? "text-gray-600 hover:text-[#ff5d55]" : "text-white/85 hover:text-white"
               }`}
             >
               <Wrench className="w-3.5 h-3.5" />
@@ -232,7 +232,7 @@ export default function Navbar({
             <button
               onClick={onMobileMenuToggle}
               className={`lg:hidden p-1.5 rounded-md transition-colors ${
-                isHeaderSolid ? "text-gray-800 hover:text-[#c0262d]" : "text-white"
+                isHeaderSolid ? "text-gray-800 hover:text-[#ff5d55]" : "text-white"
               }`}
               aria-label="Toggle Navigation"
             >
@@ -268,7 +268,7 @@ export default function Navbar({
                 onClick={() => setIsSearchOpen(!isSearchOpen)}
                 className={`p-2 rounded-full transition-colors ${
                   isHeaderSolid
-                    ? "text-gray-700 hover:text-[#c0262d] hover:bg-gray-100"
+                    ? "text-gray-700 hover:text-[#ff5d55] hover:bg-gray-100"
                     : "text-white hover:text-white hover:bg-white/15"
                 }`}
                 aria-label="Open Search"
@@ -287,7 +287,7 @@ export default function Navbar({
                         onChange={(e) => setSearchQuery(e.target.value)}
                         placeholder="What are you looking for? (e.g. Kitchens, Wardrobes, Windows...)"
                         autoFocus
-                        className="w-full bg-gray-50 text-gray-900 text-sm pl-10 pr-20 py-2.5 rounded-full border border-gray-200 focus:border-[#c0262d] focus:bg-white focus:outline-hidden"
+                        className="w-full bg-gray-50 text-gray-900 text-sm pl-10 pr-20 py-2.5 rounded-full border border-gray-200 focus:border-[#ff5d55] focus:bg-white focus:outline-hidden"
                       />
                       <Search className="w-4 h-4 text-gray-400 absolute left-3.5 pointer-events-none" />
 
@@ -307,8 +307,8 @@ export default function Navbar({
                           title="Voice Search"
                           className={`p-1.5 rounded-full ${
                             isListening
-                              ? "text-white bg-[#c0262d] animate-pulse"
-                              : "text-gray-500 hover:text-[#c0262d]"
+                              ? "text-white bg-[#ff5d55] animate-pulse"
+                              : "text-gray-500 hover:text-[#ff5d55]"
                           }`}
                         >
                           <Mic className="w-4 h-4" />
@@ -317,7 +317,7 @@ export default function Navbar({
                           type="button"
                           onClick={handleCameraSearch}
                           title="Visual Image Search"
-                          className="p-1.5 text-gray-500 hover:text-[#c0262d] rounded-full"
+                          className="p-1.5 text-gray-500 hover:text-[#ff5d55] rounded-full"
                         >
                           <Camera className="w-4 h-4" />
                         </button>
@@ -335,7 +335,7 @@ export default function Navbar({
                         <button
                           key={term}
                           onClick={() => handleSelectPopular(term)}
-                          className="px-3 py-1 bg-gray-100 hover:bg-red-50 hover:text-[#c0262d] hover:border-red-200 text-xs text-gray-700 rounded-full border border-transparent transition-colors capitalize"
+                          className="px-3 py-1 bg-gray-100 hover:bg-red-50 hover:text-[#ff5d55] hover:border-red-200 text-xs text-gray-700 rounded-full border border-transparent transition-colors capitalize"
                         >
                           {term}
                         </button>
@@ -352,7 +352,7 @@ export default function Navbar({
                 onClick={() => setIsAccountOpen(!isAccountOpen)}
                 className={`p-2 rounded-full transition-colors ${
                   isHeaderSolid
-                    ? "text-gray-700 hover:text-[#c0262d] hover:bg-gray-100"
+                    ? "text-gray-700 hover:text-[#ff5d55] hover:bg-gray-100"
                     : "text-white hover:text-white hover:bg-white/15"
                 }`}
                 aria-label="Account"
@@ -372,7 +372,7 @@ export default function Navbar({
                         showToast("Login modal opened");
                         setIsAccountOpen(false);
                       }}
-                      className="w-full py-2 bg-[#c0262d] hover:bg-[#a11c22] text-white rounded-lg text-xs font-semibold shadow-xs"
+                      className="w-full py-2 bg-[#ff5d55] hover:bg-[#e5473f] text-white rounded-lg text-xs font-semibold shadow-xs"
                     >
                       Login / Register
                     </button>
@@ -406,14 +406,14 @@ export default function Navbar({
               }}
               className={`relative p-2 rounded-full transition-colors ${
                 isHeaderSolid
-                  ? "text-gray-700 hover:text-[#c0262d] hover:bg-gray-100"
+                  ? "text-gray-700 hover:text-[#ff5d55] hover:bg-gray-100"
                   : "text-white hover:text-white hover:bg-white/15"
               }`}
               aria-label="Wishlist"
             >
               <Heart className="w-5 h-5" />
               {wishlist.length > 0 && (
-                <span className="absolute top-1 right-1 w-4 h-4 bg-[#c0262d] text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+                <span className="absolute top-1 right-1 w-4 h-4 bg-[#ff5d55] text-white text-[10px] font-bold rounded-full flex items-center justify-center">
                   {wishlist.length}
                 </span>
               )}
@@ -424,14 +424,14 @@ export default function Navbar({
               onClick={openCart}
               className={`relative p-2 rounded-full transition-colors ${
                 isHeaderSolid
-                  ? "text-gray-700 hover:text-[#c0262d] hover:bg-gray-100"
+                  ? "text-gray-700 hover:text-[#ff5d55] hover:bg-gray-100"
                   : "text-white hover:text-white hover:bg-white/15"
               }`}
               aria-label="Shopping Cart"
             >
               <ShoppingBag className="w-5 h-5" />
               {cartCount > 0 && (
-                <span className="absolute top-1 right-1 w-4 h-4 bg-[#c0262d] text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+                <span className="absolute top-1 right-1 w-4 h-4 bg-[#ff5d55] text-white text-[10px] font-bold rounded-full flex items-center justify-center">
                   {cartCount}
                 </span>
               )}
@@ -453,7 +453,7 @@ export default function Navbar({
                 href="/products"
                 className={`transition-colors py-1 hover:underline cursor-pointer font-semibold ${
                   isHeaderSolid
-                    ? "text-[#c0262d]"
+                    ? "text-[#ff5d55]"
                     : "text-white"
                 }`}
               >
@@ -471,7 +471,7 @@ export default function Navbar({
                   }}
                   className={`transition-colors py-1 hover:underline cursor-pointer ${
                     isHeaderSolid
-                      ? "text-gray-800 hover:text-[#c0262d]"
+                      ? "text-gray-800 hover:text-[#ff5d55]"
                       : "text-white/90 hover:text-white"
                   }`}
                 >
@@ -484,7 +484,7 @@ export default function Navbar({
                 href="/about"
                 className={`transition-colors py-1 hover:underline cursor-pointer ${
                   isHeaderSolid
-                    ? "text-gray-800 hover:text-[#c0262d]"
+                    ? "text-gray-800 hover:text-[#ff5d55]"
                     : "text-white/90 hover:text-white"
                 }`}
               >
@@ -496,7 +496,7 @@ export default function Navbar({
                 href="/contact"
                 className={`transition-colors py-1 hover:underline cursor-pointer ${
                   isHeaderSolid
-                    ? "text-gray-800 hover:text-[#c0262d]"
+                    ? "text-gray-800 hover:text-[#ff5d55]"
                     : "text-white/90 hover:text-white"
                 }`}
               >
@@ -518,7 +518,7 @@ export default function Navbar({
               <X className="w-5 h-5" />
             </button>
             <div className="flex items-center gap-2 mb-3">
-              <MapPin className="w-5 h-5 text-[#c0262d]" />
+              <MapPin className="w-5 h-5 text-[#ff5d55]" />
               <h3 className="font-bold text-base text-gray-900">Delivery Location</h3>
             </div>
             <p className="text-xs text-gray-500 mb-4">
@@ -531,12 +531,12 @@ export default function Navbar({
                 value={newPincode}
                 onChange={(e) => setNewPincode(e.target.value.replace(/\D/g, ""))}
                 placeholder="Enter 6-digit PIN code"
-                className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm font-semibold tracking-wider text-center focus:border-[#c0262d] focus:outline-hidden"
+                className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm font-semibold tracking-wider text-center focus:border-[#ff5d55] focus:outline-hidden"
                 autoFocus
               />
               <button
                 type="submit"
-                className="w-full py-2.5 bg-[#c0262d] hover:bg-[#a11c22] text-white font-semibold rounded-lg text-xs transition-colors shadow-xs"
+                className="w-full py-2.5 bg-[#ff5d55] hover:bg-[#e5473f] text-white font-semibold rounded-lg text-xs transition-colors shadow-xs"
               >
                 Apply Location
               </button>

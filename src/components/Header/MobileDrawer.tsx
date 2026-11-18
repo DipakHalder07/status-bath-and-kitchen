@@ -54,17 +54,17 @@ export default function MobileDrawer({
           <Link
             href="/products"
             onClick={onClose}
-            className="flex items-center gap-2 p-2.5 rounded-lg bg-stone-50 hover:bg-red-50 hover:text-[#c0262d] text-gray-800 transition-colors"
+            className="flex items-center gap-2 p-2.5 rounded-lg bg-stone-50 hover:bg-red-50 hover:text-[#ff5d55] text-gray-800 transition-colors"
           >
-            <Package className="w-4 h-4 text-[#c0262d]" />
+            <Package className="w-4 h-4 text-[#ff5d55]" />
             <span>All Products</span>
           </Link>
           <Link
             href="/about"
             onClick={onClose}
-            className="flex items-center gap-2 p-2.5 rounded-lg bg-stone-50 hover:bg-red-50 hover:text-[#c0262d] text-gray-800 transition-colors"
+            className="flex items-center gap-2 p-2.5 rounded-lg bg-stone-50 hover:bg-red-50 hover:text-[#ff5d55] text-gray-800 transition-colors"
           >
-            <Info className="w-4 h-4 text-[#c0262d]" />
+            <Info className="w-4 h-4 text-[#ff5d55]" />
             <span>About Us</span>
           </Link>
         </div>
@@ -83,7 +83,7 @@ export default function MobileDrawer({
                   onClick={() =>
                     setExpandedCat(isExpanded ? null : cat.id)
                   }
-                  className="w-full flex items-center justify-between py-2.5 px-2 text-sm font-semibold text-gray-800 hover:text-[#c0262d] rounded-lg transition-colors"
+                  className="w-full flex items-center justify-between py-2.5 px-2 text-sm font-semibold text-gray-800 hover:text-[#ff5d55] rounded-lg transition-colors"
                   aria-expanded={isExpanded}
                 >
                   <span>{cat.title}</span>
@@ -114,7 +114,7 @@ export default function MobileDrawer({
                                 onSelectCategory(it.name);
                                 onClose();
                               }}
-                              className="w-full text-left text-xs text-gray-700 hover:text-[#c0262d] py-1.5 px-2 rounded-md hover:bg-white transition-colors flex items-center justify-between"
+                              className="w-full text-left text-xs text-gray-700 hover:text-[#ff5d55] py-1.5 px-2 rounded-md hover:bg-white transition-colors flex items-center justify-between"
                             >
                               <span>{it.name}</span>
                               <ChevronRight className="w-3 h-3 text-gray-400" />
@@ -133,13 +133,13 @@ export default function MobileDrawer({
         {/* Footer Support Info */}
         <div className="p-4 border-t border-gray-100 bg-gray-50 text-xs text-gray-600 space-y-2.5">
           <div className="flex items-center gap-2">
-            <Phone className="w-4 h-4 text-[#c0262d]" />
-            <Link href="/contact" onClick={onClose} className="font-semibold text-gray-800 hover:text-[#c0262d]">
+            <Phone className="w-4 h-4 text-[#ff5d55]" />
+            <Link href="/contact" onClick={onClose} className="font-semibold text-gray-800 hover:text-[#ff5d55]">
               Contact Us: {siteBrand.phone}
             </Link>
           </div>
           <div className="flex items-center gap-2">
-            <MapPin className="w-4 h-4 text-[#c0262d]" />
+            <MapPin className="w-4 h-4 text-[#ff5d55]" />
             <Link href="/contact" onClick={onClose} className="hover:underline">
               Experience Studio &amp; Locations
             </Link>
