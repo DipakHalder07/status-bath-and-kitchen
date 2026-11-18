@@ -338,7 +338,7 @@ export default function BlogListClient() {
       <Toast />
 
       {/* Footer */}
-      <Footer />
+      <Footer showBlogCredit={true} />
     </div>
   );
 }

@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { siteBrand } from "@/data/interioData";
 import { useCart } from "@/context/CartContext";
@@ -35,7 +36,14 @@ const socialIcons: { key: keyof typeof siteBrand.social; label: string; path: st
   },
 ];
 
-export default function Footer() {
+interface FooterProps {
+  showBlogCredit?: boolean;
+}
+
+export default function Footer({ showBlogCredit }: FooterProps = {}) {
+  const pathname = usePathname();
+  const isBlog =
+    showBlogCredit ?? (pathname ? pathname === "/blog" || pathname.startsWith("/blog/") : false);
   const { openConsultation } = useCart();
   const socialLinks = socialIcons.filter((s) => siteBrand.social[s.key]);
 
@@ -254,9 +262,24 @@ export default function Footer() {
 
         {/* Copyright & Legal Links */}
         <div className="flex flex-col sm:flex-row items-center justify-between text-xs text-stone-300 gap-4">
-          <p>
+          <p className="text-center sm:text-left">
             © {new Date().getFullYear()} {siteBrand.name}. All rights reserved.
           </p>
+
+          {isBlog && (
+            <p className="text-xs text-stone-300 text-center">
+              Design and Developed by{" "}
+              <a
+                href="https://digitalgrove.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-stone-100 hover:text-white underline underline-offset-4 decoration-stone-500 hover:decoration-white transition-colors font-medium"
+              >
+                digitalgrove.in
+              </a>
+            </p>
+          )}
+
           <div className="flex items-center gap-6">
             <a href="#privacy" className="hover:text-white transition-colors">
               Privacy policy

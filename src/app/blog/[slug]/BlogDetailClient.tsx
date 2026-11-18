@@ -557,7 +557,7 @@ export default function BlogDetailClient({
       <Toast />
 
       {/* Footer */}
-      <Footer />
+      <Footer showBlogCredit={true} />
     </div>
   );
 }
