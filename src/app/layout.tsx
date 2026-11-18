@@ -1,32 +1,12 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 
-const ceraFont = localFont({
-  src: [
-    {
-      path: "../../public/fonts/CeraGodrejInterio-Light.woff2",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/CeraGodrejInterio-Regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/CeraGodrejInterio-Medium.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/CeraGodrejInterio-Bold.woff2",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-cera",
+const outfitFont = Outfit({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-outfit",
   display: "swap",
   fallback: ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
 });
@@ -57,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${ceraFont.variable} h-full antialiased font-sans`}>
+    <html lang="en" className={`${outfitFont.variable} h-full antialiased font-sans`}>
       <body className="min-h-full flex flex-col font-sans bg-white text-[#4a4541] selection:bg-red-100 selection:text-red-900">
         <CartProvider>{children}</CartProvider>
       </body>

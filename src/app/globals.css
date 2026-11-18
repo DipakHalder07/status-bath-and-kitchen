@@ -1,40 +1,7 @@
 @import "tailwindcss";
 
-/* 1. Official Cera Godrej Interio Brand Typography */
-@font-face {
-  font-family: "Cera Godrej Interio";
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url("/fonts/CeraGodrejInterio-Light.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Cera Godrej Interio";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/fonts/CeraGodrejInterio-Regular.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Cera Godrej Interio";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("/fonts/CeraGodrejInterio-Medium.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Cera Godrej Interio";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("/fonts/CeraGodrejInterio-Bold.woff2") format("woff2");
-}
-
 :root {
-  --font-sans: "Cera Godrej Interio", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans: var(--font-outfit), "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --background: #ffffff;
   --foreground: #4a4541;
   --primary-red: #ff5d55;
@@ -51,7 +18,7 @@ html,
 body {
   background-color: #ffffff;
   color: #4a4541;
-  font-family: "Cera Godrej Interio", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: var(--font-outfit), "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -66,7 +33,7 @@ body {
   h4,
   h5,
   h6 {
-    font-family: "Cera Godrej Interio", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: var(--font-outfit), "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
 }
 
