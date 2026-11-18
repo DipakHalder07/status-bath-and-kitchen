@@ -151,10 +151,21 @@ export default function ConsultationModal() {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full py-3 bg-[#c0262d] hover:bg-[#a11c22] text-white text-xs font-bold rounded-xl transition-all shadow-md shadow-red-600/20"
+                  className="w-full py-3 bg-[#c0262d] hover:bg-[#a11c22] text-white text-xs font-bold rounded-xl transition-all shadow-md shadow-red-600/20 cursor-pointer"
                 >
                   Request a Call Back
                 </button>
+              </div>
+
+              <div className="text-center pt-1">
+                <a
+                  href="https://wa.me/919832095793?text=Hi%2C%20I%20would%20like%20to%20book%20a%20design%20consultation%20with%20Status%20Bath%20%26%20Kitchen."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs text-emerald-700 hover:text-emerald-800 font-semibold"
+                >
+                  <span>Or message on WhatsApp (+91 98320 95793)</span>
+                </a>
               </div>
 
               <p className="text-[10px] text-gray-400 text-center">

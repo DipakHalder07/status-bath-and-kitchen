@@ -86,8 +86,10 @@ export default function ServicesClient() {
   const [formDate, setFormDate] = useState("");
   const [formTimeSlot, setFormTimeSlot] = useState("Morning (9 AM - 12 PM)");
   const [formNotes, setFormNotes] = useState("");
+  const [sendViaWhatsapp, setSendViaWhatsapp] = useState(true);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [generatedTicketId, setGeneratedTicketId] = useState("");
+  const [whatsappShareUrl, setWhatsappShareUrl] = useState("");
 
   // Tracking State
   const [trackQuery, setTrackQuery] = useState("");
@@ -133,20 +135,44 @@ export default function ServicesClient() {
     setIsSubmitted(true);
 
     const srv = servicesList.find((s) => s.id === selectedServiceId);
+    const serviceTitle = srv ? srv.title : "Service Request";
+
+    // Prepare WhatsApp message for +91 98320 95793
+    const messageLines = [
+      `*New Service Request - Status Bath & Kitchen*`,
+      `----------------------------------------`,
+      `*Ticket ID:* ${newTicketId}`,
+      `*Service:* ${serviceTitle}`,
+      `*Customer Name:* ${formName}`,
+      `*Customer Mobile:* ${formPhone}`,
+      `*PIN Code:* ${formPincode}`,
+      formAddress ? `*Address:* ${formAddress}` : "",
+      `*Preferred Slot:* ${formDate || "Tomorrow"}, ${formTimeSlot}`,
+      formNotes ? `*Notes:* ${formNotes}` : "",
+      `----------------------------------------`,
+      `Please confirm technician dispatch.`,
+    ].filter(Boolean).join("\n");
+
+    const waUrl = `https://wa.me/919832095793?text=${encodeURIComponent(messageLines)}`;
+    setWhatsappShareUrl(waUrl);
 
     setTrackedOrder({
       ticketId: newTicketId,
-      serviceName: srv ? srv.title : "Service Request",
+      serviceName: serviceTitle,
       customerName: formName,
       status: "assigned",
       technicianName: "Deepak Rawat (Senior Specialist)",
-      technicianPhone: "+91 98200 44123",
+      technicianPhone: "+91 98320 95793",
       scheduledSlot: `${formDate || "Tomorrow"}, ${formTimeSlot}`,
       pincode: formPincode,
       lastUpdated: "Just now",
     });
 
     showToast(`Service request logged! Ticket ID: ${newTicketId}`);
+
+    if (sendViaWhatsapp && typeof window !== "undefined") {
+      window.open(waUrl, "_blank", "noopener,noreferrer");
+    }
   };
 
   const handleTrackSubmit = (e: React.FormEvent) => {
@@ -166,7 +192,7 @@ export default function ServicesClient() {
       customerName: "Verified Customer",
       status: "en-route",
       technicianName: "Vikram Jadhav (Certified Technician)",
-      technicianPhone: "+91 98192 11044",
+      technicianPhone: "+91 98320 95793",
       scheduledSlot: "Today, 2:30 PM - 5:00 PM",
       pincode: "400079",
       lastUpdated: "8 mins ago",
@@ -349,14 +375,40 @@ export default function ServicesClient() {
                       <div className="inline-block bg-white border border-[#dcd7d0] px-6 py-2.5 rounded-sm text-sm font-semibold text-[#ff5d55] tracking-wide">
                         Ticket ID: {generatedTicketId}
                       </div>
-                      <div className="pt-2 flex justify-center gap-4">
-                        <button
-                          type="button"
-                          onClick={() => handleNavClick("track-service")}
-                          className="btn-brand-primary px-6 py-2.5 text-xs font-semibold"
+
+                      {/* WhatsApp / Call Dispatch Action */}
+                      <div className="pt-2 max-w-md mx-auto space-y-3">
+                        <a
+                          href={whatsappShareUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full bg-[#25D366] hover:bg-[#20ba59] text-white py-3 px-6 rounded-sm text-xs sm:text-sm font-semibold flex items-center justify-center gap-2.5 shadow-sm transition-colors cursor-pointer"
                         >
-                          Track This Request &rarr;
-                        </button>
+                          <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                          </svg>
+                          <span>Send Details to WhatsApp (+91 98320 95793)</span>
+                        </a>
+
+                        <div className="flex flex-col sm:flex-row justify-center gap-3">
+                          <a
+                            href="tel:+919832095793"
+                            className="btn-brand-outline py-2.5 px-4 text-xs font-semibold flex items-center justify-center gap-1.5"
+                          >
+                            <Phone className="w-3.5 h-3.5" />
+                            <span>Call 98320 95793</span>
+                          </a>
+                          <button
+                            type="button"
+                            onClick={() => handleNavClick("track-service")}
+                            className="btn-brand-primary px-5 py-2.5 text-xs font-semibold"
+                          >
+                            Track This Request &rarr;
+                          </button>
+                        </div>
+                      </div>
+
+                      <div className="pt-2">
                         <button
                           type="button"
                           onClick={() => {
@@ -365,10 +417,11 @@ export default function ServicesClient() {
                             setFormPhone("");
                             setFormPincode("");
                             setFormAddress("");
+                            setFormNotes("");
                           }}
-                          className="btn-brand-outline px-6 py-2.5 text-xs font-semibold"
+                          className="text-xs text-[#76716d] hover:text-[#4a4541] underline cursor-pointer"
                         >
-                          Book Another
+                          Book Another Service
                         </button>
                       </div>
                     </div>
@@ -490,6 +543,25 @@ export default function ServicesClient() {
                         </div>
                       </div>
 
+                      {/* WhatsApp Sending Option */}
+                      <div className="bg-emerald-50/80 border border-emerald-200/80 p-3.5 rounded-sm flex items-start gap-3 text-xs text-emerald-950">
+                        <input
+                          type="checkbox"
+                          id="sendWhatsapp"
+                          checked={sendViaWhatsapp}
+                          onChange={(e) => setSendViaWhatsapp(e.target.checked)}
+                          className="mt-0.5 w-4 h-4 text-emerald-600 rounded border-gray-300 focus:ring-emerald-500 cursor-pointer shrink-0"
+                        />
+                        <label htmlFor="sendWhatsapp" className="cursor-pointer select-none">
+                          <span className="font-semibold text-emerald-900 flex items-center gap-1.5">
+                            Send service request directly to WhatsApp (+91 98320 95793)
+                          </span>
+                          <span className="text-[11px] text-emerald-800 block mt-0.5 leading-relaxed">
+                            When submitting, automatically opens WhatsApp with ticket details to dispatch our technician team immediately.
+                          </span>
+                        </label>
+                      </div>
+
                       <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
                         <div className="text-xs text-[#76716d] flex items-center gap-1.5">
                           <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
@@ -498,9 +570,9 @@ export default function ServicesClient() {
 
                         <button
                           type="submit"
-                          className="w-full sm:w-auto btn-brand-primary px-8 py-3 text-xs sm:text-sm font-medium tracking-wide shadow-md cursor-pointer"
+                          className="w-full sm:w-auto btn-brand-primary px-8 py-3 text-xs sm:text-sm font-medium tracking-wide shadow-md cursor-pointer flex items-center justify-center gap-2"
                         >
-                          Confirm Service Request &rarr;
+                          <span>Confirm &amp; Send Request &rarr;</span>
                         </button>
                       </div>
                     </form>
@@ -555,7 +627,7 @@ export default function ServicesClient() {
                             customerName: "Swapneel Nagarkar",
                             status: "en-route",
                             technicianName: "Vikram Jadhav (Certified Technician)",
-                            technicianPhone: "+91 98192 11044",
+                            technicianPhone: "+91 98320 95793",
                             scheduledSlot: "Today, 2:30 PM - 5:00 PM",
                             pincode: "400079",
                             lastUpdated: "8 mins ago",
@@ -802,11 +874,11 @@ export default function ServicesClient() {
 
             <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0 w-full sm:w-auto">
               <a
-                href="tel:18002671122"
+                href="tel:+919832095793"
                 className="w-full sm:w-auto bg-[#ff5d55] hover:bg-[#e5473f] text-white text-xs sm:text-sm font-semibold px-6 py-3.5 rounded-[20px_2px_2px_2px] flex items-center justify-center gap-2 transition-colors shadow-md"
               >
                 <Phone className="w-4 h-4" />
-                <span>Call 1800-267-1122</span>
+                <span>Call +91 98320 95793</span>
               </a>
               <Link
                 href="/contact"

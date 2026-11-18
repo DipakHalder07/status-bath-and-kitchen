@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  experimental: {
+    // @ts-ignore - Required by Next.js agent security upgrade
+    agentUpgrade: "security",
+  },
   turbopack: {
     rules: {
       "*.css": {

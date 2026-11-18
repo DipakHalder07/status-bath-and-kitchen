@@ -58,11 +58,11 @@ export default function TopUtilityBar() {
             Services & Repairs
           </a>
           <a
-            href="#contact"
+            href="tel:+919832095793"
             className="flex items-center space-x-1 hover:text-[#c0262d] transition-colors"
           >
             <Phone className="w-3.5 h-3.5" />
-            <span>1800-267-1122 (Toll Free)</span>
+            <span>+91 98320 95793</span>
           </a>
           <a
             href="#faqs"
