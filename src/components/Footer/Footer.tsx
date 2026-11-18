@@ -262,26 +262,28 @@ export default function Footer({ showBlogCredit }: FooterProps = {}) {
 
         {/* Copyright & Legal Links */}
         <div className="flex flex-col sm:flex-row items-center justify-between text-xs text-stone-300 gap-4">
-          <p className="text-center sm:text-left">
-            © {new Date().getFullYear()} {siteBrand.name}. All rights reserved.
-          </p>
-
-          {isBlog && (
-            <div className="text-center">
-              <a
-                href="https://digitalgrove.in/"
-                target="_blank"
-                rel="noopener"
-                title="Digital Grove | Web Design & Development Agency"
-                className="group inline-flex items-center gap-1.5 text-xs text-stone-300 hover:text-white transition-colors cursor-pointer"
-              >
-                <span>Design and Developed by</span>
-                <span className="text-stone-100 group-hover:text-white font-medium underline underline-offset-4 decoration-stone-400 group-hover:decoration-white transition-colors">
-                  digitalgrove.in
-                </span>
-              </a>
-            </div>
-          )}
+          <div className="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-3 text-center sm:text-left">
+            <p>
+              © {new Date().getFullYear()} {siteBrand.name}. All rights reserved.
+            </p>
+            {isBlog && (
+              <>
+                <span className="hidden sm:inline text-stone-500">|</span>
+                <a
+                  href="https://digitalgrove.in/"
+                  target="_blank"
+                  rel="noopener"
+                  title="Digital Grove | Web Design & Development Agency"
+                  className="group inline-flex items-center gap-1.5 text-xs text-stone-300 hover:text-white transition-colors cursor-pointer"
+                >
+                  <span>Design and Developed by</span>
+                  <span className="text-stone-100 group-hover:text-white font-medium underline underline-offset-4 decoration-stone-400 group-hover:decoration-white transition-colors">
+                    digitalgrove.in
+                  </span>
+                </a>
+              </>
+            )}
+          </div>
 
           <div className="flex items-center gap-6">
             <a href="#privacy" className="hover:text-white transition-colors">
