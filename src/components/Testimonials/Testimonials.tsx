@@ -69,9 +69,9 @@ export default function Testimonials() {
         </div>
 
         {/* Red scroll progress bar matching live */}
-        <div className="mt-10 max-w-2xl mx-auto h-0.5 bg-gray-200 rounded-full overflow-hidden">
+        <div className="mt-10 max-w-2xl mx-auto h-1 bg-[#e5e5e5] rounded-full overflow-hidden">
           <div
-            className="h-full bg-[#c0262d] transition-all duration-200"
+            className="h-full bg-[#ff5d55] rounded-full transition-all duration-200"
             style={{ width: `${scrollProgress}%` }}
           />
         </div>
