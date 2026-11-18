@@ -33,8 +33,11 @@ export default function ShopByCollection() {
     const slider = sliderRef.current;
     if (!slider) return;
 
-    slider.addEventListener("scroll", updateScrollProgress, { passive: true });
+    // Ensure initial scroll position starts cleanly at 0 (respecting left padding)
+    slider.scrollLeft = 0;
     updateScrollProgress();
+
+    slider.addEventListener("scroll", updateScrollProgress, { passive: true });
 
     return () => {
       slider.removeEventListener("scroll", updateScrollProgress);
@@ -171,10 +174,14 @@ export default function ShopByCollection() {
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseUp}
-            className={`flex gap-5 sm:gap-6 overflow-x-auto no-scrollbar scroll-smooth -mx-5 px-5 sm:mx-0 sm:px-0 select-none ${
+            className={`flex gap-5 sm:gap-6 overflow-x-auto no-scrollbar scroll-smooth -mx-5 px-5 sm:mx-0 sm:px-0 scroll-pl-5 sm:scroll-pl-0 scroll-pr-5 sm:scroll-pr-0 select-none ${
               isDragging ? "cursor-grabbing" : "cursor-grab"
             }`}
-            style={{ scrollSnapType: "x mandatory" }}
+            style={{
+              scrollSnapType: "x mandatory",
+              scrollPaddingLeft: "1.25rem",
+              scrollPaddingRight: "1.25rem",
+            }}
           >
             {collectionSets.map((collection, colIdx) => (
               <div
