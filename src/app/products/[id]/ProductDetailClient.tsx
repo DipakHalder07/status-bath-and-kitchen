@@ -672,12 +672,12 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                 </Link>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                 {relatedProducts.map((rel) => (
                   <div key={rel.id} className="group flex flex-col">
                     <Link
                       href={`/products/${rel.id}`}
-                      className="relative aspect-square bg-[#f6f4f0] overflow-hidden mb-3"
+                      className="block relative aspect-square bg-[#f6f4f0] overflow-hidden mb-3"
                     >
                       <Image
                         src={rel.image}
