@@ -19,12 +19,12 @@ export default function FaqAccordion() {
         {/* FAQ Section: How can we assist you? */}
         <div className="w-full">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1c1c1c] tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-medium text-[#4a4541] tracking-tight">
               How can we assist you?
             </h2>
             <button
               onClick={() => openConsultation("General Enquiry")}
-              className="text-sm font-semibold text-gray-900 border-b-2 border-gray-900 pb-0.5 hover:text-[#c0262d] hover:border-[#c0262d] transition-colors cursor-pointer"
+              className="text-sm font-medium text-[#4a4541] border-b border-[#4a4541] pb-0.5 hover:text-[#ff5d55] hover:border-[#ff5d55] transition-colors cursor-pointer"
             >
               Ask a question
             </button>
@@ -40,18 +40,18 @@ export default function FaqAccordion() {
                     onClick={() => toggle(index)}
                     className="w-full flex items-center justify-between text-left group cursor-pointer"
                   >
-                    <span className="text-base sm:text-lg font-bold text-gray-900 group-hover:text-[#c0262d] transition-colors pr-4">
+                    <span className="text-base sm:text-lg font-medium text-[#4a4541] group-hover:text-[#ff5d55] transition-colors pr-4">
                       {faq.question}
                     </span>
                     <ChevronDown
-                      className={`w-5 h-5 text-gray-600 shrink-0 transition-transform duration-200 ${
-                        isOpen ? "rotate-180 text-[#c0262d]" : ""
+                      className={`w-5 h-5 text-[#76716d] shrink-0 transition-transform duration-200 ${
+                        isOpen ? "rotate-180 text-[#ff5d55]" : ""
                       }`}
                     />
                   </button>
 
                   {isOpen && (
-                    <div className="mt-4 text-sm text-gray-600 leading-relaxed font-normal animate-in fade-in duration-200">
+                    <div className="mt-4 text-sm text-[#76716d] leading-relaxed font-normal animate-in fade-in duration-200">
                       {faq.answer}
                     </div>
                   )}
@@ -62,14 +62,14 @@ export default function FaqAccordion() {
         </div>
 
         {/* SEO Rich Content Section */}
-        <div className="w-full pt-10 border-t border-gray-200 text-gray-700 space-y-8">
+        <div className="w-full pt-10 border-t border-gray-200 text-[#76716d] space-y-8">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1c1c1c] tracking-tight mb-6">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-medium text-[#4a4541] tracking-tight mb-6">
               Modular Kitchens, Bathrooms, Wardrobes, Doors &amp; Windows by Status Bath and Kitchen
             </h2>
-            <div className="space-y-6 text-xs sm:text-sm leading-relaxed text-gray-600 font-normal">
+            <div className="space-y-6 text-xs sm:text-sm leading-relaxed text-[#76716d] font-normal">
               <div>
-                <h3 className="font-bold text-gray-900 mb-1.5 text-sm sm:text-base">
+                <h3 className="font-semibold text-[#4a4541] mb-1.5 text-sm sm:text-base">
                   Modular kitchens planned around you
                 </h3>
                 <p>
@@ -78,7 +78,7 @@ export default function FaqAccordion() {
               </div>
 
               <div>
-                <h3 className="font-bold text-gray-900 mb-1.5 text-sm sm:text-base">
+                <h3 className="font-semibold text-[#4a4541] mb-1.5 text-sm sm:text-base">
                   Bathrooms that are easy to live with
                 </h3>
                 <p>
@@ -87,7 +87,7 @@ export default function FaqAccordion() {
               </div>
 
               <div>
-                <h3 className="font-bold text-gray-900 mb-1.5 text-sm sm:text-base">
+                <h3 className="font-semibold text-[#4a4541] mb-1.5 text-sm sm:text-base">
                   Wardrobes, doors and windows
                 </h3>
                 <p>
@@ -96,7 +96,7 @@ export default function FaqAccordion() {
               </div>
 
               <div>
-                <h3 className="font-bold text-gray-900 mb-1.5 text-sm sm:text-base">
+                <h3 className="font-semibold text-[#4a4541] mb-1.5 text-sm sm:text-base">
                   Kitchen accessories that make a difference
                 </h3>
                 <p>
@@ -105,7 +105,7 @@ export default function FaqAccordion() {
               </div>
 
               <div>
-                <h3 className="font-bold text-gray-900 mb-1.5 text-sm sm:text-base">
+                <h3 className="font-semibold text-[#4a4541] mb-1.5 text-sm sm:text-base">
                   How to plan your project
                 </h3>
                 <p>
@@ -125,7 +125,7 @@ export default function FaqAccordion() {
               {/* SEO Category Links */}
               <div className="pt-6 border-t border-gray-200 space-y-4">
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-1 text-sm">
+                  <h4 className="font-semibold text-[#4a4541] mb-1 text-sm">
                     Explore Modular Kitchens
                   </h4>
                   <p className="text-gray-500 text-xs">
@@ -134,7 +134,7 @@ export default function FaqAccordion() {
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-1 text-sm">
+                  <h4 className="font-semibold text-[#4a4541] mb-1 text-sm">
                     Explore Bathrooms
                   </h4>
                   <p className="text-gray-500 text-xs">
@@ -143,7 +143,7 @@ export default function FaqAccordion() {
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-1 text-sm">
+                  <h4 className="font-semibold text-[#4a4541] mb-1 text-sm">
                     Explore Wardrobes, Doors &amp; Windows
                   </h4>
                   <p className="text-gray-500 text-xs">
@@ -152,7 +152,7 @@ export default function FaqAccordion() {
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-1 text-sm">
+                  <h4 className="font-semibold text-[#4a4541] mb-1 text-sm">
                     Explore Appliances &amp; Kitchen Accessories
                   </h4>
                   <p className="text-gray-500 text-xs">

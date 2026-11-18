@@ -20,12 +20,12 @@ export default function CareServices() {
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1c1c1c] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-medium text-[#4a4541] tracking-tight">
             Our services
           </h2>
           <button
             onClick={() => openConsultation("Design Consultation")}
-            className="text-sm font-semibold text-gray-900 border-b border-gray-900 pb-0.5 hover:text-[#c0262d] hover:border-[#c0262d] transition-colors cursor-pointer"
+            className="text-sm font-medium text-[#4a4541] border-b border-[#4a4541] pb-0.5 hover:text-[#ff5d55] hover:border-[#ff5d55] transition-colors cursor-pointer"
           >
             Talk to us
           </button>
@@ -43,19 +43,19 @@ export default function CareServices() {
               >
                 <div>
                   {/* Service Icon */}
-                  <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-[#f5f0ea] text-[#ff5247]">
+                  <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-[#f5f0ea] text-[#ff5d55]">
                     <Icon className="w-7 h-7" strokeWidth={1.75} />
                   </div>
-                  <h3 className="text-xl font-bold text-[#ff5247] mb-3">
+                  <h3 className="text-lg sm:text-xl font-medium text-[#4a4541] mb-2 group-hover:text-[#ff5d55] transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-[#76716d] leading-relaxed font-normal">
                     {service.description}
                   </p>
                 </div>
 
                 <div className="mt-6 pt-4">
-                  <span className="text-sm font-semibold text-gray-900 border-b border-gray-900 pb-0.5 group-hover:text-[#c0262d] group-hover:border-[#c0262d] transition-colors">
+                  <span className="text-sm font-medium text-[#4a4541] border-b border-[#4a4541] pb-0.5 group-hover:text-[#ff5d55] group-hover:border-[#ff5d55] transition-colors">
                     Enquire now
                   </span>
                 </div>

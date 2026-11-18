@@ -25,10 +25,10 @@ const icons: Record<string, LucideIcon> = {
 
 export default function InterioStats() {
   return (
-    <section className="py-16 sm:py-24 bg-[#ff5247] text-white">
+    <section className="py-16 sm:py-24 bg-[#ff5d55] text-white">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 text-center">
         {/* Heading */}
-        <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
+        <h2 className="text-2xl sm:text-4xl lg:text-[40px] font-medium tracking-tight text-white">
           {serviceStrip.title}
         </h2>
         <p className="text-sm sm:text-base text-white/95 mt-2 sm:mt-3 font-normal max-w-2xl mx-auto">
@@ -44,7 +44,7 @@ export default function InterioStats() {
                 <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-white/80 flex items-center justify-center">
                   <Icon className="w-7 h-7 sm:w-9 sm:h-9" strokeWidth={1.75} />
                 </div>
-                <p className="text-sm sm:text-base text-white mt-3 font-semibold">
+                <p className="text-sm sm:text-base text-white mt-3 font-medium">
                   {item.label}
                 </p>
               </div>

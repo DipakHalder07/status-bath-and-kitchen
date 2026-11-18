@@ -79,7 +79,7 @@ export default function MegaMenu({ onCategorySelect }: MegaMenuProps) {
             <div className="grid grid-cols-4 gap-8">
               {currentCategoryData.subsections.map((sub, idx) => (
                 <div key={idx} className="space-y-4">
-                  <h4 className="text-xs font-bold text-gray-900 tracking-wider uppercase border-b border-gray-100 pb-2">
+                  <h4 className="text-xs font-medium text-[#4a4541] tracking-wider uppercase border-b border-gray-100 pb-2">
                     {sub.name}
                   </h4>
                   <div className="grid grid-cols-1 gap-2.5">
@@ -104,7 +104,7 @@ export default function MegaMenu({ onCategorySelect }: MegaMenuProps) {
                           />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <p className="text-xs font-semibold text-gray-800 group-hover:text-[#c0262d] transition-colors truncate">
+                          <p className="text-xs font-medium text-[#4a4541] group-hover:text-[#ff5d55] transition-colors truncate">
                             {item.name}
                           </p>
                           <span className="text-[11px] text-gray-400 group-hover:text-gray-600 flex items-center gap-0.5">
@@ -118,23 +118,23 @@ export default function MegaMenu({ onCategorySelect }: MegaMenuProps) {
               ))}
 
               {/* Promo Banner inside Dropdown */}
-              <div className="bg-gradient-to-br from-amber-50 to-orange-50/50 rounded-2xl p-5 border border-amber-100/60 flex flex-col justify-between">
+              <div className="bg-[#f5f0ea] rounded-2xl p-5 border border-[#dcd7d0]/60 flex flex-col justify-between">
                 <div>
-                  <span className="inline-block px-2.5 py-0.5 bg-amber-500 text-white text-[10px] font-bold rounded-full mb-2">
-                    Godrej Assured
+                  <span className="inline-block px-2.5 py-0.5 bg-[#ff5d55] text-white text-[10px] font-medium rounded-full mb-2">
+                    Status Assured
                   </span>
-                  <h4 className="font-bold text-gray-900 text-sm mb-1">
-                    Free Expert Delivery & Assembly
+                  <h4 className="font-medium text-[#4a4541] text-sm mb-1">
+                    Free Expert Delivery &amp; Assembly
                   </h4>
-                  <p className="text-xs text-gray-600 leading-relaxed mb-4">
+                  <p className="text-xs text-[#76716d] leading-relaxed mb-4">
                     Trained technicians deliver and install right inside your home.
                   </p>
                 </div>
                 <a
                   href="#care-services"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#c0262d] hover:underline"
+                  className="inline-flex items-center gap-1.5 text-xs font-medium text-[#ff5d55] hover:underline"
                 >
-                  Explore Services & Warranty &rarr;
+                  Explore Services &amp; Warranty &rarr;
                 </a>
               </div>
             </div>

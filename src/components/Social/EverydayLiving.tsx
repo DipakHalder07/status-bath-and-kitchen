@@ -73,10 +73,10 @@ export default function EverydayLiving() {
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-12">
           <div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#1c1c1c] tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-medium text-[#4a4541] tracking-tight">
               Ideas for your kitchen &amp; bath
             </h2>
-            <p className="mt-2 text-sm sm:text-base text-gray-500 font-normal">
+            <p className="mt-2 text-sm sm:text-base text-[#76716d] font-normal">
               A few looks to get you started. Tap one and we will help you plan something similar.
             </p>
           </div>
@@ -85,7 +85,7 @@ export default function EverydayLiving() {
               href={siteBrand.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 sm:mt-0 inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#ff5247] hover:underline"
+              className="mt-4 sm:mt-0 inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-[#ff5d55] hover:underline"
             >
               <InstagramIcon className="w-4 h-4" />
               <span>Follow on Instagram</span>
@@ -110,10 +110,10 @@ export default function EverydayLiving() {
 
               {/* Hover Overlay */}
               <div className="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
-                <span className="text-[10px] uppercase font-bold tracking-wider text-[#ff7d70] block">
+                <span className="text-[10px] uppercase font-medium tracking-wider text-[#ff5d55] block">
                   {post.room}
                 </span>
-                <p className="text-xs font-semibold line-clamp-2 mt-0.5 leading-snug">
+                <p className="text-xs font-medium line-clamp-2 mt-0.5 leading-snug text-white">
                   {post.title}
                 </p>
               </div>

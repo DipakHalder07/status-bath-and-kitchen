@@ -23,7 +23,7 @@ export default function Testimonials() {
     <section id="why-status" className="py-16 sm:py-24 bg-[#faf8f5] overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         <div className="mb-4">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1c1c1c] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-medium text-[#4a4541] tracking-tight">
             Why homeowners choose Status
           </h2>
         </div>
@@ -43,24 +43,24 @@ export default function Testimonials() {
                 onClick={() => setActiveIdx(idx)}
                 className={`w-[300px] sm:w-[400px] shrink-0 p-8 sm:p-12 rounded-none sm:rounded-sm transition-all duration-300 flex flex-col items-center justify-between text-center cursor-pointer ${
                   isHighlighted
-                    ? "bg-white shadow-lg scale-102 border border-red-100"
+                    ? "bg-white shadow-lg scale-102 border border-[#ff5d55]/30"
                     : "bg-white/70 border border-gray-200/70 opacity-75 hover:opacity-100"
                 }`}
               >
                 {/* Step Number */}
-                <div className="text-5xl sm:text-6xl text-stone-300 font-extrabold leading-none mb-6">
+                <div className="text-5xl sm:text-6xl text-[#dcd7d0] font-light leading-none mb-6">
                   {String(idx + 1).padStart(2, "0")}
                 </div>
 
                 <h3
-                  className={`text-lg sm:text-2xl font-bold leading-snug ${
-                    isHighlighted ? "text-[#ff5247]" : "text-gray-800"
+                  className={`text-lg sm:text-2xl font-medium leading-snug ${
+                    isHighlighted ? "text-[#ff5d55]" : "text-[#4a4541]"
                   }`}
                 >
                   {item.title}
                 </h3>
 
-                <p className="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed">
+                <p className="mt-4 text-sm sm:text-base text-[#76716d] leading-relaxed">
                   {item.description}
                 </p>
               </div>

@@ -29,10 +29,10 @@ export default function PromoBanners() {
               <span className="text-xs uppercase tracking-wider text-white/80 block mb-1">
                 Modular Kitchens
               </span>
-              <h3 className="text-xl sm:text-2xl font-bold leading-tight mb-4 text-white">
+              <h3 className="text-xl sm:text-2xl font-medium leading-tight mb-4 text-white">
                 Looking for a new kitchen?
               </h3>
-              <span className="inline-block text-sm font-semibold text-white border-b border-white pb-0.5 hover:text-[#ff5247] hover:border-[#ff5247] transition-colors">
+              <span className="inline-block text-sm font-medium text-white border-b border-white pb-0.5 hover:text-[#ff5d55] hover:border-[#ff5d55] transition-colors">
                 Book a consultation
               </span>
             </div>
@@ -56,10 +56,10 @@ export default function PromoBanners() {
               <span className="text-xs uppercase tracking-wider text-white/80 block mb-1">
                 Bathrooms
               </span>
-              <h3 className="text-xl sm:text-2xl font-bold leading-tight mb-4 text-white">
+              <h3 className="text-xl sm:text-2xl font-medium leading-tight mb-4 text-white">
                 Planning a bathroom makeover?
               </h3>
-              <span className="inline-block text-sm font-semibold text-white border-b border-white pb-0.5 hover:text-[#ff5247] hover:border-[#ff5247] transition-colors">
+              <span className="inline-block text-sm font-medium text-white border-b border-white pb-0.5 hover:text-[#ff5d55] hover:border-[#ff5d55] transition-colors">
                 Book a consultation
               </span>
             </div>
@@ -82,18 +82,18 @@ export default function PromoBanners() {
 
           {/* Right: Copy & Button */}
           <div className="p-8 sm:p-12 lg:p-16 flex flex-col justify-center items-start">
-            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1c1c1c] leading-tight">
+            <h3 className="text-2xl sm:text-3xl lg:text-[36px] font-medium text-[#4a4541] leading-tight">
               Renovating an old <br />
               kitchen or bathroom?
             </h3>
-            <p className="text-sm sm:text-base text-gray-700 mt-3 sm:mt-4 font-normal">
+            <p className="text-sm sm:text-base text-[#76716d] mt-3 sm:mt-4 font-normal">
               We will plan the upgrade with you, from the new layout to the final fitting.
             </p>
             <div className="mt-6 sm:mt-8">
               <button
                 type="button"
                 onClick={() => openConsultation("Renovation")}
-                className="px-8 py-3 rounded-md border border-gray-900 bg-white hover:bg-stone-50 text-sm font-bold text-gray-900 transition-colors shadow-2xs cursor-pointer"
+                className="px-8 py-3 rounded-md border border-[#4a4541] bg-white hover:bg-[#4a4541] text-sm font-medium text-[#4a4541] hover:text-white transition-colors shadow-2xs cursor-pointer"
               >
                 Plan my renovation
               </button>

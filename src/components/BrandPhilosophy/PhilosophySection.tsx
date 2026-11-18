@@ -15,13 +15,13 @@ export default function PhilosophySection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           {/* Left: Text & Actions */}
           <div className="lg:col-span-6 space-y-4 sm:space-y-6">
-            <div className="text-xs sm:text-sm font-bold text-[#ff5247] uppercase tracking-wide">
+            <div className="text-xs sm:text-sm font-medium text-[#ff5d55] uppercase tracking-wide">
               For builders, architects &amp; designers
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1c1c1c] tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-medium text-[#4a4541] tracking-tight leading-tight">
               Project solutions for homes and developments
             </h2>
-            <p className="text-sm sm:text-base text-gray-600 leading-relaxed max-w-xl font-normal">
+            <p className="text-sm sm:text-base text-[#76716d] leading-relaxed max-w-xl font-normal">
               From a single apartment to a full project, we supply and install modular kitchens, wardrobes, doors and windows to your drawings and timelines.
             </p>
 
@@ -30,7 +30,7 @@ export default function PhilosophySection() {
               <button
                 type="button"
                 onClick={() => openConsultation("Project Enquiry")}
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md bg-[#ff5247] hover:bg-[#e0453b] text-white font-bold text-xs sm:text-sm shadow-xs transition-all cursor-pointer hover:shadow-md"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md bg-[#ff5d55] hover:bg-[#e5473f] text-white font-medium text-xs sm:text-sm shadow-xs transition-all cursor-pointer hover:shadow-md"
               >
                 <span>Enquire now</span>
                 <ArrowRight className="w-4 h-4" />
@@ -38,7 +38,7 @@ export default function PhilosophySection() {
 
               <a
                 href={siteBrand.phoneHref || "#contact"}
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md border border-gray-900 bg-white hover:bg-stone-50 text-gray-900 font-bold text-xs sm:text-sm transition-colors cursor-pointer"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md border border-[#4a4541] bg-white hover:bg-[#4a4541] text-[#4a4541] hover:text-white font-medium text-xs sm:text-sm transition-colors cursor-pointer"
               >
                 <span>Call us</span>
                 <Phone className="w-4 h-4" />

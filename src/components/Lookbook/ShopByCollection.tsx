@@ -56,10 +56,10 @@ export default function ShopByCollection() {
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Title */}
         <div className="mb-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1c1c1c] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-medium text-[#4a4541] tracking-tight">
             Shop by collection
           </h2>
-          <p className="mt-2 text-sm sm:text-base text-gray-600">
+          <p className="mt-2 text-sm sm:text-base text-[#76716d]">
             {currentCollection.subtitle}
           </p>
         </div>
@@ -103,7 +103,7 @@ export default function ShopByCollection() {
                 className="relative w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/95 shadow-lg border-2 border-white flex items-center justify-center cursor-pointer group/dot hover:scale-115 transition-transform"
                 aria-label={`View ${spot.name}`}
               >
-                <div className="w-2.5 h-2.5 rounded-full bg-[#1c1c1c] group-hover/dot:bg-[#c0262d] transition-colors" />
+                <div className="w-2.5 h-2.5 rounded-full bg-[#4a4541] group-hover/dot:bg-[#ff5d55] transition-colors" />
                 <span className="absolute inset-0 rounded-full border border-white animate-ping opacity-75 pointer-events-none" />
               </button>
 
@@ -121,11 +121,11 @@ export default function ShopByCollection() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h4 className="text-xs font-bold text-gray-900 line-clamp-2">
+                  <h4 className="text-xs font-medium text-[#4a4541] line-clamp-2">
                     {spot.name}
                   </h4>
                   <div className="mt-1 flex items-center justify-between">
-                    <span className="text-sm font-bold text-gray-900">
+                    <span className="text-sm font-semibold text-[#4a4541]">
                       {spot.price > 0
                         ? `₹${spot.price.toLocaleString("en-IN")}`
                         : "Price on request"}
@@ -133,7 +133,7 @@ export default function ShopByCollection() {
                     {spot.price > 0 ? (
                       <button
                         onClick={() => handleItemAction(spot)}
-                        className="p-1.5 bg-[#c0262d] text-white rounded-md hover:bg-[#a11c22] transition-colors cursor-pointer"
+                        className="p-1.5 bg-[#ff5d55] text-white rounded-md hover:bg-[#e5473f] transition-colors cursor-pointer"
                         title="Add to cart"
                       >
                         <ShoppingBag className="w-3.5 h-3.5" />
@@ -141,7 +141,7 @@ export default function ShopByCollection() {
                     ) : (
                       <button
                         onClick={() => handleItemAction(spot)}
-                        className="px-2.5 py-1 bg-[#c0262d] text-white rounded-md hover:bg-[#a11c22] text-[11px] font-semibold transition-colors cursor-pointer"
+                        className="px-2.5 py-1 bg-[#ff5d55] text-white rounded-md hover:bg-[#e5473f] text-[11px] font-medium transition-colors cursor-pointer"
                       >
                         Enquire
                       </button>
@@ -154,7 +154,7 @@ export default function ShopByCollection() {
 
           {/* In-Image Bottom Left: Title */}
           <div className="absolute bottom-6 left-6 sm:bottom-8 sm:left-8 z-20">
-            <h3 className="text-xl sm:text-3xl font-extrabold text-white drop-shadow-md">
+            <h3 className="text-xl sm:text-3xl font-medium text-white drop-shadow-md">
               {currentCollection.name}
             </h3>
           </div>

@@ -44,14 +44,14 @@ export default function ProductCarousel({
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Header with Title and "View all products" */}
         <div className="flex items-center justify-between mb-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1c1c1c] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-medium text-[#4a4541] tracking-tight">
             {title}
           </h2>
 
           <a
             href={viewAllLink}
             onClick={() => showToast(`Browsing all products in ${title}`)}
-            className="text-sm font-semibold text-gray-900 border-b border-gray-900 pb-0.5 hover:text-[#c0262d] hover:border-[#c0262d] transition-colors"
+            className="text-sm font-medium text-[#4a4541] border-b border-[#4a4541] pb-0.5 hover:text-[#ff5d55] hover:border-[#ff5d55] transition-colors"
           >
             View all products
           </a>

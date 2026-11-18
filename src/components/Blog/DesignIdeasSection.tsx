@@ -24,19 +24,19 @@ export default function DesignIdeasSection() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-transparent" />
 
           <div className="relative z-10 max-w-xl space-y-4">
-            <span className="text-xs font-bold text-[#ff9f99] uppercase tracking-wider">
+            <span className="text-xs font-medium text-[#ff9f99] uppercase tracking-wider">
               Interior Lookbooks &amp; Tips
             </span>
-            <h3 className="text-2xl sm:text-4xl font-extrabold leading-tight text-white">
+            <h3 className="text-2xl sm:text-3xl lg:text-[34px] font-medium leading-tight text-white">
               Design ideas to inspire you
             </h3>
-            <p className="text-xs sm:text-sm text-stone-200 leading-relaxed">
+            <p className="text-xs sm:text-sm text-stone-200 leading-relaxed font-normal">
               Blogs, articles, moodboards and more &ndash; expert advice from our design team so you stay up to date on all the latest trends.
             </p>
             <div className="pt-2">
               <Link
                 href="/blog"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-[#ff5d55] text-gray-900 hover:text-white text-xs font-bold transition-all shadow-md group"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-[#ff5d55] text-gray-900 hover:text-white text-xs font-medium transition-all shadow-md group"
               >
                 <span>View all articles</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

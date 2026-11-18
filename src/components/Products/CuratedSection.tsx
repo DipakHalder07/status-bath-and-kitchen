@@ -33,17 +33,17 @@ export default function CuratedSection() {
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Section Heading */}
         <div className="mb-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1c1c1c] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-medium text-[#4a4541] tracking-tight">
             Design ideas for you
           </h2>
-          <p className="mt-2 text-sm sm:text-base text-gray-600">
+          <p className="mt-2 text-sm sm:text-base text-[#76716d]">
             Like a look? Tap it and we will help you plan something similar for your home.
           </p>
         </div>
 
         {/* Segmented Horizontal Tabs (Inline-flex left-aligned border box matching live site) */}
         <div className="overflow-x-auto no-scrollbar mb-10 -mx-5 px-5 sm:mx-0 sm:px-0">
-          <div className="inline-flex border border-gray-300 rounded-none divide-x divide-gray-300 bg-[#f5f0ea]">
+          <div className="inline-flex border border-[#dcd7d0] rounded-none divide-x divide-[#dcd7d0] bg-[#f5f0ea]">
             {tabKeys.map((key) => {
               const tab = curatedTabsData[key];
               const isActive = activeTab === key;
@@ -56,15 +56,15 @@ export default function CuratedSection() {
                     setScrollProgress(25);
                     if (scrollRef.current) scrollRef.current.scrollLeft = 0;
                   }}
-                  className={`relative px-6 sm:px-9 py-3 sm:py-3.5 text-sm sm:text-base font-semibold whitespace-nowrap transition-colors cursor-pointer text-center ${
+                  className={`relative px-6 sm:px-9 py-3 sm:py-3.5 text-sm sm:text-base font-medium whitespace-nowrap transition-colors cursor-pointer text-center ${
                     isActive
-                      ? "bg-white text-gray-900"
-                      : "bg-[#f5f0ea] text-gray-700 hover:bg-[#ede5dc]"
+                      ? "bg-white text-[#4a4541] font-semibold"
+                      : "bg-[#f5f0ea] text-[#76716d] hover:bg-[#ede5dc] hover:text-[#4a4541]"
                   }`}
                 >
                   <span>{tab.label}</span>
                   {isActive && (
-                    <div className="absolute bottom-0 left-4 right-4 h-0.5 bg-[#c0262d]" />
+                    <div className="absolute bottom-0 left-4 right-4 h-0.5 bg-[#ff5d55]" />
                   )}
                 </button>
               );
@@ -96,11 +96,11 @@ export default function CuratedSection() {
 
               {/* Title with red underline & subtitle */}
               <div className="mt-3.5">
-                <h3 className="text-base font-bold text-gray-900 group-hover:text-[#c0262d] transition-colors line-clamp-2">
+                <h3 className="text-base font-medium text-[#4a4541] group-hover:text-[#ff5d55] transition-colors line-clamp-2">
                   {product.name}
                 </h3>
-                <div className="w-8 h-0.5 bg-[#c0262d] mt-1.5 group-hover:w-16 transition-all duration-300" />
-                <p className="text-xs text-gray-500 mt-2">
+                <div className="w-8 h-0.5 bg-[#ff5d55] mt-1.5 group-hover:w-16 transition-all duration-300" />
+                <p className="text-xs text-[#76716d] mt-2">
                   {product.dimensions || product.category}
                 </p>
               </div>

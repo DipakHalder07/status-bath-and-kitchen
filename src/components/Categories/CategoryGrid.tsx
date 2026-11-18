@@ -66,14 +66,14 @@ export default function CategoryGrid({ selection }: CategoryGridProps) {
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Section Heading */}
         <div className="mb-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1c1c1c] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-medium text-[#4a4541] tracking-tight">
             How can we help you?
           </h2>
         </div>
 
         {/* Segmented Horizontal 6 Tabs (Full-width on desktop, smoothly scrollable on mobile) */}
-        <div className="mb-10 w-full overflow-x-auto no-scrollbar border border-gray-300 rounded-none bg-white -mx-5 px-5 sm:mx-0 sm:px-0">
-          <div className="flex sm:grid sm:grid-cols-3 lg:grid-cols-6 divide-x divide-gray-300 min-w-max sm:min-w-0">
+        <div className="mb-10 w-full overflow-x-auto no-scrollbar border border-[#dcd7d0] rounded-none bg-white -mx-5 px-5 sm:mx-0 sm:px-0">
+          <div className="flex sm:grid sm:grid-cols-3 lg:grid-cols-6 divide-x divide-[#dcd7d0] min-w-max sm:min-w-0">
             {displayTabs.map((tab: { tabName: string }, idx: number) => {
               const isActive = activeTabIdx === idx;
 
@@ -84,16 +84,16 @@ export default function CategoryGrid({ selection }: CategoryGridProps) {
                     setActiveTabIdx(idx);
                     setScrollProgress(20);
                   }}
-                  className={`relative py-3.5 px-5 sm:px-2 text-center text-sm font-semibold transition-colors cursor-pointer whitespace-nowrap sm:whitespace-normal ${
+                  className={`relative py-3.5 px-5 sm:px-2 text-center text-sm font-medium transition-colors cursor-pointer whitespace-nowrap sm:whitespace-normal ${
                     isActive
-                      ? "bg-white text-gray-900 font-bold"
-                      : "bg-[#f5f0ea] text-gray-700 hover:bg-[#ede5dc]"
+                      ? "bg-white text-[#4a4541] font-semibold"
+                      : "bg-[#f5f0ea] text-[#76716d] hover:bg-[#ede5dc] hover:text-[#4a4541]"
                   }`}
                 >
                   <span className="block truncate">{tab.tabName}</span>
                   {/* Red bottom active underline indicator */}
                   {isActive && (
-                    <div className="absolute bottom-0 left-4 right-4 sm:left-6 sm:right-6 h-0.5 bg-[#c0262d]" />
+                    <div className="absolute bottom-0 left-4 right-4 sm:left-6 sm:right-6 h-0.5 bg-[#ff5d55]" />
                   )}
                 </button>
               );
@@ -126,11 +126,11 @@ export default function CategoryGrid({ selection }: CategoryGridProps) {
 
                 {/* Title with subtle red underline */}
                 <div className="mt-3.5">
-                  <h3 className="text-base font-bold text-gray-900 group-hover:text-[#c0262d] transition-colors">
+                  <h3 className="text-base font-medium text-[#4a4541] group-hover:text-[#ff5d55] transition-colors">
                     {item.name}
                   </h3>
-                  <div className="w-6 h-0.5 bg-[#c0262d] mt-1 group-hover:w-12 transition-all duration-300" />
-                  <p className="text-xs text-gray-500 mt-2">Explore range &rarr;</p>
+                  <div className="w-6 h-0.5 bg-[#ff5d55] mt-1 group-hover:w-12 transition-all duration-300" />
+                  <p className="text-xs text-[#76716d] mt-2">Explore range &rarr;</p>
                 </div>
               </Link>
             )

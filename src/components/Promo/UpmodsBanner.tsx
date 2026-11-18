@@ -11,10 +11,10 @@ export default function UpmodsBanner() {
     <section id="your-way" className="py-8 sm:py-12 lg:py-14 bg-white scroll-mt-24">
       <div className="max-w-[1280px] mx-auto px-5 sm:px-10 lg:px-20">
         <div className="text-center mb-6 sm:mb-8">
-          <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#1c1c1c] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-medium text-[#4a4541] tracking-tight">
             Status Kitchens. Designed Your Way!
           </h2>
-          <p className="mt-2 text-sm sm:text-base text-gray-600">
+          <p className="mt-2 text-sm sm:text-base text-[#76716d]">
             Pick the layout, shutters, countertop, appliances and accessories. We plan, supply and install it all.
           </p>
         </div>
@@ -41,7 +41,7 @@ export default function UpmodsBanner() {
           />
 
           <div className="absolute bottom-5 left-5 sm:bottom-8 sm:left-8">
-            <span className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 bg-[#ff5247] group-hover:bg-[#e0453b] text-white font-bold text-xs sm:text-sm rounded-full shadow-lg transition-colors">
+            <span className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 bg-[#ff5d55] group-hover:bg-[#e5473f] text-white font-medium text-xs sm:text-sm rounded-full shadow-lg transition-colors">
               Book a design consultation
               <ArrowRight className="w-4 h-4" />
             </span>

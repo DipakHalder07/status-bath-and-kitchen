@@ -61,7 +61,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Left Column: Get in touch */}
           <div className="lg:col-span-4 space-y-4">
-            <h4 className="text-base font-bold !text-white tracking-wide">
+            <h4 className="text-base font-medium !text-white tracking-wide">
               Get in touch
             </h4>
             <ul className="space-y-3 text-xs sm:text-sm">
@@ -111,7 +111,7 @@ export default function Footer() {
           <div className="lg:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-8 text-xs sm:text-sm">
             {/* Products */}
             <div className="space-y-3">
-              <h4 className="font-bold !text-white text-sm sm:text-base">
+              <h4 className="font-medium !text-white text-sm sm:text-base">
                 Products
               </h4>
               <ul className="space-y-2 text-stone-300">
@@ -135,7 +135,7 @@ export default function Footer() {
 
             {/* Company */}
             <div className="space-y-3">
-              <h4 className="font-bold !text-white text-sm sm:text-base">
+              <h4 className="font-medium !text-white text-sm sm:text-base">
                 Company
               </h4>
               <ul className="space-y-2 text-stone-300">
@@ -174,7 +174,7 @@ export default function Footer() {
 
             {/* Help */}
             <div className="space-y-3">
-              <h4 className="font-bold !text-white text-sm sm:text-base">
+              <h4 className="font-medium !text-white text-sm sm:text-base">
                 Help
               </h4>
               <ul className="space-y-2 text-stone-300">
@@ -213,34 +213,34 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 text-xs sm:text-[13px] leading-relaxed text-stone-300">
           {/* Categories You Love */}
           <div className="lg:col-span-7 space-y-3">
-            <h4 className="text-sm sm:text-base font-bold !text-white mb-2">
+            <h4 className="text-sm sm:text-base font-medium !text-white mb-2">
               Categories you love
             </h4>
             <p>
-              <span className="font-semibold text-white">Modular kitchens:</span>{" "}
+              <span className="font-medium text-white">Modular kitchens:</span>{" "}
               L-Shaped | U-Shaped | Island | Parallel | Straight | Handleless | Classic Shaker | Two-Tone
             </p>
             <p>
-              <span className="font-semibold text-white">Bathrooms:</span>{" "}
+              <span className="font-medium text-white">Bathrooms:</span>{" "}
               Vanity Units | Shower Enclosures | Bathtubs | Taps &amp; Showers | Sanitaryware | Bathroom Storage
             </p>
             <p>
-              <span className="font-semibold text-white">Wardrobes:</span>{" "}
+              <span className="font-medium text-white">Wardrobes:</span>{" "}
               Fitted | Hinged | Walk-in | Wardrobe Interiors
             </p>
             <p>
-              <span className="font-semibold text-white">Doors &amp; windows:</span>{" "}
+              <span className="font-medium text-white">Doors &amp; windows:</span>{" "}
               Entrance Doors | Interior Doors | Sliding Glass Doors | Sliding Windows | Casement Windows | Smart Locks &amp; Hardware
             </p>
             <p>
-              <span className="font-semibold text-white">Appliances &amp; accessories:</span>{" "}
+              <span className="font-medium text-white">Appliances &amp; accessories:</span>{" "}
               Chimneys | Hobs | Built-in Ovens | Microwaves | Dishwashers | Refrigerators | Sinks | Faucets | Tall Pantry Units
             </p>
           </div>
 
           {/* Our Services */}
           <div className="lg:col-span-5 space-y-3">
-            <h4 className="text-sm sm:text-base font-bold !text-white mb-2">
+            <h4 className="text-sm sm:text-base font-medium !text-white mb-2">
               How we work
             </h4>
             <p className="leading-loose">

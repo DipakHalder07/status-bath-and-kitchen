@@ -41,10 +41,10 @@ export default function SmartSearchBanner({ onFilterApply }: SmartSearchBannerPr
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>AI Furniture Recommendation Assistant</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-medium text-white tracking-tight">
                 Find the right furniture for you
               </h2>
-              <p className="text-sm text-stone-300 leading-relaxed">
+              <p className="text-sm text-stone-300 leading-relaxed font-normal">
                 Tell us what you&apos;re looking for and we&apos;ll help you choose
                 from our range of 2000+ ergonomically crafted products.
               </p>
@@ -59,7 +59,7 @@ export default function SmartSearchBanner({ onFilterApply }: SmartSearchBannerPr
                 <select
                   value={selectedRoom}
                   onChange={(e) => setSelectedRoom(e.target.value)}
-                  className="w-full sm:w-44 bg-white text-gray-900 text-xs font-semibold px-3 py-2.5 rounded-xl border-none focus:ring-2 focus:ring-[#c0262d]"
+                  className="w-full sm:w-44 bg-white text-gray-900 text-xs font-semibold px-3 py-2.5 rounded-xl border-none focus:ring-2 focus:ring-[#ff5d55]"
                 >
                   {rooms.map((r) => (
                     <option key={r} value={r}>
@@ -76,7 +76,7 @@ export default function SmartSearchBanner({ onFilterApply }: SmartSearchBannerPr
                 <select
                   value={selectedBudget}
                   onChange={(e) => setSelectedBudget(e.target.value)}
-                  className="w-full sm:w-44 bg-white text-gray-900 text-xs font-semibold px-3 py-2.5 rounded-xl border-none focus:ring-2 focus:ring-[#c0262d]"
+                  className="w-full sm:w-44 bg-white text-gray-900 text-xs font-semibold px-3 py-2.5 rounded-xl border-none focus:ring-2 focus:ring-[#ff5d55]"
                 >
                   {budgets.map((b) => (
                     <option key={b} value={b}>
@@ -89,7 +89,7 @@ export default function SmartSearchBanner({ onFilterApply }: SmartSearchBannerPr
               <div className="w-full sm:w-auto pt-0 sm:pt-4">
                 <button
                   onClick={handleApply}
-                  className="w-full sm:w-auto px-5 py-2.5 bg-[#c0262d] hover:bg-[#a11c22] text-white text-xs font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group whitespace-nowrap"
+                  className="w-full sm:w-auto px-5 py-2.5 bg-[#ff5d55] hover:bg-[#e5473f] text-white text-xs font-medium rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group whitespace-nowrap cursor-pointer"
                 >
                   <span>Filter Products</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />

@@ -65,7 +65,7 @@ export default function RoomCategoriesBanner({
               <div className="mt-3 sm:mt-4 w-full">
                 <button
                   type="button"
-                  className="w-full py-2.5 px-3 rounded-full border border-gray-300 bg-white hover:bg-stone-50 hover:border-gray-400 text-xs sm:text-sm font-semibold text-gray-800 transition-colors shadow-2xs text-center truncate"
+                  className="w-full py-2.5 px-3 rounded-full border border-[#dcd7d0] bg-white hover:bg-stone-50 hover:border-[#4a4541] text-xs sm:text-sm font-medium text-[#4a4541] transition-colors shadow-2xs text-center truncate"
                 >
                   {item.title}
                 </button>
