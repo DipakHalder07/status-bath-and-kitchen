@@ -171,9 +171,8 @@ export default function ShopByCollection() {
           </div>
         </div>
 
-        {/* Authentic Swiper Scrollbar & Pagination matching live interio.com */}
-        <div className="mt-8 max-w-xl mx-auto flex flex-col items-center gap-3">
-          {/* Swiper Scrollbar Track */}
+        {/* Authentic Swiper Scrollbar Track matching live interio.com */}
+        <div className="mt-8 max-w-xl mx-auto">
           <div
             className="relative w-full h-1 bg-[#e5e5e5] rounded-full overflow-hidden cursor-pointer"
             onClick={(e) => {
@@ -187,7 +186,7 @@ export default function ShopByCollection() {
               setActiveHotspot(null);
               setSelectedIdx(nextIndex);
             }}
-            title="Click along track to change slide"
+            title="Click to seek slide"
           >
             {/* Draggable Indicator Handle */}
             <div
@@ -197,36 +196,6 @@ export default function ShopByCollection() {
                 transform: `translateX(${selectedIdx * 100}%)`,
               }}
             />
-          </div>
-
-          {/* Interactive Pagination Bullets with Slide Numbers */}
-          <div className="flex items-center gap-3 text-xs font-medium text-[#76716d]">
-            <span className="font-semibold text-[#4a4541] tabular-nums">
-              0{selectedIdx + 1}
-            </span>
-            <div className="flex items-center gap-2">
-              {collectionSets.map((col, idx) => {
-                const isActive = selectedIdx === idx;
-                return (
-                  <button
-                    key={idx}
-                    type="button"
-                    onClick={() => {
-                      setActiveHotspot(null);
-                      setSelectedIdx(idx);
-                    }}
-                    className={`transition-all duration-300 cursor-pointer rounded-full ${
-                      isActive
-                        ? "w-8 h-1.5 bg-[#ff5d55]"
-                        : "w-2 h-1.5 bg-[#dcd7d0] hover:bg-stone-400"
-                    }`}
-                    aria-label={`Jump to ${col.name}`}
-                    title={col.name}
-                  />
-                );
-              })}
-            </div>
-            <span className="tabular-nums">0{collectionSets.length}</span>
           </div>
         </div>
 
