@@ -493,6 +493,18 @@ export default function Navbar({
             </li>
             <li className="relative">
               <Link
+                href="/blog"
+                className={`transition-colors py-1 hover:underline cursor-pointer ${
+                  isHeaderSolid
+                    ? "text-gray-800 hover:text-[#ff5d55]"
+                    : "text-white/90 hover:text-white"
+                }`}
+              >
+                Design Ideas
+              </Link>
+            </li>
+            <li className="relative">
+              <Link
                 href="/contact"
                 className={`transition-colors py-1 hover:underline cursor-pointer ${
                   isHeaderSolid

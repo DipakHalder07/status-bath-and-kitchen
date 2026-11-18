@@ -145,6 +145,11 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/blog" className="hover:text-white transition-colors">
+                    Design Ideas &amp; Blog
+                  </Link>
+                </li>
+                <li>
                   <Link href="/about#principles" className="hover:text-white transition-colors">
                     Brand Philosophy
                   </Link>

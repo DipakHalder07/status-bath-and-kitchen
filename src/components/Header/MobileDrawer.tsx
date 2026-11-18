@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { X, ChevronDown, ChevronRight, Phone, MapPin, Building2, Home, Package, Info } from "lucide-react";
+import { X, ChevronDown, ChevronRight, Phone, MapPin, Building2, Home, Package, Info, BookOpen } from "lucide-react";
 import { megaMenuItems, siteBrand } from "@/data/interioData";
 
 interface MobileDrawerProps {
@@ -51,27 +51,35 @@ export default function MobileDrawer({
 
         {/* Quick Main Nav */}
         <div className="p-4 border-b border-gray-100 space-y-2.5">
-          <div className="grid grid-cols-3 gap-2 text-xs font-semibold">
+          <div className="grid grid-cols-4 gap-1.5 text-[11px] font-semibold">
             <Link
               href="/products"
               onClick={onClose}
-              className="flex flex-col items-center justify-center gap-1.5 p-2.5 rounded-lg bg-stone-50 hover:bg-red-50 hover:text-[#ff5d55] text-gray-800 transition-colors text-center"
+              className="flex flex-col items-center justify-center gap-1.5 p-2 rounded-lg bg-stone-50 hover:bg-red-50 hover:text-[#ff5d55] text-gray-800 transition-colors text-center"
             >
               <Package className="w-4 h-4 text-[#ff5d55]" />
               <span>Products</span>
             </Link>
             <Link
+              href="/blog"
+              onClick={onClose}
+              className="flex flex-col items-center justify-center gap-1.5 p-2 rounded-lg bg-stone-50 hover:bg-red-50 hover:text-[#ff5d55] text-gray-800 transition-colors text-center"
+            >
+              <BookOpen className="w-4 h-4 text-[#ff5d55]" />
+              <span>Ideas</span>
+            </Link>
+            <Link
               href="/about"
               onClick={onClose}
-              className="flex flex-col items-center justify-center gap-1.5 p-2.5 rounded-lg bg-stone-50 hover:bg-red-50 hover:text-[#ff5d55] text-gray-800 transition-colors text-center"
+              className="flex flex-col items-center justify-center gap-1.5 p-2 rounded-lg bg-stone-50 hover:bg-red-50 hover:text-[#ff5d55] text-gray-800 transition-colors text-center"
             >
               <Info className="w-4 h-4 text-[#ff5d55]" />
-              <span>About Us</span>
+              <span>About</span>
             </Link>
             <Link
               href="/contact"
               onClick={onClose}
-              className="flex flex-col items-center justify-center gap-1.5 p-2.5 rounded-lg bg-stone-50 hover:bg-red-50 hover:text-[#ff5d55] text-gray-800 transition-colors text-center"
+              className="flex flex-col items-center justify-center gap-1.5 p-2 rounded-lg bg-stone-50 hover:bg-red-50 hover:text-[#ff5d55] text-gray-800 transition-colors text-center"
             >
               <Phone className="w-4 h-4 text-[#ff5d55]" />
               <span>Contact</span>
