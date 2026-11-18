@@ -154,7 +154,7 @@ export default function ShopByCollection() {
 
           {/* In-Image Bottom Left: Title */}
           <div className="absolute bottom-6 left-6 sm:bottom-8 sm:left-8 z-20">
-            <h3 className="text-xl sm:text-3xl font-medium text-white drop-shadow-md">
+            <h3 className="text-xl sm:text-3xl font-medium !text-white drop-shadow-md">
               {currentCollection.name}
             </h3>
           </div>

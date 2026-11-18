@@ -27,7 +27,7 @@ export default function DesignIdeasSection() {
             <span className="text-xs font-medium text-[#ff9f99] uppercase tracking-wider">
               Interior Lookbooks &amp; Tips
             </span>
-            <h3 className="text-2xl sm:text-3xl lg:text-[34px] font-medium leading-tight text-white">
+            <h3 className="text-2xl sm:text-3xl lg:text-[34px] font-medium leading-tight !text-white">
               Design ideas to inspire you
             </h3>
             <p className="text-xs sm:text-sm text-stone-200 leading-relaxed font-normal">

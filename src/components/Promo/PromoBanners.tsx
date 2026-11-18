@@ -29,7 +29,7 @@ export default function PromoBanners() {
               <span className="text-xs uppercase tracking-wider text-white/80 block mb-1">
                 Modular Kitchens
               </span>
-              <h3 className="text-xl sm:text-2xl font-medium leading-tight mb-4 text-white">
+              <h3 className="text-xl sm:text-2xl font-medium leading-tight mb-4 !text-white">
                 Looking for a new kitchen?
               </h3>
               <span className="inline-block text-sm font-medium text-white border-b border-white pb-0.5 hover:text-[#ff5d55] hover:border-[#ff5d55] transition-colors">
@@ -56,7 +56,7 @@ export default function PromoBanners() {
               <span className="text-xs uppercase tracking-wider text-white/80 block mb-1">
                 Bathrooms
               </span>
-              <h3 className="text-xl sm:text-2xl font-medium leading-tight mb-4 text-white">
+              <h3 className="text-xl sm:text-2xl font-medium leading-tight mb-4 !text-white">
                 Planning a bathroom makeover?
               </h3>
               <span className="inline-block text-sm font-medium text-white border-b border-white pb-0.5 hover:text-[#ff5d55] hover:border-[#ff5d55] transition-colors">

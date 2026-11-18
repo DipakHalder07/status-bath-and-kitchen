@@ -41,7 +41,7 @@ export default function SmartSearchBanner({ onFilterApply }: SmartSearchBannerPr
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>AI Furniture Recommendation Assistant</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-medium text-white tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-medium !text-white tracking-tight">
                 Find the right furniture for you
               </h2>
               <p className="text-sm text-stone-300 leading-relaxed font-normal">
