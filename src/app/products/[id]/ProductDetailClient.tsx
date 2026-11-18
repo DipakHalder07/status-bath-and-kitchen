@@ -100,7 +100,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
 
       <main className="flex-1 w-full pt-28 sm:pt-36 pb-28 sm:pb-20">
         <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
-          {/* Breadcrumb (Matching interio.com 14px 400 py-4) */}
+          {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className="py-4 text-[14px] text-[#76716d]">
             <ol className="flex items-center space-x-2 flex-wrap">
               <li>
@@ -196,7 +196,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
 
             {/* RIGHT COLUMN: STICKY PRODUCT CONFIGURATION & PURCHASE PANEL */}
             <div className="lg:col-span-5 flex flex-col space-y-6">
-              {/* Top Row: Title, Wishlist & Share (Matching interio.com 24px 500 leading 28.8px) */}
+              {/* Top Row: Title, Wishlist & Share */}
               <div>
                 <div className="flex items-start justify-between gap-4">
                   <h1 className="text-[24px] sm:text-[26px] font-medium text-[#4a4541] tracking-normal leading-[1.2]">
@@ -646,7 +646,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
         </div>
       </main>
 
-      {/* 4. STICKY BOTTOM FLOATING BUY BAR (Matching interio.com #f5f0ea, height 76px) */}
+      {/* 4. STICKY BOTTOM FLOATING BUY BAR */}
       <div
         className={`fixed bottom-0 left-0 w-full bg-[#f5f0ea] border-t border-[#dcd7d0] z-40 transition-transform duration-300 shadow-lg ${
           showStickyBar ? "translate-y-0" : "translate-y-full"

@@ -9,28 +9,28 @@ interface RoomCategoriesBannerProps {
 
 const roomCategories = [
   {
-    id: "living-room",
-    title: "Living Room Furniture",
-    img: "https://interio.com/media/wysiwyg/1_12.jpg",
-    link: "#curated-products",
+    id: "kitchens",
+    title: "Modular Kitchens",
+    img: "/images/site/cat-mk-handleless.jpg",
+    link: "/products?category=Modular+Kitchens",
   },
   {
-    id: "bedroom",
-    title: "Bedroom Furniture",
-    img: "https://interio.com/media/wysiwyg/2_8.jpg",
-    link: "#curated-products",
+    id: "bathrooms",
+    title: "Luxury Bathrooms",
+    img: "/images/site/cat-bath-vanity.jpg",
+    link: "/products?category=Bathrooms",
   },
   {
-    id: "dining-room",
-    title: "Dining Room Furniture",
-    img: "https://interio.com/media/wysiwyg/3_4.jpg",
-    link: "#curated-products",
+    id: "wardrobes",
+    title: "Bespoke Wardrobes",
+    img: "/images/site/cat-wardrobe-walkin.jpg",
+    link: "/products?category=Wardrobes",
   },
   {
-    id: "office-study",
-    title: "Office & Study Furniture",
-    img: "https://interio.com/media/wysiwyg/4.jpg",
-    link: "#curated-products",
+    id: "doors-windows",
+    title: "Doors & Windows",
+    img: "/images/site/cat-door-main.jpg",
+    link: "/products?category=Doors+%26+Windows",
   },
 ];
 

@@ -143,7 +143,7 @@ export default function ShopByCollection() {
           </div>
         </div>
 
-        {/* Continuous Horizontal Swiper Slider (Matches interio.com lookbook-main-slider) */}
+        {/* Continuous Horizontal Swiper Slider */}
         <div className="relative group/slider">
           {/* Floating Left Arrow on Slider Image (matches user Image 1) */}
           <button
@@ -257,7 +257,7 @@ export default function ShopByCollection() {
                   );
                 })}
 
-                {/* In-Image Bottom Bar (Matching live interio.com img-btm-info) */}
+                {/* In-Image Bottom Bar */}
                 <div className="absolute bottom-3 sm:bottom-6 inset-x-3 sm:inset-x-8 z-10 flex items-center justify-between gap-2 pointer-events-auto">
                   {/* Left: Collection Title */}
                   <h3 className="text-sm sm:text-2xl lg:text-3xl font-medium !text-white drop-shadow-md truncate">
@@ -282,7 +282,7 @@ export default function ShopByCollection() {
           </div>
         </div>
 
-        {/* Live Interio Authentic Swiper Scrollbar */}
+        {/* Authentic Swiper Scrollbar */}
         <div className="mt-8 max-w-xl mx-auto">
           <div
             className="relative w-full h-1 bg-[#e5e5e5] rounded-full overflow-hidden cursor-pointer"

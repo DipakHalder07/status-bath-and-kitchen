@@ -74,7 +74,7 @@ export default function AboutPage() {
         {/* 2. HERO: "Designed for life" with Authentic Banner */}
         <div className="w-full relative h-[280px] sm:h-[480px] lg:h-[540px] overflow-hidden mb-8">
           <Image
-            src="/images/interio/about_hero_poster.jpg"
+            src="/images/status/about_hero_poster.jpg"
             alt="Designed for life"
             fill
             priority
@@ -90,7 +90,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* 3. STICKY SUB-NAV BAR (Matching live interio.com) */}
+        {/* 3. STICKY SUB-NAV BAR */}
         <div className="sticky top-[72px] sm:top-[88px] lg:top-[96px] z-30 bg-white border-b border-[#dcd7d0] py-3 sm:py-3.5 mb-12 sm:mb-16 overflow-x-auto no-scrollbar shadow-xs -mx-5 px-5 sm:mx-0 sm:px-0">
           <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
             <ul className="flex items-center space-x-8 text-[14px] font-medium whitespace-nowrap">
@@ -497,7 +497,7 @@ export default function AboutPage() {
           {/* 12. SHAPE THE FUTURE / CAREERS BANNER */}
           <section id="career" className="relative h-80 sm:h-96 overflow-hidden">
             <Image
-              src="/images/interio/about_career.jpg"
+              src="/images/status/about_career.jpg"
               alt="Careers"
               fill
               sizes="100vw"
@@ -521,17 +521,17 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* 13. INTERIO IN MEDIA */}
+          {/* 13. STATUS IN MEDIA */}
           <section id="media" className="pt-8 border-t border-[#dcd7d0] space-y-8">
             <h2 className="text-2xl sm:text-3xl lg:text-[42px] font-medium text-[#4a4541] leading-[46.2px] tracking-tight">
-              Interio in Media
+              Status in Media
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="border border-[#dcd7d0] bg-white overflow-hidden group">
                 <div className="relative h-60 overflow-hidden">
                   <Image
-                    src="/images/interio/media_1.png"
+                    src="/images/status/media_1.png"
                     alt="Media Article 1"
                     fill
                     sizes="500px"
@@ -552,7 +552,7 @@ export default function AboutPage() {
               <div className="border border-[#dcd7d0] bg-white overflow-hidden group">
                 <div className="relative h-60 overflow-hidden">
                   <Image
-                    src="/images/interio/media_2.jpg"
+                    src="/images/status/media_2.jpg"
                     alt="Media Article 2"
                     fill
                     sizes="500px"
@@ -575,7 +575,7 @@ export default function AboutPage() {
           {/* 14. FIND A STORE NEAR YOU BANNER (Matching live site Store_image-min_2.jpg) */}
           <section className="relative h-80 sm:h-96 overflow-hidden">
             <Image
-              src="/images/interio/about_store.jpg"
+              src="/images/status/about_store.jpg"
               alt="Find a store near you"
               fill
               sizes="100vw"

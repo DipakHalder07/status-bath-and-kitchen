@@ -155,7 +155,7 @@ function ProductsPageContent() {
 
       <main className="flex-1 w-full pt-28 sm:pt-36 pb-20">
         <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
-          {/* 1. BREADCRUMBS (Matching interio.com 16px 80px container padding, 14px 400 text) */}
+          {/* 1. BREADCRUMBS */}
           <nav aria-label="Breadcrumb" className="py-4 text-[14px] text-[#76716d]">
             <ol className="flex items-center space-x-2">
               <li>
@@ -188,7 +188,7 @@ function ProductsPageContent() {
             </ol>
           </nav>
 
-          {/* 2. CATEGORY TITLE & COUNT (Matching interio.com 60px 500 leading 66px) */}
+          {/* 2. CATEGORY TITLE & COUNT */}
           <div className="text-center max-w-3xl mx-auto my-6 sm:my-8">
             <h1 className="text-4xl sm:text-5xl lg:text-[60px] font-medium text-[#4a4541] tracking-tight leading-[1.1] flex items-baseline justify-center gap-3">
               <span>{selectedCategory}</span>
@@ -202,7 +202,7 @@ function ProductsPageContent() {
             </p>
           </div>
 
-          {/* 3. QUICK CATEGORY PILLS BAR (Joined Segmented Box matching interio.com) */}
+          {/* 3. QUICK CATEGORY PILLS BAR */}
           <div className="flex items-center justify-start sm:justify-center overflow-x-auto pb-2 mb-8 no-scrollbar -mx-5 px-5 sm:mx-0 sm:px-0">
             <div className="inline-flex border border-[#dcd7d0] bg-white divide-x divide-[#dcd7d0]">
               {categoryTabs.map((cat) => {
@@ -230,7 +230,7 @@ function ProductsPageContent() {
             </div>
           </div>
 
-          {/* 4. FILTER & SORT TOOLBAR (Matching interio.com 14px 500 font-medium) */}
+          {/* 4. FILTER & SORT TOOLBAR */}
           <div className="border-y border-[#dcd7d0] py-3.5 mb-8 flex flex-wrap items-center justify-between gap-4 text-[14px]">
             {/* Left: Quick filters */}
             <div className="flex items-center space-x-4 sm:space-x-6">
@@ -319,7 +319,7 @@ function ProductsPageContent() {
             </div>
           )}
 
-          {/* 5. PRODUCT GRID (3-columns on desktop, card typography matching interio.com 16px 500 title) */}
+          {/* 5. PRODUCT GRID */}
           {sortedProducts.length === 0 ? (
             <div className="py-20 text-center">
               <p className="text-lg font-medium text-[#4a4541] mb-2">

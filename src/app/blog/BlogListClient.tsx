@@ -70,7 +70,7 @@ export default function BlogListClient() {
           </nav>
         </div>
 
-        {/* 2. HERO HEADER (Matching interio.com 500 font-medium) */}
+        {/* 2. HERO HEADER */}
         <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 mb-10 text-center">
           <span className="text-xs uppercase tracking-widest font-semibold text-[#ff5d55] block mb-2">
             Status Living Journal

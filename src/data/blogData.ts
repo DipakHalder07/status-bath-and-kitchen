@@ -288,7 +288,7 @@ export const blogArticles: BlogArticleFull[] = [
     category: "Materials & Care",
     readTime: "5 min read",
     publishedAt: "24th March, 2026",
-    image: "/images/interio/about_career.jpg",
+    image: "/images/status/about_career.jpg",
     author: {
       name: "Aditya Kulkarni",
       role: "Sustainability Director",

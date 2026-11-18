@@ -16,16 +16,16 @@ export default function DesignIdeasSection() {
         <div className="relative rounded-3xl overflow-hidden bg-stone-900 text-white p-8 sm:p-14 mb-12 shadow-xl">
           <picture className="absolute inset-0 w-full h-full">
             <img
-              src="https://interio.com/media/.renditions/wysiwyg/B2C-Homepage/Get_inspired_522x300px.jpg"
+              src="/images/site/look-kitchen.jpg"
               alt="Design ideas to inspire you"
-              className="w-full h-full object-cover opacity-45"
+              className="w-full h-full object-cover opacity-35"
             />
           </picture>
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-transparent" />
 
           <div className="relative z-10 max-w-xl space-y-4">
             <span className="text-xs font-medium text-[#ff9f99] uppercase tracking-wider">
-              Interior Lookbooks &amp; Tips
+              Design Guides &amp; Showroom Lookbooks
             </span>
             <h3 className="text-2xl sm:text-3xl lg:text-[34px] font-medium leading-tight !text-white">
               Design ideas to inspire you

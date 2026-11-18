@@ -54,8 +54,8 @@ const categoryChannels = [
     whatsapp: "+91 98320 95793",
     escalationLabel: "To escalate modular service matters",
     escalationText: "Write to our National Service Head:",
-    escalationAction: "nsh.interio@statusbathkitchen.com",
-    escalationEmail: "nsh.interio@statusbathkitchen.com",
+    escalationAction: "service@statusbathkitchen.com",
+    escalationEmail: "service@statusbathkitchen.com",
   },
 ];
 
@@ -151,10 +151,10 @@ export default function ContactPage() {
           </nav>
         </div>
 
-        {/* 2. HERO BANNER WITH AUTHENTIC BACKGROUND & CORAL RED BADGE (Matching live interio.com) */}
+        {/* 2. HERO BANNER WITH CORAL RED BADGE */}
         <div className="w-full relative h-48 sm:h-64 lg:h-80 overflow-hidden mb-8">
           <Image
-            src="/images/interio/contact_hero.png"
+            src="/images/status/contact_hero.png"
             alt="Contact Us"
             fill
             priority

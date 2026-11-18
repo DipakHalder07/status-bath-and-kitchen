@@ -123,7 +123,7 @@ export default function Navbar({
           : "bg-gradient-to-b from-black/70 via-black/30 to-transparent text-white"
       }`}
     >
-      {/* 1. TOP UTILITY BAR (Hidden on mobile to match live interio.com slim mobile header) */}
+      {/* 1. TOP UTILITY BAR (Hidden on mobile) */}
       <div
         className={`hidden sm:block w-full text-xs transition-colors border-b ${
           isHeaderSolid

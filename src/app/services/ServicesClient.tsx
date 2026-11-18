@@ -246,7 +246,7 @@ export default function ServicesClient() {
           </div>
         </div>
 
-        {/* 3. MASTER 2-COLUMN SECTION (Matching live interio.com .service-list-wrap) */}
+        {/* 3. MASTER 2-COLUMN SECTION */}
         <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-start">
             {/* LEFT SIDEBAR NAVIGATION (25% Width on Desktop) */}
@@ -828,7 +828,7 @@ export default function ServicesClient() {
             </div>
           </div>
 
-          {/* 4. CUSTOMER TESTIMONIALS SECTION (Matching live interio.com) */}
+          {/* 4. CUSTOMER TESTIMONIALS SECTION */}
           <section className="mt-24 pt-16 border-t border-[#dcd7d0] space-y-8">
             <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-medium text-[#4a4541] leading-tight tracking-tight">
               Here’s what our customers have to say:

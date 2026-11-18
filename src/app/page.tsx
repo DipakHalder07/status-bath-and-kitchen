@@ -12,7 +12,7 @@ import UpmodsBanner from "@/components/Promo/UpmodsBanner";
 import CuratedSection from "@/components/Products/CuratedSection";
 import ShopByCollection from "@/components/Lookbook/ShopByCollection";
 import PromoBanners from "@/components/Promo/PromoBanners";
-import InterioStats from "@/components/Stats/InterioStats";
+import StatusStats from "@/components/Stats/InterioStats";
 import StoreLocatorSection from "@/components/StoreLocator/StoreLocatorSection";
 import CareServices from "@/components/Services/CareServices";
 import Testimonials from "@/components/Testimonials/Testimonials";
@@ -105,7 +105,7 @@ export default function Home() {
         <PromoBanners />
 
         {/* 10. Everything we do (coral services strip) */}
-        <InterioStats />
+        <StatusStats />
 
         {/* 11. Visit our experience studio */}
         <StoreLocatorSection />

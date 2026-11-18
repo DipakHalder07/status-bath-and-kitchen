@@ -697,9 +697,9 @@
     }
   ],
   "tickerBanner": {
-    "desktopImg": "https://interio.com/media/wysiwyg/Big-Billion-Day_Ticker_Desktop-Size.jpg",
-    "mobileImg": "https://interio.com/media/wysiwyg/Big-Billion-Day_Ticker_Mobile-Size.jpg",
-    "link": "#curated-products"
+    "desktopImg": "/images/site/look-kitchen.jpg",
+    "mobileImg": "/images/site/look-kitchen.jpg",
+    "link": "#categories"
   },
   "serviceStrip": {
     "title": "Everything for your kitchen & bath",

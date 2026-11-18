@@ -23,7 +23,7 @@ const icons: Record<string, LucideIcon> = {
   accessories: UtensilsCrossed,
 };
 
-export default function InterioStats() {
+export default function StatusStats() {
   return (
     <section className="py-16 sm:py-24 bg-[#ff5d55] text-white">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 text-center">
