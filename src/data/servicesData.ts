@@ -34,9 +34,9 @@ export const servicesList: ServiceItem[] = [
     title: "Repainting",
     tagline: "Breathe new life into your space",
     description:
-      "Repaint your almirahs, metal storage units, and wooden cabinets to unveil a fresh look that lasts for years to come. Factory-grade electrostatic priming and automated spray finishing prevent peel and corrosion.",
+      "Breathe new life into your space. Repaint your almirahs and metal pieces to unveil a fresh look that lasts for years to come.",
     category: "Residential",
-    image: "/images/site/cur-b-bright.jpg",
+    image: "/images/services/repainting.png",
     highlights: [
       "Over 40+ curated contemporary matte & gloss shades",
       "Automated spray booth with dust-free curing",
@@ -58,9 +58,9 @@ export const servicesList: ServiceItem[] = [
     title: "Reupholstery",
     tagline: "Update your decor with stylish comfort",
     description:
-      "Looking to refresh your living room or study? Choose from our wide range of stain-resistant materials, breathable weaves, and leatherettes to give your sofas and accent chairs a luxurious new persona.",
+      "Looking to update your decor? Choose from our wide range of materials and give your furniture a stylish new look with updated upholstery.",
     category: "Residential",
-    image: "/images/site/look-living.jpg",
+    image: "/images/services/reupholstery.png",
     highlights: [
       "300+ fabric choices: boucle, velvet, linen-blend & vegan leather",
       "High-resilience 40D polyurethane foam replenishment",
@@ -79,12 +79,12 @@ export const servicesList: ServiceItem[] = [
   },
   {
     id: "cleaning",
-    title: "Cleaning & Deep Hygiene",
+    title: "Cleaning",
     tagline: "Eco-friendly deep sanitization",
     description:
-      "We deep-clean your sofas, mattresses, dining chairs, and area rugs using hospital-grade injection-extraction machinery to remove deep-set allergens, stubborn stains, and restore vibrant fabric texture.",
+      "We deep-clean your sofas, chairs, and carpets using high-quality cleaning solutions to remove stains, maintain overall hygiene and make them look fresh.",
     category: "Residential",
-    image: "/images/site/cur-b-wood.jpg",
+    image: "/images/services/cleaning.png",
     highlights: [
       "High-pressure 140°C dry steam kills 99.9% of dust mites and bacteria",
       "German injection-extraction stain removal technology",
@@ -103,12 +103,12 @@ export const servicesList: ServiceItem[] = [
   },
   {
     id: "annual-care",
-    title: "Annual Care (AMC)",
+    title: "Annual Care",
     tagline: "Preventative maintenance for lasting luxury",
     description:
-      "Extend the lifespan of your modular kitchen, wardrobes, and furniture with our comprehensive Annual Maintenance Contract. Regular inspection and precision tuning keep all moving hardware effortless.",
+      "Extend the life of your furniture with our annual maintenance contract. Our expert care keeps your pieces looking their best and ensures durability.",
     category: "Modular",
-    image: "/images/site/cat-acc-pantry.jpg",
+    image: "/images/services/annual_care.png",
     highlights: [
       "Biannual comprehensive 24-point hardware check",
       "Free replacement of worn-out dampers and minor hardware",
@@ -127,12 +127,12 @@ export const servicesList: ServiceItem[] = [
   },
   {
     id: "refurbishing",
-    title: "Refurbishing & Modular Restoration",
+    title: "Refurbishing",
     tagline: "Smart renewal at a fraction of replacement cost",
     description:
-      "An ideal solution for kitchens, wardrobes, and workspaces where frames are solid but surfaces or channels are worn. We replace shutter facings, edge-banding, and runner hardware to rejuvenate appearance and boost durability.",
+      "An ideal solution for workspaces where we replace fabrics to rejuvenate appearance and boost life, while keeping it affordable.",
     category: "Modular",
-    image: "/images/site/banner-kitchen.jpg",
+    image: "/images/services/refurbishing.png",
     highlights: [
       "Save up to 65% compared to purchasing new cabinetry",
       "Upgrade traditional cabinets to modern soft-close tandem drawers",
@@ -151,12 +151,12 @@ export const servicesList: ServiceItem[] = [
   },
   {
     id: "densification",
-    title: "Densification & Ergonomic Planning",
+    title: "Densification",
     tagline: "Layout reconfiguration for maximum spatial efficiency",
     description:
-      "We optimize your home work-den or commercial workspace layout to improve acoustic privacy, seating ergonomics, and natural circulation, letting you accommodate more people without expanding floor area.",
+      "We optimise your office space and give it a new look, while enhancing the layout - this improves privacy and productivity of your people.",
     category: "Commercial",
-    image: "/images/site/b2b.jpg",
+    image: "/images/services/densification.png",
     highlights: [
       "Architectural 3D space utilization audit",
       "Modular workstation relocation, cabling management & re-sizing",
@@ -303,3 +303,4 @@ export const servicesFAQs: ServiceFAQ[] = [
     category: "General",
   },
 ];
+
