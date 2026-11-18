@@ -112,12 +112,12 @@ export default function ShopByCollection() {
     <section id="shop-by-collection" className="py-14 sm:py-20 bg-white scroll-mt-28">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Title Header with Arrows */}
-        <div className="flex items-end justify-between mb-8">
+        <div className="flex items-end justify-between mb-6 sm:mb-8">
           <div>
-            <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#1a1a1a] tracking-tight">
+            <h2 className="text-xl sm:text-2xl lg:text-[28px] font-medium text-[#332f2c] tracking-tight">
               Shop by collection
             </h2>
-            <p className="mt-2 text-sm sm:text-base text-[#76716d]">
+            <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm text-[#76716d] font-normal">
               Curated modular spaces crafted with premium fittings, appliances and tailored joinery.
             </p>
           </div>
@@ -127,7 +127,7 @@ export default function ShopByCollection() {
             <button
               type="button"
               onClick={() => scrollBySlide("prev")}
-              className="w-10 h-10 rounded-full border border-[#dcd7d0] hover:border-[#1a1a1a] hover:bg-[#f5f0ea] text-[#1a1a1a] flex items-center justify-center transition-colors cursor-pointer"
+              className="w-10 h-10 rounded-full border border-[#dcd7d0] hover:border-[#332f2c] hover:bg-[#f5f0ea] text-[#332f2c] flex items-center justify-center transition-colors cursor-pointer"
               aria-label="Previous slide"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -135,7 +135,7 @@ export default function ShopByCollection() {
             <button
               type="button"
               onClick={() => scrollBySlide("next")}
-              className="w-10 h-10 rounded-full border border-[#dcd7d0] hover:border-[#1a1a1a] hover:bg-[#f5f0ea] text-[#1a1a1a] flex items-center justify-center transition-colors cursor-pointer"
+              className="w-10 h-10 rounded-full border border-[#dcd7d0] hover:border-[#332f2c] hover:bg-[#f5f0ea] text-[#332f2c] flex items-center justify-center transition-colors cursor-pointer"
               aria-label="Next slide"
             >
               <ChevronRight className="w-5 h-5" />
@@ -149,20 +149,20 @@ export default function ShopByCollection() {
           <button
             type="button"
             onClick={() => scrollBySlide("prev")}
-            className="hidden sm:flex absolute left-3 lg:left-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-white/95 hover:bg-white text-[#1a1a1a] shadow-xl items-center justify-center transition-all hover:scale-105 active:scale-95 cursor-pointer border border-black/5"
+            className="hidden sm:flex absolute left-3 lg:left-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-white/95 hover:bg-white text-[#332f2c] shadow-xl items-center justify-center transition-all hover:scale-105 active:scale-95 cursor-pointer border border-black/5"
             aria-label="Previous slide"
           >
-            <ChevronLeft className="w-5 h-5 text-[#1a1a1a]" />
+            <ChevronLeft className="w-5 h-5 text-[#332f2c]" />
           </button>
 
           {/* Floating Right Arrow on Slider Image (matches user Image 1) */}
           <button
             type="button"
             onClick={() => scrollBySlide("next")}
-            className="hidden sm:flex absolute right-3 lg:right-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-white/95 hover:bg-white text-[#1a1a1a] shadow-xl items-center justify-center transition-all hover:scale-105 active:scale-95 cursor-pointer border border-black/5"
+            className="hidden sm:flex absolute right-3 lg:right-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-white/95 hover:bg-white text-[#332f2c] shadow-xl items-center justify-center transition-all hover:scale-105 active:scale-95 cursor-pointer border border-black/5"
             aria-label="Next slide"
           >
-            <ChevronRight className="w-5 h-5 text-[#1a1a1a]" />
+            <ChevronRight className="w-5 h-5 text-[#332f2c]" />
           </button>
 
           <div

@@ -64,7 +64,7 @@ export default function HeroBanner({ onCtaClick }: HeroBannerProps) {
             const el = document.querySelector("#curated-products");
             if (el) el.scrollIntoView({ behavior: "smooth" });
           }}
-          className="px-7 sm:px-10 py-3 sm:py-3.5 bg-[#ff5247] hover:bg-[#e0453b] text-white font-bold text-xs sm:text-sm md:text-base rounded-full shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
+          className="px-7 sm:px-10 py-3 sm:py-3.5 bg-[#ff5247] hover:bg-[#e0453b] text-white font-medium text-xs sm:text-sm rounded-full shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
         >
           {slides[currentSlide].ctaText}
         </button>

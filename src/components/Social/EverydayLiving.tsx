@@ -71,12 +71,12 @@ export default function EverydayLiving() {
     <section id="inspiration" className="py-14 sm:py-20 bg-white border-t border-stone-100">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-12">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-6 sm:mb-10">
           <div>
-            <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#1a1a1a] tracking-tight">
+            <h2 className="text-xl sm:text-2xl lg:text-[28px] font-medium text-[#332f2c] tracking-tight">
               Ideas for your kitchen &amp; bath
             </h2>
-            <p className="mt-2 text-sm sm:text-base text-[#76716d] font-normal">
+            <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm text-[#76716d] font-normal">
               A few looks to get you started. Tap one and we will help you plan something similar.
             </p>
           </div>

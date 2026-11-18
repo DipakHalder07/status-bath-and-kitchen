@@ -52,7 +52,7 @@ export default function DealsBanner({ onDealClick }: DealsBannerProps) {
                 <span className="text-xs uppercase tracking-wider !text-white/90 block mb-1 font-medium">
                   {feature.eyebrow}
                 </span>
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold leading-tight !text-white drop-shadow-sm">
+                <h3 className="text-lg sm:text-2xl lg:text-[26px] font-medium leading-tight !text-white drop-shadow-sm">
                   {feature.title}
                 </h3>
                 <span className="mt-3 inline-flex items-center gap-2 text-sm font-medium !text-white border-b border-white pb-0.5 group-hover:!text-[#ff5d55] group-hover:border-[#ff5d55] transition-colors">

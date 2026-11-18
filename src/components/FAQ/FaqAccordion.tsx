@@ -19,12 +19,12 @@ export default function FaqAccordion() {
         {/* FAQ Section: How can we assist you? */}
         <div className="w-full">
           <div className="flex items-baseline justify-between gap-3 mb-6 sm:mb-8">
-            <h2 className="text-xl sm:text-3xl lg:text-[36px] font-bold text-[#1a1a1a] tracking-tight">
+            <h2 className="text-xl sm:text-2xl lg:text-[28px] font-medium text-[#332f2c] tracking-tight">
               How can we assist you?
             </h2>
             <button
               onClick={() => openConsultation("General Enquiry")}
-              className="text-xs sm:text-sm font-medium text-[#1a1a1a] border-b border-[#1a1a1a] pb-0.5 hover:text-[#ff5d55] hover:border-[#ff5d55] transition-colors cursor-pointer whitespace-nowrap shrink-0"
+              className="text-xs sm:text-sm font-normal text-[#332f2c] border-b border-[#332f2c] pb-0.5 hover:text-[#ff5d55] hover:border-[#ff5d55] transition-colors cursor-pointer whitespace-nowrap shrink-0"
             >
               Ask a question
             </button>

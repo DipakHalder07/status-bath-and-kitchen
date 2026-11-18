@@ -11,10 +11,10 @@ export default function UpmodsBanner() {
     <section id="your-way" className="py-8 sm:py-12 lg:py-14 bg-white scroll-mt-24">
       <div className="max-w-[1280px] mx-auto px-5 sm:px-10 lg:px-20">
         <div className="text-center mb-6 sm:mb-8">
-          <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#1a1a1a] tracking-tight">
+          <h2 className="text-xl sm:text-2xl lg:text-[28px] font-medium text-[#332f2c] tracking-tight">
             Status Kitchens. Designed Your Way!
           </h2>
-          <p className="mt-2 text-sm sm:text-base text-[#76716d]">
+          <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm text-[#76716d] font-normal">
             Pick the layout, shutters, countertop, appliances and accessories. We plan, supply and install it all.
           </p>
         </div>

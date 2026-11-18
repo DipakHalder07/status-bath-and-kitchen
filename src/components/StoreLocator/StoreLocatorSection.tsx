@@ -30,7 +30,7 @@ export default function StoreLocatorSection() {
 
           {/* Overlaid Frosted Card on Right */}
           <div className="relative z-10 w-full max-w-md rounded-xl bg-black/45 backdrop-blur-md border border-white/15 p-6 sm:p-10 text-white shadow-2xl">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            <h2 className="text-xl sm:text-2xl lg:text-[28px] font-medium !text-white tracking-tight">
               Visit our experience studio
             </h2>
             <p className="text-xs sm:text-sm text-white/90 mt-3 sm:mt-4 leading-relaxed font-normal">

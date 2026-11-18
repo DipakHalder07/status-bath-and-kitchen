@@ -65,14 +65,14 @@ export default function CategoryGrid({ selection }: CategoryGridProps) {
     <section id="categories" className="py-14 sm:py-20 bg-[#f5f0ea] scroll-mt-24 sm:scroll-mt-32">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Section Heading */}
-        <div className="mb-8">
-          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#1a1a1a] tracking-tight">
+        <div className="mb-6 sm:mb-8">
+          <h2 className="text-xl sm:text-2xl lg:text-[28px] font-medium text-[#332f2c] tracking-tight">
             How can we help you?
           </h2>
         </div>
 
         {/* Segmented Horizontal 6 Tabs (Full-width on desktop, smoothly scrollable on mobile) */}
-        <div className="mb-10 w-full overflow-x-auto no-scrollbar -mx-5 px-5 sm:mx-0 sm:px-0">
+        <div className="mb-8 w-full overflow-x-auto no-scrollbar -mx-5 px-5 sm:mx-0 sm:px-0">
           <div className="inline-flex sm:grid sm:grid-cols-3 lg:grid-cols-6 border border-[#dcd7d0] divide-x divide-[#dcd7d0] bg-white min-w-max sm:min-w-0 w-auto sm:w-full">
             {displayTabs.map((tab: { tabName: string }, idx: number) => {
               const isActive = activeTabIdx === idx;
@@ -84,16 +84,16 @@ export default function CategoryGrid({ selection }: CategoryGridProps) {
                     setActiveTabIdx(idx);
                     setScrollProgress(20);
                   }}
-                  className={`relative py-3.5 px-5 sm:px-2 text-center text-sm transition-colors cursor-pointer whitespace-nowrap sm:whitespace-normal ${
+                  className={`relative py-3 px-5 sm:px-2 text-center text-xs sm:text-sm font-medium transition-colors cursor-pointer whitespace-nowrap sm:whitespace-normal ${
                     isActive
-                      ? "bg-white text-[#1a1a1a] font-bold sm:font-semibold"
-                      : "bg-[#f5f0ea] text-[#4a4541] font-medium hover:bg-[#ede5dc] hover:text-[#1a1a1a]"
+                      ? "bg-white text-[#332f2c]"
+                      : "bg-[#f5f0ea] text-[#6b6560] hover:bg-[#ede5dc] hover:text-[#332f2c]"
                   }`}
                 >
                   <span className="block truncate">{tab.tabName}</span>
-                  {/* Red bottom active underline indicator matching Image 2 */}
+                  {/* Red bottom active underline indicator */}
                   {isActive && (
-                    <div className="absolute bottom-0 left-3 right-3 sm:left-5 sm:right-5 h-[2.5px] bg-[#ff5d55]" />
+                    <div className="absolute bottom-0 left-3 right-3 sm:left-4 sm:right-4 h-[2px] bg-[#ff5d55]" />
                   )}
                 </button>
               );

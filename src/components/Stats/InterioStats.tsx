@@ -28,10 +28,10 @@ export default function InterioStats() {
     <section className="py-16 sm:py-24 bg-[#ff5d55] text-white">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 text-center">
         {/* Heading */}
-        <h2 className="text-2xl sm:text-4xl lg:text-[40px] font-medium tracking-tight !text-white">
+        <h2 className="text-xl sm:text-2xl lg:text-[30px] font-medium tracking-tight !text-white">
           {serviceStrip.title}
         </h2>
-        <p className="text-sm sm:text-base text-white/95 mt-2 sm:mt-3 font-normal max-w-2xl mx-auto">
+        <p className="text-xs sm:text-sm text-white/95 mt-1.5 sm:mt-2 font-normal max-w-2xl mx-auto">
           {serviceStrip.subtitle}
         </p>
 

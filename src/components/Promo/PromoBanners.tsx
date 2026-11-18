@@ -82,11 +82,11 @@ export default function PromoBanners() {
 
           {/* Right: Copy & Button */}
           <div className="p-6 sm:p-12 lg:p-16 flex flex-col justify-center items-start">
-            <h3 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#1a1a1a] leading-tight">
+            <h3 className="text-xl sm:text-2xl lg:text-[28px] font-medium text-[#332f2c] leading-tight">
               Renovating an old <br />
               kitchen or bathroom?
             </h3>
-            <p className="text-sm sm:text-base text-[#76716d] mt-3 sm:mt-4 font-normal">
+            <p className="text-xs sm:text-sm text-[#76716d] mt-2 sm:mt-3 font-normal">
               We will plan the upgrade with you, from the new layout to the final fitting.
             </p>
             <div className="mt-6 sm:mt-8">

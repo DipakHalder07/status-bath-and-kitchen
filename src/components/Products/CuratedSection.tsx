@@ -32,17 +32,17 @@ export default function CuratedSection() {
     <section id="curated-products" className="py-14 sm:py-20 bg-[#f5f0ea] scroll-mt-28">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Section Heading */}
-        <div className="mb-8">
-          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#1a1a1a] tracking-tight">
+        <div className="mb-6 sm:mb-8">
+          <h2 className="text-xl sm:text-2xl lg:text-[28px] font-medium text-[#332f2c] tracking-tight">
             Design ideas for you
           </h2>
-          <p className="mt-2 text-sm sm:text-base text-[#76716d]">
+          <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm text-[#76716d] font-normal">
             Like a look? Tap it and we will help you plan something similar for your home.
           </p>
         </div>
 
         {/* Segmented Horizontal Tabs (Inline-flex left-aligned border box matching live site) */}
-        <div className="overflow-x-auto no-scrollbar mb-10 -mx-5 px-5 sm:mx-0 sm:px-0">
+        <div className="overflow-x-auto no-scrollbar mb-8 -mx-5 px-5 sm:mx-0 sm:px-0">
           <div className="inline-flex border border-[#dcd7d0] rounded-none divide-x divide-[#dcd7d0] bg-[#f5f0ea]">
             {tabKeys.map((key) => {
               const tab = curatedTabsData[key];
@@ -56,15 +56,15 @@ export default function CuratedSection() {
                     setScrollProgress(25);
                     if (scrollRef.current) scrollRef.current.scrollLeft = 0;
                   }}
-                  className={`relative px-6 sm:px-9 py-3 sm:py-3.5 text-sm sm:text-base transition-colors cursor-pointer text-center ${
+                  className={`relative px-5 sm:px-8 py-2.5 sm:py-3 text-xs sm:text-sm font-medium transition-colors cursor-pointer text-center ${
                     isActive
-                      ? "bg-white text-[#1a1a1a] font-bold sm:font-semibold"
-                      : "bg-[#f5f0ea] text-[#4a4541] font-medium hover:bg-[#ede5dc] hover:text-[#1a1a1a]"
+                      ? "bg-white text-[#332f2c]"
+                      : "bg-[#f5f0ea] text-[#6b6560] hover:bg-[#ede5dc] hover:text-[#332f2c]"
                   }`}
                 >
                   <span>{tab.label}</span>
                   {isActive && (
-                    <div className="absolute bottom-0 left-3 right-3 sm:left-5 sm:right-5 h-[2.5px] bg-[#ff5d55]" />
+                    <div className="absolute bottom-0 left-3 right-3 sm:left-4 sm:right-4 h-[2px] bg-[#ff5d55]" />
                   )}
                 </button>
               );
