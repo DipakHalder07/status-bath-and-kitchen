@@ -72,7 +72,7 @@ export default function AboutPage() {
         </div>
 
         {/* 2. HERO: "Designed for life" with Authentic Banner */}
-        <div className="w-full relative h-[360px] sm:h-[480px] lg:h-[540px] overflow-hidden mb-8">
+        <div className="w-full relative h-[280px] sm:h-[480px] lg:h-[540px] overflow-hidden mb-8">
           <Image
             src="/images/interio/about_hero_poster.jpg"
             alt="Designed for life"
@@ -83,15 +83,15 @@ export default function AboutPage() {
           />
           <div className="absolute inset-0 bg-black/35" />
 
-          <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 h-full relative flex items-end pb-12 sm:pb-16">
-            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-medium leading-[1.1] !text-white tracking-tight">
+          <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 h-full relative flex items-end pb-8 sm:pb-16">
+            <h1 className="text-3xl sm:text-5xl lg:text-[56px] font-medium leading-[1.1] !text-white tracking-tight">
               Designed for life
             </h1>
           </div>
         </div>
 
         {/* 3. STICKY SUB-NAV BAR (Matching live interio.com) */}
-        <div className="sticky top-20 z-30 bg-white border-b border-[#dcd7d0] py-3.5 mb-16 overflow-x-auto no-scrollbar shadow-xs">
+        <div className="sticky top-[72px] sm:top-[88px] lg:top-[96px] z-30 bg-white border-b border-[#dcd7d0] py-3 sm:py-3.5 mb-12 sm:mb-16 overflow-x-auto no-scrollbar shadow-xs -mx-5 px-5 sm:mx-0 sm:px-0">
           <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
             <ul className="flex items-center space-x-8 text-[14px] font-medium whitespace-nowrap">
               {subNavItems.map((item) => {
@@ -265,7 +265,8 @@ export default function AboutPage() {
               </h2>
 
               {/* Segmented Tabs */}
-              <div className="inline-flex border border-[#dcd7d0] bg-white divide-x divide-[#dcd7d0]">
+              <div className="overflow-x-auto no-scrollbar -mx-5 px-5 sm:mx-0 sm:px-0 pb-1">
+                <div className="inline-flex border border-[#dcd7d0] bg-white divide-x divide-[#dcd7d0]">
                 {indianFocusTabs.map((tab) => {
                   const isActive = activeFocusTab === tab;
                   return (
@@ -285,6 +286,7 @@ export default function AboutPage() {
                     </button>
                   );
                 })}
+                </div>
               </div>
             </div>
 
@@ -421,7 +423,7 @@ export default function AboutPage() {
             </div>
 
             {/* Sustainability Sub-tabs */}
-            <div className="overflow-x-auto no-scrollbar">
+            <div className="overflow-x-auto no-scrollbar -mx-5 px-5 sm:mx-0 sm:px-0 pb-1">
               <div className="inline-flex border border-[#dcd7d0] bg-white divide-x divide-[#dcd7d0]">
                 {[
                   { id: "approach", label: "Our Approach" },

@@ -111,7 +111,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
 
       <MobileDrawer isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
 
-      <main className="flex-1 w-full pt-28 sm:pt-36 pb-20">
+      <main className="flex-1 w-full pt-28 sm:pt-36 pb-28 sm:pb-20">
         <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
           {/* Breadcrumb (Matching interio.com 14px 400 py-4) */}
           <nav aria-label="Breadcrumb" className="py-4 text-[14px] text-[#76716d]">
@@ -180,14 +180,14 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
 
               {/* Thumbnails Row */}
               {gallery.length > 1 && (
-                <div className="grid grid-cols-4 sm:grid-cols-5 gap-3 pt-1">
+                <div className="flex sm:grid sm:grid-cols-5 gap-3 pt-1 overflow-x-auto no-scrollbar -mx-5 px-5 sm:mx-0 sm:px-0">
                   {gallery.map((imgUrl: string, idx: number) => {
                     const isSelected = activeImageIndex === idx;
                     return (
                       <button
                         key={idx}
                         onClick={() => setActiveImageIndex(idx)}
-                        className={`relative aspect-square bg-[#f6f4f0] overflow-hidden border-2 transition-all cursor-pointer ${
+                        className={`relative w-20 sm:w-auto shrink-0 sm:shrink aspect-square bg-[#f6f4f0] overflow-hidden border-2 transition-all cursor-pointer ${
                           isSelected
                             ? "border-[#ff5d55]"
                             : "border-transparent hover:border-[#dcd7d0] opacity-80 hover:opacity-100"
@@ -307,26 +307,28 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                 <div className="text-[13px] font-medium text-[#4a4541]">
                   Option / Finish:
                 </div>
-                <div className="inline-flex border border-[#dcd7d0] divide-x divide-[#dcd7d0]">
-                  {variants.map((variant, idx) => {
-                    const isSelected = selectedVariant === idx;
-                    return (
-                      <button
-                        key={idx}
-                        onClick={() => setSelectedVariant(idx)}
-                        className={`relative px-5 py-2.5 text-[13px] font-medium transition-colors cursor-pointer ${
-                          isSelected
-                            ? "bg-white text-[#4a4541] font-semibold"
-                            : "bg-[#faf8f5] text-[#76716d] hover:bg-white"
-                        }`}
-                      >
-                        <span>{variant.label}</span>
-                        {isSelected && (
-                          <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-[#ff5d55]" />
-                        )}
-                      </button>
-                    );
-                  })}
+                <div className="overflow-x-auto no-scrollbar -mx-5 px-5 sm:mx-0 sm:px-0">
+                  <div className="inline-flex border border-[#dcd7d0] divide-x divide-[#dcd7d0]">
+                    {variants.map((variant, idx) => {
+                      const isSelected = selectedVariant === idx;
+                      return (
+                        <button
+                          key={idx}
+                          onClick={() => setSelectedVariant(idx)}
+                          className={`relative px-5 py-2.5 text-[13px] font-medium transition-colors cursor-pointer ${
+                            isSelected
+                              ? "bg-white text-[#4a4541] font-semibold"
+                              : "bg-[#faf8f5] text-[#76716d] hover:bg-white"
+                          }`}
+                        >
+                          <span>{variant.label}</span>
+                          {isSelected && (
+                            <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-[#ff5d55]" />
+                          )}
+                        </button>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
 
@@ -427,7 +429,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
           {/* 2. TABS SECTION: OVERVIEW, SPECS, FEATURES, REVIEWS */}
           <div className="mt-20 pt-10 border-t border-[#dcd7d0]">
             {/* Tabs Header */}
-            <div className="flex items-center space-x-8 border-b border-[#dcd7d0] overflow-x-auto text-[15px] font-medium mb-8">
+            <div className="flex items-center space-x-8 border-b border-[#dcd7d0] overflow-x-auto no-scrollbar -mx-5 px-5 sm:mx-0 sm:px-0 text-[15px] font-medium mb-8">
               <button
                 onClick={() => setActiveTab("overview")}
                 className={`pb-3.5 border-b-2 whitespace-nowrap transition-colors cursor-pointer ${
@@ -725,7 +727,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
           showStickyBar ? "translate-y-0" : "translate-y-full"
         }`}
       >
-        <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 py-2.5 flex items-center justify-between gap-4">
+        <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 py-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] flex items-center justify-between gap-4">
           {/* Left: Product title and thumbnail on larger screens */}
           <div className="hidden sm:flex items-center gap-3 min-w-0">
             <div className="relative w-12 h-12 bg-white rounded-xs overflow-hidden shrink-0">

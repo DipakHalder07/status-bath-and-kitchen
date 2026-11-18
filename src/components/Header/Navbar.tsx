@@ -278,7 +278,7 @@ export default function Navbar({
 
               {/* Expandable Search Overlay / Modal */}
               {isSearchOpen && (
-                <div className="absolute right-0 top-full mt-2 w-[340px] sm:w-[480px] bg-white text-gray-900 rounded-2xl shadow-2xl border border-gray-100 p-4 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                <div className="fixed inset-x-3 top-20 sm:inset-auto sm:right-0 sm:top-full sm:mt-2 w-auto sm:w-[480px] bg-white text-gray-900 rounded-2xl shadow-2xl border border-gray-100 p-4 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
                   <form onSubmit={handleSearchFormSubmit} className="relative w-full">
                     <div className="relative flex items-center">
                       <input

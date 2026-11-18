@@ -42,7 +42,7 @@ export default function CuratedSection() {
         </div>
 
         {/* Segmented Horizontal Tabs (Inline-flex left-aligned border box matching live site) */}
-        <div className="overflow-x-auto no-scrollbar mb-10">
+        <div className="overflow-x-auto no-scrollbar mb-10 -mx-5 px-5 sm:mx-0 sm:px-0">
           <div className="inline-flex border border-gray-300 rounded-none divide-x divide-gray-300 bg-[#f5f0ea]">
             {tabKeys.map((key) => {
               const tab = curatedTabsData[key];
@@ -76,7 +76,7 @@ export default function CuratedSection() {
         <div
           ref={scrollRef}
           onScroll={handleScroll}
-          className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth pb-4"
+          className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth pb-4 -mx-5 px-5 sm:mx-0 sm:px-0"
         >
           {products.map((product) => (
             <Link

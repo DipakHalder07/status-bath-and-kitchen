@@ -211,7 +211,7 @@ export default function ContactPage() {
               </h2>
 
               {/* Joined Segmented Toolbar (Business Enquiry | Delivery Related | Damage/Return | Installation/Service) */}
-              <div className="overflow-x-auto no-scrollbar pb-2">
+              <div className="overflow-x-auto no-scrollbar pb-2 -mx-5 px-5 sm:mx-0 sm:px-0">
                 <div className="inline-flex border border-[#dcd7d0] bg-white divide-x divide-[#dcd7d0]">
                   {inquiryTypes.map((inq) => {
                     const isSelected = selectedInquiry === inq.id;
@@ -284,7 +284,7 @@ export default function ContactPage() {
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full border-b border-[#dcd7d0] py-2 text-[15px] text-[#4a4541] focus:border-[#ff5d55] focus:outline-hidden bg-transparent"
+                        className="w-full border-b border-[#dcd7d0] py-2 text-base sm:text-[15px] text-[#4a4541] focus:border-[#ff5d55] focus:outline-hidden bg-transparent"
                       />
                     </div>
 
@@ -304,7 +304,7 @@ export default function ContactPage() {
                             mobile: e.target.value.replace(/\D/g, ""),
                           })
                         }
-                        className="w-full border-b border-[#dcd7d0] py-2 text-[15px] text-[#4a4541] focus:border-[#ff5d55] focus:outline-hidden bg-transparent"
+                        className="w-full border-b border-[#dcd7d0] py-2 text-base sm:text-[15px] text-[#4a4541] focus:border-[#ff5d55] focus:outline-hidden bg-transparent"
                       />
                     </div>
 
@@ -318,7 +318,7 @@ export default function ContactPage() {
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full border-b border-[#dcd7d0] py-2 text-[15px] text-[#4a4541] focus:border-[#ff5d55] focus:outline-hidden bg-transparent"
+                        className="w-full border-b border-[#dcd7d0] py-2 text-base sm:text-[15px] text-[#4a4541] focus:border-[#ff5d55] focus:outline-hidden bg-transparent"
                       />
                     </div>
 
@@ -358,7 +358,7 @@ export default function ContactPage() {
                               pincode: e.target.value.replace(/\D/g, ""),
                             })
                           }
-                          className="w-full border-b border-[#dcd7d0] py-2 text-[15px] text-[#4a4541] focus:border-[#ff5d55] focus:outline-hidden bg-transparent"
+                          className="w-full border-b border-[#dcd7d0] py-2 text-base sm:text-[15px] text-[#4a4541] focus:border-[#ff5d55] focus:outline-hidden bg-transparent"
                         />
                       </div>
 
@@ -371,7 +371,7 @@ export default function ContactPage() {
                           required
                           value={formData.city}
                           onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                          className="w-full border-b border-[#dcd7d0] py-2 text-[15px] text-[#4a4541] focus:border-[#ff5d55] focus:outline-hidden bg-transparent"
+                          className="w-full border-b border-[#dcd7d0] py-2 text-base sm:text-[15px] text-[#4a4541] focus:border-[#ff5d55] focus:outline-hidden bg-transparent"
                         />
                       </div>
                     </div>
@@ -386,7 +386,7 @@ export default function ContactPage() {
                         required
                         value={formData.query}
                         onChange={(e) => setFormData({ ...formData, query: e.target.value })}
-                        className="w-full border-b border-[#dcd7d0] py-2 text-[15px] text-[#4a4541] focus:border-[#ff5d55] focus:outline-hidden bg-transparent resize-none"
+                        className="w-full border-b border-[#dcd7d0] py-2 text-base sm:text-[15px] text-[#4a4541] focus:border-[#ff5d55] focus:outline-hidden bg-transparent resize-none"
                       />
                     </div>
 
@@ -395,7 +395,7 @@ export default function ContactPage() {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="btn-brand-primary px-10 py-3.5 text-sm font-medium tracking-wide shadow-xs cursor-pointer flex items-center justify-center gap-2 disabled:opacity-50"
+                        className="btn-brand-primary w-full sm:w-auto px-10 py-3.5 text-sm font-medium tracking-wide shadow-xs cursor-pointer flex items-center justify-center gap-2 disabled:opacity-50"
                       >
                         {isSubmitting ? "Submitting..." : "Submit Query"}
                       </button>

@@ -40,7 +40,7 @@ export default function ConsultationModal() {
       />
 
       {/* Modal Card */}
-      <div className="relative bg-white rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-2xl z-50 animate-in zoom-in-95 duration-200">
+      <div className="relative bg-white rounded-3xl p-6 sm:p-8 max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl z-50 animate-in zoom-in-95 duration-200">
         <button
           onClick={closeConsultation}
           className="absolute top-5 right-5 text-gray-400 hover:text-gray-600 p-1 rounded-full hover:bg-gray-100"
@@ -89,11 +89,11 @@ export default function ConsultationModal() {
                   placeholder="e.g. Rahul Sharma"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 text-xs text-gray-900 focus:border-[#c0262d] focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 text-base sm:text-xs text-gray-900 focus:border-[#c0262d] focus:outline-hidden"
                 />
               </div>
 
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-xs font-semibold text-gray-700 mb-1">
                     Mobile Number
@@ -107,7 +107,7 @@ export default function ConsultationModal() {
                     onChange={(e) =>
                       setPhone(e.target.value.replace(/\D/g, ""))
                     }
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 text-xs text-gray-900 focus:border-[#c0262d] focus:outline-hidden"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 text-base sm:text-xs text-gray-900 focus:border-[#c0262d] focus:outline-hidden"
                   />
                 </div>
                 <div>
@@ -119,7 +119,7 @@ export default function ConsultationModal() {
                     placeholder="e.g. Your city"
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 text-xs text-gray-900 focus:border-[#c0262d] focus:outline-hidden"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 text-base sm:text-xs text-gray-900 focus:border-[#c0262d] focus:outline-hidden"
                   />
                 </div>
               </div>

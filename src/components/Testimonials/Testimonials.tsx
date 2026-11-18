@@ -32,7 +32,7 @@ export default function Testimonials() {
         <div
           ref={scrollRef}
           onScroll={handleScroll}
-          className="flex items-center gap-6 overflow-x-auto no-scrollbar scroll-smooth py-6"
+          className="flex items-center gap-6 overflow-x-auto no-scrollbar scroll-smooth py-6 -mx-5 px-5 sm:mx-0 sm:px-0"
         >
           {promisesList.map((item, idx) => {
             const isHighlighted = idx === activeIdx;

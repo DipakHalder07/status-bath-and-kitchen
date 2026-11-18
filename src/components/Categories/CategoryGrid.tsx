@@ -71,9 +71,9 @@ export default function CategoryGrid({ selection }: CategoryGridProps) {
           </h2>
         </div>
 
-        {/* Segmented Horizontal 6 Tabs (Full-width 6 columns matching live site) */}
-        <div className="mb-10 w-full overflow-hidden border border-gray-300 rounded-none bg-white">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 divide-x divide-y sm:divide-y-0 divide-gray-300">
+        {/* Segmented Horizontal 6 Tabs (Full-width on desktop, smoothly scrollable on mobile) */}
+        <div className="mb-10 w-full overflow-x-auto no-scrollbar border border-gray-300 rounded-none bg-white -mx-5 px-5 sm:mx-0 sm:px-0">
+          <div className="flex sm:grid sm:grid-cols-3 lg:grid-cols-6 divide-x divide-gray-300 min-w-max sm:min-w-0">
             {displayTabs.map((tab: { tabName: string }, idx: number) => {
               const isActive = activeTabIdx === idx;
 
@@ -84,7 +84,7 @@ export default function CategoryGrid({ selection }: CategoryGridProps) {
                     setActiveTabIdx(idx);
                     setScrollProgress(20);
                   }}
-                  className={`relative py-3.5 px-2 text-center text-sm font-semibold transition-colors cursor-pointer ${
+                  className={`relative py-3.5 px-5 sm:px-2 text-center text-sm font-semibold transition-colors cursor-pointer whitespace-nowrap sm:whitespace-normal ${
                     isActive
                       ? "bg-white text-gray-900 font-bold"
                       : "bg-[#f5f0ea] text-gray-700 hover:bg-[#ede5dc]"
@@ -93,7 +93,7 @@ export default function CategoryGrid({ selection }: CategoryGridProps) {
                   <span className="block truncate">{tab.tabName}</span>
                   {/* Red bottom active underline indicator */}
                   {isActive && (
-                    <div className="absolute bottom-0 left-6 right-6 h-0.5 bg-[#c0262d]" />
+                    <div className="absolute bottom-0 left-4 right-4 sm:left-6 sm:right-6 h-0.5 bg-[#c0262d]" />
                   )}
                 </button>
               );
@@ -105,7 +105,7 @@ export default function CategoryGrid({ selection }: CategoryGridProps) {
         <div
           ref={scrollRef}
           onScroll={handleScroll}
-          className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth pb-4"
+          className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth pb-4 -mx-5 px-5 sm:mx-0 sm:px-0"
         >
           {currentTab.items.map(
             (item: { name: string; image: string; link: string }, i: number) => (

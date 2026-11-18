@@ -218,7 +218,7 @@ function ProductsPageContent() {
           </div>
 
           {/* 3. QUICK CATEGORY PILLS BAR (Joined Segmented Box matching interio.com) */}
-          <div className="flex items-center justify-start sm:justify-center overflow-x-auto pb-2 mb-8 no-scrollbar">
+          <div className="flex items-center justify-start sm:justify-center overflow-x-auto pb-2 mb-8 no-scrollbar -mx-5 px-5 sm:mx-0 sm:px-0">
             <div className="inline-flex border border-[#dcd7d0] bg-white divide-x divide-[#dcd7d0]">
               {categoryTabs.map((cat) => {
                 const isActive = selectedCategory === cat;
@@ -568,6 +568,147 @@ function ProductsPageContent() {
           </div>
         </div>
       </main>
+
+      {/* Filter Drawer / Mobile Bottom Sheet */}
+      {isFilterDrawerOpen && (
+        <div className="fixed inset-0 z-50 overflow-hidden">
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity"
+            onClick={() => setIsFilterDrawerOpen(false)}
+          />
+
+          {/* Drawer / Sheet */}
+          <div className="fixed inset-y-0 right-0 max-w-md w-full bg-white shadow-2xl flex flex-col z-50 animate-in slide-in-from-right duration-300">
+            {/* Header */}
+            <div className="p-4 sm:p-5 border-b border-[#dcd7d0] flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <SlidersHorizontal className="w-5 h-5 text-[#ff5d55]" />
+                <h3 className="text-base sm:text-lg font-medium text-[#4a4541]">
+                  Filter Products
+                </h3>
+              </div>
+              <button
+                onClick={() => setIsFilterDrawerOpen(false)}
+                className="p-1.5 text-[#76716d] hover:text-[#4a4541] rounded-full hover:bg-stone-100 transition-colors"
+                aria-label="Close filters"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Filter Options Body */}
+            <div className="flex-1 overflow-y-auto p-5 space-y-6">
+              {/* Category Filter */}
+              <div>
+                <label className="block text-xs font-semibold uppercase tracking-wider text-[#76716d] mb-3">
+                  Category
+                </label>
+                <div className="flex flex-wrap gap-2">
+                  {categoryTabs.map((cat) => {
+                    const isSelected = selectedCategory === cat;
+                    return (
+                      <button
+                        key={cat}
+                        onClick={() => setSelectedCategory(cat)}
+                        className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer ${
+                          isSelected
+                            ? "bg-[#ff5d55] text-white shadow-xs"
+                            : "bg-[#f5f0ea] text-[#4a4541] hover:bg-[#ede5dc]"
+                        }`}
+                      >
+                        {cat}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Price Range Filter */}
+              <div className="pt-4 border-t border-[#dcd7d0]">
+                <label className="block text-xs font-semibold uppercase tracking-wider text-[#76716d] mb-3">
+                  Price Range
+                </label>
+                <div className="space-y-2">
+                  {[
+                    { value: "all", label: "All Prices" },
+                    { value: "under-30k", label: "Under ₹30,000" },
+                    { value: "30k-75k", label: "₹30,000 - ₹75,000" },
+                    { value: "75k-150k", label: "₹75,000 - ₹1,50,000" },
+                    { value: "above-150k", label: "Above ₹1,50,000" },
+                  ].map((p) => (
+                    <label
+                      key={p.value}
+                      className="flex items-center gap-2.5 text-sm text-[#4a4541] cursor-pointer"
+                    >
+                      <input
+                        type="radio"
+                        name="mobilePriceFilter"
+                        value={p.value}
+                        checked={priceFilter === p.value}
+                        onChange={() => setPriceFilter(p.value)}
+                        className="text-[#ff5d55] focus:ring-[#ff5d55]"
+                      />
+                      <span>{p.label}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              {/* Sort Order */}
+              <div className="pt-4 border-t border-[#dcd7d0]">
+                <label className="block text-xs font-semibold uppercase tracking-wider text-[#76716d] mb-3">
+                  Sort By
+                </label>
+                <div className="space-y-2">
+                  {[
+                    { value: "featured", label: "Best Match" },
+                    { value: "price-low", label: "Price: Low to High" },
+                    { value: "price-high", label: "Price: High to Low" },
+                    { value: "rating", label: "Customer Rating" },
+                  ].map((s) => (
+                    <label
+                      key={s.value}
+                      className="flex items-center gap-2.5 text-sm text-[#4a4541] cursor-pointer"
+                    >
+                      <input
+                        type="radio"
+                        name="mobileSort"
+                        value={s.value}
+                        checked={selectedSort === s.value}
+                        onChange={() => setSelectedSort(s.value)}
+                        className="text-[#ff5d55] focus:ring-[#ff5d55]"
+                      />
+                      <span>{s.label}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom Actions */}
+            <div className="p-4 sm:p-5 border-t border-[#dcd7d0] bg-[#fbf7f4] flex items-center gap-3">
+              <button
+                onClick={() => {
+                  setSelectedCategory("All Products");
+                  setPriceFilter("all");
+                  setSelectedSort("featured");
+                  setSearchQuery("");
+                }}
+                className="w-1/2 py-2.5 px-4 border border-[#4a4541] text-[#4a4541] hover:bg-[#4a4541] hover:text-white rounded-[20px_2px_2px_2px] text-xs font-medium transition-colors cursor-pointer text-center"
+              >
+                Reset All
+              </button>
+              <button
+                onClick={() => setIsFilterDrawerOpen(false)}
+                className="w-1/2 py-2.5 px-4 bg-[#ff5d55] hover:bg-[#e5473f] text-white rounded-[20px_2px_2px_2px] text-xs font-medium transition-colors shadow-xs cursor-pointer text-center"
+              >
+                Show Results
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Global Modals & Drawers */}
       <CartDrawer />

@@ -65,29 +65,29 @@ export default function ShopByCollection() {
         </div>
 
         {/* Lookbook Main Slider Frame */}
-        <div className="relative w-full aspect-[16/9] sm:aspect-[21/9] rounded-none sm:rounded-md overflow-hidden bg-stone-100 shadow-xs group">
+        <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] rounded-none sm:rounded-md overflow-hidden bg-stone-100 shadow-xs group">
           <img
             src={currentCollection.roomImage}
             alt={currentCollection.name}
             className="w-full h-full object-cover transition-all duration-700"
           />
 
-          {/* Navigation Arrows on Hover */}
+          {/* Navigation Arrows (Visible on mobile, hover on desktop) */}
           <button
             type="button"
             onClick={handlePrev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-gray-900 shadow-md flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 z-30 cursor-pointer"
+            className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/90 hover:bg-white text-gray-900 shadow-md flex items-center justify-center transition-all opacity-90 sm:opacity-0 sm:group-hover:opacity-100 z-30 cursor-pointer"
             aria-label="Previous collection"
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
           <button
             type="button"
             onClick={handleNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-gray-900 shadow-md flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 z-30 cursor-pointer"
+            className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/90 hover:bg-white text-gray-900 shadow-md flex items-center justify-center transition-all opacity-90 sm:opacity-0 sm:group-hover:opacity-100 z-30 cursor-pointer"
             aria-label="Next collection"
           >
-            <ChevronRight className="w-5 h-5" />
+            <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
 
           {/* Hotspots */}

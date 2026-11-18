@@ -50,22 +50,40 @@ export default function MobileDrawer({
         </div>
 
         {/* Quick Main Nav */}
-        <div className="p-4 border-b border-gray-100 grid grid-cols-2 gap-2 text-xs font-semibold">
+        <div className="p-4 border-b border-gray-100 space-y-2.5">
+          <div className="grid grid-cols-3 gap-2 text-xs font-semibold">
+            <Link
+              href="/products"
+              onClick={onClose}
+              className="flex flex-col items-center justify-center gap-1.5 p-2.5 rounded-lg bg-stone-50 hover:bg-red-50 hover:text-[#ff5d55] text-gray-800 transition-colors text-center"
+            >
+              <Package className="w-4 h-4 text-[#ff5d55]" />
+              <span>Products</span>
+            </Link>
+            <Link
+              href="/about"
+              onClick={onClose}
+              className="flex flex-col items-center justify-center gap-1.5 p-2.5 rounded-lg bg-stone-50 hover:bg-red-50 hover:text-[#ff5d55] text-gray-800 transition-colors text-center"
+            >
+              <Info className="w-4 h-4 text-[#ff5d55]" />
+              <span>About Us</span>
+            </Link>
+            <Link
+              href="/contact"
+              onClick={onClose}
+              className="flex flex-col items-center justify-center gap-1.5 p-2.5 rounded-lg bg-stone-50 hover:bg-red-50 hover:text-[#ff5d55] text-gray-800 transition-colors text-center"
+            >
+              <Phone className="w-4 h-4 text-[#ff5d55]" />
+              <span>Contact</span>
+            </Link>
+          </div>
+
           <Link
-            href="/products"
+            href="/contact"
             onClick={onClose}
-            className="flex items-center gap-2 p-2.5 rounded-lg bg-stone-50 hover:bg-red-50 hover:text-[#ff5d55] text-gray-800 transition-colors"
+            className="w-full py-2.5 px-4 bg-[#ff5d55] hover:bg-[#e5473f] text-white rounded-[20px_2px_2px_2px] text-xs font-semibold shadow-xs flex items-center justify-center gap-2 transition-colors"
           >
-            <Package className="w-4 h-4 text-[#ff5d55]" />
-            <span>All Products</span>
-          </Link>
-          <Link
-            href="/about"
-            onClick={onClose}
-            className="flex items-center gap-2 p-2.5 rounded-lg bg-stone-50 hover:bg-red-50 hover:text-[#ff5d55] text-gray-800 transition-colors"
-          >
-            <Info className="w-4 h-4 text-[#ff5d55]" />
-            <span>About Us</span>
+            <span>Book Free Design Consultation</span>
           </Link>
         </div>
 
@@ -108,8 +126,9 @@ export default function MobileDrawer({
                         </div>
                         <div className="space-y-1">
                           {sub.items.map((it, itIdx) => (
-                            <button
+                            <Link
                               key={itIdx}
+                              href={`/products?category=${encodeURIComponent(it.name)}`}
                               onClick={() => {
                                 onSelectCategory(it.name);
                                 onClose();
@@ -118,7 +137,7 @@ export default function MobileDrawer({
                             >
                               <span>{it.name}</span>
                               <ChevronRight className="w-3 h-3 text-gray-400" />
-                            </button>
+                            </Link>
                           ))}
                         </div>
                       </div>
