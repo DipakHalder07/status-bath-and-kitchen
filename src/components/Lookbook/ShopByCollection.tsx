@@ -104,7 +104,7 @@ export default function ShopByCollection() {
             : "",
         image: item.image,
       });
-      showToast(`Added ${item.name} to bag!`);
+      showToast(`Added ${item.name} to showroom shortlist!`);
     } else {
       setActiveDrawerCol(null);
       openConsultation(item.name);
@@ -253,7 +253,7 @@ export default function ShopByCollection() {
                               <button
                                 onClick={() => handleItemAction(spot)}
                                 className="p-1.5 bg-[#ff5d55] text-white rounded-md hover:bg-[#e5473f] transition-colors cursor-pointer"
-                                title="Add to cart"
+                                title="Add to showroom shortlist"
                               >
                                 <ShoppingBag className="w-3.5 h-3.5" />
                               </button>

@@ -512,12 +512,12 @@ function ProductsPageContent() {
                         <button
                           onClick={() => {
                             addToCart(product);
-                            showToast(`Added ${product.name} to cart`);
+                            showToast(`Added ${product.name} to showroom shortlist`);
                           }}
                           className="bg-[#ff5d55] hover:bg-[#e5473f] text-white px-3 py-1.5 rounded-[16px_2px_2px_2px] text-xs font-medium flex items-center gap-1.5 cursor-pointer shadow-xs transition-colors"
                         >
                           <ShoppingBag className="w-3.5 h-3.5" />
-                          <span>Add</span>
+                          <span>Shortlist</span>
                         </button>
                       </div>
                     </div>

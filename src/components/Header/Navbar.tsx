@@ -419,15 +419,16 @@ export default function Navbar({
               )}
             </button>
 
-            {/* Shopping Bag / Cart */}
+            {/* Showroom Shortlist */}
             <button
               onClick={openCart}
-              className={`relative p-2 rounded-full transition-colors ${
+              className={`relative p-2 rounded-full transition-colors cursor-pointer ${
                 isHeaderSolid
                   ? "text-gray-700 hover:text-[#ff5d55] hover:bg-gray-100"
                   : "text-white hover:text-white hover:bg-white/15"
               }`}
-              aria-label="Shopping Cart"
+              aria-label="Showroom Shortlist"
+              title="Showroom Shortlist"
             >
               <ShoppingBag className="w-5 h-5" />
               {cartCount > 0 && (

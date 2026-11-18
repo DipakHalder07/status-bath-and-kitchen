@@ -25,15 +25,15 @@ import { siteBrand } from "@/data/interioData";
 
 const categoryChannels = [
   {
-    id: "online",
-    name: "Online order related",
-    email: "interiocare@statusbathkitchen.com",
+    id: "showroom",
+    name: "Showroom visit & purchases",
+    email: "showroom@statusbathkitchen.com",
     phone: "+91 98320 95793",
     whatsapp: "+91 98320 95793",
-    escalationLabel: "To escalate order related matters",
-    escalationText: "Raise a ticket for order related issues:",
-    escalationAction: "Raise New ticket",
-    escalationEmail: "escalations@statusbathkitchen.com",
+    escalationLabel: "To escalate showroom enquiries",
+    escalationText: "Connect with our Showroom Manager:",
+    escalationAction: "Visit Our Store",
+    escalationEmail: "showroom@statusbathkitchen.com",
   },
   {
     id: "offline",
