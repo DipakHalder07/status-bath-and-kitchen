@@ -104,7 +104,6 @@ export default function ContactPage() {
     name: "",
     mobile: "",
     email: "",
-    pincode: "",
     city: "",
     query: "",
   });
@@ -114,7 +113,7 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.mobile || !formData.email || !formData.pincode) {
+    if (!formData.name || !formData.mobile || !formData.email) {
       showToast("Please fill in all mandatory fields (*)");
       return;
     }
@@ -262,7 +261,6 @@ export default function ContactPage() {
                           name: "",
                           mobile: "",
                           email: "",
-                          pincode: "",
                           city: "",
                           query: "",
                         });
@@ -341,39 +339,18 @@ export default function ContactPage() {
                       </div>
                     </div>
 
-                    {/* Pincode & City */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <div className="space-y-1">
-                        <label className="block text-[13px] font-normal text-[#76716d]">
-                          Pincode *
-                        </label>
-                        <input
-                          type="text"
-                          required
-                          maxLength={6}
-                          value={formData.pincode}
-                          onChange={(e) =>
-                            setFormData({
-                              ...formData,
-                              pincode: e.target.value.replace(/\D/g, ""),
-                            })
-                          }
-                          className="w-full border-b border-[#dcd7d0] py-2 text-base sm:text-[15px] text-[#4a4541] focus:border-[#ff5d55] focus:outline-hidden bg-transparent"
-                        />
-                      </div>
-
-                      <div className="space-y-1">
-                        <label className="block text-[13px] font-normal text-[#76716d]">
-                          City *
-                        </label>
-                        <input
-                          type="text"
-                          required
-                          value={formData.city}
-                          onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                          className="w-full border-b border-[#dcd7d0] py-2 text-base sm:text-[15px] text-[#4a4541] focus:border-[#ff5d55] focus:outline-hidden bg-transparent"
-                        />
-                      </div>
+                    {/* City / Location */}
+                    <div className="space-y-1">
+                      <label className="block text-[13px] font-normal text-[#76716d]">
+                        City / Area
+                      </label>
+                      <input
+                        type="text"
+                        value={formData.city}
+                        onChange={(e) => setFormData({ ...formData, city: e.target.value })}
+                        placeholder="e.g. Siliguri, Jalpaiguri, Kolkata..."
+                        className="w-full border-b border-[#dcd7d0] py-2 text-base sm:text-[15px] text-[#4a4541] focus:border-[#ff5d55] focus:outline-hidden bg-transparent"
+                      />
                     </div>
 
                     {/* Your Query */}

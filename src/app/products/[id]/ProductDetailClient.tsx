@@ -43,9 +43,6 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [selectedVariant, setSelectedVariant] = useState(0);
-  const [pincode, setPincode] = useState("400079");
-  const [pincodeInput, setPincodeInput] = useState("");
-  const [pincodeChecked, setPincodeChecked] = useState(true);
   const [activeTab, setActiveTab] = useState<"overview" | "specs" | "features" | "reviews">("overview");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showStickyBar, setShowStickyBar] = useState(false);
@@ -73,18 +70,6 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const handlePincodeSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (pincodeInput.length === 6) {
-      setPincode(pincodeInput);
-      setPincodeChecked(true);
-      showToast(`Pincode ${pincodeInput} is verified for Free White-Glove Assembly!`);
-      setPincodeInput("");
-    } else {
-      showToast("Please enter a valid 6-digit PIN code.");
-    }
-  };
 
   const handleShare = () => {
     if (navigator.share) {
@@ -262,46 +247,19 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                 </div>
               </div>
 
-              {/* Price Block (Matching interio.com 24px-28px font-medium, padding 24px 0 0) */}
+              {/* Price Block: Bespoke Showroom Pricing */}
               <div className="pt-4 border-t border-[#dcd7d0]">
                 <div className="flex items-baseline gap-3">
-                  <span className="text-[26px] sm:text-[28px] font-medium text-[#4a4541]">
-                    ₹{product.price.toLocaleString("en-IN")}
+                  <span className="text-[22px] sm:text-[24px] font-medium text-[#4a4541]">
+                    Price on Request
                   </span>
-                  {product.mrp > product.price && (
-                    <span className="text-sm text-[#8e8984] line-through">
-                      MRP ₹{product.mrp.toLocaleString("en-IN")}
-                    </span>
-                  )}
-                  {product.discount && (
-                    <span className="text-sm font-semibold text-[#ff5d55]">
-                      {product.discount}
-                    </span>
-                  )}
+                  <span className="text-xs bg-[#f5f0ea] text-[#76716d] px-2.5 py-1 rounded-xs font-medium">
+                    Bespoke Layout &amp; Sizing
+                  </span>
                 </div>
-                <p className="text-[13px] text-[#76716d] mt-1">
-                  Inclusive of all taxes. Free shipping &amp; free installation included.
+                <p className="text-[13px] text-[#76716d] mt-1.5 leading-relaxed">
+                  Every project is custom-planned to your space and tailored joinery requirements. Visit our showroom or contact us on WhatsApp for a personalized quotation.
                 </p>
-              </div>
-
-              {/* Product Promotional Offers Box */}
-              <div className="bg-[#fbf7f4] border border-[#f0e4d8] p-4 text-[13px] space-y-1.5">
-                <div className="flex items-center gap-1.5 text-[#ff5d55] font-bold uppercase tracking-wider text-[11px]">
-                  <Tag className="w-3.5 h-3.5" />
-                  <span>Product Offers</span>
-                </div>
-                <p className="text-[#4a4541] font-normal leading-relaxed">
-                  Use coupon code <span className="font-bold text-[#222] bg-white px-1.5 py-0.5 border border-[#dcd7d0] rounded-xs">FESTIVEDEALS</span> at checkout for up to ₹2,000 off!
-                </p>
-                <div className="pt-1 flex items-center justify-between text-[#76716d] text-[12px]">
-                  <span>No-Cost EMI available</span>
-                  <button
-                    onClick={() => showToast("Offer applied at checkout!")}
-                    className="text-[#4a4541] font-medium hover:text-[#ff5d55] underline cursor-pointer"
-                  >
-                    Explore More Offers &gt;
-                  </button>
-                </div>
               </div>
 
               {/* Variant Selector (Matching Joined segmented buttons on live site) */}
@@ -676,19 +634,9 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                       {rel.name}
                     </Link>
                     <div className="flex items-center gap-2 mt-1">
-                      <span className="font-bold text-xs sm:text-sm text-[#4a4541]">
-                        ₹{rel.price.toLocaleString("en-IN")}
+                      <span className="font-medium text-xs text-[#76716d]">
+                        Price on Request
                       </span>
-                      {rel.mrp > rel.price && (
-                        <span className="text-[11px] text-[#8e8984] line-through">
-                          ₹{rel.mrp.toLocaleString("en-IN")}
-                        </span>
-                      )}
-                      {rel.discount && (
-                        <span className="text-[11px] font-medium text-[#ff5d55]">
-                          {rel.discount}
-                        </span>
-                      )}
                     </div>
                   </div>
                 ))}
@@ -719,11 +667,11 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
           {/* Right: Price + Quantity Stepper + Add to Cart */}
           <div className="flex items-center gap-4 w-full sm:w-auto justify-between sm:justify-end">
             <div className="text-left sm:text-right">
-              <div className="text-base sm:text-lg font-bold text-[#4a4541] leading-none">
-                ₹{product.price.toLocaleString("en-IN")}
+              <div className="text-sm sm:text-base font-medium text-[#4a4541] leading-none">
+                Price on Request
               </div>
-              <div className="text-[11px] text-[#8e8984] line-through mt-0.5">
-                MRP ₹{product.mrp.toLocaleString("en-IN")}
+              <div className="text-[11px] text-[#8e8984] mt-0.5">
+                Bespoke Showroom Quote
               </div>
             </div>
 

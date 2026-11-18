@@ -541,7 +541,7 @@ export default function AboutPage() {
                 <div className="p-6 space-y-2">
                   <div className="text-xs text-[#76716d]">3rd April, 2026</div>
                   <h3 className="text-lg font-medium text-[#4a4541] leading-snug group-hover:text-[#ff5d55] transition-colors">
-                    Status Bath &amp; Kitchen&apos;s ₹55 cr game-changer reshaping modular spaces.
+                    Status Bath &amp; Kitchen&apos;s state-of-the-art facility reshaping modular spaces.
                   </h3>
                   <p className="text-xs text-[#76716d] leading-relaxed">
                     How automated German precision manufacturing is revolutionizing custom kitchen fitouts in India.

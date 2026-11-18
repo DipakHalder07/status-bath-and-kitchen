@@ -5,23 +5,23 @@ import { Sparkles, CheckCircle2, Search, SlidersHorizontal, ArrowRight } from "l
 import { useCart } from "@/context/CartContext";
 
 interface SmartSearchBannerProps {
-  onFilterApply?: (room: string, budget: string) => void;
+  onFilterApply?: (room: string, style: string) => void;
 }
 
 export default function SmartSearchBanner({ onFilterApply }: SmartSearchBannerProps) {
-  const [selectedRoom, setSelectedRoom] = useState("Living Room");
-  const [selectedBudget, setSelectedBudget] = useState("Any Budget");
+  const [selectedRoom, setSelectedRoom] = useState("Modular Kitchen");
+  const [selectedStyle, setSelectedStyle] = useState("All Finishes");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { showToast } = useCart();
 
-  const rooms = ["Living Room", "Bedroom", "Dining Room", "Office & Study"];
-  const budgets = ["Under ₹25,000", "₹25,000 - ₹60,000", "Above ₹60,000", "Any Budget"];
+  const rooms = ["Modular Kitchen", "Luxury Bathroom", "Doors & Windows", "Wardrobes & Closets", "Kitchen Appliances"];
+  const styles = ["Bespoke Architectural", "Premium Luxury", "Contemporary Minimal", "All Finishes"];
 
   const handleApply = () => {
     if (onFilterApply) {
-      onFilterApply(selectedRoom, selectedBudget);
+      onFilterApply(selectedRoom, selectedStyle);
     }
-    showToast(`Showing recommendations for ${selectedRoom} (${selectedBudget})`);
+    showToast(`Showing recommendations for ${selectedRoom} (${selectedStyle})`);
     setIsModalOpen(false);
     const elem = document.querySelector("#curated-products");
     if (elem) elem.scrollIntoView({ behavior: "smooth" });
@@ -71,16 +71,16 @@ export default function SmartSearchBanner({ onFilterApply }: SmartSearchBannerPr
 
               <div className="w-full sm:w-auto">
                 <label className="block text-[11px] font-semibold text-stone-300 uppercase mb-1">
-                  Budget
+                  Collection / Style
                 </label>
                 <select
-                  value={selectedBudget}
-                  onChange={(e) => setSelectedBudget(e.target.value)}
+                  value={selectedStyle}
+                  onChange={(e) => setSelectedStyle(e.target.value)}
                   className="w-full sm:w-44 bg-white text-gray-900 text-xs font-semibold px-3 py-2.5 rounded-xl border-none focus:ring-2 focus:ring-[#ff5d55]"
                 >
-                  {budgets.map((b) => (
-                    <option key={b} value={b}>
-                      {b}
+                  {styles.map((s) => (
+                    <option key={s} value={s}>
+                      {s}
                     </option>
                   ))}
                 </select>

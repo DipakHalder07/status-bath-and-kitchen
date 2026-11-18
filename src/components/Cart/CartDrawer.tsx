@@ -12,14 +12,10 @@ export default function CartDrawer() {
     closeCart,
     updateQuantity,
     removeFromCart,
-    cartTotal,
-    cartSavings,
     openConsultation,
   } = useCart();
 
   if (!isCartOpen) return null;
-
-  const finalTotal = cartTotal;
 
   return (
     <div className="fixed inset-0 z-50 overflow-hidden">
@@ -93,15 +89,10 @@ export default function CartDrawer() {
                     {item.product.warranty || "Brand Warranty Included"}
                   </div>
 
-                  <div className="flex items-center gap-2 mt-2">
-                    <span className="text-sm font-extrabold text-gray-900">
-                      ₹{(item.product.price * item.quantity).toLocaleString("en-IN")}
+                  <div className="mt-2">
+                    <span className="text-xs font-semibold text-[#8c827a] tracking-wide uppercase">
+                      Price on Request
                     </span>
-                    {item.product.mrp > item.product.price && (
-                      <span className="text-xs text-gray-400 line-through">
-                        ₹{(item.product.mrp * item.quantity).toLocaleString("en-IN")}
-                      </span>
-                    )}
                   </div>
 
                   {/* Quantity Controls */}
@@ -145,23 +136,17 @@ export default function CartDrawer() {
         {/* Footer / In-Store Enquiry */}
         {cart.length > 0 && (
           <div className="p-5 border-t border-gray-100 bg-[#faf8f5] space-y-3.5">
-            {/* Bill Summary */}
+            {/* Shortlist Summary */}
             <div className="space-y-1.5 text-xs">
-              <div className="flex justify-between text-gray-600">
-                <span>Estimated Value</span>
-                <span>₹{cartTotal.toLocaleString("en-IN")}</span>
-              </div>
-              {cartSavings > 0 && (
-                <div className="flex justify-between text-emerald-700 font-medium">
-                  <span>Product Savings</span>
-                  <span>-₹{cartSavings.toLocaleString("en-IN")}</span>
-                </div>
-              )}
-              <div className="pt-2 border-t border-gray-200 flex justify-between text-sm font-extrabold text-gray-900">
-                <span>Estimated Total</span>
-                <span className="text-[#c0262d]">
-                  ₹{finalTotal.toLocaleString("en-IN")}
+              <div className="flex justify-between text-gray-700 font-medium">
+                <span>Shortlisted Items</span>
+                <span className="font-bold text-gray-900">
+                  {cart.reduce((s, i) => s + i.quantity, 0)} Products
                 </span>
+              </div>
+              <div className="flex justify-between text-gray-600">
+                <span>Pricing</span>
+                <span className="font-semibold text-gray-800">Custom Showroom Quote</span>
               </div>
             </div>
 
@@ -175,10 +160,10 @@ export default function CartDrawer() {
               href={`https://wa.me/919832095793?text=${encodeURIComponent(
                 `*Status Bath & Kitchen - Showroom Shortlist Enquiry*\n` +
                 `----------------------------------------\n` +
-                cart.map((i, idx) => `${idx + 1}. ${i.product.name} (Qty: ${i.quantity}) - ₹${(i.product.price * i.quantity).toLocaleString("en-IN")}`).join("\n") +
+                cart.map((i, idx) => `${idx + 1}. ${i.product.name} (Qty: ${i.quantity})`).join("\n") +
                 `\n----------------------------------------\n` +
-                `Estimated Total: ₹${finalTotal.toLocaleString("en-IN")}\n` +
-                `I would like to visit your showroom / enquire about in-store availability.`
+                `Total Items: ${cart.reduce((s, i) => s + i.quantity, 0)}\n` +
+                `I would like to visit your showroom / enquire about bespoke pricing and in-store availability.`
               )}`}
               target="_blank"
               rel="noopener noreferrer"

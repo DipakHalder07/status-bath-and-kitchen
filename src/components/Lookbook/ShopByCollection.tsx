@@ -98,10 +98,7 @@ export default function ShopByCollection() {
         category: "Collection",
         price: item.price,
         mrp: item.mrp,
-        discount:
-          item.mrp > item.price
-            ? `${Math.round(((item.mrp - item.price) / item.mrp) * 100)}% OFF`
-            : "",
+        discount: "",
         image: item.image,
       });
       showToast(`Added ${item.name} to showroom shortlist!`);
@@ -244,27 +241,15 @@ export default function ShopByCollection() {
                             {spot.name}
                           </h4>
                           <div className="mt-1.5 flex items-center justify-between">
-                            <span className="text-sm font-semibold text-[#4a4541]">
-                              {spot.price > 0
-                                ? `₹${spot.price.toLocaleString("en-IN")}`
-                                : "Price on request"}
+                            <span className="text-xs font-medium text-[#76716d]">
+                              Price on request
                             </span>
-                            {spot.price > 0 ? (
-                              <button
-                                onClick={() => handleItemAction(spot)}
-                                className="p-1.5 bg-[#ff5d55] text-white rounded-md hover:bg-[#e5473f] transition-colors cursor-pointer"
-                                title="Add to showroom shortlist"
-                              >
-                                <ShoppingBag className="w-3.5 h-3.5" />
-                              </button>
-                            ) : (
-                              <button
-                                onClick={() => handleItemAction(spot)}
-                                className="px-2.5 py-1 bg-[#ff5d55] text-white rounded-md hover:bg-[#e5473f] text-[11px] font-medium transition-colors cursor-pointer"
-                              >
-                                Enquire
-                              </button>
-                            )}
+                            <button
+                              onClick={() => handleItemAction(spot)}
+                              className="px-2.5 py-1 bg-[#ff5d55] text-white rounded-md hover:bg-[#e5473f] text-[11px] font-medium transition-colors cursor-pointer"
+                            >
+                              Enquire
+                            </button>
                           </div>
                         </div>
                       )}
@@ -354,10 +339,8 @@ export default function ShopByCollection() {
                       />
                       <div>
                         <h4 className="text-sm font-medium text-[#4a4541]">{item.name}</h4>
-                        <span className="text-xs font-semibold text-[#4a4541]">
-                          {item.price > 0
-                            ? `₹${item.price.toLocaleString("en-IN")}`
-                            : "Price on request"}
+                        <span className="text-xs font-medium text-[#76716d]">
+                          Price on request
                         </span>
                       </div>
                     </div>
@@ -365,7 +348,7 @@ export default function ShopByCollection() {
                       onClick={() => handleItemAction(item)}
                       className="px-3.5 py-1.5 rounded-lg bg-[#ff5d55] text-white hover:bg-[#e5473f] text-xs font-medium transition-colors cursor-pointer"
                     >
-                      {item.price > 0 ? "Add to Bag" : "Enquire"}
+                      Enquire
                     </button>
                   </div>
                 ))}

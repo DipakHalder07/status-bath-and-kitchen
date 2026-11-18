@@ -120,33 +120,15 @@ export default function ProductCarousel({
                     </p>
                   </div>
 
-                  {/* Right Column: Prices & Discount */}
-                  {product.price > 0 ? (
-                    <div className="text-right shrink-0">
-                      <div className="text-sm font-bold text-gray-900">
-                        ₹{product.price.toLocaleString("en-IN")}
-                      </div>
-                      {product.mrp > product.price && (
-                        <div className="text-xs text-gray-400 line-through">
-                          ₹{product.mrp.toLocaleString("en-IN")}
-                        </div>
-                      )}
-                      {product.discount && (
-                        <div className="text-xs font-semibold text-[#c0262d]">
-                          {product.discount}
-                        </div>
-                      )}
+                  {/* Right Column: Price on Request */}
+                  <div className="text-right shrink-0">
+                    <div className="text-xs font-semibold text-gray-900">
+                      Price on request
                     </div>
-                  ) : (
-                    <div className="text-right shrink-0">
-                      <div className="text-xs font-semibold text-gray-900">
-                        Price on request
-                      </div>
-                      <div className="text-xs font-semibold text-[#c0262d] mt-0.5">
-                        Get a quote
-                      </div>
+                    <div className="text-xs font-semibold text-[#c0262d] mt-0.5">
+                      Get a quote
                     </div>
-                  )}
+                  </div>
                 </div>
               </Link>
             );

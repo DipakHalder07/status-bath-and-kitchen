@@ -63,9 +63,6 @@ function ProductsPageContent() {
   const [selectedCategory, setSelectedCategory] = useState<string>(initialCategory);
   const [searchQuery, setSearchQuery] = useState<string>(initialQuery);
   const [selectedSort, setSelectedSort] = useState<string>("featured");
-  const [pincode, setPincode] = useState<string>("400079");
-  const [pincodeInput, setPincodeInput] = useState<string>("");
-  const [pincodeStatus, setPincodeStatus] = useState<string | null>(null);
   const [priceFilter, setPriceFilter] = useState<string>("all");
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -125,18 +122,6 @@ function ProductsPageContent() {
     }
     return list; // featured default
   }, [filteredProducts, selectedSort]);
-
-  const handlePincodeCheck = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (pincodeInput.length === 6) {
-      setPincode(pincodeInput);
-      setPincodeStatus("Deliverable in 3-5 days");
-      showToast(`Delivery available at PIN ${pincodeInput}`);
-      setPincodeInput("");
-    } else {
-      showToast("Please enter a valid 6-digit PIN code");
-    }
-  };
 
   const handleCompareToggle = (id: string, name: string) => {
     if (compareList.includes(id)) {
@@ -249,52 +234,18 @@ function ProductsPageContent() {
           <div className="border-y border-[#dcd7d0] py-3.5 mb-8 flex flex-wrap items-center justify-between gap-4 text-[14px]">
             {/* Left: Quick filters */}
             <div className="flex items-center space-x-4 sm:space-x-6">
-              {/* Price Filter dropdown */}
-              <div className="relative">
-                <select
-                  value={priceFilter}
-                  onChange={(e) => setPriceFilter(e.target.value)}
-                  className="appearance-none bg-transparent pr-6 pl-1 py-1 font-medium text-[#4a4541] border-b border-[#4a4541] focus:outline-hidden cursor-pointer"
-                >
-                  <option value="all">Price Range: All</option>
-                  <option value="under-30k">Under ₹30,000</option>
-                  <option value="30k-75k">₹30,000 - ₹75,000</option>
-                  <option value="75k-150k">₹75,000 - ₹1,50,000</option>
-                  <option value="above-150k">Above ₹1,50,000</option>
-                </select>
-                <ChevronDown className="w-3.5 h-3.5 text-[#76716d] absolute right-0.5 top-2 pointer-events-none" />
-              </div>
-
               {/* All Filters Toggle */}
               <button
                 onClick={() => setIsFilterDrawerOpen(!isFilterDrawerOpen)}
                 className="flex items-center space-x-1.5 font-medium text-[#4a4541] hover:text-[#ff5d55] transition-colors cursor-pointer"
               >
-                <span>All filters</span>
+                <span>Filter categories</span>
                 <SlidersHorizontal className="w-3.5 h-3.5" />
               </button>
             </div>
 
-            {/* Right: Pincode Check, Compare & Sorter */}
+            {/* Right: Compare & Sorter */}
             <div className="flex items-center space-x-4 sm:space-x-6 flex-wrap gap-y-2">
-              {/* Delivery Pincode Input */}
-              <form onSubmit={handlePincodeCheck} className="flex items-center text-[13px]">
-                <input
-                  type="text"
-                  maxLength={6}
-                  value={pincodeInput}
-                  onChange={(e) => setPincodeInput(e.target.value.replace(/\D/g, ""))}
-                  placeholder={`pincode`}
-                  className="w-20 sm:w-24 border-b border-[#a4a2a0] py-0.5 text-[13px] focus:outline-hidden focus:border-[#4a4541] text-[#4a4541]"
-                />
-                <button
-                  type="submit"
-                  className="ml-2 font-medium text-[#4a4541] hover:text-[#ff5d55] text-[13px] underline cursor-pointer"
-                >
-                  Check
-                </button>
-              </form>
-
               {/* Compare Button */}
               {compareList.length > 0 && (
                 <div className="flex items-center gap-1.5 bg-[#f5f0ea] px-3 py-1 rounded-xs text-[12px] font-medium text-[#4a4541]">
@@ -316,11 +267,8 @@ function ProductsPageContent() {
                   onChange={(e) => setSelectedSort(e.target.value)}
                   className="bg-transparent font-medium text-[#4a4541] border-b border-[#4a4541] py-0.5 text-[13px] focus:outline-hidden cursor-pointer"
                 >
-                  <option value="featured">Best Match</option>
-                  <option value="price-low">Price: Low to High</option>
-                  <option value="price-high">Price: High to Low</option>
+                  <option value="featured">Featured</option>
                   <option value="rating">Customer Rating</option>
-                  <option value="discount">Biggest Discount</option>
                 </select>
                 <ArrowUpDown className="w-3.5 h-3.5 text-[#76716d] pointer-events-none" />
               </div>
@@ -458,21 +406,14 @@ function ProductsPageContent() {
                         </p>
                       </div>
 
-                      {/* Right: Price & Discount Block */}
+                      {/* Right: Price on Request */}
                       <div className="text-right shrink-0">
-                        <div className="text-[17px] font-bold text-[#4a4541]">
-                          ₹{product.price.toLocaleString("en-IN")}
+                        <div className="text-xs sm:text-[13px] font-medium text-[#76716d]">
+                          Price on Request
                         </div>
-                        {product.mrp > product.price && (
-                          <div className="text-[12px] text-[#8e8984] line-through mt-0.5">
-                            ₹{product.mrp.toLocaleString("en-IN")}
-                          </div>
-                        )}
-                        {product.discount && (
-                          <div className="text-[12px] font-medium text-[#ff5d55]">
-                            {product.discount}
-                          </div>
-                        )}
+                        <div className="text-[11px] text-[#ff5d55] mt-0.5 font-medium">
+                          Bespoke Quote
+                        </div>
                       </div>
                     </div>
 
@@ -624,37 +565,6 @@ function ProductsPageContent() {
                 </div>
               </div>
 
-              {/* Price Range Filter */}
-              <div className="pt-4 border-t border-[#dcd7d0]">
-                <label className="block text-xs font-semibold uppercase tracking-wider text-[#76716d] mb-3">
-                  Price Range
-                </label>
-                <div className="space-y-2">
-                  {[
-                    { value: "all", label: "All Prices" },
-                    { value: "under-30k", label: "Under ₹30,000" },
-                    { value: "30k-75k", label: "₹30,000 - ₹75,000" },
-                    { value: "75k-150k", label: "₹75,000 - ₹1,50,000" },
-                    { value: "above-150k", label: "Above ₹1,50,000" },
-                  ].map((p) => (
-                    <label
-                      key={p.value}
-                      className="flex items-center gap-2.5 text-sm text-[#4a4541] cursor-pointer"
-                    >
-                      <input
-                        type="radio"
-                        name="mobilePriceFilter"
-                        value={p.value}
-                        checked={priceFilter === p.value}
-                        onChange={() => setPriceFilter(p.value)}
-                        className="text-[#ff5d55] focus:ring-[#ff5d55]"
-                      />
-                      <span>{p.label}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-
               {/* Sort Order */}
               <div className="pt-4 border-t border-[#dcd7d0]">
                 <label className="block text-xs font-semibold uppercase tracking-wider text-[#76716d] mb-3">
@@ -662,9 +572,7 @@ function ProductsPageContent() {
                 </label>
                 <div className="space-y-2">
                   {[
-                    { value: "featured", label: "Best Match" },
-                    { value: "price-low", label: "Price: Low to High" },
-                    { value: "price-high", label: "Price: High to Low" },
+                    { value: "featured", label: "Featured" },
                     { value: "rating", label: "Customer Rating" },
                   ].map((s) => (
                     <label

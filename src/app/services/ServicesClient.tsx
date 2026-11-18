@@ -81,7 +81,7 @@ export default function ServicesClient() {
   const [selectedServiceId, setSelectedServiceId] = useState<string>("repainting");
   const [formName, setFormName] = useState("");
   const [formPhone, setFormPhone] = useState("");
-  const [formPincode, setFormPincode] = useState("");
+  const [formLocation, setFormLocation] = useState("");
   const [formAddress, setFormAddress] = useState("");
   const [formDate, setFormDate] = useState("");
   const [formTimeSlot, setFormTimeSlot] = useState("Morning (9 AM - 12 PM)");
@@ -101,7 +101,7 @@ export default function ServicesClient() {
     technicianName: string;
     technicianPhone: string;
     scheduledSlot: string;
-    pincode: string;
+    location: string;
     lastUpdated: string;
   } | null>(null);
   const [trackError, setTrackError] = useState("");
@@ -124,8 +124,8 @@ export default function ServicesClient() {
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formName || !formPhone || !formPincode) {
-      showToast("Please fill in your name, mobile number, and PIN code.");
+    if (!formName || !formPhone) {
+      showToast("Please fill in your name and mobile number.");
       return;
     }
 
@@ -145,7 +145,7 @@ export default function ServicesClient() {
       `*Service:* ${serviceTitle}`,
       `*Customer Name:* ${formName}`,
       `*Customer Mobile:* ${formPhone}`,
-      `*PIN Code:* ${formPincode}`,
+      formLocation ? `*Location:* ${formLocation}` : "",
       formAddress ? `*Address:* ${formAddress}` : "",
       `*Preferred Slot:* ${formDate || "Tomorrow"}, ${formTimeSlot}`,
       formNotes ? `*Notes:* ${formNotes}` : "",
@@ -164,7 +164,7 @@ export default function ServicesClient() {
       technicianName: "Deepak Rawat (Senior Specialist)",
       technicianPhone: "+91 98320 95793",
       scheduledSlot: `${formDate || "Tomorrow"}, ${formTimeSlot}`,
-      pincode: formPincode,
+      location: formLocation || "Siliguri",
       lastUpdated: "Just now",
     });
 
@@ -194,7 +194,7 @@ export default function ServicesClient() {
       technicianName: "Vikram Jadhav (Certified Technician)",
       technicianPhone: "+91 98320 95793",
       scheduledSlot: "Today, 2:30 PM - 5:00 PM",
-      pincode: "400079",
+      location: "Siliguri",
       lastUpdated: "8 mins ago",
     });
     showToast("Ticket found! Displaying live technician dispatch status.");
@@ -415,7 +415,7 @@ export default function ServicesClient() {
                             setIsSubmitted(false);
                             setFormName("");
                             setFormPhone("");
-                            setFormPincode("");
+                            setFormLocation("");
                             setFormAddress("");
                             setFormNotes("");
                           }}
@@ -487,15 +487,13 @@ export default function ServicesClient() {
 
                         <div>
                           <label className="block text-xs font-semibold text-[#4a4541] mb-1">
-                            PIN Code *
+                            Area / Landmark
                           </label>
                           <input
                             type="text"
-                            required
-                            maxLength={6}
-                            value={formPincode}
-                            onChange={(e) => setFormPincode(e.target.value.replace(/\D/g, ""))}
-                            placeholder="6-digit PIN"
+                            value={formLocation}
+                            onChange={(e) => setFormLocation(e.target.value)}
+                            placeholder="e.g. Siliguri, Jalpaiguri"
                             className="w-full bg-white border border-[#dcd7d0] px-3 py-2 text-sm focus:border-[#ff5d55] focus:outline-hidden"
                           />
                         </div>
@@ -629,7 +627,7 @@ export default function ServicesClient() {
                             technicianName: "Vikram Jadhav (Certified Technician)",
                             technicianPhone: "+91 98320 95793",
                             scheduledSlot: "Today, 2:30 PM - 5:00 PM",
-                            pincode: "400079",
+                            location: "Siliguri",
                             lastUpdated: "8 mins ago",
                           });
                         }}
@@ -949,7 +947,7 @@ export default function ServicesClient() {
                 <strong className="text-[#4a4541]">{selectedServiceModal.turnaroundTime}</strong>
               </div>
               <div>
-                <span className="text-[#76716d] block">Pricing Starting At:</span>
+                <span className="text-[#76716d] block">Consultation / Estimate:</span>
                 <strong className="text-[#ff5d55]">{selectedServiceModal.pricingStarting}</strong>
               </div>
             </div>

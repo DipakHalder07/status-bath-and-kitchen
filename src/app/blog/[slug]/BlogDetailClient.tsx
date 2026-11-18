@@ -406,8 +406,8 @@ export default function BlogDetailClient({
                               {prod.name}
                             </h4>
                           </Link>
-                          <div className="text-sm font-bold text-[#4a4541]">
-                            ₹{prod.price.toLocaleString("en-IN")}
+                          <div className="text-xs font-semibold text-[#76716d] uppercase tracking-wider">
+                            Price on Request
                           </div>
                           <Link
                             href={`/products/${prod.id}`}

@@ -8,7 +8,6 @@ import {
   Mic,
   Camera,
   X,
-  User,
   Heart,
   ShoppingBag,
   MapPin,
@@ -39,20 +38,15 @@ export default function Navbar({
   onCategorySelect,
   forceSolid = false,
 }: NavbarProps) {
-  const { cartCount, cartTotal, openCart, wishlist, showToast, openConsultation } = useCart();
+  const { cartCount, openCart, wishlist, showToast, openConsultation } = useCart();
   const [isScrolled, setIsScrolled] = useState(false);
   const isHeaderSolid = forceSolid || isScrolled;
   const [searchQuery, setSearchQuery] = useState("");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [isAccountOpen, setIsAccountOpen] = useState(false);
-  const [pincode, setPincode] = useState("400079");
-  const [showPincodeModal, setShowPincodeModal] = useState(false);
-  const [newPincode, setNewPincode] = useState("");
   const [isListening, setIsListening] = useState(false);
   const [activeSegment, setActiveSegment] = useState<"homes" | "business">("homes");
 
   const searchRef = useRef<HTMLDivElement>(null);
-  const accountRef = useRef<HTMLDivElement>(null);
 
   const popularSearches = [
     "modular kitchens",
@@ -79,14 +73,11 @@ export default function Navbar({
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close dropdowns on outside click
+  // Close search dropdown on outside click
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsSearchOpen(false);
-      }
-      if (accountRef.current && !accountRef.current.contains(event.target as Node)) {
-        setIsAccountOpen(false);
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -121,18 +112,6 @@ export default function Navbar({
     setIsSearchOpen(false);
     if (onSearchSubmit) {
       onSearchSubmit(term);
-    }
-  };
-
-  const updatePincode = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (newPincode.length === 6) {
-      setPincode(newPincode);
-      setShowPincodeModal(false);
-      showToast(`Delivery location updated to ${newPincode}!`);
-      setNewPincode("");
-    } else {
-      showToast("Please enter a valid 6-digit PIN code.");
     }
   };
 
@@ -346,57 +325,6 @@ export default function Navbar({
               )}
             </div>
 
-            {/* Account Icon */}
-            <div className="relative" ref={accountRef}>
-              <button
-                onClick={() => setIsAccountOpen(!isAccountOpen)}
-                className={`p-2 rounded-full transition-colors ${
-                  isHeaderSolid
-                    ? "text-gray-700 hover:text-[#ff5d55] hover:bg-gray-100"
-                    : "text-white hover:text-white hover:bg-white/15"
-                }`}
-                aria-label="Account"
-              >
-                <User className="w-5 h-5" />
-              </button>
-
-              {isAccountOpen && (
-                <div className="absolute right-0 top-full mt-2 w-64 bg-white text-gray-900 rounded-xl shadow-xl border border-gray-100 py-2 z-50 animate-in fade-in duration-150">
-                  <div className="px-4 py-3 border-b border-gray-100">
-                    <p className="text-xs text-gray-500">Welcome to Status</p>
-                    <p className="text-sm font-semibold text-gray-900">Sign in to your account</p>
-                  </div>
-                  <div className="p-3">
-                    <button
-                      onClick={() => {
-                        showToast("Login modal opened");
-                        setIsAccountOpen(false);
-                      }}
-                      className="w-full py-2 bg-[#ff5d55] hover:bg-[#e5473f] text-white rounded-lg text-xs font-semibold shadow-xs"
-                    >
-                      Login / Register
-                    </button>
-                  </div>
-                  <div className="border-t border-gray-100 py-1 text-xs">
-                    <a
-                      href="#track"
-                      onClick={() => setIsAccountOpen(false)}
-                      className="block px-4 py-2 hover:bg-gray-50 text-gray-700"
-                    >
-                      Track Your Order
-                    </a>
-                    <a
-                      href="#care-services"
-                      onClick={() => setIsAccountOpen(false)}
-                      className="block px-4 py-2 hover:bg-gray-50 text-gray-700"
-                    >
-                      Warranty & Support
-                    </a>
-                  </div>
-                </div>
-              )}
-            </div>
-
             {/* Wishlist Icon */}
             <button
               onClick={() => {
@@ -483,44 +411,6 @@ export default function Navbar({
           </ul>
         </div>
       </div>
-
-      {/* Pincode Change Modal */}
-      {showPincodeModal && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 z-50 text-gray-900">
-          <div className="bg-white rounded-2xl max-w-sm w-full p-6 shadow-2xl relative animate-in zoom-in-95 duration-150">
-            <button
-              onClick={() => setShowPincodeModal(false)}
-              className="absolute top-4 right-4 p-1 text-gray-400 hover:text-gray-600 rounded-full"
-            >
-              <X className="w-5 h-5" />
-            </button>
-            <div className="flex items-center gap-2 mb-3">
-              <MapPin className="w-5 h-5 text-[#ff5d55]" />
-              <h3 className="font-medium text-base text-[#4a4541]">Delivery Location</h3>
-            </div>
-            <p className="text-xs text-gray-500 mb-4">
-              Enter your PIN code to check delivery time and product availability in your area.
-            </p>
-            <form onSubmit={updatePincode} className="space-y-4">
-              <input
-                type="text"
-                maxLength={6}
-                value={newPincode}
-                onChange={(e) => setNewPincode(e.target.value.replace(/\D/g, ""))}
-                placeholder="Enter 6-digit PIN code"
-                className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm font-semibold tracking-wider text-center focus:border-[#ff5d55] focus:outline-hidden"
-                autoFocus
-              />
-              <button
-                type="submit"
-                className="w-full py-2.5 bg-[#ff5d55] hover:bg-[#e5473f] text-white font-semibold rounded-lg text-xs transition-colors shadow-xs"
-              >
-                Apply Location
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
     </header>
   );
 }
