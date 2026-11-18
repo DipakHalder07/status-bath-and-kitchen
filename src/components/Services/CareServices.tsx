@@ -20,25 +20,25 @@ export default function CareServices() {
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
-          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-medium text-[#4a4541] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#1a1a1a] tracking-tight">
             Our services
           </h2>
           <button
             onClick={() => openConsultation("Design Consultation")}
-            className="text-sm font-medium text-[#4a4541] border-b border-[#4a4541] pb-0.5 hover:text-[#ff5d55] hover:border-[#ff5d55] transition-colors cursor-pointer"
+            className="text-sm font-medium text-[#1a1a1a] border-b border-[#1a1a1a] pb-0.5 hover:text-[#ff5d55] hover:border-[#ff5d55] transition-colors cursor-pointer"
           >
             Talk to us
           </button>
         </div>
 
         {/* Bordered Service Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {careServicesList.map((service) => {
             const Icon = icons[service.icon] ?? Wrench;
             return (
               <div
                 key={service.id}
-                className="bg-white rounded-none sm:rounded-sm p-8 border border-gray-200 hover:border-gray-300 hover:shadow-sm transition-all flex flex-col justify-between text-center group cursor-pointer"
+                className="bg-white rounded-md sm:rounded-sm p-5 sm:p-8 border border-gray-200 hover:border-gray-300 hover:shadow-sm transition-all flex flex-col justify-between text-center group cursor-pointer"
                 onClick={() => openConsultation(service.title)}
               >
                 <div>

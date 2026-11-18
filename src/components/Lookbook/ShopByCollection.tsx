@@ -109,12 +109,12 @@ export default function ShopByCollection() {
   };
 
   return (
-    <section id="shop-by-collection" className="py-14 sm:py-20 bg-white scroll-mt-24">
+    <section id="shop-by-collection" className="py-14 sm:py-20 bg-white scroll-mt-28">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Title Header with Arrows */}
         <div className="flex items-end justify-between mb-8">
           <div>
-            <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-medium text-[#4a4541] tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#1a1a1a] tracking-tight">
               Shop by collection
             </h2>
             <p className="mt-2 text-sm sm:text-base text-[#76716d]">
@@ -122,12 +122,12 @@ export default function ShopByCollection() {
             </p>
           </div>
 
-          {/* Desktop Arrow Controls */}
+          {/* Desktop Top Arrow Controls */}
           <div className="hidden sm:flex items-center gap-2">
             <button
               type="button"
               onClick={() => scrollBySlide("prev")}
-              className="w-10 h-10 rounded-full border border-[#dcd7d0] hover:border-[#4a4541] hover:bg-[#f5f0ea] text-[#4a4541] flex items-center justify-center transition-colors cursor-pointer"
+              className="w-10 h-10 rounded-full border border-[#dcd7d0] hover:border-[#1a1a1a] hover:bg-[#f5f0ea] text-[#1a1a1a] flex items-center justify-center transition-colors cursor-pointer"
               aria-label="Previous slide"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -135,7 +135,7 @@ export default function ShopByCollection() {
             <button
               type="button"
               onClick={() => scrollBySlide("next")}
-              className="w-10 h-10 rounded-full border border-[#dcd7d0] hover:border-[#4a4541] hover:bg-[#f5f0ea] text-[#4a4541] flex items-center justify-center transition-colors cursor-pointer"
+              className="w-10 h-10 rounded-full border border-[#dcd7d0] hover:border-[#1a1a1a] hover:bg-[#f5f0ea] text-[#1a1a1a] flex items-center justify-center transition-colors cursor-pointer"
               aria-label="Next slide"
             >
               <ChevronRight className="w-5 h-5" />
@@ -145,6 +145,26 @@ export default function ShopByCollection() {
 
         {/* Continuous Horizontal Swiper Slider (Matches interio.com lookbook-main-slider) */}
         <div className="relative group/slider">
+          {/* Floating Left Arrow on Slider Image (matches user Image 1) */}
+          <button
+            type="button"
+            onClick={() => scrollBySlide("prev")}
+            className="hidden sm:flex absolute left-3 lg:left-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-white/95 hover:bg-white text-[#1a1a1a] shadow-xl items-center justify-center transition-all hover:scale-105 active:scale-95 cursor-pointer border border-black/5"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft className="w-5 h-5 text-[#1a1a1a]" />
+          </button>
+
+          {/* Floating Right Arrow on Slider Image (matches user Image 1) */}
+          <button
+            type="button"
+            onClick={() => scrollBySlide("next")}
+            className="hidden sm:flex absolute right-3 lg:right-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-white/95 hover:bg-white text-[#1a1a1a] shadow-xl items-center justify-center transition-all hover:scale-105 active:scale-95 cursor-pointer border border-black/5"
+            aria-label="Next slide"
+          >
+            <ChevronRight className="w-5 h-5 text-[#1a1a1a]" />
+          </button>
+
           <div
             ref={sliderRef}
             onMouseDown={handleMouseDown}
@@ -246,9 +266,9 @@ export default function ShopByCollection() {
                 })}
 
                 {/* In-Image Bottom Bar (Matching live interio.com img-btm-info) */}
-                <div className="absolute bottom-4 sm:bottom-6 inset-x-4 sm:inset-x-8 z-10 flex items-end justify-between pointer-events-auto">
+                <div className="absolute bottom-3 sm:bottom-6 inset-x-3 sm:inset-x-8 z-10 flex items-center justify-between gap-2 pointer-events-auto">
                   {/* Left: Collection Title */}
-                  <h3 className="text-lg sm:text-2xl lg:text-3xl font-medium !text-white drop-shadow-md">
+                  <h3 className="text-sm sm:text-2xl lg:text-3xl font-medium !text-white drop-shadow-md truncate">
                     {collection.name}
                   </h3>
 
@@ -259,10 +279,10 @@ export default function ShopByCollection() {
                       e.stopPropagation();
                       setActiveDrawerCol(collection);
                     }}
-                    className="flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white text-[#4a4541] hover:bg-stone-50 font-medium text-xs sm:text-sm shadow-md transition-transform hover:scale-103 cursor-pointer shrink-0"
+                    className="shrink-0 flex items-center gap-1.5 px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full bg-white text-[#4a4541] hover:bg-stone-50 font-medium text-xs sm:text-sm shadow-md transition-transform hover:scale-103 cursor-pointer"
                   >
                     <span>View all items</span>
-                    <LayoutGrid className="w-4 h-4 text-[#76716d]" />
+                    <LayoutGrid className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#76716d]" />
                   </button>
                 </div>
               </div>

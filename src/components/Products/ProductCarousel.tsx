@@ -43,15 +43,15 @@ export default function ProductCarousel({
     <section id={id} className="py-14 sm:py-20 bg-white">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Header with Title and "View all products" */}
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-medium text-[#4a4541] tracking-tight">
+        <div className="flex items-baseline justify-between gap-3 mb-6 sm:mb-8">
+          <h2 className="text-xl sm:text-3xl lg:text-[36px] font-bold text-[#1a1a1a] tracking-tight">
             {title}
           </h2>
 
           <a
             href={viewAllLink}
             onClick={() => showToast(`Browsing all products in ${title}`)}
-            className="text-sm font-medium text-[#4a4541] border-b border-[#4a4541] pb-0.5 hover:text-[#ff5d55] hover:border-[#ff5d55] transition-colors"
+            className="text-xs sm:text-sm font-medium text-[#1a1a1a] border-b border-[#1a1a1a] pb-0.5 hover:text-[#ff5d55] hover:border-[#ff5d55] transition-colors whitespace-nowrap shrink-0"
           >
             View all products
           </a>

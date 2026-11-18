@@ -23,7 +23,7 @@ export default function Testimonials() {
     <section id="why-status" className="py-16 sm:py-24 bg-[#faf8f5] overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         <div className="mb-4">
-          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-medium text-[#4a4541] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#1a1a1a] tracking-tight">
             Why homeowners choose Status
           </h2>
         </div>
@@ -41,7 +41,7 @@ export default function Testimonials() {
               <div
                 key={idx}
                 onClick={() => setActiveIdx(idx)}
-                className={`w-[300px] sm:w-[400px] shrink-0 p-8 sm:p-12 rounded-none sm:rounded-sm transition-all duration-300 flex flex-col items-center justify-between text-center cursor-pointer ${
+                className={`w-[280px] sm:w-[400px] shrink-0 p-6 sm:p-12 rounded-md sm:rounded-sm transition-all duration-300 flex flex-col items-center justify-between text-center cursor-pointer ${
                   isHighlighted
                     ? "bg-white shadow-lg scale-102 border border-[#ff5d55]/30"
                     : "bg-white/70 border border-gray-200/70 opacity-75 hover:opacity-100"

@@ -29,11 +29,11 @@ export default function CuratedSection() {
   };
 
   return (
-    <section id="curated-products" className="py-14 sm:py-20 bg-[#f5f0ea]">
+    <section id="curated-products" className="py-14 sm:py-20 bg-[#f5f0ea] scroll-mt-28">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Section Heading */}
         <div className="mb-8">
-          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-medium text-[#4a4541] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#1a1a1a] tracking-tight">
             Design ideas for you
           </h2>
           <p className="mt-2 text-sm sm:text-base text-[#76716d]">
@@ -56,15 +56,15 @@ export default function CuratedSection() {
                     setScrollProgress(25);
                     if (scrollRef.current) scrollRef.current.scrollLeft = 0;
                   }}
-                  className={`relative px-6 sm:px-9 py-3 sm:py-3.5 text-sm sm:text-base font-medium whitespace-nowrap transition-colors cursor-pointer text-center ${
+                  className={`relative px-6 sm:px-9 py-3 sm:py-3.5 text-sm sm:text-base transition-colors cursor-pointer text-center ${
                     isActive
-                      ? "bg-white text-[#4a4541] font-semibold"
-                      : "bg-[#f5f0ea] text-[#76716d] hover:bg-[#ede5dc] hover:text-[#4a4541]"
+                      ? "bg-white text-[#1a1a1a] font-bold sm:font-semibold"
+                      : "bg-[#f5f0ea] text-[#4a4541] font-medium hover:bg-[#ede5dc] hover:text-[#1a1a1a]"
                   }`}
                 >
                   <span>{tab.label}</span>
                   {isActive && (
-                    <div className="absolute bottom-0 left-4 right-4 h-0.5 bg-[#ff5d55]" />
+                    <div className="absolute bottom-0 left-3 right-3 sm:left-5 sm:right-5 h-[2.5px] bg-[#ff5d55]" />
                   )}
                 </button>
               );

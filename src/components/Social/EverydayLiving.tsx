@@ -73,7 +73,7 @@ export default function EverydayLiving() {
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-12">
           <div>
-            <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-medium text-[#4a4541] tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#1a1a1a] tracking-tight">
               Ideas for your kitchen &amp; bath
             </h2>
             <p className="mt-2 text-sm sm:text-base text-[#76716d] font-normal">

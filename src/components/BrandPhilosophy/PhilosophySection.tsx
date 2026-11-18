@@ -18,7 +18,7 @@ export default function PhilosophySection() {
             <div className="text-xs sm:text-sm font-medium text-[#ff5d55] uppercase tracking-wide">
               For builders, architects &amp; designers
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-medium text-[#4a4541] tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#1a1a1a] tracking-tight leading-tight">
               Project solutions for homes and developments
             </h2>
             <p className="text-sm sm:text-base text-[#76716d] leading-relaxed max-w-xl font-normal">

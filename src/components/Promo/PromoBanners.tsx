@@ -81,8 +81,8 @@ export default function PromoBanners() {
           </div>
 
           {/* Right: Copy & Button */}
-          <div className="p-8 sm:p-12 lg:p-16 flex flex-col justify-center items-start">
-            <h3 className="text-2xl sm:text-3xl lg:text-[36px] font-medium text-[#4a4541] leading-tight">
+          <div className="p-6 sm:p-12 lg:p-16 flex flex-col justify-center items-start">
+            <h3 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#1a1a1a] leading-tight">
               Renovating an old <br />
               kitchen or bathroom?
             </h3>

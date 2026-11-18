@@ -144,9 +144,9 @@ export default function Navbar({
           : "bg-gradient-to-b from-black/70 via-black/30 to-transparent text-white"
       }`}
     >
-      {/* 1. TOP UTILITY BAR */}
+      {/* 1. TOP UTILITY BAR (Hidden on mobile to match live interio.com slim mobile header) */}
       <div
-        className={`w-full text-xs transition-colors border-b ${
+        className={`hidden sm:block w-full text-xs transition-colors border-b ${
           isHeaderSolid
             ? "border-gray-100/80 bg-gray-50/80 text-gray-700"
             : "border-white/10 text-white/90"

@@ -11,7 +11,7 @@ export default function UpmodsBanner() {
     <section id="your-way" className="py-8 sm:py-12 lg:py-14 bg-white scroll-mt-24">
       <div className="max-w-[1280px] mx-auto px-5 sm:px-10 lg:px-20">
         <div className="text-center mb-6 sm:mb-8">
-          <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-medium text-[#4a4541] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#1a1a1a] tracking-tight">
             Status Kitchens. Designed Your Way!
           </h2>
           <p className="mt-2 text-sm sm:text-base text-[#76716d]">
@@ -40,10 +40,10 @@ export default function UpmodsBanner() {
             loading="lazy"
           />
 
-          <div className="absolute bottom-5 left-5 sm:bottom-8 sm:left-8">
-            <span className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 bg-[#ff5d55] group-hover:bg-[#e5473f] text-white font-medium text-xs sm:text-sm rounded-full shadow-lg transition-colors">
+          <div className="absolute bottom-4 left-4 sm:bottom-8 sm:left-8">
+            <span className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-8 py-2.5 sm:py-3 bg-[#ff5d55] group-hover:bg-[#e5473f] text-white font-medium text-xs sm:text-sm rounded-full shadow-lg transition-colors">
               Book a design consultation
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </span>
           </div>
         </div>
