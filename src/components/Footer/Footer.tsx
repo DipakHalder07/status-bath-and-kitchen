@@ -267,17 +267,20 @@ export default function Footer({ showBlogCredit }: FooterProps = {}) {
           </p>
 
           {isBlog && (
-            <p className="text-xs text-stone-300 text-center">
-              Design and Developed by{" "}
+            <div className="text-center">
               <a
-                href="https://digitalgrove.in"
+                href="https://digitalgrove.in/"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="text-stone-100 hover:text-white underline underline-offset-4 decoration-stone-500 hover:decoration-white transition-colors font-medium"
+                rel="noopener"
+                title="Digital Grove | Web Design & Development Agency"
+                className="group inline-flex items-center gap-1.5 text-xs text-stone-300 hover:text-white transition-colors cursor-pointer"
               >
-                digitalgrove.in
+                <span>Design and Developed by</span>
+                <span className="text-stone-100 group-hover:text-white font-medium underline underline-offset-4 decoration-stone-400 group-hover:decoration-white transition-colors">
+                  digitalgrove.in
+                </span>
               </a>
-            </p>
+            </div>
           )}
 
           <div className="flex items-center gap-6">
