@@ -212,7 +212,7 @@ export default function Navbar({
               <span>Contact us</span>
             </Link>
             <Link
-              href="/about"
+              href="/services"
               className={`hidden md:flex items-center space-x-1.5 transition-colors ${
                 isHeaderSolid ? "text-gray-600 hover:text-[#ff5d55]" : "text-white/85 hover:text-white"
               }`}
@@ -501,6 +501,18 @@ export default function Navbar({
                 }`}
               >
                 Design Ideas
+              </Link>
+            </li>
+            <li className="relative">
+              <Link
+                href="/services"
+                className={`transition-colors py-1 hover:underline cursor-pointer ${
+                  isHeaderSolid
+                    ? "text-gray-800 hover:text-[#ff5d55]"
+                    : "text-white/90 hover:text-white"
+                }`}
+              >
+                Services
               </Link>
             </li>
             <li className="relative">

@@ -47,7 +47,8 @@
   --text-muted: #76716d;
 }
 
-html, body {
+html,
+body {
   background-color: #ffffff;
   color: #4a4541;
   font-family: "Cera Godrej Interio", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -58,7 +59,13 @@ html, body {
 
 /* Base Headings & Elements inside @layer base so utility classes (text-white, text-[#ff5d55]) always take precedence */
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: "Cera Godrej Interio", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 }
@@ -94,13 +101,16 @@ html, body {
   width: 6px;
   height: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #c1c1c1;
   border-radius: 3px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #999;
 }
@@ -111,10 +121,12 @@ html, body {
     box-shadow: 0 0 0 0 rgba(255, 93, 85, 0.7);
     transform: scale(1);
   }
+
   70% {
     box-shadow: 0 0 0 14px rgba(255, 93, 85, 0);
     transform: scale(1.1);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(255, 93, 85, 0);
     transform: scale(1);
@@ -129,6 +141,7 @@ html, body {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;

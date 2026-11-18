@@ -155,7 +155,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about#services" className="hover:text-white transition-colors">
+                  <Link href="/services" className="hover:text-white transition-colors">
                     Care &amp; Services
                   </Link>
                 </li>
