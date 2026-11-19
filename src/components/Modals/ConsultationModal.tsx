@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { X, CheckCircle2 } from "lucide-react";
 import { useCart } from "@/context/CartContext";
-import { siteBrand } from "@/data/interioData";
+import { siteBrand } from "@/data/statusData";
 
 export default function ConsultationModal() {
   const { isConsultationOpen, closeConsultation, consultationType, showToast } =
@@ -40,7 +40,7 @@ export default function ConsultationModal() {
       />
 
       {/* Modal Card */}
-      <div className="relative bg-white rounded-3xl p-6 sm:p-8 max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl z-50 animate-in zoom-in-95 duration-200">
+      <div className="status-modal relative bg-white rounded-3xl p-6 sm:p-8 max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl z-50 animate-in zoom-in-95 duration-200">
         <button
           onClick={closeConsultation}
           className="absolute top-5 right-5 text-gray-400 hover:text-gray-600 p-1 rounded-full hover:bg-gray-100"
@@ -151,7 +151,7 @@ export default function ConsultationModal() {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full py-3 bg-[#c0262d] hover:bg-[#a11c22] text-white text-xs font-bold rounded-xl transition-all shadow-md shadow-red-600/20 cursor-pointer"
+                  className="status-btn-primary w-full py-3 bg-[#c0262d] hover:bg-[#a11c22] text-white text-xs font-bold rounded-xl transition-all shadow-md shadow-red-600/20 cursor-pointer"
                 >
                   Request a Call Back
                 </button>

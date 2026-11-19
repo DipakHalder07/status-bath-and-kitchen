@@ -1,0 +1,1173 @@
+{
+  "brand": {
+    "name": "Status Bath and Kitchen",
+    "shortName": "Status",
+    "tagline": "Modular Kitchens • Wardrobes • Doors • Windows • Appliances • Kitchen Accessories & more",
+    "whiteLogo": "/images/status-bk-logo-white.png",
+    "colorLogo": "/images/status-bk-logo-dark.png",
+    "favicon": "/images/status-bk-icon.png",
+    "phone": "+91 98320 95793",
+    "phoneHref": "tel:+919832095793",
+    "email": "contact@statusbathkitchen.com",
+    "address": "3rd Floor, Satyam Plaza, Sevoke Road (2.5 Mile), near Bhaktinagar Police Station, beside Sagar Family Restaurant, Ward 42, Don Bosco Colony, Siliguri, West Bengal – 734001",
+    "shortAddress": "Satyam Plaza, Sevoke Road, Siliguri – 734001",
+    "hours": "Mon - Sat: 10:00 AM - 8:00 PM (Sunday by Appointment)",
+    "googleMapsUrl": "https://share.google/V1jbNPSPYTSSO7Gpq",
+    "social": {
+      "instagram": "",
+      "facebook": "",
+      "youtube": "",
+      "linkedin": "",
+      "pinterest": ""
+    }
+  },
+  "heroSlides": [
+    {
+      "id": "kitchens",
+      "title": "Modular Kitchens, Made for You",
+      "subtitle": "Kitchens, bathrooms, wardrobes, doors and windows — designed, supplied and installed by one team",
+      "desktopImg": "/images/hero-kitchen.jpg",
+      "mobileImg": "/images/hero-kitchen.jpg",
+      "link": "#curated-products",
+      "ctaText": "Explore Modular Kitchens",
+      "tag": "Status Bath and Kitchen"
+    }
+  ],
+  "categories": [
+    {
+      "id": "kitchens",
+      "name": "Modular Kitchens",
+      "image": "/images/site/cat-kitchen-island.jpg",
+      "count": "5 layouts",
+      "featured": [
+        "L-Shaped Kitchens",
+        "U-Shaped Kitchens",
+        "Island Kitchens",
+        "Parallel Kitchens",
+        "Straight Kitchens"
+      ]
+    },
+    {
+      "id": "bathrooms",
+      "name": "Bathrooms",
+      "image": "/images/site/cat-bath-vanity.jpg",
+      "count": "6 solutions",
+      "featured": [
+        "Vanity Units",
+        "Shower Enclosures",
+        "Bathtubs",
+        "Taps & Showers",
+        "Sanitaryware",
+        "Bathroom Storage"
+      ]
+    },
+    {
+      "id": "wardrobes",
+      "name": "Wardrobes",
+      "image": "/images/site/cat-wardrobe-walkin.jpg",
+      "count": "4 types",
+      "featured": [
+        "Fitted Wardrobes",
+        "Hinged Wardrobes",
+        "Walk-in Wardrobes",
+        "Wardrobe Organizers"
+      ]
+    },
+    {
+      "id": "doors",
+      "name": "Doors",
+      "image": "/images/site/cat-door-entrance.jpg",
+      "count": "4 types",
+      "featured": [
+        "Entrance Doors",
+        "Internal Room Doors",
+        "Sliding Glass Doors",
+        "Smart Locks & Hardware"
+      ]
+    },
+    {
+      "id": "windows",
+      "name": "Windows",
+      "image": "/images/site/cat-window-casement.jpg",
+      "count": "4 types",
+      "featured": [
+        "Sliding Windows",
+        "Casement Windows",
+        "Bay & Picture Windows",
+        "Arched Windows"
+      ]
+    },
+    {
+      "id": "appliances",
+      "name": "Appliances",
+      "image": "/images/site/cat-app-chimney.jpg",
+      "count": "7 types",
+      "featured": [
+        "Chimneys",
+        "Hobs & Cooking Ranges",
+        "Built-in Ovens",
+        "Microwaves",
+        "Dishwashers",
+        "Refrigerators",
+        "Washing Machines"
+      ]
+    },
+    {
+      "id": "accessories",
+      "name": "Kitchen Accessories",
+      "image": "/images/site/cat-acc-sink.jpg",
+      "count": "5 types",
+      "featured": [
+        "Sinks",
+        "Faucets",
+        "Tall Pantry Units",
+        "Wall Rail Systems",
+        "Spice & Bottle Organisers"
+      ]
+    }
+  ],
+  "curatedTabs": {
+    "kitchens": {
+      "label": "Kitchen styles",
+      "products": [
+        {
+          "id": "cur-k-handleless",
+          "name": "Handleless White & Oak",
+          "category": "Modular Kitchens",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cur-k-handleless.jpg",
+          "dimensions": "Island kitchen with matte white shutters and oak accents"
+        },
+        {
+          "id": "cur-k-shaker",
+          "name": "Classic Shaker Kitchen",
+          "category": "Modular Kitchens",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cur-k-shaker.jpg",
+          "dimensions": "Framed shutters, a marble-look island and a range hood"
+        },
+        {
+          "id": "cur-k-sage",
+          "name": "Soft Sage Kitchen",
+          "category": "Modular Kitchens",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cur-k-sage.jpg",
+          "dimensions": "Muted green shutters around a garden-view window"
+        },
+        {
+          "id": "cur-k-dark",
+          "name": "Dark Oak & Glass Kitchen",
+          "category": "Modular Kitchens",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cur-k-dark.jpg",
+          "dimensions": "Fluted panels, a glass-front tall unit and a breakfast counter"
+        },
+        {
+          "id": "cur-k-wood",
+          "name": "Warm Wood Tall-Unit Kitchen",
+          "category": "Modular Kitchens",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cur-k-wood.jpg",
+          "dimensions": "Built-in oven column with white wall cabinets"
+        },
+        {
+          "id": "cur-k-diner",
+          "name": "Open Kitchen-Diner",
+          "category": "Modular Kitchens",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cur-k-diner.jpg",
+          "dimensions": "Wall rail system, open shelf and a family dining table"
+        }
+      ]
+    },
+    "bathrooms": {
+      "label": "Bathroom styles",
+      "products": [
+        {
+          "id": "cur-b-marble",
+          "name": "Marble & Brass Basin Wall",
+          "category": "Bathrooms",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cur-b-marble.jpg",
+          "dimensions": "Vessel basin, brass mixer and a round mirror"
+        },
+        {
+          "id": "cur-b-spa",
+          "name": "Spa-Inspired Bathroom",
+          "category": "Bathrooms",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cur-b-spa.jpg",
+          "dimensions": "Freestanding tub, vessel basin and plenty of greenery"
+        },
+        {
+          "id": "cur-b-wood",
+          "name": "Floating Oak Vanity",
+          "category": "Bathrooms",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cur-b-wood.jpg",
+          "dimensions": "Wall-hung vanity with marble-look tiles"
+        },
+        {
+          "id": "cur-b-dark",
+          "name": "Dark & Moody Bathroom",
+          "category": "Bathrooms",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cur-b-dark.jpg",
+          "dimensions": "Matte black fittings and a walk-in shower"
+        },
+        {
+          "id": "cur-b-bright",
+          "name": "Bright Shower Room",
+          "category": "Bathrooms",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cur-b-bright.jpg",
+          "dimensions": "Glass shower enclosure and a long double vanity"
+        },
+        {
+          "id": "cur-b-tub",
+          "name": "Statement Copper Tub",
+          "category": "Bathrooms",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cur-b-tub.jpg",
+          "dimensions": "A freestanding focal point by the window"
+        }
+      ]
+    },
+    "doors-windows": {
+      "label": "Doors & windows",
+      "products": [
+        {
+          "id": "cur-d-glass",
+          "name": "Floor-to-Ceiling Glazing",
+          "category": "Windows",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cur-d-glass.jpg",
+          "dimensions": "Large fixed panels that bring the garden indoors"
+        },
+        {
+          "id": "cur-d-black",
+          "name": "Black-Frame Glass Doors",
+          "category": "Doors",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cur-d-black.jpg",
+          "dimensions": "Slim frames for bedrooms and balconies"
+        },
+        {
+          "id": "cur-d-garden",
+          "name": "Sliding Doors to the Deck",
+          "category": "Doors",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cur-d-garden.jpg",
+          "dimensions": "Wide openings for indoor–outdoor living"
+        },
+        {
+          "id": "cur-d-arched",
+          "name": "Arched Windows",
+          "category": "Windows",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cur-d-arched.jpg",
+          "dimensions": "Classic arches with slim black frames"
+        },
+        {
+          "id": "cur-d-facade",
+          "name": "Contemporary Facades",
+          "category": "Doors",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cur-d-facade.jpg",
+          "dimensions": "Entrance doors and windows planned together"
+        },
+        {
+          "id": "cur-d-bay",
+          "name": "Bay Window Seat",
+          "category": "Windows",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cur-d-bay.jpg",
+          "dimensions": "A reading corner built into the window"
+        }
+      ]
+    }
+  },
+  "justArrived": [
+    {
+      "id": "app-chimney",
+      "name": "Island Kitchen Chimney",
+      "price": 0,
+      "mrp": 0,
+      "discount": "",
+      "image": "/images/site/prod-chimney.jpg",
+      "category": "Appliances",
+      "dimensions": "Glass canopy, stainless steel finish",
+      "badge": "Appliances"
+    },
+    {
+      "id": "app-hob",
+      "name": "Gas Hob & Cooking Range",
+      "price": 0,
+      "mrp": 0,
+      "discount": "",
+      "image": "/images/site/prod-hob.jpg",
+      "category": "Appliances",
+      "dimensions": "Cast-iron pan supports, front controls",
+      "badge": "Appliances"
+    },
+    {
+      "id": "app-oven",
+      "name": "Built-in Oven",
+      "price": 0,
+      "mrp": 0,
+      "discount": "",
+      "image": "/images/site/prod-oven.jpg",
+      "category": "Appliances",
+      "dimensions": "Fits a tall unit or under the counter",
+      "badge": "Built-in"
+    },
+    {
+      "id": "app-fridge",
+      "name": "French-Door Refrigerator",
+      "price": 0,
+      "mrp": 0,
+      "discount": "",
+      "image": "/images/site/prod-fridge.jpg",
+      "category": "Appliances",
+      "dimensions": "Planned into your kitchen layout",
+      "badge": "Appliances"
+    },
+    {
+      "id": "acc-sink",
+      "name": "Stainless Steel Kitchen Sink",
+      "price": 0,
+      "mrp": 0,
+      "discount": "",
+      "image": "/images/site/prod-sink.jpg",
+      "category": "Kitchen Accessories",
+      "dimensions": "Double bowl with a high-arc faucet",
+      "badge": "Accessories"
+    },
+    {
+      "id": "bath-mixer",
+      "name": "Basin Mixer Tap",
+      "price": 0,
+      "mrp": 0,
+      "discount": "",
+      "image": "/images/site/prod-basin-mixer.jpg",
+      "category": "Bathrooms",
+      "dimensions": "Single-lever mixer for vanity basins",
+      "badge": "Bath fittings"
+    }
+  ],
+  "mostLoved": [
+    {
+      "id": "ml-microwave",
+      "name": "Built-in Microwave",
+      "price": 0,
+      "mrp": 0,
+      "discount": "",
+      "image": "/images/site/cat-app-microwave.jpg",
+      "category": "Appliances",
+      "badge": "Appliances"
+    },
+    {
+      "id": "ml-dishwasher",
+      "name": "Dishwasher",
+      "price": 0,
+      "mrp": 0,
+      "discount": "",
+      "image": "/images/site/cat-app-dishwasher.jpg",
+      "category": "Appliances",
+      "badge": "Appliances"
+    },
+    {
+      "id": "ml-pantry",
+      "name": "Tall Pantry Unit",
+      "price": 0,
+      "mrp": 0,
+      "discount": "",
+      "image": "/images/site/cat-acc-pantry.jpg",
+      "category": "Kitchen Accessories",
+      "badge": "Accessories"
+    }
+  ],
+  "collections": [
+    {
+      "id": "monochrome-kitchen",
+      "name": "The Monochrome Kitchen",
+      "subtitle": "Gloss grey shutters, a quartz waterfall island and built-in appliances",
+      "roomImage": "/images/site/look-kitchen.jpg",
+      "hotspots": [
+        {
+          "id": "mk-chimney",
+          "name": "Wall-mounted chimney",
+          "price": 0,
+          "mrp": 0,
+          "x": 27,
+          "y": 58,
+          "image": "/images/site/hs-k-chimney.jpg"
+        },
+        {
+          "id": "mk-oven",
+          "name": "Built-in oven",
+          "price": 0,
+          "mrp": 0,
+          "x": 72,
+          "y": 59,
+          "image": "/images/site/hs-k-oven.jpg"
+        },
+        {
+          "id": "mk-island",
+          "name": "Quartz waterfall island",
+          "price": 0,
+          "mrp": 0,
+          "x": 78,
+          "y": 80,
+          "image": "/images/site/hs-k-island.jpg"
+        },
+        {
+          "id": "mk-tall",
+          "name": "Tall refrigerator unit",
+          "price": 0,
+          "mrp": 0,
+          "x": 55,
+          "y": 33,
+          "image": "/images/site/hs-k-tall.jpg"
+        }
+      ]
+    },
+    {
+      "id": "marble-brass-bath",
+      "name": "The Marble & Brass Bathroom",
+      "subtitle": "A double vanity with brass fittings, round mirrors and a bright window",
+      "roomImage": "/images/site/look-bath.jpg",
+      "hotspots": [
+        {
+          "id": "mb-mirror",
+          "name": "Round brass-frame mirror",
+          "price": 0,
+          "mrp": 0,
+          "x": 38,
+          "y": 26,
+          "image": "/images/site/hs-b-mirror.jpg"
+        },
+        {
+          "id": "mb-mixer",
+          "name": "Brass basin mixer",
+          "price": 0,
+          "mrp": 0,
+          "x": 68,
+          "y": 28,
+          "image": "/images/site/hs-b-mixer.jpg"
+        },
+        {
+          "id": "mb-vanity",
+          "name": "Shaker-style vanity unit",
+          "price": 0,
+          "mrp": 0,
+          "x": 85,
+          "y": 55,
+          "image": "/images/site/hs-b-vanity.jpg"
+        },
+        {
+          "id": "mb-window",
+          "name": "Bathroom window",
+          "price": 0,
+          "mrp": 0,
+          "x": 38,
+          "y": 74,
+          "image": "/images/site/hs-b-window.jpg"
+        }
+      ]
+    },
+    {
+      "id": "glass-wall-living",
+      "name": "The Glass-Wall Living Room",
+      "subtitle": "Slim-frame sliding doors and picture windows that open onto the deck",
+      "roomImage": "/images/site/look-living.jpg",
+      "hotspots": [
+        {
+          "id": "gl-sliding",
+          "name": "Slim-frame sliding doors",
+          "price": 0,
+          "mrp": 0,
+          "x": 40,
+          "y": 76,
+          "image": "/images/site/hs-l-sliding.jpg"
+        },
+        {
+          "id": "gl-window",
+          "name": "Fixed picture window",
+          "price": 0,
+          "mrp": 0,
+          "x": 30,
+          "y": 55,
+          "image": "/images/site/hs-l-window.jpg"
+        },
+        {
+          "id": "gl-bench",
+          "name": "Built-in bench storage",
+          "price": 0,
+          "mrp": 0,
+          "x": 62,
+          "y": 29,
+          "image": "/images/site/hs-l-bench.jpg"
+        }
+      ]
+    }
+  ],
+  "promises": [
+    {
+      "title": "One team, start to finish",
+      "description": "Design, supply and installation for your kitchen, bathroom, wardrobes, doors and windows, with one point of contact throughout."
+    },
+    {
+      "title": "Designed for how you live",
+      "description": "We plan around your space, your routine and your budget instead of fitting you into a catalogue layout."
+    },
+    {
+      "title": "See it before it's built",
+      "description": "You approve the layout, materials and finishes before any work begins on site."
+    },
+    {
+      "title": "Clear, itemised quotations",
+      "description": "Every quotation lists products, finishes and installation separately, so you know exactly what you are paying for."
+    },
+    {
+      "title": "Support after handover",
+      "description": "Need a hinge adjusted or a service visit later? Call us and we will take care of it."
+    }
+  ],
+  "services": [
+    {
+      "id": "consultation",
+      "title": "Design consultation",
+      "description": "Share your floor plan and how you use the space. We suggest layouts, materials and finishes that suit your budget.",
+      "icon": "consultation",
+      "tag": "Plan"
+    },
+    {
+      "id": "measurement",
+      "title": "Site measurement",
+      "description": "We measure on site so kitchens, wardrobes, doors and windows are made to fit your walls, not a standard size.",
+      "icon": "measurement",
+      "tag": "Measure"
+    },
+    {
+      "id": "installation",
+      "title": "Installation",
+      "description": "Our team installs and aligns everything, then walks you through how to use and care for it.",
+      "icon": "installation",
+      "tag": "Install"
+    },
+    {
+      "id": "support",
+      "title": "After-sales support",
+      "description": "Adjustments, part replacements and servicing whenever you need them after handover.",
+      "icon": "support",
+      "tag": "Support"
+    }
+  ],
+  "articles": [
+    {
+      "title": "Choosing the Right Kitchen Layout: L, U, Parallel or Island?",
+      "category": "Kitchen Guide",
+      "readTime": "5 min read",
+      "image": "/images/site/cat-kitchen-island.jpg"
+    },
+    {
+      "title": "Planning a Bathroom That Stays Easy to Clean",
+      "category": "Bathroom Guide",
+      "readTime": "4 min read",
+      "image": "/images/site/cat-bath-shower.jpg"
+    },
+    {
+      "title": "Sliding or Hinged? Picking the Right Wardrobe Doors",
+      "category": "Wardrobe Guide",
+      "readTime": "4 min read",
+      "image": "/images/site/cat-wardrobe-fitted.jpg"
+    }
+  ],
+  "megaMenu": [
+    {
+      "id": "kitchens",
+      "title": "Modular Kitchens",
+      "subsections": [
+        {
+          "name": "Layouts",
+          "items": [
+            {
+              "name": "L-Shaped Kitchens",
+              "image": "/images/site/cat-kitchen-l-shaped.jpg"
+            },
+            {
+              "name": "U-Shaped Kitchens",
+              "image": "/images/site/cat-kitchen-u-shaped.jpg"
+            },
+            {
+              "name": "Island Kitchens",
+              "image": "/images/site/cat-kitchen-island.jpg"
+            },
+            {
+              "name": "Parallel Kitchens",
+              "image": "/images/site/cat-kitchen-parallel.jpg"
+            },
+            {
+              "name": "Straight Kitchens",
+              "image": "/images/site/cat-kitchen-straight.jpg"
+            }
+          ]
+        },
+        {
+          "name": "Styles",
+          "items": [
+            {
+              "name": "Handleless Kitchens",
+              "image": "/images/site/cur-k-handleless.jpg"
+            },
+            {
+              "name": "Classic Shaker Kitchens",
+              "image": "/images/site/cur-k-shaker.jpg"
+            },
+            {
+              "name": "Two-Tone Kitchens",
+              "image": "/images/site/cur-k-sage.jpg"
+            },
+            {
+              "name": "Dark & Wood Kitchens",
+              "image": "/images/site/cur-k-dark.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bathrooms",
+      "title": "Bathrooms",
+      "subsections": [
+        {
+          "name": "Bathroom Solutions",
+          "items": [
+            {
+              "name": "Vanity Units",
+              "image": "/images/site/cat-bath-vanity.jpg"
+            },
+            {
+              "name": "Shower Enclosures",
+              "image": "/images/site/cat-bath-shower.jpg"
+            },
+            {
+              "name": "Bathtubs",
+              "image": "/images/site/cat-bath-tub.jpg"
+            },
+            {
+              "name": "Taps & Showers",
+              "image": "/images/site/cat-bath-fittings.jpg"
+            },
+            {
+              "name": "Sanitaryware",
+              "image": "/images/site/cat-bath-sanitaryware.jpg"
+            },
+            {
+              "name": "Bathroom Storage",
+              "image": "/images/site/cat-bath-storage.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wardrobes",
+      "title": "Wardrobes",
+      "subsections": [
+        {
+          "name": "Wardrobes",
+          "items": [
+            {
+              "name": "Fitted Wardrobes",
+              "image": "/images/site/cat-wardrobe-fitted.jpg"
+            },
+            {
+              "name": "Hinged Wardrobes",
+              "image": "/images/site/cat-wardrobe-hinged.jpg"
+            },
+            {
+              "name": "Walk-in Wardrobes",
+              "image": "/images/site/cat-wardrobe-walkin.jpg"
+            },
+            {
+              "name": "Wardrobe Organizers",
+              "image": "/images/site/cat-wardrobe-interiors.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "doors",
+      "title": "Doors",
+      "subsections": [
+        {
+          "name": "Doors",
+          "items": [
+            {
+              "name": "Entrance Doors",
+              "image": "/images/site/cat-door-entrance.jpg"
+            },
+            {
+              "name": "Internal Room Doors",
+              "image": "/images/site/cat-door-interior.jpg"
+            },
+            {
+              "name": "Sliding Glass Doors",
+              "image": "/images/site/cat-door-sliding.jpg"
+            },
+            {
+              "name": "Smart Locks & Hardware",
+              "image": "/images/site/cat-door-smart-lock.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "windows",
+      "title": "Windows",
+      "subsections": [
+        {
+          "name": "Windows",
+          "items": [
+            {
+              "name": "Sliding Windows",
+              "image": "/images/site/cat-window-sliding.jpg"
+            },
+            {
+              "name": "Casement Windows",
+              "image": "/images/site/cat-window-casement.jpg"
+            },
+            {
+              "name": "Bay & Picture Windows",
+              "image": "/images/site/cur-d-bay.jpg"
+            },
+            {
+              "name": "Arched Windows",
+              "image": "/images/site/cur-d-arched.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "appliances",
+      "title": "Appliances",
+      "subsections": [
+        {
+          "name": "Kitchen Appliances",
+          "items": [
+            {
+              "name": "Chimneys",
+              "image": "/images/site/cat-app-chimney.jpg"
+            },
+            {
+              "name": "Hobs & Cooking Ranges",
+              "image": "/images/site/cat-app-hob.jpg"
+            },
+            {
+              "name": "Built-in Ovens",
+              "image": "/images/site/cat-app-oven.jpg"
+            },
+            {
+              "name": "Microwaves",
+              "image": "/images/site/cat-app-microwave.jpg"
+            },
+            {
+              "name": "Dishwashers",
+              "image": "/images/site/cat-app-dishwasher.jpg"
+            },
+            {
+              "name": "Refrigerators",
+              "image": "/images/site/cat-app-fridge.jpg"
+            },
+            {
+              "name": "Washing Machines",
+              "image": "/images/site/cat-app-washer.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "accessories",
+      "title": "Kitchen Accessories",
+      "subsections": [
+        {
+          "name": "Accessories",
+          "items": [
+            {
+              "name": "Sinks",
+              "image": "/images/site/cat-acc-sink.jpg"
+            },
+            {
+              "name": "Faucets",
+              "image": "/images/site/cat-acc-faucet.jpg"
+            },
+            {
+              "name": "Tall Pantry Units",
+              "image": "/images/site/cat-acc-pantry.jpg"
+            },
+            {
+              "name": "Wall Rail Systems",
+              "image": "/images/site/cat-acc-rail.jpg"
+            },
+            {
+              "name": "Spice & Bottle Organisers",
+              "image": "/images/site/cat-acc-spice.jpg"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What does Status Bath and Kitchen offer?",
+      "answer": "Modular kitchens, bathrooms, wardrobes, doors and windows, along with kitchen appliances and accessories — designed, supplied and installed by one team."
+    },
+    {
+      "question": "Can I see the design before I confirm?",
+      "answer": "Yes. We share the layout, materials and finishes with you for approval before any work begins."
+    },
+    {
+      "question": "What warranty do I get?",
+      "answer": "Warranty depends on the product and the brand. The exact terms for every item are listed in your quotation and invoice."
+    }
+  ],
+  "howCanWeHelpTabs": [
+    {
+      "tabName": "Modular Kitchens",
+      "aliases": [
+        "Kitchens",
+        "Handleless Kitchens",
+        "Classic Shaker Kitchens",
+        "Two-Tone Kitchens",
+        "Dark & Wood Kitchens"
+      ],
+      "items": [
+        {
+          "name": "L-Shaped Kitchens",
+          "image": "/images/site/cat-kitchen-l-shaped.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "U-Shaped Kitchens",
+          "image": "/images/site/cat-kitchen-u-shaped.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Island Kitchens",
+          "image": "/images/site/cat-kitchen-island.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Parallel Kitchens",
+          "image": "/images/site/cat-kitchen-parallel.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Straight Kitchens",
+          "image": "/images/site/cat-kitchen-straight.jpg",
+          "link": "#categories"
+        }
+      ]
+    },
+    {
+      "tabName": "Bathrooms",
+      "aliases": [
+        "Bath",
+        "Bathroom"
+      ],
+      "items": [
+        {
+          "name": "Vanity Units",
+          "image": "/images/site/cat-bath-vanity.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Shower Enclosures",
+          "image": "/images/site/cat-bath-shower.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Bathtubs",
+          "image": "/images/site/cat-bath-tub.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Taps & Showers",
+          "image": "/images/site/cat-bath-fittings.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Sanitaryware",
+          "image": "/images/site/cat-bath-sanitaryware.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Bathroom Storage",
+          "image": "/images/site/cat-bath-storage.jpg",
+          "link": "#categories"
+        }
+      ]
+    },
+    {
+      "tabName": "Wardrobes",
+      "aliases": [
+        "Wardrobe"
+      ],
+      "items": [
+        {
+          "name": "Fitted Wardrobes",
+          "image": "/images/site/cat-wardrobe-fitted.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Hinged Wardrobes",
+          "image": "/images/site/cat-wardrobe-hinged.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Walk-in Wardrobes",
+          "image": "/images/site/cat-wardrobe-walkin.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Wardrobe Organizers",
+          "image": "/images/site/cat-wardrobe-interiors.jpg",
+          "link": "#categories"
+        }
+      ]
+    },
+    {
+      "tabName": "Doors & Windows",
+      "aliases": [
+        "Doors",
+        "Windows",
+        "Door",
+        "Window",
+        "Bay & Picture Windows",
+        "Arched Windows"
+      ],
+      "items": [
+        {
+          "name": "Entrance Doors",
+          "image": "/images/site/cat-door-entrance.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Internal Room Doors",
+          "image": "/images/site/cat-door-interior.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Sliding Glass Doors",
+          "image": "/images/site/cat-door-sliding.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Sliding Windows",
+          "image": "/images/site/cat-window-sliding.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Casement Windows",
+          "image": "/images/site/cat-window-casement.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Smart Locks & Hardware",
+          "image": "/images/site/cat-door-smart-lock.jpg",
+          "link": "#categories"
+        }
+      ]
+    },
+    {
+      "tabName": "Appliances",
+      "aliases": [
+        "Appliance",
+        "Kitchen Appliances"
+      ],
+      "items": [
+        {
+          "name": "Chimneys",
+          "image": "/images/site/cat-app-chimney.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Hobs & Cooking Ranges",
+          "image": "/images/site/cat-app-hob.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Built-in Ovens",
+          "image": "/images/site/cat-app-oven.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Microwaves",
+          "image": "/images/site/cat-app-microwave.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Dishwashers",
+          "image": "/images/site/cat-app-dishwasher.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Refrigerators",
+          "image": "/images/site/cat-app-fridge.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Washing Machines",
+          "image": "/images/site/cat-app-washer.jpg",
+          "link": "#categories"
+        }
+      ]
+    },
+    {
+      "tabName": "Kitchen Accessories",
+      "aliases": [
+        "Accessories",
+        "Kitchen Accessory"
+      ],
+      "items": [
+        {
+          "name": "Sinks",
+          "image": "/images/site/cat-acc-sink.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Faucets",
+          "image": "/images/site/cat-acc-faucet.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Tall Pantry Units",
+          "image": "/images/site/cat-acc-pantry.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Wall Rail Systems",
+          "image": "/images/site/cat-acc-rail.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Spice & Bottle Organisers",
+          "image": "/images/site/cat-acc-spice.jpg",
+          "link": "#categories"
+        }
+      ]
+    }
+  ],
+  "tickerBanner": {
+    "desktopImg": "/images/site/look-kitchen.jpg",
+    "mobileImg": "/images/site/look-kitchen.jpg",
+    "link": "#categories"
+  },
+  "serviceStrip": {
+    "title": "Everything for your kitchen & bath",
+    "subtitle": "Modular Kitchens • Wardrobes • Doors • Windows • Appliances • Kitchen Accessories & more",
+    "items": [
+      {
+        "id": "kitchens",
+        "label": "Modular Kitchens"
+      },
+      {
+        "id": "bathrooms",
+        "label": "Bathrooms"
+      },
+      {
+        "id": "wardrobes",
+        "label": "Wardrobes"
+      },
+      {
+        "id": "doors",
+        "label": "Doors"
+      },
+      {
+        "id": "windows",
+        "label": "Windows"
+      },
+      {
+        "id": "appliances",
+        "label": "Appliances"
+      },
+      {
+        "id": "accessories",
+        "label": "Kitchen Accessories"
+      }
+    ]
+  },
+  "liveFaqs": [
+    {
+      "question": "What does Status Bath and Kitchen offer?",
+      "answer": "We design, supply and install modular kitchens, bathrooms, wardrobes, doors and windows, along with kitchen appliances and accessories, so you can plan your whole home with one team."
+    },
+    {
+      "question": "How does a kitchen or bathroom project work?",
+      "answer": "It starts with a consultation to understand your space, needs and budget. We then measure on site and share a design with a detailed quotation. Once you approve it, we prepare everything and install it."
+    },
+    {
+      "question": "Can I see the design before I confirm?",
+      "answer": "Yes. We share the layout, materials and finishes with you for approval before any work begins, and you can ask for changes at that stage."
+    },
+    {
+      "question": "How long does installation take?",
+      "answer": "It depends on the size of the project and the materials you choose. Your quotation includes an estimated timeline so you can plan around it."
+    },
+    {
+      "question": "Do you supply appliances and accessories too?",
+      "answer": "Yes. We can plan chimneys, hobs, built-in ovens, microwaves, dishwashers and refrigerators into your kitchen, along with sinks, faucets, pantry units and other accessories."
+    },
+    {
+      "question": "What warranty do I get?",
+      "answer": "Warranty depends on the product and the brand. The exact terms for every item are listed in your quotation and invoice."
+    },
+    {
+      "question": "Do you work with builders, architects and home space planners?",
+      "answer": "Yes. We take on project orders for kitchens, wardrobes, doors and windows. Get in touch to discuss your drawings and timelines."
+    }
+  ]
+}

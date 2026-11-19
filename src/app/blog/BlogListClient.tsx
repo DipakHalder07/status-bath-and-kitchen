@@ -79,7 +79,7 @@ export default function BlogListClient() {
             Design Ideas, Guides &amp; Inspiration
           </h1>
           <p className="mt-4 text-[15px] sm:text-[17px] text-[#76716d] leading-relaxed max-w-2xl mx-auto">
-            Expert insights from master architects and interior stylists on space planning, material science, and modern Indian living.
+            Expert insights from master architects and home space planners on space planning, material science, and modern Indian living.
           </p>
 
           {/* Search bar */}

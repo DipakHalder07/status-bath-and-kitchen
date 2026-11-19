@@ -8,8 +8,8 @@ export default function TickerBanner() {
   const { openConsultation } = useCart();
 
   return (
-    <div className="w-full bg-[#fbf7f4] border-y border-[#e7e1d9] py-3.5 sm:py-4">
-      <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
+    <div className="status-ticker w-full bg-[#fbf7f4] border-y border-[#e7e1d9] py-3.5 sm:py-4">
+      <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-full bg-[#c0262d]/10 text-[#c0262d] flex items-center justify-center shrink-0">
@@ -38,7 +38,7 @@ export default function TickerBanner() {
             <span className="text-stone-300 hidden sm:inline">|</span>
             <button
               onClick={() => openConsultation("Showroom Visit")}
-              className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-[#4a4541] hover:bg-[#332f2c] text-white text-xs font-medium transition-colors cursor-pointer"
+              className="status-btn-dark inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-[#4a4541] hover:bg-[#332f2c] text-white text-xs font-medium transition-colors cursor-pointer"
             >
               <span>Book Consultation</span>
               <ArrowRight className="w-3 h-3" />

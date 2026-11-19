@@ -196,10 +196,10 @@ export const blogArticles: BlogArticleFull[] = [
       role: "Storage & Wardrobe Stylist",
       avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=160&q=80",
     },
-    tags: ["Wardrobes", "Bedroom Furniture", "Space Saving", "Interior Design"],
+    tags: ["Wardrobes", "Bedroom Furniture", "Space Saving", "Home Styling"],
     keyTakeaways: [
       "Sliding wardrobes require zero exterior swing space, making them ideal for bedrooms with less than 3 feet of bed clearance.",
-      "Hinged wardrobes allow 100% full interior visibility at once, whereas sliding systems only expose 50% at any moment.",
+      "Hinged wardrobes allow 100% full internal compartment visibility at once, whereas sliding systems only expose 50% at any moment.",
       "Internal wardrobe lighting and integrated pull-out trouser racks double day-to-day organizational efficiency.",
     ],
     sections: [
@@ -214,7 +214,7 @@ export const blogArticles: BlogArticleFull[] = [
           headers: ["Feature", "Hinged Wardrobes", "Sliding Wardrobes"],
           rows: [
             ["Door Clearance Needed", "20 - 24 inches swing clearance", "Zero clearance (glides internally)"],
-            ["Interior Visibility", "100% open at once", "50% open at once (two-track)"],
+            ["Internal Storage Visibility", "100% open at once", "50% open at once (two-track)"],
             ["Back of Door Usage", "Can mount ties, belts & mirrors", "Cannot use back of doors"],
             ["Maximum Width", "Any width (modular)", "Best for runs 5 feet and wider"],
             ["Long-term Maintenance", "Minimal (standard hinges)", "Requires track dust cleaning"],

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { X, ChevronDown, ChevronRight, Phone, MapPin, Building2, Home, Package, Info, BookOpen, Wrench } from "lucide-react";
-import { megaMenuItems, siteBrand } from "@/data/interioData";
+import { megaMenuItems, siteBrand } from "@/data/statusData";
 
 interface MobileDrawerProps {
   isOpen: boolean;
@@ -30,7 +30,7 @@ export default function MobileDrawer({
       />
 
       {/* Drawer */}
-      <div className="fixed inset-y-0 left-0 max-w-xs w-full bg-white shadow-2xl z-50 flex flex-col animate-in slide-in-from-left duration-250">
+      <div className="status-drawer fixed inset-y-0 left-0 max-w-xs w-full bg-white shadow-2xl z-50 flex flex-col animate-in slide-in-from-left duration-250">
         {/* Header */}
         <div className="p-4 border-b border-gray-100 flex items-center justify-between">
           <div className="relative w-28 h-8">
@@ -99,7 +99,7 @@ export default function MobileDrawer({
           <Link
             href="/contact"
             onClick={onClose}
-            className="w-full py-2.5 px-4 bg-[#ff5d55] hover:bg-[#e5473f] text-white rounded-[20px_2px_2px_2px] text-xs font-semibold shadow-xs flex items-center justify-center gap-2 transition-colors"
+            className="status-btn-primary w-full py-2.5 px-4 bg-[#ff5d55] hover:bg-[#e5473f] text-white rounded-[20px_2px_2px_2px] text-xs font-semibold shadow-xs flex items-center justify-center gap-2 transition-colors"
           >
             <span>Book Free Design Consultation</span>
           </Link>

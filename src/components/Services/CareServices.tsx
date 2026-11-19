@@ -2,7 +2,7 @@
 
 import React from "react";
 import { PencilRuler, Ruler, Wrench, LifeBuoy, type LucideIcon } from "lucide-react";
-import { careServicesList } from "@/data/interioData";
+import { careServicesList } from "@/data/statusData";
 import { useCart } from "@/context/CartContext";
 
 const icons: Record<string, LucideIcon> = {
@@ -16,8 +16,8 @@ export default function CareServices() {
   const { openConsultation } = useCart();
 
   return (
-    <section id="care-services" className="py-14 sm:py-20 bg-white">
-      <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
+    <section id="care-services" className="status-section py-14 sm:py-20 bg-white">
+      <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Header */}
         <div className="flex items-center justify-between mb-6 sm:mb-8">
           <h2 className="text-xl sm:text-2xl lg:text-[28px] font-medium text-[#332f2c] tracking-tight">
@@ -38,7 +38,7 @@ export default function CareServices() {
             return (
               <div
                 key={service.id}
-                className="bg-white rounded-md sm:rounded-sm p-5 sm:p-8 border border-gray-200 hover:border-gray-300 hover:shadow-sm transition-all flex flex-col justify-between text-center group cursor-pointer"
+                className="status-card status-card-hover bg-white rounded-md sm:rounded-sm p-5 sm:p-8 border border-gray-200 hover:border-gray-300 hover:shadow-sm transition-all flex flex-col justify-between text-center group cursor-pointer"
                 onClick={() => openConsultation(service.title)}
               >
                 <div>

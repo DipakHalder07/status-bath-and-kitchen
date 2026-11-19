@@ -81,7 +81,7 @@ export const allProductsCatalog: Product[] = [
     specifications: {
       "Base Material": "High-Density Moisture Resistant (HDHMR) Action TESA",
       "Finish": "Multi-coat Italian Polyurethane (PU) Matte Lacquer",
-      "Hardware": "Hettich InnoTech Atira Soft-Close",
+      "Hardware": "Status Precision Soft-Close Drawer Systems",
       "Warranty": "10-Year Warranty against manufacturing defects",
       "Installation": "Complimentary on-site assembly and calibration",
     },
@@ -198,7 +198,7 @@ export const allProductsCatalog: Product[] = [
     ],
     specifications: {
       "Base Material": "Greenpanel Club BWP Calibrated Plywood",
-      "Fittings": "Hettich Sensys Soft-Close Hinges",
+      "Fittings": "Heavy-Duty Precision Soft-Close Hinges",
       "Warranty": "10-Year Warranty",
     },
     inStock: true,
@@ -316,7 +316,7 @@ export const allProductsCatalog: Product[] = [
     ],
     specifications: {
       "Material": "Hydrophobic Treated Oak & BWP Core",
-      "Drawers": "Hettich Quadro 4D Soft-Close",
+      "Drawers": "Status Precision 4D Full-Extension Soft-Close",
       "Warranty": "5-Year Full Replacement Warranty",
     },
     inStock: true,
@@ -546,7 +546,7 @@ export const allProductsCatalog: Product[] = [
       "Modular interior with customizable shelf and drawer configurations",
     ],
     specifications: {
-      "Hardware": "Hettich TopLine XL Soft-Close Sliding Track",
+      "Hardware": "Heavy-Duty Smooth-Glide Soft-Close Sliding Track",
       "Glass": "6mm Tempered Safety Glass with Shatterproof Film",
       "Warranty": "10-Year Structural and Mechanism Warranty",
     },
@@ -672,9 +672,9 @@ export const allProductsCatalog: Product[] = [
   },
   {
     id: "door-interior-flushed",
-    name: "Concealed Magnetic Acoustic Interior Door",
+    name: "Concealed Magnetic Acoustic Room Door",
     category: "Doors & Windows",
-    subCategory: "Interior Doors",
+    subCategory: "Internal Room Doors",
     price: 32000,
     mrp: 49000,
     discount: "35% Off",

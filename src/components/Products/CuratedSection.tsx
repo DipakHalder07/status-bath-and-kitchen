@@ -3,7 +3,7 @@
 import React, { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { curatedTabsData } from "@/data/interioData";
+import { curatedTabsData } from "@/data/statusData";
 import { useCart } from "@/context/CartContext";
 
 const tabKeys = Object.keys(curatedTabsData);
@@ -29,8 +29,8 @@ export default function CuratedSection() {
   };
 
   return (
-    <section id="curated-products" className="py-14 sm:py-20 bg-[#f5f0ea] scroll-mt-28">
-      <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
+    <section id="curated-products" className="status-section py-14 sm:py-20 bg-[#f5f0ea] scroll-mt-28">
+      <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Section Heading */}
         <div className="mb-6 sm:mb-8">
           <h2 className="text-xl sm:text-2xl lg:text-[28px] font-medium text-[#332f2c] tracking-tight">

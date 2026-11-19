@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import { liveFaqs } from "@/data/interioData";
+import { liveFaqs } from "@/data/statusData";
 import { useCart } from "@/context/CartContext";
 
 export default function FaqAccordion() {
@@ -14,8 +14,8 @@ export default function FaqAccordion() {
   };
 
   return (
-    <section id="faqs" className="py-16 sm:py-24 bg-white border-t border-gray-100">
-      <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 space-y-16">
+    <section id="faqs" className="status-section py-16 sm:py-24 bg-white border-t border-gray-100">
+      <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 space-y-16">
         {/* FAQ Section: How can we assist you? */}
         <div className="w-full">
           <div className="flex items-baseline justify-between gap-3 mb-6 sm:mb-8">
@@ -91,7 +91,7 @@ export default function FaqAccordion() {
                   Wardrobes, doors and windows
                 </h3>
                 <p>
-                  Fitted, hinged and walk-in wardrobes are planned around what you actually store, with interiors for hanging, folding, shoes and accessories. We also supply and install entrance doors, interior doors, sliding glass doors and windows, so the finishes across your home match.
+                  Fitted, hinged and walk-in wardrobes are planned around what you actually store, with dedicated organizers for hanging, folding, shoes and accessories. We also supply and install entrance doors, internal room doors, sliding glass doors and windows, so the finishes across your home match.
                 </p>
               </div>
 
@@ -147,7 +147,7 @@ export default function FaqAccordion() {
                     Explore Wardrobes, Doors &amp; Windows
                   </h4>
                   <p className="text-gray-500 text-xs">
-                    Fitted Wardrobes | Hinged Wardrobes | Walk-in Wardrobes | Wardrobe Interiors | Entrance Doors | Interior Doors | Sliding Glass Doors | Sliding Windows | Casement Windows | Smart Locks &amp; Hardware
+                    Fitted Wardrobes | Hinged Wardrobes | Walk-in Wardrobes | Wardrobe Organizers | Entrance Doors | Internal Room Doors | Sliding Glass Doors | Sliding Windows | Casement Windows | Smart Locks &amp; Hardware
                   </p>
                 </div>
 

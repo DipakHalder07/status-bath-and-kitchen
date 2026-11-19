@@ -281,7 +281,7 @@ export const servicesFAQs: ServiceFAQ[] = [
   {
     question: "What is covered under the Status 10-Year Warranty?",
     answer:
-      "Our 10-Year Modular Kitchen & Wardrobe Warranty covers structural integrity of BWP marine-grade plywood, Blum and Hettich hardware hinges, drawer runner mechanisms, and factory edge-band adhesion against manufacturing defects. Consumable items like LED bulbs and silicone caulking are covered under our 1-year complimentary service warranty.",
+      "Our 10-Year Modular Kitchen & Wardrobe Warranty covers structural integrity of BWP marine-grade plywood, certified high-durability soft-close hinges, precision drawer runner mechanisms, and factory edge-band adhesion against manufacturing defects. Consumable items like LED bulbs and silicone caulking are covered under our 1-year complimentary service warranty.",
     category: "Warranty",
   },
   {

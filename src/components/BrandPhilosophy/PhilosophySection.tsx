@@ -2,15 +2,15 @@
 
 import React from "react";
 import { ArrowRight, Phone } from "lucide-react";
-import { siteBrand } from "@/data/interioData";
+import { siteBrand } from "@/data/statusData";
 import { useCart } from "@/context/CartContext";
 
 export default function PhilosophySection() {
   const { openConsultation } = useCart();
 
   return (
-    <section id="philosophy" className="py-16 sm:py-20 bg-white">
-      <div id="about" className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
+    <section id="philosophy" className="status-section py-16 sm:py-20 bg-white">
+      <div id="about" className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Projects for builders, architects & designers */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           {/* Left: Text & Actions */}
@@ -30,7 +30,7 @@ export default function PhilosophySection() {
               <button
                 type="button"
                 onClick={() => openConsultation("Project Enquiry")}
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md bg-[#ff5d55] hover:bg-[#e5473f] text-white font-medium text-xs sm:text-sm shadow-xs transition-all cursor-pointer hover:shadow-md"
+                className="status-btn-primary inline-flex items-center gap-2 px-7 py-3.5 rounded-md bg-[#ff5d55] hover:bg-[#e5473f] text-white font-medium text-xs sm:text-sm shadow-xs transition-all cursor-pointer hover:shadow-md"
               >
                 <span>Enquire now</span>
                 <ArrowRight className="w-4 h-4" />
@@ -38,7 +38,7 @@ export default function PhilosophySection() {
 
               <a
                 href={siteBrand.phoneHref || "#contact"}
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md border border-[#4a4541] bg-white hover:bg-[#4a4541] text-[#4a4541] hover:text-white font-medium text-xs sm:text-sm transition-colors cursor-pointer"
+                className="status-btn-outline inline-flex items-center gap-2 px-7 py-3.5 rounded-md border border-[#4a4541] bg-white hover:bg-[#4a4541] text-[#4a4541] hover:text-white font-medium text-xs sm:text-sm transition-colors cursor-pointer"
               >
                 <span>Call us</span>
                 <Phone className="w-4 h-4" />

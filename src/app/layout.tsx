@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     "Modular Kitchen Showroom",
     "Bathroom Vanities & Fixtures",
     "Siliguri Modular Kitchens",
-    "West Bengal Interior Showroom",
+    "West Bengal Home & Bath Studio",
     "Walk-in Closets",
     "Sliding Glass Doors",
     "Kitchen Accessories & Organizers",
@@ -102,7 +102,7 @@ export const metadata: Metadata = {
     ],
     shortcut: ["/images/status-bk-icon.png"],
   },
-  category: "Interior Design & Modular Architecture",
+  category: "Home Architecture, Modular Kitchens & Bathrooms",
 };
 
 // JSON-LD Structured Data for LocalBusiness & Organization

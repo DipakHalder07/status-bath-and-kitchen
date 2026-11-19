@@ -153,7 +153,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
 
                 {/* Top-Left Badge */}
                 {product.badge && (
-                  <div className="absolute top-4 left-4 bg-[#ede7de] text-[#4a4541] text-[11px] uppercase tracking-wider font-medium px-3 py-1">
+                  <div className="status-badge status-badge-sand absolute top-4 left-4 bg-[#ede7de] text-[#4a4541] text-[11px] uppercase tracking-wider font-medium px-3 py-1">
                     {product.badge}
                   </div>
                 )}
@@ -319,7 +319,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                 {/* Save to In-Store Shortlist */}
                 <button
                   onClick={handleAddToCart}
-                  className="w-full sm:w-auto py-3 px-5 border border-[#4a4541] hover:bg-[#4a4541] hover:text-white text-[#4a4541] font-medium text-sm rounded-[20px_2px_2px_2px] transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                  className="status-btn-outline w-full sm:w-auto py-3 px-5 border border-[#4a4541] hover:bg-[#4a4541] hover:text-white text-[#4a4541] font-medium text-sm rounded-[20px_2px_2px_2px] transition-colors flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <ShoppingBag className="w-4 h-4" />
                   <span>Add to Shortlist</span>
@@ -464,7 +464,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                   </div>
                   <div className="grid grid-cols-3 p-3.5 bg-[#fbf7f4]">
                     <span className="font-medium text-[#4a4541]">Hardware / Fittings</span>
-                    <span className="col-span-2 text-[#4a4541]">{product.specifications?.hardware || "Blum / Hettich Soft-Close Mechanisms (100,000 Cycles)"}</span>
+                    <span className="col-span-2 text-[#4a4541]">{product.specifications?.hardware || "German Engineered Soft-Close Mechanisms (100,000 Cycles)"}</span>
                   </div>
                   <div className="grid grid-cols-3 p-3.5 bg-white">
                     <span className="font-medium text-[#4a4541]">Dimensions</span>

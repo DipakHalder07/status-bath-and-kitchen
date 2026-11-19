@@ -467,7 +467,7 @@ export default function BlogDetailClient({
                     {article.author.name}
                   </h4>
                   <p className="text-xs text-[#76716d] leading-relaxed">
-                    {article.author.role} at Status Bath and Kitchen. Specializing in ergonomic floorplan planning, high-durability BWP marine fabrication, and contemporary interior aesthetics.
+                    {article.author.role} at Status Bath and Kitchen. Specializing in ergonomic floorplan planning, high-durability BWP marine fabrication, and contemporary architectural aesthetics.
                   </p>
                 </div>
               </div>

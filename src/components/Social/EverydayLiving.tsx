@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { ArrowRight } from "lucide-react";
-import { siteBrand } from "@/data/interioData";
+import { siteBrand } from "@/data/statusData";
 import { useCart } from "@/context/CartContext";
 
 function InstagramIcon({ className = "w-4 h-4" }: { className?: string }) {
@@ -68,8 +68,8 @@ export default function EverydayLiving() {
   const { openConsultation } = useCart();
 
   return (
-    <section id="inspiration" className="py-14 sm:py-20 bg-white border-t border-stone-100">
-      <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
+    <section id="inspiration" className="status-section py-14 sm:py-20 bg-white border-t border-stone-100">
+      <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-6 sm:mb-10">
           <div>

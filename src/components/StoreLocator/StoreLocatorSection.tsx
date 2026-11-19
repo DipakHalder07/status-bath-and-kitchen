@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { Store, X, MapPin, Phone, Clock, Navigation } from "lucide-react";
-import { siteBrand } from "@/data/interioData";
+import { siteBrand } from "@/data/statusData";
 
 export default function StoreLocatorSection() {
   const [showModal, setShowModal] = useState(false);
@@ -14,8 +14,8 @@ export default function StoreLocatorSection() {
     )}`;
 
   return (
-    <section id="store-locator" className="w-full bg-white py-6 sm:py-10">
-      <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
+    <section id="store-locator" className="status-section status-store-locator w-full bg-white py-6 sm:py-10">
+      <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Aspect ratio only on xl: below that, min-h + aspect-ratio widens the box past the screen */}
         <div className="relative rounded-none sm:rounded-sm overflow-hidden min-h-[440px] xl:aspect-[21/9] flex items-center justify-end p-6 sm:p-12 lg:p-16">
           {/* Background Image */}
@@ -31,7 +31,7 @@ export default function StoreLocatorSection() {
           </picture>
 
           {/* Overlaid Frosted Card on Right */}
-          <div className="relative z-10 w-full max-w-md rounded-xl bg-black/45 backdrop-blur-md border border-white/15 p-6 sm:p-10 text-white shadow-2xl">
+          <div className="status-glass-dark status-card relative z-10 w-full max-w-md rounded-xl bg-black/45 backdrop-blur-md border border-white/15 p-6 sm:p-10 text-white shadow-2xl">
             <h2 className="text-xl sm:text-2xl lg:text-[28px] font-medium !text-white tracking-tight">
               Visit our experience studio
             </h2>
@@ -43,7 +43,7 @@ export default function StoreLocatorSection() {
               <button
                 type="button"
                 onClick={() => setShowModal(true)}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-[#ff5247] hover:bg-[#e0453b] text-white font-bold text-xs sm:text-sm shadow-lg transition-all duration-200 cursor-pointer"
+                className="status-btn-primary w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-[#ff5247] hover:bg-[#e0453b] text-white font-bold text-xs sm:text-sm shadow-lg transition-all duration-200 cursor-pointer"
               >
                 <span>Find our studio &gt;</span>
                 <Store className="w-4 h-4 ml-1" />

@@ -7,7 +7,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://statusbathkitchen.c
 export const metadata: Metadata = {
   title: "Design Ideas, Home Guides & Modular Living Blog",
   description:
-    "Explore master architectural guides, modular kitchen layouts, small bathroom makeover tips, wardrobe space planning, and premium interior materials for modern homes.",
+    "Explore master architectural guides, modular kitchen layouts, small bathroom makeover tips, wardrobe space planning, and premium surface materials for modern homes.",
   alternates: {
     canonical: "/blog",
   },

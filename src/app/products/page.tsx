@@ -349,7 +349,7 @@ function ProductsPageContent() {
                   <div key={product.id} className="group flex flex-col">
                     {/* Image Container with Soft Neutral Background (#f6f4f0) */}
                     <div className="relative aspect-4/3 bg-[#f6f4f0] overflow-hidden mb-3.5">
-                      <Link href={`/products/${product.id}`} className="block w-full h-full">
+                      <Link href={`/products/${product.id}`} className="relative block w-full h-full">
                         <Image
                           src={product.image}
                           alt={product.name}

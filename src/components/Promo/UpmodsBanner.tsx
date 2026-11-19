@@ -8,8 +8,8 @@ export default function UpmodsBanner() {
   const { openConsultation } = useCart();
 
   return (
-    <section id="your-way" className="py-8 sm:py-12 lg:py-14 bg-white scroll-mt-24">
-      <div className="max-w-[1280px] mx-auto px-5 sm:px-10 lg:px-20">
+    <section id="your-way" className="status-section py-8 sm:py-12 lg:py-14 bg-white scroll-mt-24">
+      <div className="status-container max-w-[1280px] mx-auto px-5 sm:px-10 lg:px-20">
         <div className="text-center mb-6 sm:mb-8">
           <h2 className="text-xl sm:text-2xl lg:text-[28px] font-medium text-[#332f2c] tracking-tight">
             Status Kitchens. Designed Your Way!

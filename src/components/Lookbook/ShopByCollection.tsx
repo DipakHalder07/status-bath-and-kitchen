@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import { LayoutGrid, ShoppingBag, ChevronLeft, ChevronRight, X } from "lucide-react";
-import { collectionSets } from "@/data/interioData";
+import { collectionSets } from "@/data/statusData";
 import { Hotspot, CollectionSet } from "@/types";
 import { useCart } from "@/context/CartContext";
 
@@ -109,8 +109,8 @@ export default function ShopByCollection() {
   };
 
   return (
-    <section id="shop-by-collection" className="py-14 sm:py-20 bg-white scroll-mt-28">
-      <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
+    <section id="shop-by-collection" className="status-section py-14 sm:py-20 bg-white scroll-mt-28">
+      <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Title Header with Arrows */}
         <div className="flex items-end justify-between mb-6 sm:mb-8">
           <div>

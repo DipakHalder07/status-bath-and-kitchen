@@ -315,7 +315,7 @@ export default function AboutPage() {
                   A team dedicated to design innovation
                 </h3>
                 <p className="text-[14px] text-[#76716d] leading-relaxed">
-                  Our in-house studio of architects and interior space planners continuously tests new composite materials, zero-fingerprint coatings, and motorized pantry lifts.
+                  Our in-house studio of architects and residential space planners continuously tests new composite materials, zero-fingerprint coatings, and motorized pantry lifts.
                 </p>
               </div>
 

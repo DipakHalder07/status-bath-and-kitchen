@@ -23,7 +23,7 @@ import {
   Wrench,
 } from "lucide-react";
 import { useCart } from "@/context/CartContext";
-import { siteBrand, megaMenuItems } from "@/data/interioData";
+import { siteBrand, megaMenuItems } from "@/data/statusData";
 
 interface NavbarProps {
   onMobileMenuToggle: () => void;
@@ -117,7 +117,7 @@ export default function Navbar({
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`status-navbar fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isHeaderSolid
           ? "bg-white text-gray-900 shadow-md border-b border-gray-100"
           : "bg-gradient-to-b from-black/70 via-black/30 to-transparent text-white"
@@ -131,7 +131,7 @@ export default function Navbar({
             : "border-white/10 text-white/90"
         }`}
       >
-        <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 h-8 sm:h-9 flex items-center justify-between">
+        <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 h-8 sm:h-9 flex items-center justify-between">
           {/* Left: For Homes / For Businesses */}
           <div className="flex items-center space-x-2">
             <button

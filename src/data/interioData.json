@@ -39,49 +39,91 @@
       "name": "Modular Kitchens",
       "image": "/images/site/cat-kitchen-island.jpg",
       "count": "5 layouts",
-      "featured": ["L-Shaped Kitchens", "U-Shaped Kitchens", "Island Kitchens", "Parallel Kitchens", "Straight Kitchens"]
+      "featured": [
+        "L-Shaped Kitchens",
+        "U-Shaped Kitchens",
+        "Island Kitchens",
+        "Parallel Kitchens",
+        "Straight Kitchens"
+      ]
     },
     {
       "id": "bathrooms",
       "name": "Bathrooms",
       "image": "/images/site/cat-bath-vanity.jpg",
       "count": "6 solutions",
-      "featured": ["Vanity Units", "Shower Enclosures", "Bathtubs", "Taps & Showers", "Sanitaryware", "Bathroom Storage"]
+      "featured": [
+        "Vanity Units",
+        "Shower Enclosures",
+        "Bathtubs",
+        "Taps & Showers",
+        "Sanitaryware",
+        "Bathroom Storage"
+      ]
     },
     {
       "id": "wardrobes",
       "name": "Wardrobes",
       "image": "/images/site/cat-wardrobe-walkin.jpg",
       "count": "4 types",
-      "featured": ["Fitted Wardrobes", "Hinged Wardrobes", "Walk-in Wardrobes", "Wardrobe Interiors"]
+      "featured": [
+        "Fitted Wardrobes",
+        "Hinged Wardrobes",
+        "Walk-in Wardrobes",
+        "Wardrobe Organizers"
+      ]
     },
     {
       "id": "doors",
       "name": "Doors",
       "image": "/images/site/cat-door-entrance.jpg",
       "count": "4 types",
-      "featured": ["Entrance Doors", "Interior Doors", "Sliding Glass Doors", "Smart Locks & Hardware"]
+      "featured": [
+        "Entrance Doors",
+        "Internal Room Doors",
+        "Sliding Glass Doors",
+        "Smart Locks & Hardware"
+      ]
     },
     {
       "id": "windows",
       "name": "Windows",
       "image": "/images/site/cat-window-casement.jpg",
       "count": "4 types",
-      "featured": ["Sliding Windows", "Casement Windows", "Bay & Picture Windows", "Arched Windows"]
+      "featured": [
+        "Sliding Windows",
+        "Casement Windows",
+        "Bay & Picture Windows",
+        "Arched Windows"
+      ]
     },
     {
       "id": "appliances",
       "name": "Appliances",
       "image": "/images/site/cat-app-chimney.jpg",
       "count": "7 types",
-      "featured": ["Chimneys", "Hobs & Cooking Ranges", "Built-in Ovens", "Microwaves", "Dishwashers", "Refrigerators", "Washing Machines"]
+      "featured": [
+        "Chimneys",
+        "Hobs & Cooking Ranges",
+        "Built-in Ovens",
+        "Microwaves",
+        "Dishwashers",
+        "Refrigerators",
+        "Washing Machines"
+      ]
     },
     {
       "id": "accessories",
       "name": "Kitchen Accessories",
       "image": "/images/site/cat-acc-sink.jpg",
       "count": "5 types",
-      "featured": ["Sinks", "Faucets", "Tall Pantry Units", "Wall Rail Systems", "Spice & Bottle Organisers"]
+      "featured": [
+        "Sinks",
+        "Faucets",
+        "Tall Pantry Units",
+        "Wall Rail Systems",
+        "Spice & Bottle Organisers"
+      ]
     }
   ],
   "curatedTabs": {
@@ -388,10 +430,42 @@
       "subtitle": "Gloss grey shutters, a quartz waterfall island and built-in appliances",
       "roomImage": "/images/site/look-kitchen.jpg",
       "hotspots": [
-        { "id": "mk-chimney", "name": "Wall-mounted chimney", "price": 0, "mrp": 0, "x": 27, "y": 58, "image": "/images/site/hs-k-chimney.jpg" },
-        { "id": "mk-oven", "name": "Built-in oven", "price": 0, "mrp": 0, "x": 72, "y": 59, "image": "/images/site/hs-k-oven.jpg" },
-        { "id": "mk-island", "name": "Quartz waterfall island", "price": 0, "mrp": 0, "x": 78, "y": 80, "image": "/images/site/hs-k-island.jpg" },
-        { "id": "mk-tall", "name": "Tall refrigerator unit", "price": 0, "mrp": 0, "x": 55, "y": 33, "image": "/images/site/hs-k-tall.jpg" }
+        {
+          "id": "mk-chimney",
+          "name": "Wall-mounted chimney",
+          "price": 0,
+          "mrp": 0,
+          "x": 27,
+          "y": 58,
+          "image": "/images/site/hs-k-chimney.jpg"
+        },
+        {
+          "id": "mk-oven",
+          "name": "Built-in oven",
+          "price": 0,
+          "mrp": 0,
+          "x": 72,
+          "y": 59,
+          "image": "/images/site/hs-k-oven.jpg"
+        },
+        {
+          "id": "mk-island",
+          "name": "Quartz waterfall island",
+          "price": 0,
+          "mrp": 0,
+          "x": 78,
+          "y": 80,
+          "image": "/images/site/hs-k-island.jpg"
+        },
+        {
+          "id": "mk-tall",
+          "name": "Tall refrigerator unit",
+          "price": 0,
+          "mrp": 0,
+          "x": 55,
+          "y": 33,
+          "image": "/images/site/hs-k-tall.jpg"
+        }
       ]
     },
     {
@@ -400,10 +474,42 @@
       "subtitle": "A double vanity with brass fittings, round mirrors and a bright window",
       "roomImage": "/images/site/look-bath.jpg",
       "hotspots": [
-        { "id": "mb-mirror", "name": "Round brass-frame mirror", "price": 0, "mrp": 0, "x": 38, "y": 26, "image": "/images/site/hs-b-mirror.jpg" },
-        { "id": "mb-mixer", "name": "Brass basin mixer", "price": 0, "mrp": 0, "x": 68, "y": 28, "image": "/images/site/hs-b-mixer.jpg" },
-        { "id": "mb-vanity", "name": "Shaker-style vanity unit", "price": 0, "mrp": 0, "x": 85, "y": 55, "image": "/images/site/hs-b-vanity.jpg" },
-        { "id": "mb-window", "name": "Bathroom window", "price": 0, "mrp": 0, "x": 38, "y": 74, "image": "/images/site/hs-b-window.jpg" }
+        {
+          "id": "mb-mirror",
+          "name": "Round brass-frame mirror",
+          "price": 0,
+          "mrp": 0,
+          "x": 38,
+          "y": 26,
+          "image": "/images/site/hs-b-mirror.jpg"
+        },
+        {
+          "id": "mb-mixer",
+          "name": "Brass basin mixer",
+          "price": 0,
+          "mrp": 0,
+          "x": 68,
+          "y": 28,
+          "image": "/images/site/hs-b-mixer.jpg"
+        },
+        {
+          "id": "mb-vanity",
+          "name": "Shaker-style vanity unit",
+          "price": 0,
+          "mrp": 0,
+          "x": 85,
+          "y": 55,
+          "image": "/images/site/hs-b-vanity.jpg"
+        },
+        {
+          "id": "mb-window",
+          "name": "Bathroom window",
+          "price": 0,
+          "mrp": 0,
+          "x": 38,
+          "y": 74,
+          "image": "/images/site/hs-b-window.jpg"
+        }
       ]
     },
     {
@@ -412,9 +518,33 @@
       "subtitle": "Slim-frame sliding doors and picture windows that open onto the deck",
       "roomImage": "/images/site/look-living.jpg",
       "hotspots": [
-        { "id": "gl-sliding", "name": "Slim-frame sliding doors", "price": 0, "mrp": 0, "x": 40, "y": 76, "image": "/images/site/hs-l-sliding.jpg" },
-        { "id": "gl-window", "name": "Fixed picture window", "price": 0, "mrp": 0, "x": 30, "y": 55, "image": "/images/site/hs-l-window.jpg" },
-        { "id": "gl-bench", "name": "Built-in bench storage", "price": 0, "mrp": 0, "x": 62, "y": 29, "image": "/images/site/hs-l-bench.jpg" }
+        {
+          "id": "gl-sliding",
+          "name": "Slim-frame sliding doors",
+          "price": 0,
+          "mrp": 0,
+          "x": 40,
+          "y": 76,
+          "image": "/images/site/hs-l-sliding.jpg"
+        },
+        {
+          "id": "gl-window",
+          "name": "Fixed picture window",
+          "price": 0,
+          "mrp": 0,
+          "x": 30,
+          "y": 55,
+          "image": "/images/site/hs-l-window.jpg"
+        },
+        {
+          "id": "gl-bench",
+          "name": "Built-in bench storage",
+          "price": 0,
+          "mrp": 0,
+          "x": 62,
+          "y": 29,
+          "image": "/images/site/hs-l-bench.jpg"
+        }
       ]
     }
   ],
@@ -498,20 +628,47 @@
         {
           "name": "Layouts",
           "items": [
-            { "name": "L-Shaped Kitchens", "image": "/images/site/cat-kitchen-l-shaped.jpg" },
-            { "name": "U-Shaped Kitchens", "image": "/images/site/cat-kitchen-u-shaped.jpg" },
-            { "name": "Island Kitchens", "image": "/images/site/cat-kitchen-island.jpg" },
-            { "name": "Parallel Kitchens", "image": "/images/site/cat-kitchen-parallel.jpg" },
-            { "name": "Straight Kitchens", "image": "/images/site/cat-kitchen-straight.jpg" }
+            {
+              "name": "L-Shaped Kitchens",
+              "image": "/images/site/cat-kitchen-l-shaped.jpg"
+            },
+            {
+              "name": "U-Shaped Kitchens",
+              "image": "/images/site/cat-kitchen-u-shaped.jpg"
+            },
+            {
+              "name": "Island Kitchens",
+              "image": "/images/site/cat-kitchen-island.jpg"
+            },
+            {
+              "name": "Parallel Kitchens",
+              "image": "/images/site/cat-kitchen-parallel.jpg"
+            },
+            {
+              "name": "Straight Kitchens",
+              "image": "/images/site/cat-kitchen-straight.jpg"
+            }
           ]
         },
         {
           "name": "Styles",
           "items": [
-            { "name": "Handleless Kitchens", "image": "/images/site/cur-k-handleless.jpg" },
-            { "name": "Classic Shaker Kitchens", "image": "/images/site/cur-k-shaker.jpg" },
-            { "name": "Two-Tone Kitchens", "image": "/images/site/cur-k-sage.jpg" },
-            { "name": "Dark & Wood Kitchens", "image": "/images/site/cur-k-dark.jpg" }
+            {
+              "name": "Handleless Kitchens",
+              "image": "/images/site/cur-k-handleless.jpg"
+            },
+            {
+              "name": "Classic Shaker Kitchens",
+              "image": "/images/site/cur-k-shaker.jpg"
+            },
+            {
+              "name": "Two-Tone Kitchens",
+              "image": "/images/site/cur-k-sage.jpg"
+            },
+            {
+              "name": "Dark & Wood Kitchens",
+              "image": "/images/site/cur-k-dark.jpg"
+            }
           ]
         }
       ]
@@ -523,12 +680,30 @@
         {
           "name": "Bathroom Solutions",
           "items": [
-            { "name": "Vanity Units", "image": "/images/site/cat-bath-vanity.jpg" },
-            { "name": "Shower Enclosures", "image": "/images/site/cat-bath-shower.jpg" },
-            { "name": "Bathtubs", "image": "/images/site/cat-bath-tub.jpg" },
-            { "name": "Taps & Showers", "image": "/images/site/cat-bath-fittings.jpg" },
-            { "name": "Sanitaryware", "image": "/images/site/cat-bath-sanitaryware.jpg" },
-            { "name": "Bathroom Storage", "image": "/images/site/cat-bath-storage.jpg" }
+            {
+              "name": "Vanity Units",
+              "image": "/images/site/cat-bath-vanity.jpg"
+            },
+            {
+              "name": "Shower Enclosures",
+              "image": "/images/site/cat-bath-shower.jpg"
+            },
+            {
+              "name": "Bathtubs",
+              "image": "/images/site/cat-bath-tub.jpg"
+            },
+            {
+              "name": "Taps & Showers",
+              "image": "/images/site/cat-bath-fittings.jpg"
+            },
+            {
+              "name": "Sanitaryware",
+              "image": "/images/site/cat-bath-sanitaryware.jpg"
+            },
+            {
+              "name": "Bathroom Storage",
+              "image": "/images/site/cat-bath-storage.jpg"
+            }
           ]
         }
       ]
@@ -540,10 +715,22 @@
         {
           "name": "Wardrobes",
           "items": [
-            { "name": "Fitted Wardrobes", "image": "/images/site/cat-wardrobe-fitted.jpg" },
-            { "name": "Hinged Wardrobes", "image": "/images/site/cat-wardrobe-hinged.jpg" },
-            { "name": "Walk-in Wardrobes", "image": "/images/site/cat-wardrobe-walkin.jpg" },
-            { "name": "Wardrobe Interiors", "image": "/images/site/cat-wardrobe-interiors.jpg" }
+            {
+              "name": "Fitted Wardrobes",
+              "image": "/images/site/cat-wardrobe-fitted.jpg"
+            },
+            {
+              "name": "Hinged Wardrobes",
+              "image": "/images/site/cat-wardrobe-hinged.jpg"
+            },
+            {
+              "name": "Walk-in Wardrobes",
+              "image": "/images/site/cat-wardrobe-walkin.jpg"
+            },
+            {
+              "name": "Wardrobe Organizers",
+              "image": "/images/site/cat-wardrobe-interiors.jpg"
+            }
           ]
         }
       ]
@@ -555,10 +742,22 @@
         {
           "name": "Doors",
           "items": [
-            { "name": "Entrance Doors", "image": "/images/site/cat-door-entrance.jpg" },
-            { "name": "Interior Doors", "image": "/images/site/cat-door-interior.jpg" },
-            { "name": "Sliding Glass Doors", "image": "/images/site/cat-door-sliding.jpg" },
-            { "name": "Smart Locks & Hardware", "image": "/images/site/cat-door-smart-lock.jpg" }
+            {
+              "name": "Entrance Doors",
+              "image": "/images/site/cat-door-entrance.jpg"
+            },
+            {
+              "name": "Internal Room Doors",
+              "image": "/images/site/cat-door-interior.jpg"
+            },
+            {
+              "name": "Sliding Glass Doors",
+              "image": "/images/site/cat-door-sliding.jpg"
+            },
+            {
+              "name": "Smart Locks & Hardware",
+              "image": "/images/site/cat-door-smart-lock.jpg"
+            }
           ]
         }
       ]
@@ -570,10 +769,22 @@
         {
           "name": "Windows",
           "items": [
-            { "name": "Sliding Windows", "image": "/images/site/cat-window-sliding.jpg" },
-            { "name": "Casement Windows", "image": "/images/site/cat-window-casement.jpg" },
-            { "name": "Bay & Picture Windows", "image": "/images/site/cur-d-bay.jpg" },
-            { "name": "Arched Windows", "image": "/images/site/cur-d-arched.jpg" }
+            {
+              "name": "Sliding Windows",
+              "image": "/images/site/cat-window-sliding.jpg"
+            },
+            {
+              "name": "Casement Windows",
+              "image": "/images/site/cat-window-casement.jpg"
+            },
+            {
+              "name": "Bay & Picture Windows",
+              "image": "/images/site/cur-d-bay.jpg"
+            },
+            {
+              "name": "Arched Windows",
+              "image": "/images/site/cur-d-arched.jpg"
+            }
           ]
         }
       ]
@@ -585,13 +796,34 @@
         {
           "name": "Kitchen Appliances",
           "items": [
-            { "name": "Chimneys", "image": "/images/site/cat-app-chimney.jpg" },
-            { "name": "Hobs & Cooking Ranges", "image": "/images/site/cat-app-hob.jpg" },
-            { "name": "Built-in Ovens", "image": "/images/site/cat-app-oven.jpg" },
-            { "name": "Microwaves", "image": "/images/site/cat-app-microwave.jpg" },
-            { "name": "Dishwashers", "image": "/images/site/cat-app-dishwasher.jpg" },
-            { "name": "Refrigerators", "image": "/images/site/cat-app-fridge.jpg" },
-            { "name": "Washing Machines", "image": "/images/site/cat-app-washer.jpg" }
+            {
+              "name": "Chimneys",
+              "image": "/images/site/cat-app-chimney.jpg"
+            },
+            {
+              "name": "Hobs & Cooking Ranges",
+              "image": "/images/site/cat-app-hob.jpg"
+            },
+            {
+              "name": "Built-in Ovens",
+              "image": "/images/site/cat-app-oven.jpg"
+            },
+            {
+              "name": "Microwaves",
+              "image": "/images/site/cat-app-microwave.jpg"
+            },
+            {
+              "name": "Dishwashers",
+              "image": "/images/site/cat-app-dishwasher.jpg"
+            },
+            {
+              "name": "Refrigerators",
+              "image": "/images/site/cat-app-fridge.jpg"
+            },
+            {
+              "name": "Washing Machines",
+              "image": "/images/site/cat-app-washer.jpg"
+            }
           ]
         }
       ]
@@ -603,11 +835,26 @@
         {
           "name": "Accessories",
           "items": [
-            { "name": "Sinks", "image": "/images/site/cat-acc-sink.jpg" },
-            { "name": "Faucets", "image": "/images/site/cat-acc-faucet.jpg" },
-            { "name": "Tall Pantry Units", "image": "/images/site/cat-acc-pantry.jpg" },
-            { "name": "Wall Rail Systems", "image": "/images/site/cat-acc-rail.jpg" },
-            { "name": "Spice & Bottle Organisers", "image": "/images/site/cat-acc-spice.jpg" }
+            {
+              "name": "Sinks",
+              "image": "/images/site/cat-acc-sink.jpg"
+            },
+            {
+              "name": "Faucets",
+              "image": "/images/site/cat-acc-faucet.jpg"
+            },
+            {
+              "name": "Tall Pantry Units",
+              "image": "/images/site/cat-acc-pantry.jpg"
+            },
+            {
+              "name": "Wall Rail Systems",
+              "image": "/images/site/cat-acc-rail.jpg"
+            },
+            {
+              "name": "Spice & Bottle Organisers",
+              "image": "/images/site/cat-acc-spice.jpg"
+            }
           ]
         }
       ]
@@ -630,71 +877,227 @@
   "howCanWeHelpTabs": [
     {
       "tabName": "Modular Kitchens",
-      "aliases": ["Kitchens", "Handleless Kitchens", "Classic Shaker Kitchens", "Two-Tone Kitchens", "Dark & Wood Kitchens"],
+      "aliases": [
+        "Kitchens",
+        "Handleless Kitchens",
+        "Classic Shaker Kitchens",
+        "Two-Tone Kitchens",
+        "Dark & Wood Kitchens"
+      ],
       "items": [
-        { "name": "L-Shaped Kitchens", "image": "/images/site/cat-kitchen-l-shaped.jpg", "link": "#categories" },
-        { "name": "U-Shaped Kitchens", "image": "/images/site/cat-kitchen-u-shaped.jpg", "link": "#categories" },
-        { "name": "Island Kitchens", "image": "/images/site/cat-kitchen-island.jpg", "link": "#categories" },
-        { "name": "Parallel Kitchens", "image": "/images/site/cat-kitchen-parallel.jpg", "link": "#categories" },
-        { "name": "Straight Kitchens", "image": "/images/site/cat-kitchen-straight.jpg", "link": "#categories" }
+        {
+          "name": "L-Shaped Kitchens",
+          "image": "/images/site/cat-kitchen-l-shaped.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "U-Shaped Kitchens",
+          "image": "/images/site/cat-kitchen-u-shaped.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Island Kitchens",
+          "image": "/images/site/cat-kitchen-island.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Parallel Kitchens",
+          "image": "/images/site/cat-kitchen-parallel.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Straight Kitchens",
+          "image": "/images/site/cat-kitchen-straight.jpg",
+          "link": "#categories"
+        }
       ]
     },
     {
       "tabName": "Bathrooms",
-      "aliases": ["Bath", "Bathroom"],
+      "aliases": [
+        "Bath",
+        "Bathroom"
+      ],
       "items": [
-        { "name": "Vanity Units", "image": "/images/site/cat-bath-vanity.jpg", "link": "#categories" },
-        { "name": "Shower Enclosures", "image": "/images/site/cat-bath-shower.jpg", "link": "#categories" },
-        { "name": "Bathtubs", "image": "/images/site/cat-bath-tub.jpg", "link": "#categories" },
-        { "name": "Taps & Showers", "image": "/images/site/cat-bath-fittings.jpg", "link": "#categories" },
-        { "name": "Sanitaryware", "image": "/images/site/cat-bath-sanitaryware.jpg", "link": "#categories" },
-        { "name": "Bathroom Storage", "image": "/images/site/cat-bath-storage.jpg", "link": "#categories" }
+        {
+          "name": "Vanity Units",
+          "image": "/images/site/cat-bath-vanity.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Shower Enclosures",
+          "image": "/images/site/cat-bath-shower.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Bathtubs",
+          "image": "/images/site/cat-bath-tub.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Taps & Showers",
+          "image": "/images/site/cat-bath-fittings.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Sanitaryware",
+          "image": "/images/site/cat-bath-sanitaryware.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Bathroom Storage",
+          "image": "/images/site/cat-bath-storage.jpg",
+          "link": "#categories"
+        }
       ]
     },
     {
       "tabName": "Wardrobes",
-      "aliases": ["Wardrobe"],
+      "aliases": [
+        "Wardrobe"
+      ],
       "items": [
-        { "name": "Fitted Wardrobes", "image": "/images/site/cat-wardrobe-fitted.jpg", "link": "#categories" },
-        { "name": "Hinged Wardrobes", "image": "/images/site/cat-wardrobe-hinged.jpg", "link": "#categories" },
-        { "name": "Walk-in Wardrobes", "image": "/images/site/cat-wardrobe-walkin.jpg", "link": "#categories" },
-        { "name": "Wardrobe Interiors", "image": "/images/site/cat-wardrobe-interiors.jpg", "link": "#categories" }
+        {
+          "name": "Fitted Wardrobes",
+          "image": "/images/site/cat-wardrobe-fitted.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Hinged Wardrobes",
+          "image": "/images/site/cat-wardrobe-hinged.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Walk-in Wardrobes",
+          "image": "/images/site/cat-wardrobe-walkin.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Wardrobe Organizers",
+          "image": "/images/site/cat-wardrobe-interiors.jpg",
+          "link": "#categories"
+        }
       ]
     },
     {
       "tabName": "Doors & Windows",
-      "aliases": ["Doors", "Windows", "Door", "Window", "Bay & Picture Windows", "Arched Windows"],
+      "aliases": [
+        "Doors",
+        "Windows",
+        "Door",
+        "Window",
+        "Bay & Picture Windows",
+        "Arched Windows"
+      ],
       "items": [
-        { "name": "Entrance Doors", "image": "/images/site/cat-door-entrance.jpg", "link": "#categories" },
-        { "name": "Interior Doors", "image": "/images/site/cat-door-interior.jpg", "link": "#categories" },
-        { "name": "Sliding Glass Doors", "image": "/images/site/cat-door-sliding.jpg", "link": "#categories" },
-        { "name": "Sliding Windows", "image": "/images/site/cat-window-sliding.jpg", "link": "#categories" },
-        { "name": "Casement Windows", "image": "/images/site/cat-window-casement.jpg", "link": "#categories" },
-        { "name": "Smart Locks & Hardware", "image": "/images/site/cat-door-smart-lock.jpg", "link": "#categories" }
+        {
+          "name": "Entrance Doors",
+          "image": "/images/site/cat-door-entrance.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Internal Room Doors",
+          "image": "/images/site/cat-door-interior.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Sliding Glass Doors",
+          "image": "/images/site/cat-door-sliding.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Sliding Windows",
+          "image": "/images/site/cat-window-sliding.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Casement Windows",
+          "image": "/images/site/cat-window-casement.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Smart Locks & Hardware",
+          "image": "/images/site/cat-door-smart-lock.jpg",
+          "link": "#categories"
+        }
       ]
     },
     {
       "tabName": "Appliances",
-      "aliases": ["Appliance", "Kitchen Appliances"],
+      "aliases": [
+        "Appliance",
+        "Kitchen Appliances"
+      ],
       "items": [
-        { "name": "Chimneys", "image": "/images/site/cat-app-chimney.jpg", "link": "#categories" },
-        { "name": "Hobs & Cooking Ranges", "image": "/images/site/cat-app-hob.jpg", "link": "#categories" },
-        { "name": "Built-in Ovens", "image": "/images/site/cat-app-oven.jpg", "link": "#categories" },
-        { "name": "Microwaves", "image": "/images/site/cat-app-microwave.jpg", "link": "#categories" },
-        { "name": "Dishwashers", "image": "/images/site/cat-app-dishwasher.jpg", "link": "#categories" },
-        { "name": "Refrigerators", "image": "/images/site/cat-app-fridge.jpg", "link": "#categories" },
-        { "name": "Washing Machines", "image": "/images/site/cat-app-washer.jpg", "link": "#categories" }
+        {
+          "name": "Chimneys",
+          "image": "/images/site/cat-app-chimney.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Hobs & Cooking Ranges",
+          "image": "/images/site/cat-app-hob.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Built-in Ovens",
+          "image": "/images/site/cat-app-oven.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Microwaves",
+          "image": "/images/site/cat-app-microwave.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Dishwashers",
+          "image": "/images/site/cat-app-dishwasher.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Refrigerators",
+          "image": "/images/site/cat-app-fridge.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Washing Machines",
+          "image": "/images/site/cat-app-washer.jpg",
+          "link": "#categories"
+        }
       ]
     },
     {
       "tabName": "Kitchen Accessories",
-      "aliases": ["Accessories", "Kitchen Accessory"],
+      "aliases": [
+        "Accessories",
+        "Kitchen Accessory"
+      ],
       "items": [
-        { "name": "Sinks", "image": "/images/site/cat-acc-sink.jpg", "link": "#categories" },
-        { "name": "Faucets", "image": "/images/site/cat-acc-faucet.jpg", "link": "#categories" },
-        { "name": "Tall Pantry Units", "image": "/images/site/cat-acc-pantry.jpg", "link": "#categories" },
-        { "name": "Wall Rail Systems", "image": "/images/site/cat-acc-rail.jpg", "link": "#categories" },
-        { "name": "Spice & Bottle Organisers", "image": "/images/site/cat-acc-spice.jpg", "link": "#categories" }
+        {
+          "name": "Sinks",
+          "image": "/images/site/cat-acc-sink.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Faucets",
+          "image": "/images/site/cat-acc-faucet.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Tall Pantry Units",
+          "image": "/images/site/cat-acc-pantry.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Wall Rail Systems",
+          "image": "/images/site/cat-acc-rail.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Spice & Bottle Organisers",
+          "image": "/images/site/cat-acc-spice.jpg",
+          "link": "#categories"
+        }
       ]
     }
   ],
@@ -707,13 +1110,34 @@
     "title": "Everything for your kitchen & bath",
     "subtitle": "Modular Kitchens • Wardrobes • Doors • Windows • Appliances • Kitchen Accessories & more",
     "items": [
-      { "id": "kitchens", "label": "Modular Kitchens" },
-      { "id": "bathrooms", "label": "Bathrooms" },
-      { "id": "wardrobes", "label": "Wardrobes" },
-      { "id": "doors", "label": "Doors" },
-      { "id": "windows", "label": "Windows" },
-      { "id": "appliances", "label": "Appliances" },
-      { "id": "accessories", "label": "Kitchen Accessories" }
+      {
+        "id": "kitchens",
+        "label": "Modular Kitchens"
+      },
+      {
+        "id": "bathrooms",
+        "label": "Bathrooms"
+      },
+      {
+        "id": "wardrobes",
+        "label": "Wardrobes"
+      },
+      {
+        "id": "doors",
+        "label": "Doors"
+      },
+      {
+        "id": "windows",
+        "label": "Windows"
+      },
+      {
+        "id": "appliances",
+        "label": "Appliances"
+      },
+      {
+        "id": "accessories",
+        "label": "Kitchen Accessories"
+      }
     ]
   },
   "liveFaqs": [
@@ -742,7 +1166,7 @@
       "answer": "Warranty depends on the product and the brand. The exact terms for every item are listed in your quotation and invoice."
     },
     {
-      "question": "Do you work with builders, architects and interior designers?",
+      "question": "Do you work with builders, architects and home space planners?",
       "answer": "Yes. We take on project orders for kitchens, wardrobes, doors and windows. Get in touch to discuss your drawings and timelines."
     }
   ]

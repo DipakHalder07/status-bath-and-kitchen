@@ -15,6 +15,7 @@ import {
   ExternalLink,
   MapPin,
   Clock,
+  MessageSquare,
 } from "lucide-react";
 import Navbar from "@/components/Header/Navbar";
 import MobileDrawer from "@/components/Header/MobileDrawer";
@@ -23,7 +24,7 @@ import CartDrawer from "@/components/Cart/CartDrawer";
 import ConsultationModal from "@/components/Modals/ConsultationModal";
 import Toast from "@/components/UI/Toast";
 import { useCart } from "@/context/CartContext";
-import { siteBrand } from "@/data/interioData";
+import { siteBrand } from "@/data/statusData";
 
 const categoryChannels = [
   {
@@ -71,7 +72,7 @@ const inquiryTypes = [
 const contactFaqs = [
   {
     q: "Can I customize the color of the modular kitchen cabinets?",
-    a: "Yes, Status Bath and Kitchen offers an extensive range of customization options for modular kitchen cabinet colors, textures, finishes (anti-fingerprint matte, high gloss acrylic, thermal laminate, and natural veneers), and interior shelf layouts.",
+    a: "Yes, Status Bath and Kitchen offers an extensive range of customization options for modular kitchen cabinet colors, textures, finishes (anti-fingerprint matte, high gloss acrylic, thermal laminate, and natural veneers), and internal cabinet shelf layouts.",
   },
   {
     q: "Are modular kitchens designed to optimize storage space?",
@@ -256,21 +257,34 @@ export default function ContactPage() {
                       Our team will reach out at <strong>{formData.mobile}</strong> or email{" "}
                       <strong>{formData.email}</strong> shortly.
                     </p>
-                    <button
-                      onClick={() => {
-                        setIsSubmitted(false);
-                        setFormData({
-                          name: "",
-                          mobile: "",
-                          email: "",
-                          city: "",
-                          query: "",
-                        });
-                      }}
-                      className="mt-4 px-6 py-2 bg-[#ff5d55] hover:bg-[#e5473f] text-white text-xs font-medium rounded-[20px_2px_2px_2px] transition-colors cursor-pointer"
-                    >
-                      Submit Another Query
-                    </button>
+                    <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3">
+                      <a
+                        href={`https://wa.me/919832095793?text=${encodeURIComponent(
+                          `*Contact Query - Status Bath & Kitchen*\n\n*Name:* ${formData.name || "Customer"}\n*Mobile:* ${formData.mobile}\n*Email:* ${formData.email}\n*City:* ${formData.city || "Siliguri"}\n*Inquiry Category:* ${inquiryTypes.find((i) => i.id === selectedInquiry)?.label}\n*Message:* ${formData.query}`
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-semibold rounded-[20px_2px_2px_2px] transition-colors shadow-xs"
+                      >
+                        <MessageSquare className="w-3.5 h-3.5" />
+                        <span>Send to WhatsApp (+91 98320 95793)</span>
+                      </a>
+                      <button
+                        onClick={() => {
+                          setIsSubmitted(false);
+                          setFormData({
+                            name: "",
+                            mobile: "",
+                            email: "",
+                            city: "",
+                            query: "",
+                          });
+                        }}
+                        className="px-6 py-2.5 bg-[#4a4541] hover:bg-[#332f2c] text-white text-xs font-medium rounded-[20px_2px_2px_2px] transition-colors cursor-pointer"
+                      >
+                        Submit Another Query
+                      </button>
+                    </div>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl">
@@ -351,7 +365,7 @@ export default function ContactPage() {
                         value={formData.city}
                         onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                         placeholder="e.g. Siliguri, Jalpaiguri, Kolkata..."
-                        className="w-full border-b border-[#dcd7d0] py-2 text-base sm:text-[15px] text-[#4a4541] focus:border-[#ff5d55] focus:outline-hidden bg-transparent"
+                        className="status-input w-full border-b border-[#dcd7d0] py-2 text-base sm:text-[15px] text-[#4a4541] focus:border-[#ff5d55] focus:outline-hidden bg-transparent"
                       />
                     </div>
 
@@ -365,7 +379,7 @@ export default function ContactPage() {
                         required
                         value={formData.query}
                         onChange={(e) => setFormData({ ...formData, query: e.target.value })}
-                        className="w-full border-b border-[#dcd7d0] py-2 text-base sm:text-[15px] text-[#4a4541] focus:border-[#ff5d55] focus:outline-hidden bg-transparent resize-none"
+                        className="status-textarea w-full border-b border-[#dcd7d0] py-2 text-base sm:text-[15px] text-[#4a4541] focus:border-[#ff5d55] focus:outline-hidden bg-transparent resize-none"
                       />
                     </div>
 
@@ -374,7 +388,7 @@ export default function ContactPage() {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="btn-brand-primary w-full sm:w-auto px-10 py-3.5 text-sm font-medium tracking-wide shadow-xs cursor-pointer flex items-center justify-center gap-2 disabled:opacity-50"
+                        className="status-btn-primary btn-brand-primary w-full sm:w-auto px-10 py-3.5 text-sm font-medium tracking-wide shadow-xs cursor-pointer flex items-center justify-center gap-2 disabled:opacity-50"
                       >
                         {isSubmitting ? "Submitting..." : "Submit Query"}
                       </button>
@@ -386,7 +400,7 @@ export default function ContactPage() {
 
             {/* RIGHT COLUMN: CONTACT US WITH ONE OF THE CHANNEL CARD */}
             <div className="lg:col-span-4">
-              <div className="bg-[#fbf7f4] border border-[#dcd7d0] p-6 sm:p-8 space-y-6">
+              <div className="status-card status-card-cream bg-[#fbf7f4] border border-[#dcd7d0] p-6 sm:p-8 space-y-6">
                 <h4 className="font-medium text-[#4a4541] text-[18px]">
                   Contact us with one of the channel
                 </h4>
@@ -442,7 +456,7 @@ export default function ContactPage() {
               </div>
 
               {/* Physical Showroom Studio Card */}
-              <div className="bg-[#fbf7f4] border border-[#dcd7d0] p-6 sm:p-8 space-y-4">
+              <div className="status-card status-card-cream bg-[#fbf7f4] border border-[#dcd7d0] p-6 sm:p-8 space-y-4">
                 <div className="flex items-center gap-2">
                   <MapPin className="w-5 h-5 text-[#ff5d55]" />
                   <h4 className="font-medium text-[#4a4541] text-[18px]">

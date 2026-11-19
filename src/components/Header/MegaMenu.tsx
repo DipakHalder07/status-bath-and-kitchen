@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { megaMenuItems } from "@/data/interioData";
+import { megaMenuItems } from "@/data/statusData";
 import { ChevronRight, Sparkles, Tag, ArrowRight } from "lucide-react";
 
 interface MegaMenuProps {
@@ -18,10 +18,10 @@ export default function MegaMenu({ onCategorySelect }: MegaMenuProps) {
 
   return (
     <div
-      className="hidden lg:block w-full bg-white border-b border-gray-200 relative z-30"
+      className="status-megamenu hidden lg:block w-full bg-white border-b border-gray-200 relative z-30"
       onMouseLeave={() => setActiveCategory(null)}
     >
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="status-container max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between">
           <ul className="flex items-center gap-1 xl:gap-3 text-sm font-medium text-gray-800">
             {megaMenuItems.map((cat) => {

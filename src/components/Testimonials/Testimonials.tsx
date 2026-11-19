@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef } from "react";
-import { promisesList } from "@/data/interioData";
+import { promisesList } from "@/data/statusData";
 
 export default function Testimonials() {
   const [activeIdx, setActiveIdx] = useState(0);
@@ -20,8 +20,8 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="why-status" className="py-16 sm:py-24 bg-[#faf8f5] overflow-hidden">
-      <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
+    <section id="why-status" className="status-section py-16 sm:py-24 bg-[#faf8f5] overflow-hidden">
+      <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         <div className="mb-4">
           <h2 className="text-xl sm:text-2xl lg:text-[28px] font-medium text-[#332f2c] tracking-tight">
             Why homeowners choose Status

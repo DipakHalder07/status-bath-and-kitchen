@@ -12,7 +12,7 @@ import UpmodsBanner from "@/components/Promo/UpmodsBanner";
 import CuratedSection from "@/components/Products/CuratedSection";
 import ShopByCollection from "@/components/Lookbook/ShopByCollection";
 import PromoBanners from "@/components/Promo/PromoBanners";
-import StatusStats from "@/components/Stats/InterioStats";
+import StatusStats from "@/components/Stats/StatusStats";
 import StoreLocatorSection from "@/components/StoreLocator/StoreLocatorSection";
 import CareServices from "@/components/Services/CareServices";
 import Testimonials from "@/components/Testimonials/Testimonials";
@@ -23,7 +23,7 @@ import Footer from "@/components/Footer/Footer";
 import CartDrawer from "@/components/Cart/CartDrawer";
 import ConsultationModal from "@/components/Modals/ConsultationModal";
 import Toast from "@/components/UI/Toast";
-import { justArrivedProducts } from "@/data/interioData";
+import { justArrivedProducts } from "@/data/statusData";
 import { useCart } from "@/context/CartContext";
 
 export default function Home() {

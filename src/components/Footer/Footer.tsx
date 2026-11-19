@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import { siteBrand } from "@/data/interioData";
+import { siteBrand } from "@/data/statusData";
 import { useCart } from "@/context/CartContext";
 
 const socialIcons: { key: keyof typeof siteBrand.social; label: string; path: string }[] = [
@@ -48,8 +48,8 @@ export default function Footer({ showBlogCredit }: FooterProps = {}) {
   const socialLinks = socialIcons.filter((s) => siteBrand.social[s.key]);
 
   return (
-    <footer id="contact" className="w-full bg-[#3d3734] text-stone-300 pt-16 pb-12 border-t border-stone-700/50">
-      <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 space-y-12">
+    <footer id="contact" className="status-footer w-full bg-[#3d3734] text-stone-300 pt-16 pb-12 border-t border-stone-700/50">
+      <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 space-y-12">
         {/* Top Header Row: Logo & Tagline */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-8">
           <div className="relative w-48 sm:w-56 h-12 sm:h-14">
@@ -241,11 +241,11 @@ export default function Footer({ showBlogCredit }: FooterProps = {}) {
             </p>
             <p>
               <span className="font-medium text-white">Wardrobes:</span>{" "}
-              Fitted | Hinged | Walk-in | Wardrobe Interiors
+              Fitted | Hinged | Walk-in | Wardrobe Organizers &amp; Internal Storage
             </p>
             <p>
               <span className="font-medium text-white">Doors &amp; windows:</span>{" "}
-              Entrance Doors | Interior Doors | Sliding Glass Doors | Sliding Windows | Casement Windows | Smart Locks &amp; Hardware
+              Entrance Doors | Internal Room Doors | Sliding Glass Doors | Sliding Windows | Casement Windows | Smart Locks &amp; Hardware
             </p>
             <p>
               <span className="font-medium text-white">Appliances &amp; accessories:</span>{" "}
