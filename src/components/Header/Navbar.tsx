@@ -173,7 +173,7 @@ export default function Navbar({
               <span>Book a consultation</span>
             </button>
             <Link
-              href="/about"
+              href="/contact"
               className={`flex items-center space-x-1.5 transition-colors ${
                 isHeaderSolid ? "text-gray-600 hover:text-[#ff5d55]" : "text-white/85 hover:text-white"
               }`}

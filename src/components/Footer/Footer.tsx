@@ -87,7 +87,14 @@ export default function Footer({ showBlogCredit }: FooterProps = {}) {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-stone-400" />
-                <span>{siteBrand.address}</span>
+                <a
+                  href={siteBrand.googleMapsUrl || "https://share.google/V1jbNPSPYTSSO7Gpq"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors leading-relaxed"
+                >
+                  {siteBrand.address}
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-4 h-4 mt-0.5 shrink-0 text-stone-400" />

@@ -158,11 +158,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                   </div>
                 )}
 
-                {/* In Stock Pill */}
-                <div className="absolute top-4 right-4 bg-white/95 text-emerald-800 text-[11px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-xs">
-                  <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
-                  <span>In Stock</span>
-                </div>
+
               </div>
 
               {/* Thumbnails Row */}

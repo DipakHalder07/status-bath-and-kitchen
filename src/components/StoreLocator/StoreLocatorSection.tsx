@@ -7,9 +7,11 @@ import { siteBrand } from "@/data/interioData";
 export default function StoreLocatorSection() {
   const [showModal, setShowModal] = useState(false);
 
-  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    `${siteBrand.name}, ${siteBrand.address}`
-  )}`;
+  const mapsUrl =
+    siteBrand.googleMapsUrl ||
+    `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+      `${siteBrand.name}, ${siteBrand.address}`
+    )}`;
 
   return (
     <section id="store-locator" className="w-full bg-white py-6 sm:py-10">

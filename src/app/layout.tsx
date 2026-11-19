@@ -118,12 +118,17 @@ const jsonLdOrg = {
   "description": "Status Bath & Kitchen is a premier bespoke showroom studio for modular kitchens, luxury bathrooms, custom wardrobes, architectural doors, and designer windows.",
   "telephone": "+91 98320 95793",
   "priceRange": "$$",
+  "hasMap": "https://share.google/V1jbNPSPYTSSO7Gpq",
+  "sameAs": [
+    "https://share.google/V1jbNPSPYTSSO7Gpq"
+  ],
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Showroom Studio",
+    "streetAddress": "3rd Floor, Satyam Plaza, Sevoke Road (2.5 Mile), near Bhaktinagar Police Station, beside Sagar Family Restaurant, Ward 42, Don Bosco Colony",
     "addressLocality": "Siliguri",
     "addressRegion": "West Bengal",
-    "addressCountry": "IN",
+    "postalCode": "734001",
+    "addressCountry": "IN"
   },
   "geo": {
     "@type": "GeoCoordinates",

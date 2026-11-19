@@ -13,6 +13,8 @@ import {
   Wrench,
   CheckCircle2,
   ExternalLink,
+  MapPin,
+  Clock,
 } from "lucide-react";
 import Navbar from "@/components/Header/Navbar";
 import MobileDrawer from "@/components/Header/MobileDrawer";
@@ -437,6 +439,35 @@ export default function ContactPage() {
                     </a>
                   </div>
                 </div>
+              </div>
+
+              {/* Physical Showroom Studio Card */}
+              <div className="bg-[#fbf7f4] border border-[#dcd7d0] p-6 sm:p-8 space-y-4">
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-5 h-5 text-[#ff5d55]" />
+                  <h4 className="font-medium text-[#4a4541] text-[18px]">
+                    Experience Studio (Siliguri)
+                  </h4>
+                </div>
+
+                <p className="text-xs text-[#76716d] leading-relaxed">
+                  {siteBrand.address}
+                </p>
+
+                <div className="text-xs text-[#76716d] flex items-center gap-2 pt-1 border-t border-[#dcd7d0]">
+                  <Clock className="w-4 h-4 text-[#ff5d55] shrink-0" />
+                  <span>{siteBrand.hours}</span>
+                </div>
+
+                <a
+                  href={siteBrand.googleMapsUrl || "https://share.google/V1jbNPSPYTSSO7Gpq"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-[20px_2px_2px_2px] bg-[#4a4541] hover:bg-[#332f2c] text-white text-xs font-semibold transition-colors shadow-xs"
+                >
+                  <span>Google My Business Profile &amp; Directions</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
               </div>
             </div>
           </div>
