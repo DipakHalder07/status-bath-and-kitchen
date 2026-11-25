@@ -11,7 +11,7 @@ interface CategoryGridProps {
   selection?: { name: string; key: number } | null;
 }
 
-const displayTabs = howCanWeHelpTabs.slice(0, 6);
+const displayTabs = howCanWeHelpTabs;
 
 function findTabIndex(name: string) {
   const query = name.trim().toLowerCase();
@@ -71,26 +71,26 @@ export default function CategoryGrid({ selection }: CategoryGridProps) {
           </h2>
         </div>
 
-        {/* Segmented Horizontal 6 Tabs (Full-width on desktop, smoothly scrollable on mobile) */}
+        {/* Segmented Horizontal 7 Tabs (Full-width on desktop, smoothly scrollable on mobile/tablet) */}
         <div className="mb-8 w-full overflow-x-auto no-scrollbar -mx-5 px-5 sm:mx-0 sm:px-0">
-          <div className="inline-flex sm:grid sm:grid-cols-3 lg:grid-cols-6 border border-[#dcd7d0] divide-x divide-[#dcd7d0] bg-white min-w-max sm:min-w-0 w-auto sm:w-full">
-            {displayTabs.map((tab: { tabName: string }, idx: number) => {
+          <div className="inline-flex lg:grid lg:grid-cols-7 border border-[#dcd7d0] divide-x divide-[#dcd7d0] bg-white min-w-max lg:min-w-0 w-auto lg:w-full">
+            {displayTabs.map((tab, idx) => {
               const isActive = activeTabIdx === idx;
 
               return (
                 <button
-                  key={idx}
+                  key={tab.tabName}
                   onClick={() => {
                     setActiveTabIdx(idx);
                     setScrollProgress(20);
                   }}
-                  className={`relative py-3 px-5 sm:px-2 text-center text-xs sm:text-sm font-medium transition-colors cursor-pointer whitespace-nowrap sm:whitespace-normal ${
+                  className={`relative flex items-center justify-center py-3 px-4 lg:px-2 text-center text-xs sm:text-[13px] font-medium transition-colors cursor-pointer whitespace-nowrap lg:whitespace-normal leading-snug ${
                     isActive
                       ? "bg-white text-[#332f2c]"
                       : "bg-[#f5f0ea] text-[#6b6560] hover:bg-[#ede5dc] hover:text-[#332f2c]"
                   }`}
                 >
-                  <span className="block truncate">{tab.tabName}</span>
+                  <span className="block">{tab.tabName}</span>
                   {/* Red bottom active underline indicator */}
                   {isActive && (
                     <div className="absolute bottom-0 left-3 right-3 sm:left-4 sm:right-4 h-[2px] bg-[#ff5d55]" />
@@ -108,9 +108,9 @@ export default function CategoryGrid({ selection }: CategoryGridProps) {
           className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth pb-4 -mx-5 px-5 sm:mx-0 sm:px-0"
         >
           {currentTab.items.map(
-            (item: { name: string; image: string; link: string }, i: number) => (
+            (item, i) => (
               <Link
-                key={i}
+                key={`${currentTab.tabName}-${i}`}
                 href={`/products?category=${encodeURIComponent(item.name)}`}
                 className="shrink-0 w-64 sm:w-72 group cursor-pointer block"
               >
@@ -130,6 +130,11 @@ export default function CategoryGrid({ selection }: CategoryGridProps) {
                     {item.name}
                   </h3>
                   <div className="w-6 h-0.5 bg-[#ff5d55] mt-1 group-hover:w-12 transition-all duration-300" />
+                  {item.subtitle && (
+                    <p className="text-xs text-[#76716d] mt-2 line-clamp-2 leading-relaxed">
+                      {item.subtitle}
+                    </p>
+                  )}
                   <p className="text-xs text-[#76716d] mt-2">Explore range &rarr;</p>
                 </div>
               </Link>

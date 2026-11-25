@@ -86,6 +86,7 @@ export interface CategoryTab {
   aliases?: string[];
   items: {
     name: string;
+    subtitle?: string;
     image: string;
     link: string;
   }[];

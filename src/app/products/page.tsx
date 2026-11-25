@@ -31,36 +31,97 @@ import { Product } from "@/types";
 const categoryTabs = [
   "All Products",
   "Modular Kitchens",
-  "Bathrooms",
+  "WAW Aluminium Windows",
+  "Ambiiance uPVC Windows",
   "Wardrobes",
-  "Doors & Windows",
+  "Glass Railings",
   "Appliances",
+  "Insect Blinds",
+  "Bathrooms",
+  "Doors & Windows",
   "Kitchen Accessories",
 ];
 
 const categoryDescriptions: Record<string, string> = {
   "All Products":
-    "Explore our complete collection of precision-engineered modular kitchens, luxury bathroom suites, custom wardrobes, architectural doors, windows, and smart kitchen appliances.",
+    "Explore our complete collection of precision-engineered modular kitchens, WAW aluminium windows, Ambiiance uPVC systems, custom wardrobes, glass railings, appliances, and Meshworkz insect blinds.",
   "Modular Kitchens":
     "Bring effortless organization and culinary passion into your home with our bespoke modular kitchens, custom-built with waterproof marine ply, Blum soft-close fittings, and scratch-resistant quartz worktops.",
-  "Bathrooms":
-    "Transform everyday bathing into a 5-star spa sanctuary. Discover wall-hung marble vanities, thermostatic rain showers, freestanding statement tubs, and rimless cyclone sanitaryware.",
+  "WAW Aluminium Windows":
+    "High-performance 6063-T6 WAW architectural aluminium windows and doors by Bhavya Window — spanning SL-25/SL-29/SL-55 sliding series, Thermal Break profiles, CW-40/CW-50 casements, slide & fold patios, louvers, DGU integrated blinds, and safety grills.",
+  "Ambiiance uPVC Windows":
+    "Lead-free, steel-reinforced multi-chamber uPVC windows and balcony doors engineered for tropical weather resistance, acoustic street-noise insulation, and zero-maintenance thermal efficiency.",
   "Wardrobes":
     "Designed around the clothes and accessories you treasure. Explore boutique walk-in closets, floor-to-ceiling tinted glass sliding wardrobes, and soft-close modular internal organisers.",
-  "Doors & Windows":
-    "Make an unforgettable grand entrance with architectural teak pivot doors, ultra-slim 20mm patio sliding glass systems, and high-performance acoustic thermal double-glazed windows.",
+  "Glass Railings":
+    "Frameless toughened and laminated safety glass railing systems including marine-grade SS316 spigots, recessed aluminium U-channels, staircase balustrades, and balcony post-and-clamp assemblies.",
   "Appliances":
     "High-efficiency kitchen appliances engineered for modern cooking. Heavy-suction BLDC chimneys, triple-brass wok burner hobs, 3D hot air convection ovens, and energy-smart refrigerators.",
+  "Insect Blinds":
+    "Meshworkz pleated collapsible insect screens, pet-friendly Zipline retractable screens, whisper-quiet motorized screens, 100% black-out & diffused honeycomb blinds, and high-tensile MeshTec security doors.",
+  "Bathrooms":
+    "Transform everyday bathing into a 5-star spa sanctuary. Discover wall-hung marble vanities, thermostatic rain showers, freestanding statement tubs, and rimless cyclone sanitaryware.",
+  "Doors & Windows":
+    "Make an unforgettable grand entrance with architectural teak pivot doors, ultra-slim 20mm patio sliding glass systems, and high-performance acoustic thermal double-glazed windows.",
   "Kitchen Accessories":
     "Elevate workflow and hygiene with 80% natural granite quartz sinks, stainless steel high-neck pullout mixer taps, and heavy-duty 120kg multi-tier pantry pullouts.",
 };
 
+const categoryMatchAliases: Record<string, string[]> = {
+  "fitted wardrobes": ["sliding wardrobes", "wardrobes"],
+  "walk-in wardrobes": ["walk-in closets"],
+  "wardrobe organizers": ["wardrobes"],
+  "taps & showers": ["showers & fittings", "faucets & taps"],
+  "bathroom storage": ["bathrooms"],
+  "sliding glass doors": ["sliding doors"],
+  "sliding windows": ["upvc sliding windows", "sliding systems"],
+  "casement windows": ["casement systems", "upvc casement windows", "arched & bay"],
+  "bay & picture windows": ["bay & combination windows", "arched"],
+  "arched windows": ["arched"],
+  "smart locks & hardware": ["entrance doors", "doors"],
+  "hobs & cooking ranges": ["hobs & cooktops"],
+  "built-in ovens": ["built-in ovens"],
+  "microwaves": ["built-in ovens"],
+  "washing machines": ["dishwashers", "appliances"],
+  "faucets": ["faucets & taps"],
+  "tall pantry units": ["organizers"],
+  "wall rail systems": ["organizers"],
+  "spice & bottle organisers": ["organizers"],
+};
+
+function matchesSelectedCategory(product: Product, selected: string): boolean {
+  if (selected === "All Products") return true;
+  const query = selected.toLowerCase().trim();
+  const cat = product.category.toLowerCase();
+  const sub = (product.subCategory || "").toLowerCase();
+  const name = product.name.toLowerCase();
+
+  if (
+    cat.includes(query) ||
+    query.includes(cat) ||
+    sub.includes(query) ||
+    (sub.length > 0 && query.includes(sub)) ||
+    name.includes(query)
+  ) {
+    return true;
+  }
+
+  const aliases = categoryMatchAliases[query];
+  if (aliases) {
+    return aliases.some(
+      (alias) => cat.includes(alias) || sub.includes(alias) || name.includes(alias)
+    );
+  }
+  return false;
+}
+
 function ProductsPageContent() {
   const searchParams = useSearchParams();
-  const initialCategory = searchParams.get("category") || "All Products";
+  const urlCategory = searchParams.get("category") || "All Products";
   const initialQuery = searchParams.get("q") || "";
 
-  const [selectedCategory, setSelectedCategory] = useState<string>(initialCategory);
+  const [prevUrlCategory, setPrevUrlCategory] = useState<string>(urlCategory);
+  const [selectedCategory, setSelectedCategory] = useState<string>(urlCategory);
   const [searchQuery, setSearchQuery] = useState<string>(initialQuery);
   const [selectedSort, setSelectedSort] = useState<string>("featured");
   const [priceFilter, setPriceFilter] = useState<string>("all");
@@ -68,17 +129,19 @@ function ProductsPageContent() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [compareList, setCompareList] = useState<string[]>([]);
 
+  if (urlCategory !== prevUrlCategory) {
+    setPrevUrlCategory(urlCategory);
+    setSelectedCategory(urlCategory);
+  }
+
   const { addToCart, toggleWishlist, isWishlisted, showToast, openConsultation } = useCart();
 
   // Filter products
   const filteredProducts = useMemo(() => {
     return allProductsCatalog.filter((product) => {
       // Category filter
-      if (selectedCategory !== "All Products") {
-        const catMatch =
-          product.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
-          selectedCategory.toLowerCase().includes(product.category.toLowerCase());
-        if (!catMatch) return false;
+      if (!matchesSelectedCategory(product, selectedCategory)) {
+        return false;
       }
 
       // Search query
@@ -198,13 +261,14 @@ function ProductsPageContent() {
             </h1>
             <p className="mt-3 text-[14px] sm:text-[15px] text-[#76716d] leading-[24px] font-normal max-w-2xl mx-auto">
               {categoryDescriptions[selectedCategory] ||
+                (sortedProducts[0] && categoryDescriptions[sortedProducts[0].category]) ||
                 categoryDescriptions["All Products"]}
             </p>
           </div>
 
           {/* 3. QUICK CATEGORY PILLS BAR */}
-          <div className="flex items-center justify-start sm:justify-center overflow-x-auto pb-2 mb-8 no-scrollbar -mx-5 px-5 sm:mx-0 sm:px-0">
-            <div className="inline-flex border border-[#dcd7d0] bg-white divide-x divide-[#dcd7d0]">
+          <div className="flex items-center justify-start overflow-x-auto pb-2 mb-8 no-scrollbar -mx-5 px-5 sm:mx-0 sm:px-0">
+            <div className="inline-flex mx-auto border border-[#dcd7d0] bg-white divide-x divide-[#dcd7d0]">
               {categoryTabs.map((cat) => {
                 const isActive = selectedCategory === cat;
                 return (

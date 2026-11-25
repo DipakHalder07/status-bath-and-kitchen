@@ -913,40 +913,97 @@
       ]
     },
     {
-      "tabName": "Bathrooms",
+      "tabName": "WAW Aluminium Windows",
       "aliases": [
-        "Bath",
-        "Bathroom"
+        "Windows",
+        "Doors",
+        "Doors & Windows",
+        "WAW Windows",
+        "Aluminium Windows",
+        "Bay & Picture Windows",
+        "Arched Windows",
+        "Entrance Doors",
+        "Internal Room Doors",
+        "Sliding Glass Doors",
+        "Smart Locks & Hardware"
       ],
       "items": [
         {
-          "name": "Vanity Units",
-          "image": "/images/site/cat-bath-vanity.jpg",
+          "name": "Sliding Systems",
+          "subtitle": "SL-25, SL-29, SL-55 & Thermal Break slim profiles",
+          "image": "/images/site/cur-d-glass.jpg",
           "link": "#categories"
         },
         {
-          "name": "Shower Enclosures",
-          "image": "/images/site/cat-bath-shower.jpg",
+          "name": "Casement Systems",
+          "subtitle": "CW-40 & CW-50 outward-opening 6063-T6 aluminium",
+          "image": "/images/site/cat-waw-casement.jpg",
           "link": "#categories"
         },
         {
-          "name": "Bathtubs",
-          "image": "/images/site/cat-bath-tub.jpg",
+          "name": "Slide & Fold Systems",
+          "subtitle": "Wide-span bi-fold openings with compact stacking",
+          "image": "/images/site/cur-d-garden.jpg",
           "link": "#categories"
         },
         {
-          "name": "Taps & Showers",
-          "image": "/images/site/cat-bath-fittings.jpg",
+          "name": "Fix & Movable Louvers",
+          "subtitle": "Architectural sun-shading & airflow louver blades",
+          "image": "/images/site/cat-waw-louvers.jpg",
           "link": "#categories"
         },
         {
-          "name": "Sanitaryware",
-          "image": "/images/site/cat-bath-sanitaryware.jpg",
+          "name": "Integrated Venetian Blinds",
+          "subtitle": "Sealed inside DGU glass with magnetic or motorized lift",
+          "image": "/images/site/cat-waw-blinds.jpg",
           "link": "#categories"
         },
         {
-          "name": "Bathroom Storage",
-          "image": "/images/site/cat-bath-storage.jpg",
+          "name": "Aluminium Safety Grills",
+          "subtitle": "Fixed, removable & collapsible architectural safety grills",
+          "image": "/images/site/cat-waw-grill.jpg",
+          "link": "#categories"
+        }
+      ]
+    },
+    {
+      "tabName": "Ambiiance uPVC Windows",
+      "aliases": [
+        "uPVC Windows",
+        "Ambiiance",
+        "uPVC",
+        "Sliding Windows",
+        "Casement Windows"
+      ],
+      "items": [
+        {
+          "name": "uPVC Sliding Windows",
+          "subtitle": "Multi-chamber weather-tight sliding frames with steel reinforcement",
+          "image": "/images/site/cat-window-sliding.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "uPVC Casement Windows",
+          "subtitle": "Acoustic double-gasket side-hinged uPVC windows",
+          "image": "/images/site/cat-window-casement.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Tilt & Turn Windows",
+          "subtitle": "Dual-action inward tilt ventilation & full-swing cleaning",
+          "image": "/images/site/cat-upvc-tilt-turn.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Bay & Combination Windows",
+          "subtitle": "Custom panoramic multi-panel uPVC glazing setups",
+          "image": "/images/site/cat-upvc-bay.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "uPVC Balcony Doors",
+          "subtitle": "Low-maintenance thermal & sound-insulated patio doors",
+          "image": "/images/site/cat-upvc-door.jpg",
           "link": "#categories"
         }
       ]
@@ -980,44 +1037,35 @@
       ]
     },
     {
-      "tabName": "Doors & Windows",
+      "tabName": "Glass Railings",
       "aliases": [
-        "Doors",
-        "Windows",
-        "Door",
-        "Window",
-        "Bay & Picture Windows",
-        "Arched Windows"
+        "Railings",
+        "Balustrades",
+        "Glass Railing"
       ],
       "items": [
         {
-          "name": "Entrance Doors",
-          "image": "/images/site/cat-door-entrance.jpg",
+          "name": "Frameless Spigot Railings",
+          "subtitle": "SS316 marine-grade spigot balcony & terrace glass railings",
+          "image": "/images/site/cat-railing-spigot.jpg",
           "link": "#categories"
         },
         {
-          "name": "Internal Room Doors",
-          "image": "/images/site/cat-door-interior.jpg",
+          "name": "Aluminium U-Channel Railings",
+          "subtitle": "Heavy-duty recessed base-shoe toughened laminated balustrades",
+          "image": "/images/site/cat-railing-channel.jpg",
           "link": "#categories"
         },
         {
-          "name": "Sliding Glass Doors",
+          "name": "Staircase Glass Balustrades",
+          "subtitle": "Tempered safety glass staircase railings with sleek handrails",
+          "image": "/images/site/cat-railing-staircase.jpg",
+          "link": "#categories"
+        },
+        {
+          "name": "Post & Clamp Glass Railings",
+          "subtitle": "Post-mounted toughened glass balustrades for terraces & pool decks",
           "image": "/images/site/cat-door-sliding.jpg",
-          "link": "#categories"
-        },
-        {
-          "name": "Sliding Windows",
-          "image": "/images/site/cat-window-sliding.jpg",
-          "link": "#categories"
-        },
-        {
-          "name": "Casement Windows",
-          "image": "/images/site/cat-window-casement.jpg",
-          "link": "#categories"
-        },
-        {
-          "name": "Smart Locks & Hardware",
-          "image": "/images/site/cat-door-smart-lock.jpg",
           "link": "#categories"
         }
       ]
@@ -1067,35 +1115,43 @@
       ]
     },
     {
-      "tabName": "Kitchen Accessories",
+      "tabName": "Insect Blinds",
       "aliases": [
-        "Accessories",
-        "Kitchen Accessory"
+        "Insect Screens",
+        "Blinds",
+        "Mosquito Mesh",
+        "Security Screens",
+        "Meshworkz"
       ],
       "items": [
         {
-          "name": "Sinks",
-          "image": "/images/site/cat-acc-sink.jpg",
+          "name": "Pleated Insect Screens",
+          "subtitle": "Meshworkz zig-zag collapsible mesh • One-finger operation",
+          "image": "/images/site/cat-insect-pleated.jpg",
           "link": "#categories"
         },
         {
-          "name": "Faucets",
-          "image": "/images/site/cat-acc-faucet.jpg",
+          "name": "Zipline Retractable Screens",
+          "subtitle": "Pet-friendly zip-track mesh for wide balconies & patios",
+          "image": "/images/site/cat-insect-zipline.jpg",
           "link": "#categories"
         },
         {
-          "name": "Tall Pantry Units",
-          "image": "/images/site/cat-acc-pantry.jpg",
+          "name": "Motorized Insect Screens",
+          "subtitle": "Remote-controlled whisper motion & thermal protection",
+          "image": "/images/site/cat-insect-motorized.jpg",
           "link": "#categories"
         },
         {
-          "name": "Wall Rail Systems",
-          "image": "/images/site/cat-acc-rail.jpg",
+          "name": "Black-Out & Diffused Blinds",
+          "subtitle": "Honeycomb 100% black-out & 70% diffused light control blinds",
+          "image": "/images/site/cat-insect-blinds.jpg",
           "link": "#categories"
         },
         {
-          "name": "Spice & Bottle Organisers",
-          "image": "/images/site/cat-acc-spice.jpg",
+          "name": "Security Mesh Screens",
+          "subtitle": "High-tensile MeshTec doors & windows with 3-side locking",
+          "image": "/images/site/cat-insect-security.jpg",
           "link": "#categories"
         }
       ]

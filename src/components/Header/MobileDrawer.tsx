@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { X, ChevronDown, ChevronRight, Phone, MapPin, Building2, Home, Package, Info, BookOpen, Wrench } from "lucide-react";
+import { X, ChevronDown, ChevronRight, Phone, MapPin, Package, Info, BookOpen, Wrench } from "lucide-react";
 import { megaMenuItems, siteBrand } from "@/data/statusData";
 
 interface MobileDrawerProps {
@@ -49,13 +49,10 @@ export default function MobileDrawer({
           </button>
         </div>
 
-        {/* Customer Segment Toggle */}
+        {/* Customer Segment Badge */}
         <div className="px-4 py-2.5 bg-[#f9f8f5] border-b border-gray-100 flex items-center gap-2">
           <span className="px-3 py-1 rounded-full text-xs font-medium bg-[#ff5d55] text-white shadow-xs">
             For Homes
-          </span>
-          <span className="px-2.5 py-1 rounded-full text-xs font-medium text-[#76716d]">
-            For Businesses
           </span>
         </div>
 

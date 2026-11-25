@@ -17,8 +17,6 @@ import {
   HelpCircle,
   Sparkles,
   Tag,
-  Building2,
-  Home as HomeIcon,
   CalendarCheck,
   Wrench,
 } from "lucide-react";
@@ -44,7 +42,6 @@ export default function Navbar({
   const [searchQuery, setSearchQuery] = useState("");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isListening, setIsListening] = useState(false);
-  const [activeSegment, setActiveSegment] = useState<"homes" | "business">("homes");
 
   const searchRef = useRef<HTMLDivElement>(null);
 
@@ -132,32 +129,11 @@ export default function Navbar({
         }`}
       >
         <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 h-8 sm:h-9 flex items-center justify-between">
-          {/* Left: For Homes / For Businesses */}
-          <div className="flex items-center space-x-2">
-            <button
-              onClick={() => setActiveSegment("homes")}
-              className={`px-3 py-1 rounded-full font-medium transition-all ${
-                activeSegment === "homes"
-                  ? "bg-[#ff5d55] text-white shadow-xs"
-                  : isHeaderSolid
-                  ? "text-gray-700 hover:text-black"
-                  : "text-white/80 hover:text-white"
-              }`}
-            >
+          {/* Left: For Homes */}
+          <div className="flex items-center">
+            <span className="px-3 py-1 rounded-full font-medium bg-[#ff5d55] text-white shadow-xs">
               For Homes
-            </button>
-            <button
-              onClick={() => setActiveSegment("business")}
-              className={`px-2.5 py-1 text-xs font-medium transition-colors ${
-                activeSegment === "business"
-                  ? "text-[#ff5d55] font-semibold"
-                  : isHeaderSolid
-                  ? "text-gray-600 hover:text-gray-900"
-                  : "text-white/80 hover:text-white"
-              }`}
-            >
-              For Businesses
-            </button>
+            </span>
           </div>
 
           {/* Right Utility Links */}

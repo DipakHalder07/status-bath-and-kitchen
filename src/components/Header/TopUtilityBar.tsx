@@ -1,39 +1,18 @@
 "use client";
 
-import React, { useState } from "react";
-import { MapPin, Phone, Building2, Home, HelpCircle } from "lucide-react";
+import React from "react";
+import { MapPin, Phone, Home, HelpCircle } from "lucide-react";
 
 export default function TopUtilityBar() {
-  const [activeSegment, setActiveSegment] = useState<"homes" | "business">("homes");
-
   return (
     <div className="w-full bg-[#f9f8f5] border-b border-gray-200 text-xs text-gray-700">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-9 flex items-center justify-between">
-        {/* Left Segment Switcher */}
+        {/* Left Segment Badge */}
         <div className="flex items-center space-x-1">
-          <button
-            onClick={() => setActiveSegment("homes")}
-            className={`flex items-center space-x-1 px-3 py-1 font-medium transition-all ${
-              activeSegment === "homes"
-                ? "text-[#c0262d] font-semibold border-b-2 border-[#c0262d]"
-                : "text-gray-600 hover:text-gray-900"
-            }`}
-          >
+          <span className="flex items-center space-x-1 px-3 py-1 font-semibold text-[#c0262d] border-b-2 border-[#c0262d]">
             <Home className="w-3.5 h-3.5" />
             <span>For Homes</span>
-          </button>
-          <span className="text-gray-300">|</span>
-          <button
-            onClick={() => setActiveSegment("business")}
-            className={`flex items-center space-x-1 px-3 py-1 font-medium transition-all ${
-              activeSegment === "business"
-                ? "text-[#c0262d] font-semibold border-b-2 border-[#c0262d]"
-                : "text-gray-600 hover:text-gray-900"
-            }`}
-          >
-            <Building2 className="w-3.5 h-3.5" />
-            <span>For Businesses</span>
-          </button>
+          </span>
         </div>
 
         {/* Right Links */}
