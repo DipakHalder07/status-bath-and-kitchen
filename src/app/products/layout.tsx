@@ -4,11 +4,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://statusbathkitchen.c
 
 export const metadata: Metadata = {
   title: {
-    default: "All Products — Modular Kitchens, Bathrooms, Wardrobes, Doors & Windows",
+    default: "All Products — Modular Kitchens, Windows, Wardrobes, Glass Railings & Insect Blinds",
     template: "%s | Status Bath and Kitchen",
   },
   description:
-    "Explore our full collection of precision-engineered modular kitchens, luxury bathroom suites, custom wardrobes, architectural doors, and designer windows at Status Bath & Kitchen.",
+    "Explore our full collection of modular kitchens, WAW aluminium windows, Ambiiance uPVC windows, custom wardrobes, glass railings, appliances, and Meshworkz insect blinds at Status Bath & Kitchen.",
   alternates: {
     canonical: "/products",
   },
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: `${siteUrl}/products`,
     siteName: "Status Bath and Kitchen",
-    title: "All Products — Modular Kitchens, Bathrooms, Wardrobes, Doors & Windows",
+    title: "All Products — Modular Kitchens, Windows, Wardrobes, Glass Railings & Insect Blinds",
     description:
-      "Explore handcrafted modular kitchens, bathroom vanities, fitted wardrobes, and architectural doors & windows. Custom-tailored and quoted on request at our showroom.",
+      "Explore handcrafted modular kitchens, WAW aluminium & Ambiiance uPVC windows, fitted wardrobes, glass railings, and insect blinds. Custom-tailored and quoted on request at our showroom.",
     images: [
       {
         url: "/images/hero-kitchen.jpg",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "All Products | Status Bath and Kitchen",
     description:
-      "Explore handcrafted modular kitchens, bathroom vanities, fitted wardrobes, and architectural doors & windows at our showroom.",
+      "Explore handcrafted modular kitchens, WAW & Ambiiance windows, fitted wardrobes, glass railings, and insect blinds at our showroom.",
     images: ["/images/hero-kitchen.jpg"],
   },
 };

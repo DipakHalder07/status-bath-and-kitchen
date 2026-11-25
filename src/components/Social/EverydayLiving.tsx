@@ -39,9 +39,9 @@ const inspirationPosts: InspirationPost[] = [
   },
   {
     id: "idea-2",
-    img: "/images/site/gal-2.jpg",
-    title: "Floating wood vanity with open shelves for rolled towels",
-    room: "Bathroom",
+    img: "/images/site/cat-waw-casement.jpg",
+    title: "WAW 6063-T6 slim black aluminium casement & slide-fold patio windows",
+    room: "Windows",
   },
   {
     id: "idea-3",
@@ -51,15 +51,15 @@ const inspirationPosts: InspirationPost[] = [
   },
   {
     id: "idea-4",
-    img: "/images/site/gal-4.jpg",
-    title: "Oak double vanity with tall storage and twin vessel basins",
-    room: "Bathroom",
+    img: "/images/site/cat-railing-spigot.jpg",
+    title: "Frameless SS316 spigot toughened glass terrace & balcony railing",
+    room: "Glass Railings",
   },
   {
     id: "idea-5",
-    img: "/images/site/gal-5.jpg",
-    title: "Freestanding tub, wall-hung basin and a stone feature wall",
-    room: "Bathroom",
+    img: "/images/site/cat-insect-pleated.jpg",
+    title: "Meshworkz pleated collapsible mosquito screen for balcony doors",
+    room: "Insect Blinds",
   },
 ];
 
@@ -74,7 +74,7 @@ export default function EverydayLiving() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-6 sm:mb-10">
           <div>
             <h2 className="text-xl sm:text-2xl lg:text-[28px] font-medium text-[#332f2c] tracking-tight">
-              Ideas for your kitchen &amp; bath
+              Ideas for your home
             </h2>
             <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm text-[#76716d] font-normal">
               A few looks to get you started. Tap one and we will help you plan something similar.

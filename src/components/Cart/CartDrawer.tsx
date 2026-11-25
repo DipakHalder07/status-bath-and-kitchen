@@ -54,7 +54,7 @@ export default function CartDrawer() {
                 Your cart is currently empty
               </p>
               <p className="text-xs text-gray-500 max-w-xs mx-auto">
-                Planning a kitchen, bathroom, wardrobe, doors or windows? Book a consultation and we will put together a quotation for you.
+                Planning a kitchen, wardrobe, windows, glass railings or insect blinds? Book a consultation and we will put together a quotation for you.
               </p>
               <button
                 onClick={() => {

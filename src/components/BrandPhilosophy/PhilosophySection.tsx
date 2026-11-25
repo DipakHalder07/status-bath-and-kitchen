@@ -22,7 +22,7 @@ export default function PhilosophySection() {
               Project solutions for homes and developments
             </h2>
             <p className="text-xs sm:text-sm text-[#76716d] leading-relaxed max-w-xl font-normal">
-              From a single apartment to a full project, we supply and install modular kitchens, wardrobes, doors and windows to your drawings and timelines.
+              From a single apartment to a full project, we supply and install modular kitchens, wardrobes, WAW &amp; Ambiiance windows, glass railings and insect blinds to your drawings and timelines.
             </p>
 
             {/* Buttons */}

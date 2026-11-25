@@ -133,11 +133,12 @@ export default function Footer({ showBlogCredit }: FooterProps = {}) {
                 {[
                   { label: "All Products", href: "/products" },
                   { label: "Modular kitchens", href: "/products?category=Modular+Kitchens" },
-                  { label: "Bathrooms", href: "/products?category=Bathrooms" },
+                  { label: "WAW Aluminium Windows", href: "/products?category=WAW+Aluminium+Windows" },
+                  { label: "Ambiiance uPVC Windows", href: "/products?category=Ambiiance+uPVC+Windows" },
                   { label: "Wardrobes", href: "/products?category=Wardrobes" },
-                  { label: "Doors & windows", href: "/products?category=Doors+%26+Windows" },
+                  { label: "Glass Railings", href: "/products?category=Glass+Railings" },
                   { label: "Appliances", href: "/products?category=Appliances" },
-                  { label: "Kitchen accessories", href: "/products?category=Kitchen+Accessories" },
+                  { label: "Insect Blinds", href: "/products?category=Insect+Blinds" },
                 ].map((item) => (
                   <li key={item.label}>
                     <Link href={item.href} className="hover:text-white transition-colors">
@@ -236,20 +237,16 @@ export default function Footer({ showBlogCredit }: FooterProps = {}) {
               L-Shaped | U-Shaped | Island | Parallel | Straight | Handleless | Classic Shaker | Two-Tone
             </p>
             <p>
-              <span className="font-medium text-white">Bathrooms:</span>{" "}
-              Vanity Units | Shower Enclosures | Bathtubs | Taps &amp; Showers | Sanitaryware | Bathroom Storage
+              <span className="font-medium text-white">WAW Aluminium &amp; Ambiiance uPVC Windows:</span>{" "}
+              Sliding Systems | Casement Systems | Slide &amp; Fold | Tilt &amp; Turn | Bay Windows | Integrated Blinds | Safety Grills
             </p>
             <p>
-              <span className="font-medium text-white">Wardrobes:</span>{" "}
-              Fitted | Hinged | Walk-in | Wardrobe Organizers &amp; Internal Storage
+              <span className="font-medium text-white">Wardrobes &amp; Glass Railings:</span>{" "}
+              Fitted | Hinged | Walk-in | Organizers | SS316 Spigot Railings | Aluminium U-Channel | Staircase Balustrades
             </p>
             <p>
-              <span className="font-medium text-white">Doors &amp; windows:</span>{" "}
-              Entrance Doors | Internal Room Doors | Sliding Glass Doors | Sliding Windows | Casement Windows | Smart Locks &amp; Hardware
-            </p>
-            <p>
-              <span className="font-medium text-white">Appliances &amp; accessories:</span>{" "}
-              Chimneys | Hobs | Built-in Ovens | Microwaves | Dishwashers | Refrigerators | Sinks | Faucets | Tall Pantry Units
+              <span className="font-medium text-white">Appliances &amp; Insect Blinds:</span>{" "}
+              Chimneys | Hobs | Built-in Ovens | Dishwashers | Refrigerators | Pleated Screens | Zipline | Motorized | Black-Out Blinds | Security Mesh
             </p>
           </div>
 

@@ -15,10 +15,10 @@ const roomCategories = [
     link: "/products?category=Modular+Kitchens",
   },
   {
-    id: "bathrooms",
-    title: "Luxury Bathrooms",
-    img: "/images/site/cat-bath-vanity.jpg",
-    link: "/products?category=Bathrooms",
+    id: "windows",
+    title: "WAW & uPVC Windows",
+    img: "/images/site/cat-waw-casement.jpg",
+    link: "/products?category=WAW+Aluminium+Windows",
   },
   {
     id: "wardrobes",
@@ -47,7 +47,7 @@ export default function RoomCategoriesBanner({
               className="flex flex-col items-center group cursor-pointer"
               onClick={() => {
                 if (onSelectCategory) onSelectCategory(item.title);
-                const elem = document.querySelector("#curated-products");
+                const elem = document.querySelector("#categories");
                 if (elem) elem.scrollIntoView({ behavior: "smooth" });
               }}
             >

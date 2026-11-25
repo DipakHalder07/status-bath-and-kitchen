@@ -3,24 +3,24 @@
 import React from "react";
 import {
   ChefHat,
-  Bath,
-  DoorClosed,
-  DoorOpen,
   AppWindow,
+  PanelTop,
+  DoorClosed,
+  Layers,
   Microwave,
-  UtensilsCrossed,
+  Blinds,
   type LucideIcon,
 } from "lucide-react";
 import { serviceStrip } from "@/data/statusData";
 
 const icons: Record<string, LucideIcon> = {
   kitchens: ChefHat,
-  bathrooms: Bath,
+  "waw-windows": AppWindow,
+  "upvc-windows": PanelTop,
   wardrobes: DoorClosed,
-  doors: DoorOpen,
-  windows: AppWindow,
+  "glass-railings": Layers,
   appliances: Microwave,
-  accessories: UtensilsCrossed,
+  "insect-blinds": Blinds,
 };
 
 export default function StatusStats() {
@@ -36,15 +36,15 @@ export default function StatusStats() {
         </p>
 
         {/* Service Columns: horizontal swipe on mobile, clean 7-column grid on desktop */}
-        <div className="flex sm:grid sm:grid-cols-4 lg:grid-cols-7 gap-5 sm:gap-8 lg:gap-10 mt-8 sm:mt-16 max-w-6xl mx-auto overflow-x-auto no-scrollbar pb-2 sm:pb-0 -mx-5 px-5 sm:mx-auto sm:px-0 justify-start sm:justify-center">
+        <div className="flex sm:grid sm:grid-cols-4 lg:grid-cols-7 gap-5 sm:gap-6 lg:gap-6 mt-8 sm:mt-16 max-w-6xl mx-auto overflow-x-auto no-scrollbar pb-2 sm:pb-0 -mx-5 px-5 sm:mx-auto sm:px-0 justify-start sm:justify-center">
           {serviceStrip.items.map((item) => {
             const Icon = icons[item.id] ?? ChefHat;
             return (
-              <div key={item.id} className="flex flex-col items-center shrink-0 w-24 sm:w-auto text-center">
+              <div key={item.id} className="flex flex-col items-center shrink-0 w-28 sm:w-auto text-center">
                 <div className="w-14 h-14 sm:w-20 sm:h-20 rounded-full border-2 border-white/80 flex items-center justify-center">
                   <Icon className="w-6 h-6 sm:w-9 sm:h-9" strokeWidth={1.75} />
                 </div>
-                <p className="text-xs sm:text-base text-white mt-2.5 sm:mt-3 font-medium text-center leading-snug">
+                <p className="text-xs sm:text-sm text-white mt-2.5 sm:mt-3 font-medium text-center leading-snug">
                   {item.label}
                 </p>
               </div>

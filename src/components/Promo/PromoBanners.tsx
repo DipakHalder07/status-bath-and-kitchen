@@ -8,7 +8,7 @@ export default function PromoBanners() {
 
   return (
     <section className="w-full space-y-12 py-10 bg-white">
-      {/* 2-Column Frosted Split Banners: Kitchens & Bathrooms */}
+      {/* 2-Column Frosted Split Banners: Kitchens & Windows/Railings */}
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {/* Banner 1: Modular Kitchen */}
@@ -38,15 +38,15 @@ export default function PromoBanners() {
             </div>
           </div>
 
-          {/* Banner 2: Bathrooms */}
+          {/* Banner 2: Windows, Glass Railings & Insect Blinds */}
           <div
-            id="bathrooms"
+            id="windows-railings"
             className="relative rounded-none sm:rounded-sm overflow-hidden aspect-[4/3] sm:aspect-[16/10] bg-stone-900 group shadow-xs flex items-center justify-center p-6 cursor-pointer"
-            onClick={() => openConsultation("Bathroom")}
+            onClick={() => openConsultation("Windows, Railings & Insect Blinds")}
           >
             <img
-              src="/images/site/promo-bath.jpg"
-              alt="Dark modern bathroom with a freestanding tub and glass shower"
+              src="/images/site/cat-waw-casement.jpg"
+              alt="Architectural WAW aluminium windows and slide-fold glass doors overlooking greenery"
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               loading="lazy"
             />
@@ -54,10 +54,10 @@ export default function PromoBanners() {
             {/* Centered Frosted Glass Card */}
             <div className="relative z-10 w-full max-w-xs sm:max-w-sm rounded-xl bg-black/40 backdrop-blur-md p-6 sm:p-8 text-center text-white border border-white/10 shadow-xl group-hover:bg-black/50 transition-colors">
               <span className="text-xs uppercase tracking-wider text-white/80 block mb-1">
-                Bathrooms
+                Windows, Railings &amp; Blinds
               </span>
               <h3 className="text-xl sm:text-2xl font-medium leading-tight mb-4 !text-white">
-                Planning a bathroom makeover?
+                Planning windows or insect screens?
               </h3>
               <span className="inline-block text-sm font-medium text-white border-b border-white pb-0.5 hover:text-[#ff5d55] hover:border-[#ff5d55] transition-colors">
                 Book a consultation
@@ -83,8 +83,8 @@ export default function PromoBanners() {
           {/* Right: Copy & Button */}
           <div className="p-6 sm:p-12 lg:p-16 flex flex-col justify-center items-start">
             <h3 className="text-xl sm:text-2xl lg:text-[28px] font-medium text-[#332f2c] leading-tight">
-              Renovating an old <br />
-              kitchen or bathroom?
+              Upgrading your kitchen, <br />
+              windows or interiors?
             </h3>
             <p className="text-xs sm:text-sm text-[#76716d] mt-2 sm:mt-3 font-normal">
               We will plan the upgrade with you, from the new layout to the final fitting.

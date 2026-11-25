@@ -37,7 +37,6 @@ const categoryTabs = [
   "Glass Railings",
   "Appliances",
   "Insect Blinds",
-  "Bathrooms",
   "Doors & Windows",
   "Kitchen Accessories",
 ];
@@ -59,8 +58,6 @@ const categoryDescriptions: Record<string, string> = {
     "High-efficiency kitchen appliances engineered for modern cooking. Heavy-suction BLDC chimneys, triple-brass wok burner hobs, 3D hot air convection ovens, and energy-smart refrigerators.",
   "Insect Blinds":
     "Meshworkz pleated collapsible insect screens, pet-friendly Zipline retractable screens, whisper-quiet motorized screens, 100% black-out & diffused honeycomb blinds, and high-tensile MeshTec security doors.",
-  "Bathrooms":
-    "Transform everyday bathing into a 5-star spa sanctuary. Discover wall-hung marble vanities, thermostatic rain showers, freestanding statement tubs, and rimless cyclone sanitaryware.",
   "Doors & Windows":
     "Make an unforgettable grand entrance with architectural teak pivot doors, ultra-slim 20mm patio sliding glass systems, and high-performance acoustic thermal double-glazed windows.",
   "Kitchen Accessories":
@@ -71,8 +68,6 @@ const categoryMatchAliases: Record<string, string[]> = {
   "fitted wardrobes": ["sliding wardrobes", "wardrobes"],
   "walk-in wardrobes": ["walk-in closets"],
   "wardrobe organizers": ["wardrobes"],
-  "taps & showers": ["showers & fittings", "faucets & taps"],
-  "bathroom storage": ["bathrooms"],
   "sliding glass doors": ["sliding doors"],
   "sliding windows": ["upvc sliding windows", "sliding systems"],
   "casement windows": ["casement systems", "upvc casement windows", "arched & bay"],

@@ -17,12 +17,12 @@ const features = [
     alt: "White kitchen with a wooden island and globe pendant lights",
   },
   {
-    id: "bathrooms",
-    eyebrow: "Bathrooms",
-    title: "Calm, clutter-free bathrooms",
-    cta: "Explore bathroom ideas",
-    image: "/images/site/deal-bath.jpg",
-    alt: "Grey bathroom with a round mirror, black basin and freestanding tub",
+    id: "windows-railings",
+    eyebrow: "WAW Aluminium Windows",
+    title: "Slim frames, acoustic calm & clear views",
+    cta: "Explore window & railing ideas",
+    image: "/images/site/cat-waw-casement.jpg",
+    alt: "Modern living room with WAW aluminium casement and slide-fold glass windows opening to a green garden",
   },
 ];
 
@@ -37,7 +37,7 @@ export default function DealsBanner({ onDealClick }: DealsBannerProps) {
               className="group relative cursor-pointer rounded-none sm:rounded-sm overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 aspect-[16/10] bg-stone-900"
               onClick={() => {
                 if (onDealClick) onDealClick(feature.eyebrow);
-                const el = document.querySelector("#curated-products");
+                const el = document.querySelector("#categories");
                 if (el) el.scrollIntoView({ behavior: "smooth" });
               }}
             >

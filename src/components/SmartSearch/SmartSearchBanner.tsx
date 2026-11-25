@@ -14,7 +14,15 @@ export default function SmartSearchBanner({ onFilterApply }: SmartSearchBannerPr
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { showToast } = useCart();
 
-  const rooms = ["Modular Kitchen", "Luxury Bathroom", "Doors & Windows", "Wardrobes & Closets", "Kitchen Appliances"];
+  const rooms = [
+    "Modular Kitchen",
+    "WAW Aluminium Windows",
+    "Ambiiance uPVC Windows",
+    "Wardrobes & Closets",
+    "Glass Railings",
+    "Kitchen Appliances",
+    "Insect Blinds",
+  ];
   const styles = ["Bespoke Architectural", "Premium Luxury", "Contemporary Minimal", "All Finishes"];
 
   const handleApply = () => {
@@ -23,7 +31,7 @@ export default function SmartSearchBanner({ onFilterApply }: SmartSearchBannerPr
     }
     showToast(`Showing recommendations for ${selectedRoom} (${selectedStyle})`);
     setIsModalOpen(false);
-    const elem = document.querySelector("#curated-products");
+    const elem = document.querySelector("#categories");
     if (elem) elem.scrollIntoView({ behavior: "smooth" });
   };
 

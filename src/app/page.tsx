@@ -6,24 +6,15 @@ import MobileDrawer from "@/components/Header/MobileDrawer";
 import HeroBanner from "@/components/HeroBanner/HeroBanner";
 import TickerBanner from "@/components/Promo/TickerBanner";
 import CategoryGrid from "@/components/Categories/CategoryGrid";
-import ProductCarousel from "@/components/Products/ProductCarousel";
 import DealsBanner from "@/components/Promo/DealsBanner";
 import UpmodsBanner from "@/components/Promo/UpmodsBanner";
-import CuratedSection from "@/components/Products/CuratedSection";
-import ShopByCollection from "@/components/Lookbook/ShopByCollection";
-import PromoBanners from "@/components/Promo/PromoBanners";
-import StatusStats from "@/components/Stats/StatusStats";
 import StoreLocatorSection from "@/components/StoreLocator/StoreLocatorSection";
 import CareServices from "@/components/Services/CareServices";
-import Testimonials from "@/components/Testimonials/Testimonials";
-import PhilosophySection from "@/components/BrandPhilosophy/PhilosophySection";
-import EverydayLiving from "@/components/Social/EverydayLiving";
 import FaqAccordion from "@/components/FAQ/FaqAccordion";
 import Footer from "@/components/Footer/Footer";
 import CartDrawer from "@/components/Cart/CartDrawer";
 import ConsultationModal from "@/components/Modals/ConsultationModal";
 import Toast from "@/components/UI/Toast";
-import { justArrivedProducts } from "@/data/statusData";
 import { useCart } from "@/context/CartContext";
 
 export default function Home() {
@@ -71,58 +62,29 @@ export default function Home() {
         {/* 2. Promotional Bank Offer Ticker Banner */}
         <TickerBanner />
 
-        {/* 3. How can we help you? (6 category tabs: kitchens, bathrooms, wardrobes, doors & windows, appliances, accessories) */}
+        {/* 3. How can we help you? (7 category tabs: kitchens, WAW aluminium windows, Ambiiance uPVC windows, wardrobes, glass railings, appliances, insect blinds) */}
         <CategoryGrid
           onSelectCategory={handleCategorySelect}
           selection={categorySelection}
         />
 
-        {/* 4. Appliances & fittings carousel */}
-        <ProductCarousel
-          id="appliances"
-          title="Appliances & fittings"
-          products={justArrivedProducts}
-          viewAllLink="#categories"
-        />
-
-        {/* 5. Kitchen & bathroom feature banners */}
+        {/* 4. Kitchen & windows feature banners */}
         <DealsBanner
           onDealClick={(deal) => {
-            showToast(`Exploring ${deal}`);
+            handleCategorySelect(deal);
           }}
         />
 
-        {/* 6. Your kitchen, your way banner */}
+        {/* 5. Your kitchen, your way banner */}
         <UpmodsBanner />
 
-        {/* 7. Design ideas (kitchen, bathroom, doors & windows styles) */}
-        <CuratedSection />
-
-        {/* 8. Shop by collection (room lookbook with hotspots) */}
-        <ShopByCollection />
-
-        {/* 9. Consultation banners (kitchens, bathrooms, renovation) */}
-        <PromoBanners />
-
-        {/* 10. Everything we do (coral services strip) */}
-        <StatusStats />
-
-        {/* 11. Visit our experience studio */}
+        {/* 6. Visit our experience studio */}
         <StoreLocatorSection />
 
-        {/* 12. Our services */}
+        {/* 7. Our services */}
         <CareServices />
 
-        {/* 13. Why choose Status */}
-        <Testimonials />
-
-        {/* 14. Builders, architects & designers */}
-        <PhilosophySection />
-
-        {/* 15. Inspiration gallery */}
-        <EverydayLiving />
-
-        {/* 16. FAQs & SEO content */}
+        {/* 8. FAQs */}
         <FaqAccordion />
       </main>
 

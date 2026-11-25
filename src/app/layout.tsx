@@ -23,26 +23,24 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://statusbathkitchen.c
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Status Bath and Kitchen | Modular Kitchens, Luxury Bathrooms, Doors & Windows",
+    default: "Status Bath and Kitchen | Modular Kitchens, Windows, Wardrobes, Railings & Insect Blinds",
     template: "%s | Status Bath and Kitchen",
   },
   description:
-    "Status Bath & Kitchen designs, fabricates and installs precision modular kitchens, luxury bathroom suites, custom wardrobes, architectural doors, and designer windows. Experience custom finishes in our physical showroom or book a consultation.",
+    "Status Bath & Kitchen designs, supplies and installs precision modular kitchens, WAW aluminium & Ambiiance uPVC windows, custom wardrobes, glass railings, kitchen appliances, and Meshworkz insect blinds.",
   keywords: [
     "Status Bath and Kitchen",
     "Modular Kitchens",
-    "Luxury Bathrooms",
+    "WAW Aluminium Windows",
+    "Ambiiance uPVC Windows",
     "Bespoke Wardrobes",
-    "Architectural Doors",
-    "Designer Windows",
+    "Glass Railings",
     "Built-in Kitchen Appliances",
+    "Meshworkz Insect Blinds",
     "Modular Kitchen Showroom",
-    "Bathroom Vanities & Fixtures",
     "Siliguri Modular Kitchens",
-    "West Bengal Home & Bath Studio",
     "Walk-in Closets",
-    "Sliding Glass Doors",
-    "Kitchen Accessories & Organizers",
+    "Pleated Insect Screens",
   ],
   authors: [{ name: "Status Bath and Kitchen", url: siteUrl }],
   creator: "Status Bath and Kitchen",
@@ -60,24 +58,24 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: siteUrl,
     siteName: "Status Bath and Kitchen",
-    title: "Status Bath and Kitchen | Modular Kitchens, Luxury Bathrooms, Doors & Windows",
+    title: "Status Bath and Kitchen | Modular Kitchens, Windows, Wardrobes, Railings & Insect Blinds",
     description:
-      "Explore bespoke modular kitchens, luxury bathroom vanities, fitted wardrobes, and architectural doors & windows crafted for contemporary homes. Visit our showroom experience studio.",
+      "Explore bespoke modular kitchens, WAW aluminium & Ambiiance uPVC windows, fitted wardrobes, glass railings, appliances, and insect blinds crafted for contemporary homes.",
     images: [
       {
         url: "/images/hero-kitchen.jpg",
         width: 1200,
         height: 630,
-        alt: "Status Bath and Kitchen - Luxury Modular Kitchen & Bathroom Showroom",
+        alt: "Status Bath and Kitchen - Modular Kitchens, Windows, Railings & Wardrobes",
         type: "image/jpeg",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Status Bath and Kitchen | Modular Kitchens, Luxury Bathrooms, Doors & Windows",
+    title: "Status Bath and Kitchen | Modular Kitchens, Windows, Wardrobes, Railings & Insect Blinds",
     description:
-      "Explore bespoke modular kitchens, luxury bathroom vanities, fitted wardrobes, and architectural doors & windows. Visit our physical store experience studio.",
+      "Explore bespoke modular kitchens, WAW aluminium & Ambiiance uPVC windows, fitted wardrobes, glass railings, appliances, and insect blinds.",
     images: ["/images/hero-kitchen.jpg"],
     creator: "@statusbathkitchen",
   },
@@ -102,7 +100,7 @@ export const metadata: Metadata = {
     ],
     shortcut: ["/images/status-bk-icon.png"],
   },
-  category: "Home Architecture, Modular Kitchens & Bathrooms",
+  category: "Home Architecture, Modular Kitchens, Windows & Railings",
 };
 
 // JSON-LD Structured Data for LocalBusiness & Organization
@@ -115,7 +113,7 @@ const jsonLdOrg = {
   "url": siteUrl,
   "logo": `${siteUrl}/images/status-bk-logo-dark.png`,
   "image": `${siteUrl}/images/hero-kitchen.jpg`,
-  "description": "Status Bath & Kitchen is a premier bespoke showroom studio for modular kitchens, luxury bathrooms, custom wardrobes, architectural doors, and designer windows.",
+  "description": "Status Bath & Kitchen is a premier bespoke showroom studio for modular kitchens, WAW aluminium windows, Ambiiance uPVC windows, custom wardrobes, glass railings, appliances, and Meshworkz insect blinds.",
   "telephone": "+91 98320 95793",
   "priceRange": "$$",
   "hasMap": "https://share.google/V1jbNPSPYTSSO7Gpq",
@@ -160,7 +158,11 @@ const jsonLdOrg = {
       },
       {
         "@type": "OfferCatalog",
-        "name": "Luxury Bathrooms",
+        "name": "WAW Aluminium Windows",
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Ambiiance uPVC Windows",
       },
       {
         "@type": "OfferCatalog",
@@ -168,11 +170,15 @@ const jsonLdOrg = {
       },
       {
         "@type": "OfferCatalog",
-        "name": "Architectural Doors & Windows",
+        "name": "Glass Railings",
       },
       {
         "@type": "OfferCatalog",
-        "name": "Kitchen Appliances & Accessories",
+        "name": "Kitchen Appliances",
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Meshworkz Insect Blinds",
       },
     ],
   },

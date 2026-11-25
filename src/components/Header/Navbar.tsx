@@ -47,13 +47,13 @@ export default function Navbar({
 
   const popularSearches = [
     "modular kitchens",
-    "bathrooms",
+    "waw aluminium windows",
+    "ambiiance upvc windows",
     "wardrobes",
-    "doors",
-    "windows",
+    "glass railings",
+    "appliances",
+    "insect blinds",
     "chimneys",
-    "vanity units",
-    "sinks",
   ];
 
   // Scroll detection for sticky header & transparent hero overlay
@@ -305,7 +305,7 @@ export default function Navbar({
             <button
               onClick={() => {
                 showToast(`Wishlist contains ${wishlist.length} item(s)`);
-                const el = document.querySelector("#curated-products");
+                const el = document.querySelector("#categories");
                 if (el) el.scrollIntoView({ behavior: "smooth" });
               }}
               className={`relative p-2 rounded-full transition-colors ${

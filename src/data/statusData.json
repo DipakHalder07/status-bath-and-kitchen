@@ -2,7 +2,7 @@
   "brand": {
     "name": "Status Bath and Kitchen",
     "shortName": "Status",
-    "tagline": "Modular Kitchens • Wardrobes • Doors • Windows • Appliances • Kitchen Accessories & more",
+    "tagline": "Modular Kitchens • WAW Aluminium Windows • Ambiiance uPVC Windows • Wardrobes • Glass Railings • Appliances • Insect Blinds",
     "whiteLogo": "/images/status-bk-logo-white.png",
     "colorLogo": "/images/status-bk-logo-dark.png",
     "favicon": "/images/status-bk-icon.png",
@@ -25,10 +25,10 @@
     {
       "id": "kitchens",
       "title": "Modular Kitchens, Made for You",
-      "subtitle": "Kitchens, bathrooms, wardrobes, doors and windows — designed, supplied and installed by one team",
+      "subtitle": "Modular kitchens, WAW aluminium & Ambiiance uPVC windows, wardrobes, glass railings, appliances and insect blinds — designed, supplied and installed by one team",
       "desktopImg": "/images/hero-kitchen.jpg",
       "mobileImg": "/images/hero-kitchen.jpg",
-      "link": "#curated-products",
+      "link": "#categories",
       "ctaText": "Explore Modular Kitchens",
       "tag": "Status Bath and Kitchen"
     }
@@ -48,17 +48,30 @@
       ]
     },
     {
-      "id": "bathrooms",
-      "name": "Bathrooms",
-      "image": "/images/site/cat-bath-vanity.jpg",
-      "count": "6 solutions",
+      "id": "waw-windows",
+      "name": "WAW Aluminium Windows",
+      "image": "/images/site/cat-waw-casement.jpg",
+      "count": "6 systems",
       "featured": [
-        "Vanity Units",
-        "Shower Enclosures",
-        "Bathtubs",
-        "Taps & Showers",
-        "Sanitaryware",
-        "Bathroom Storage"
+        "Sliding Systems",
+        "Casement Systems",
+        "Slide & Fold Systems",
+        "Fix & Movable Louvers",
+        "Integrated Venetian Blinds",
+        "Aluminium Safety Grills"
+      ]
+    },
+    {
+      "id": "upvc-windows",
+      "name": "Ambiiance uPVC Windows",
+      "image": "/images/site/cat-window-sliding.jpg",
+      "count": "5 systems",
+      "featured": [
+        "uPVC Sliding Windows",
+        "uPVC Casement Windows",
+        "Tilt & Turn Windows",
+        "Bay & Combination Windows",
+        "uPVC Balcony Doors"
       ]
     },
     {
@@ -74,27 +87,15 @@
       ]
     },
     {
-      "id": "doors",
-      "name": "Doors",
-      "image": "/images/site/cat-door-entrance.jpg",
-      "count": "4 types",
+      "id": "glass-railings",
+      "name": "Glass Railings",
+      "image": "/images/site/cat-railing-spigot.jpg",
+      "count": "4 systems",
       "featured": [
-        "Entrance Doors",
-        "Internal Room Doors",
-        "Sliding Glass Doors",
-        "Smart Locks & Hardware"
-      ]
-    },
-    {
-      "id": "windows",
-      "name": "Windows",
-      "image": "/images/site/cat-window-casement.jpg",
-      "count": "4 types",
-      "featured": [
-        "Sliding Windows",
-        "Casement Windows",
-        "Bay & Picture Windows",
-        "Arched Windows"
+        "Frameless Spigot Railings",
+        "Aluminium U-Channel Railings",
+        "Staircase Glass Balustrades",
+        "Post & Clamp Glass Railings"
       ]
     },
     {
@@ -113,16 +114,16 @@
       ]
     },
     {
-      "id": "accessories",
-      "name": "Kitchen Accessories",
-      "image": "/images/site/cat-acc-sink.jpg",
-      "count": "5 types",
+      "id": "insect-blinds",
+      "name": "Insect Blinds",
+      "image": "/images/site/cat-insect-pleated.jpg",
+      "count": "5 solutions",
       "featured": [
-        "Sinks",
-        "Faucets",
-        "Tall Pantry Units",
-        "Wall Rail Systems",
-        "Spice & Bottle Organisers"
+        "Pleated Insect Screens",
+        "Zipline Retractable Screens",
+        "Motorized Insect Screens",
+        "Black-Out & Diffused Blinds",
+        "Security Mesh Screens"
       ]
     }
   ],
@@ -192,133 +193,168 @@
         }
       ]
     },
-    "bathrooms": {
-      "label": "Bathroom styles",
+    "windows-doors": {
+      "label": "Windows & systems",
       "products": [
         {
-          "id": "cur-b-marble",
-          "name": "Marble & Brass Basin Wall",
-          "category": "Bathrooms",
-          "price": 0,
-          "mrp": 0,
-          "discount": "",
-          "image": "/images/site/cur-b-marble.jpg",
-          "dimensions": "Vessel basin, brass mixer and a round mirror"
-        },
-        {
-          "id": "cur-b-spa",
-          "name": "Spa-Inspired Bathroom",
-          "category": "Bathrooms",
-          "price": 0,
-          "mrp": 0,
-          "discount": "",
-          "image": "/images/site/cur-b-spa.jpg",
-          "dimensions": "Freestanding tub, vessel basin and plenty of greenery"
-        },
-        {
-          "id": "cur-b-wood",
-          "name": "Floating Oak Vanity",
-          "category": "Bathrooms",
-          "price": 0,
-          "mrp": 0,
-          "discount": "",
-          "image": "/images/site/cur-b-wood.jpg",
-          "dimensions": "Wall-hung vanity with marble-look tiles"
-        },
-        {
-          "id": "cur-b-dark",
-          "name": "Dark & Moody Bathroom",
-          "category": "Bathrooms",
-          "price": 0,
-          "mrp": 0,
-          "discount": "",
-          "image": "/images/site/cur-b-dark.jpg",
-          "dimensions": "Matte black fittings and a walk-in shower"
-        },
-        {
-          "id": "cur-b-bright",
-          "name": "Bright Shower Room",
-          "category": "Bathrooms",
-          "price": 0,
-          "mrp": 0,
-          "discount": "",
-          "image": "/images/site/cur-b-bright.jpg",
-          "dimensions": "Glass shower enclosure and a long double vanity"
-        },
-        {
-          "id": "cur-b-tub",
-          "name": "Statement Copper Tub",
-          "category": "Bathrooms",
-          "price": 0,
-          "mrp": 0,
-          "discount": "",
-          "image": "/images/site/cur-b-tub.jpg",
-          "dimensions": "A freestanding focal point by the window"
-        }
-      ]
-    },
-    "doors-windows": {
-      "label": "Doors & windows",
-      "products": [
-        {
-          "id": "cur-d-glass",
-          "name": "Floor-to-Ceiling Glazing",
-          "category": "Windows",
+          "id": "waw-sliding-systems",
+          "name": "WAW Sliding Aluminium Systems",
+          "category": "WAW Aluminium Windows",
           "price": 0,
           "mrp": 0,
           "discount": "",
           "image": "/images/site/cur-d-glass.jpg",
-          "dimensions": "Large fixed panels that bring the garden indoors"
+          "dimensions": "SL-25, SL-29, SL-55 & Thermal Break slim profiles"
         },
         {
-          "id": "cur-d-black",
-          "name": "Black-Frame Glass Doors",
-          "category": "Doors",
+          "id": "waw-casement-systems",
+          "name": "WAW Casement Systems (CW-40 / CW-50)",
+          "category": "WAW Aluminium Windows",
           "price": 0,
           "mrp": 0,
           "discount": "",
-          "image": "/images/site/cur-d-black.jpg",
-          "dimensions": "Slim frames for bedrooms and balconies"
+          "image": "/images/site/cat-waw-casement.jpg",
+          "dimensions": "6063-T6 outward-opening acoustic casements"
         },
         {
-          "id": "cur-d-garden",
-          "name": "Sliding Doors to the Deck",
-          "category": "Doors",
+          "id": "waw-slide-fold-systems",
+          "name": "WAW Slide & Fold Patio Systems",
+          "category": "WAW Aluminium Windows",
           "price": 0,
           "mrp": 0,
           "discount": "",
           "image": "/images/site/cur-d-garden.jpg",
-          "dimensions": "Wide openings for indoor–outdoor living"
+          "dimensions": "Wide-span bi-fold openings with compact stacking"
         },
         {
-          "id": "cur-d-arched",
-          "name": "Arched Windows",
-          "category": "Windows",
+          "id": "amb-upvc-bay",
+          "name": "Ambiiance uPVC Bay Windows",
+          "category": "Ambiiance uPVC Windows",
           "price": 0,
           "mrp": 0,
           "discount": "",
-          "image": "/images/site/cur-d-arched.jpg",
-          "dimensions": "Classic arches with slim black frames"
+          "image": "/images/site/cat-upvc-bay.jpg",
+          "dimensions": "Custom panoramic multi-panel uPVC glazing"
         },
         {
-          "id": "cur-d-facade",
-          "name": "Contemporary Facades",
-          "category": "Doors",
+          "id": "amb-upvc-tilt-turn",
+          "name": "Ambiiance Tilt & Turn uPVC",
+          "category": "Ambiiance uPVC Windows",
           "price": 0,
           "mrp": 0,
           "discount": "",
-          "image": "/images/site/cur-d-facade.jpg",
-          "dimensions": "Entrance doors and windows planned together"
+          "image": "/images/site/cat-upvc-tilt-turn.jpg",
+          "dimensions": "Dual-action top tilt ventilation & full inward clean"
         },
         {
-          "id": "cur-d-bay",
-          "name": "Bay Window Seat",
-          "category": "Windows",
+          "id": "amb-upvc-balcony-door",
+          "name": "Ambiiance uPVC Balcony Doors",
+          "category": "Ambiiance uPVC Windows",
           "price": 0,
           "mrp": 0,
           "discount": "",
-          "image": "/images/site/cur-d-bay.jpg",
-          "dimensions": "A reading corner built into the window"
+          "image": "/images/site/cat-upvc-door.jpg",
+          "dimensions": "Thermal & sound-insulated reinforced uPVC doors"
+        }
+      ]
+    },
+    "glass-railings": {
+      "label": "Glass railings",
+      "products": [
+        {
+          "id": "rail-frameless-spigot",
+          "name": "Frameless SS316 Spigot Railing",
+          "category": "Glass Railings",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cat-railing-spigot.jpg",
+          "dimensions": "12mm toughened / 13.52mm laminated balcony balustrade"
+        },
+        {
+          "id": "rail-aluminium-u-channel",
+          "name": "Aluminium U-Channel Balustrade",
+          "category": "Glass Railings",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cat-railing-channel.jpg",
+          "dimensions": "Recessed base shoe with slim top architectural cap"
+        },
+        {
+          "id": "rail-staircase-balustrade",
+          "name": "Staircase Glass Balustrade",
+          "category": "Glass Railings",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cat-railing-staircase.jpg",
+          "dimensions": "CNC-tempered glass with oak/teak or SS handrail"
+        },
+        {
+          "id": "rail-post-clamp",
+          "name": "Post & Clamp Terrace Railing",
+          "category": "Glass Railings",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cat-door-sliding.jpg",
+          "dimensions": "Slim SS304/SS316 balusters for terraces & pool decks"
+        }
+      ]
+    },
+    "insect-blinds": {
+      "label": "Insect blinds",
+      "products": [
+        {
+          "id": "mw-pleated-screens",
+          "name": "Meshworkz Pleated Insect Screen",
+          "category": "Insect Blinds",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cat-insect-pleated.jpg",
+          "dimensions": "Zig-zag collapsible mesh with one-finger operation"
+        },
+        {
+          "id": "mw-zipline-screens",
+          "name": "Meshworkz Zipline Retractable Screen",
+          "category": "Insect Blinds",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cat-insect-zipline.jpg",
+          "dimensions": "Pet-friendly zip-track mesh for wide balconies & patios"
+        },
+        {
+          "id": "mw-motorized-screens",
+          "name": "Meshworkz Motorized Screen",
+          "category": "Insect Blinds",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cat-insect-motorized.jpg",
+          "dimensions": "Remote-operated whisper motion & thermal protection"
+        },
+        {
+          "id": "mw-blackout-diffused-blinds",
+          "name": "Meshworkz Black-Out & Diffused Blinds",
+          "category": "Insect Blinds",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cat-insect-blinds.jpg",
+          "dimensions": "Honeycomb 100% black-out & 70% diffused daylight blinds"
+        },
+        {
+          "id": "mw-security-mesh-screens",
+          "name": "Meshworkz Security Mesh Screen",
+          "category": "Insect Blinds",
+          "price": 0,
+          "mrp": 0,
+          "discount": "",
+          "image": "/images/site/cat-insect-security.jpg",
+          "dimensions": "High-tensile MeshTec with 3-side perimeter locking"
         }
       ]
     }
@@ -380,15 +416,15 @@
       "badge": "Accessories"
     },
     {
-      "id": "bath-mixer",
-      "name": "Basin Mixer Tap",
+      "id": "app-dishwasher",
+      "name": "14-Place Built-In Dishwasher",
       "price": 0,
       "mrp": 0,
       "discount": "",
-      "image": "/images/site/prod-basin-mixer.jpg",
-      "category": "Bathrooms",
-      "dimensions": "Single-lever mixer for vanity basins",
-      "badge": "Bath fittings"
+      "image": "/images/site/cat-app-dishwasher.jpg",
+      "category": "Appliances",
+      "dimensions": "70°C Kadhai wash, auto-dry door",
+      "badge": "Appliances"
     }
   ],
   "mostLoved": [
@@ -469,46 +505,37 @@
       ]
     },
     {
-      "id": "marble-brass-bath",
-      "name": "The Marble & Brass Bathroom",
-      "subtitle": "A double vanity with brass fittings, round mirrors and a bright window",
-      "roomImage": "/images/site/look-bath.jpg",
+      "id": "patio-railing-screen",
+      "name": "The Patio, Railing & Screen Suite",
+      "subtitle": "WAW slide-and-fold systems, frameless glass railings and Meshworkz motorized screens",
+      "roomImage": "/images/site/cat-insect-motorized.jpg",
       "hotspots": [
         {
-          "id": "mb-mirror",
-          "name": "Round brass-frame mirror",
+          "id": "pr-motorized",
+          "name": "Meshworkz Motorized Insect Screen",
           "price": 0,
           "mrp": 0,
           "x": 38,
-          "y": 26,
-          "image": "/images/site/hs-b-mirror.jpg"
+          "y": 50,
+          "image": "/images/site/cat-insect-motorized.jpg"
         },
         {
-          "id": "mb-mixer",
-          "name": "Brass basin mixer",
+          "id": "pr-sliding",
+          "name": "WAW Slide & Fold Aluminium Frame",
           "price": 0,
           "mrp": 0,
-          "x": 68,
+          "x": 52,
           "y": 28,
-          "image": "/images/site/hs-b-mixer.jpg"
+          "image": "/images/site/cur-d-garden.jpg"
         },
         {
-          "id": "mb-vanity",
-          "name": "Shaker-style vanity unit",
+          "id": "pr-railing",
+          "name": "Frameless SS316 Glass Railing",
           "price": 0,
           "mrp": 0,
-          "x": 85,
-          "y": 55,
-          "image": "/images/site/hs-b-vanity.jpg"
-        },
-        {
-          "id": "mb-window",
-          "name": "Bathroom window",
-          "price": 0,
-          "mrp": 0,
-          "x": 38,
-          "y": 74,
-          "image": "/images/site/hs-b-window.jpg"
+          "x": 64,
+          "y": 72,
+          "image": "/images/site/cat-railing-spigot.jpg"
         }
       ]
     },
@@ -551,7 +578,7 @@
   "promises": [
     {
       "title": "One team, start to finish",
-      "description": "Design, supply and installation for your kitchen, bathroom, wardrobes, doors and windows, with one point of contact throughout."
+      "description": "Design, supply and installation for your modular kitchen, WAW aluminium & Ambiiance uPVC windows, wardrobes, glass railings, appliances and insect blinds — with one point of contact throughout."
     },
     {
       "title": "Designed for how you live",
@@ -581,7 +608,7 @@
     {
       "id": "measurement",
       "title": "Site measurement",
-      "description": "We measure on site so kitchens, wardrobes, doors and windows are made to fit your walls, not a standard size.",
+      "description": "We measure on site so modular kitchens, wardrobes, windows, glass railings and insect blinds are made to fit your exact openings.",
       "icon": "measurement",
       "tag": "Measure"
     },
@@ -608,10 +635,10 @@
       "image": "/images/site/cat-kitchen-island.jpg"
     },
     {
-      "title": "Planning a Bathroom That Stays Easy to Clean",
-      "category": "Bathroom Guide",
+      "title": "WAW Aluminium vs Ambiiance uPVC: Picking the Right Window System",
+      "category": "Window Guide",
       "readTime": "4 min read",
-      "image": "/images/site/cat-bath-shower.jpg"
+      "image": "/images/site/cat-waw-casement.jpg"
     },
     {
       "title": "Sliding or Hinged? Picking the Right Wardrobe Doors",
@@ -668,41 +695,6 @@
             {
               "name": "Dark & Wood Kitchens",
               "image": "/images/site/cur-k-dark.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "bathrooms",
-      "title": "Bathrooms",
-      "subsections": [
-        {
-          "name": "Bathroom Solutions",
-          "items": [
-            {
-              "name": "Vanity Units",
-              "image": "/images/site/cat-bath-vanity.jpg"
-            },
-            {
-              "name": "Shower Enclosures",
-              "image": "/images/site/cat-bath-shower.jpg"
-            },
-            {
-              "name": "Bathtubs",
-              "image": "/images/site/cat-bath-tub.jpg"
-            },
-            {
-              "name": "Taps & Showers",
-              "image": "/images/site/cat-bath-fittings.jpg"
-            },
-            {
-              "name": "Sanitaryware",
-              "image": "/images/site/cat-bath-sanitaryware.jpg"
-            },
-            {
-              "name": "Bathroom Storage",
-              "image": "/images/site/cat-bath-storage.jpg"
             }
           ]
         }
@@ -863,7 +855,7 @@
   "faqs": [
     {
       "question": "What does Status Bath and Kitchen offer?",
-      "answer": "Modular kitchens, bathrooms, wardrobes, doors and windows, along with kitchen appliances and accessories — designed, supplied and installed by one team."
+      "answer": "Modular kitchens, WAW aluminium windows, Ambiiance uPVC windows, wardrobes, glass railings, kitchen appliances and Meshworkz insect blinds — designed, supplied and installed by one team."
     },
     {
       "question": "Can I see the design before I confirm?",
@@ -1163,46 +1155,46 @@
     "link": "#categories"
   },
   "serviceStrip": {
-    "title": "Everything for your kitchen & bath",
-    "subtitle": "Modular Kitchens • Wardrobes • Doors • Windows • Appliances • Kitchen Accessories & more",
+    "title": "Everything for your home",
+    "subtitle": "Modular Kitchens • WAW Aluminium Windows • Ambiiance uPVC Windows • Wardrobes • Glass Railings • Appliances • Insect Blinds",
     "items": [
       {
         "id": "kitchens",
         "label": "Modular Kitchens"
       },
       {
-        "id": "bathrooms",
-        "label": "Bathrooms"
+        "id": "waw-windows",
+        "label": "WAW Aluminium Windows"
+      },
+      {
+        "id": "upvc-windows",
+        "label": "Ambiiance uPVC Windows"
       },
       {
         "id": "wardrobes",
         "label": "Wardrobes"
       },
       {
-        "id": "doors",
-        "label": "Doors"
-      },
-      {
-        "id": "windows",
-        "label": "Windows"
+        "id": "glass-railings",
+        "label": "Glass Railings"
       },
       {
         "id": "appliances",
         "label": "Appliances"
       },
       {
-        "id": "accessories",
-        "label": "Kitchen Accessories"
+        "id": "insect-blinds",
+        "label": "Insect Blinds"
       }
     ]
   },
   "liveFaqs": [
     {
       "question": "What does Status Bath and Kitchen offer?",
-      "answer": "We design, supply and install modular kitchens, bathrooms, wardrobes, doors and windows, along with kitchen appliances and accessories, so you can plan your whole home with one team."
+      "answer": "We design, supply and install modular kitchens, WAW aluminium windows, Ambiiance uPVC windows, wardrobes, glass railings, kitchen appliances and Meshworkz insect blinds, so you can plan your whole home with one team."
     },
     {
-      "question": "How does a kitchen or bathroom project work?",
+      "question": "How does a kitchen, window or railing project work?",
       "answer": "It starts with a consultation to understand your space, needs and budget. We then measure on site and share a design with a detailed quotation. Once you approve it, we prepare everything and install it."
     },
     {
@@ -1214,8 +1206,8 @@
       "answer": "It depends on the size of the project and the materials you choose. Your quotation includes an estimated timeline so you can plan around it."
     },
     {
-      "question": "Do you supply appliances and accessories too?",
-      "answer": "Yes. We can plan chimneys, hobs, built-in ovens, microwaves, dishwashers and refrigerators into your kitchen, along with sinks, faucets, pantry units and other accessories."
+      "question": "Do you supply appliances and insect blinds too?",
+      "answer": "Yes. We plan chimneys, hobs, built-in ovens, microwaves, dishwashers and refrigerators into your kitchen, alongside Meshworkz pleated, zipline and motorized insect screens, blinds and security mesh."
     },
     {
       "question": "What warranty do I get?",
@@ -1223,7 +1215,7 @@
     },
     {
       "question": "Do you work with builders, architects and home space planners?",
-      "answer": "Yes. We take on project orders for kitchens, wardrobes, doors and windows. Get in touch to discuss your drawings and timelines."
+      "answer": "Yes. We take on project orders for kitchens, wardrobes, WAW & Ambiiance windows, glass railings and insect blinds. Get in touch to discuss your drawings and timelines."
     }
   ]
 }

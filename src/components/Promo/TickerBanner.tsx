@@ -17,7 +17,7 @@ export default function TickerBanner() {
             </div>
             <div>
               <p className="text-xs sm:text-sm font-medium text-[#4a4541] leading-tight">
-                <span className="font-semibold text-gray-900">Experience Studio:</span> Visit our showroom to explore full-scale modular kitchens, luxury bathroom suites, doors &amp; windows.
+                <span className="font-semibold text-gray-900">Experience Studio:</span> Visit our showroom to explore modular kitchens, WAW &amp; Ambiiance windows, wardrobes, glass railings, appliances &amp; insect blinds.
               </p>
               <p className="text-[11px] text-[#76716d] mt-0.5">
                 Bespoke layouts • Premium finishes • German &amp; Austrian hardware

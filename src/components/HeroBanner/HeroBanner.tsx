@@ -14,7 +14,7 @@ const slides = [
     mobileImg: "/images/hero-kitchen.jpg",
     alt: "Modular Kitchen",
     ctaText: "Explore Modular Kitchens",
-    link: "#curated-products",
+    link: "#categories",
   },
 ];
 
@@ -61,7 +61,7 @@ export default function HeroBanner({ onCtaClick }: HeroBannerProps) {
           type="button"
           onClick={() => {
             if (onCtaClick) onCtaClick(slides[currentSlide].id);
-            const el = document.querySelector("#curated-products");
+            const el = document.querySelector("#categories");
             if (el) el.scrollIntoView({ behavior: "smooth" });
           }}
           className="px-7 sm:px-10 py-3 sm:py-3.5 bg-[#ff5247] hover:bg-[#e0453b] text-white font-medium text-xs sm:text-sm rounded-full shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"

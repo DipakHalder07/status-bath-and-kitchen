@@ -56,7 +56,7 @@ export default function CuratedSection() {
                     setScrollProgress(25);
                     if (scrollRef.current) scrollRef.current.scrollLeft = 0;
                   }}
-                  className={`relative px-5 sm:px-8 py-2.5 sm:py-3 text-xs sm:text-sm font-medium transition-colors cursor-pointer text-center ${
+                  className={`relative px-5 sm:px-8 py-2.5 sm:py-3 text-xs sm:text-sm font-medium transition-colors cursor-pointer text-center whitespace-nowrap ${
                     isActive
                       ? "bg-white text-[#332f2c]"
                       : "bg-[#f5f0ea] text-[#6b6560] hover:bg-[#ede5dc] hover:text-[#332f2c]"
