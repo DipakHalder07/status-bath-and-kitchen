@@ -109,27 +109,24 @@ export default function Navbar({
 
   return (
     <header
-      className={`status-navbar fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isHeaderSolid
+      className={`status-navbar fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isHeaderSolid
           ? "bg-white text-gray-900 shadow-md border-b border-gray-100"
           : "bg-gradient-to-b from-black/70 via-black/30 to-transparent text-white"
-      }`}
+        }`}
     >
       {/* 1. TOP UTILITY BAR (Hidden on mobile) */}
       <div
-        className={`hidden sm:block w-full text-xs transition-colors border-b ${
-          isHeaderSolid
+        className={`hidden sm:block w-full text-xs transition-colors border-b ${isHeaderSolid
             ? "border-gray-100/80 bg-gray-50/80 text-gray-700"
             : "border-white/10 text-white/90"
-        }`}
+          }`}
       >
         <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 h-8 sm:h-9 flex items-center justify-between">
           {/* Left: Studio Call Number */}
           <a
             href={siteBrand.phoneHref || "tel:+919832095793"}
-            className={`flex items-center space-x-1.5 font-medium transition-colors ${
-              isHeaderSolid ? "text-gray-700 hover:text-[#ff5d55]" : "text-white hover:text-white/90"
-            }`}
+            className={`flex items-center space-x-1.5 font-medium transition-colors ${isHeaderSolid ? "text-gray-700 hover:text-[#ff5d55]" : "text-white hover:text-white/90"
+              }`}
           >
             <Phone className="w-3.5 h-3.5" />
             <span>{siteBrand.phone}</span>
@@ -140,27 +137,24 @@ export default function Navbar({
             <button
               type="button"
               onClick={() => openConsultation("Design Consultation")}
-              className={`hidden sm:flex items-center space-x-1.5 transition-colors cursor-pointer ${
-                isHeaderSolid ? "text-gray-600 hover:text-[#ff5d55]" : "text-white/85 hover:text-white"
-              }`}
+              className={`hidden sm:flex items-center space-x-1.5 transition-colors cursor-pointer ${isHeaderSolid ? "text-gray-600 hover:text-[#ff5d55]" : "text-white/85 hover:text-white"
+                }`}
             >
               <CalendarCheck className="w-3.5 h-3.5" />
               <span>Book a consultation</span>
             </button>
             <Link
               href="/contact"
-              className={`flex items-center space-x-1.5 transition-colors ${
-                isHeaderSolid ? "text-gray-600 hover:text-[#ff5d55]" : "text-white/85 hover:text-white"
-              }`}
+              className={`flex items-center space-x-1.5 transition-colors ${isHeaderSolid ? "text-gray-600 hover:text-[#ff5d55]" : "text-white/85 hover:text-white"
+                }`}
             >
               <MapPin className="w-3.5 h-3.5" />
               <span>Visit our studio</span>
             </Link>
             <Link
               href="/contact"
-              className={`hidden md:flex items-center space-x-1.5 transition-colors ${
-                isHeaderSolid ? "text-gray-600 hover:text-[#ff5d55]" : "text-white/85 hover:text-white"
-              }`}
+              className={`hidden md:flex items-center space-x-1.5 transition-colors ${isHeaderSolid ? "text-gray-600 hover:text-[#ff5d55]" : "text-white/85 hover:text-white"
+                }`}
             >
               <Phone className="w-3.5 h-3.5" />
               <span>Contact us</span>
@@ -176,9 +170,8 @@ export default function Navbar({
           <div className="flex items-center">
             <button
               onClick={onMobileMenuToggle}
-              className={`lg:hidden p-1.5 rounded-md transition-colors ${
-                isHeaderSolid ? "text-gray-800 hover:text-[#ff5d55]" : "text-white"
-              }`}
+              className={`lg:hidden p-1.5 rounded-md transition-colors ${isHeaderSolid ? "text-gray-800 hover:text-[#ff5d55]" : "text-white"
+                }`}
               aria-label="Toggle Navigation"
             >
               <Menu className="w-6 h-6" />
@@ -211,11 +204,10 @@ export default function Navbar({
             <div className="relative" ref={searchRef}>
               <button
                 onClick={() => setIsSearchOpen(!isSearchOpen)}
-                className={`p-2 rounded-full transition-colors ${
-                  isHeaderSolid
+                className={`p-2 rounded-full transition-colors ${isHeaderSolid
                     ? "text-gray-700 hover:text-[#ff5d55] hover:bg-gray-100"
                     : "text-white hover:text-white hover:bg-white/15"
-                }`}
+                  }`}
                 aria-label="Open Search"
               >
                 <Search className="w-5 h-5" />
@@ -250,11 +242,10 @@ export default function Navbar({
                           type="button"
                           onClick={handleVoiceSearch}
                           title="Voice Search"
-                          className={`p-1.5 rounded-full ${
-                            isListening
+                          className={`p-1.5 rounded-full ${isListening
                               ? "text-white bg-[#ff5d55] animate-pulse"
                               : "text-gray-500 hover:text-[#ff5d55]"
-                          }`}
+                            }`}
                         >
                           <Mic className="w-4 h-4" />
                         </button>
@@ -294,11 +285,10 @@ export default function Navbar({
             {/* Saved Designs Drawer Trigger */}
             <button
               onClick={openCart}
-              className={`relative p-2 rounded-full transition-colors cursor-pointer ${
-                isHeaderSolid
+              className={`relative p-2 rounded-full transition-colors cursor-pointer ${isHeaderSolid
                   ? "text-gray-700 hover:text-[#ff5d55] hover:bg-gray-100"
                   : "text-white hover:text-white hover:bg-white/15"
-              }`}
+                }`}
               aria-label="Saved Designs"
               title="Saved Designs"
             >
@@ -315,24 +305,22 @@ export default function Navbar({
 
       {/* 3. CATEGORIES NAVIGATION BAR (Submenu) */}
       <div
-        className={`hidden lg:block w-full border-t transition-colors ${
-          isHeaderSolid ? "border-gray-100" : "border-white/15"
-        }`}
+        className={`hidden lg:block w-full border-t transition-colors ${isHeaderSolid ? "border-gray-100" : "border-white/15"
+          }`}
       >
         <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
-          <ul className="flex items-center justify-center space-x-5 xl:space-x-7 text-[13px] font-medium py-2.5 whitespace-nowrap">
+          <ul className="flex items-center justify-center space-x-6 xl:space-x-8 text-[13px] font-medium py-2.5 whitespace-nowrap">
             <li className="relative">
               <Link
                 href="/"
-                className={`transition-colors py-1 hover:underline cursor-pointer ${
-                  pathname === "/"
+                className={`transition-colors py-1 hover:underline cursor-pointer ${pathname === "/"
                     ? isHeaderSolid
                       ? "text-[#ff5d55] font-semibold"
                       : "text-white font-semibold"
                     : isHeaderSolid
                       ? "text-gray-800 hover:text-[#ff5d55]"
                       : "text-white/90 hover:text-white"
-                }`}
+                  }`}
               >
                 Home
               </Link>
@@ -340,46 +328,29 @@ export default function Navbar({
             <li className="relative">
               <Link
                 href="/products"
-                className={`transition-colors py-1 hover:underline cursor-pointer font-semibold ${
-                  isHeaderSolid
-                    ? "text-[#ff5d55]"
-                    : "text-white"
-                }`}
-              >
-                All Products
-              </Link>
-            </li>
-            {megaMenuItems.map((cat) => (
-              <li key={cat.id} className="relative">
-                <Link
-                  href={`/products?category=${encodeURIComponent(cat.title)}`}
-                  onClick={() => {
-                    if (onCategorySelect) {
-                      onCategorySelect(cat.title);
-                    }
-                  }}
-                  className={`transition-colors py-1 hover:underline cursor-pointer ${
-                    isHeaderSolid
-                      ? "text-gray-800 hover:text-[#ff5d55]"
-                      : "text-white/90 hover:text-white"
-                  }`}
-                >
-                  {cat.title}
-                </Link>
-              </li>
-            ))}
-            <li className="relative">
-              <Link
-                href="/about"
-                className={`transition-colors py-1 hover:underline cursor-pointer ${
-                  pathname === "/about" || pathname === "/about-us"
+                className={`transition-colors py-1 hover:underline cursor-pointer ${pathname === "/products" || pathname === "/all-products"
                     ? isHeaderSolid
                       ? "text-[#ff5d55] font-semibold"
                       : "text-white font-semibold"
                     : isHeaderSolid
                       ? "text-gray-800 hover:text-[#ff5d55]"
                       : "text-white/90 hover:text-white"
-                }`}
+                  }`}
+              >
+                All Products
+              </Link>
+            </li>
+            <li className="relative">
+              <Link
+                href="/about"
+                className={`transition-colors py-1 hover:underline cursor-pointer ${pathname === "/about" || pathname === "/about-us"
+                    ? isHeaderSolid
+                      ? "text-[#ff5d55] font-semibold"
+                      : "text-white font-semibold"
+                    : isHeaderSolid
+                      ? "text-gray-800 hover:text-[#ff5d55]"
+                      : "text-white/90 hover:text-white"
+                  }`}
               >
                 About
               </Link>
