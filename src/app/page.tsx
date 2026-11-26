@@ -9,7 +9,9 @@ import AboutSection from "@/components/About/AboutSection";
 import CategoryGrid from "@/components/Categories/CategoryGrid";
 import DealsBanner from "@/components/Promo/DealsBanner";
 import StoreLocatorSection from "@/components/StoreLocator/StoreLocatorSection";
+import ProjectGallery from "@/components/Projects/ProjectGallery";
 import CareServices from "@/components/Services/CareServices";
+import BrandsSection from "@/components/Brands/BrandsSection";
 import FaqAccordion from "@/components/FAQ/FaqAccordion";
 import Footer from "@/components/Footer/Footer";
 import CartDrawer from "@/components/Cart/CartDrawer";
@@ -85,10 +87,16 @@ export default function Home() {
         {/* 6. Visit our experience studio */}
         <StoreLocatorSection />
 
-        {/* 7. Our services */}
+        {/* 7. Project gallery / Recent installations in Siliguri & North Bengal */}
+        <ProjectGallery />
+
+        {/* 8. Our services */}
         <CareServices />
 
-        {/* 8. FAQs */}
+        {/* 9. Brands we work with */}
+        <BrandsSection />
+
+        {/* 10. FAQs */}
         <FaqAccordion />
       </main>
 
