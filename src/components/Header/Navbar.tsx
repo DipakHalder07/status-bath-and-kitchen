@@ -127,14 +127,7 @@ export default function Navbar({
             : "border-white/10 text-white/90"
         }`}
       >
-        <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 h-8 sm:h-9 flex items-center justify-between">
-          {/* Left: For Homes */}
-          <div className="flex items-center">
-            <span className="px-3 py-1 rounded-full font-medium bg-[#ff5d55] text-white shadow-xs">
-              For Homes
-            </span>
-          </div>
-
+        <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 h-8 sm:h-9 flex items-center justify-end">
           {/* Right Utility Links */}
           <div className="flex items-center space-x-4 sm:space-x-6 text-[11px] sm:text-xs">
             <button

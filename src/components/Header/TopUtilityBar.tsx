@@ -1,20 +1,12 @@
 "use client";
 
 import React from "react";
-import { MapPin, Phone, Home, HelpCircle } from "lucide-react";
+import { MapPin, Phone, HelpCircle } from "lucide-react";
 
 export default function TopUtilityBar() {
   return (
     <div className="w-full bg-[#f9f8f5] border-b border-gray-200 text-xs text-gray-700">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-9 flex items-center justify-between">
-        {/* Left Segment Badge */}
-        <div className="flex items-center space-x-1">
-          <span className="flex items-center space-x-1 px-3 py-1 font-semibold text-[#c0262d] border-b-2 border-[#c0262d]">
-            <Home className="w-3.5 h-3.5" />
-            <span>For Homes</span>
-          </span>
-        </div>
-
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-9 flex items-center justify-end">
         {/* Right Links */}
         <div className="hidden md:flex items-center space-x-6 text-gray-600">
           <a
