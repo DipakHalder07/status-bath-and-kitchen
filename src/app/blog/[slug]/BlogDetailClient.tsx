@@ -269,9 +269,8 @@ export default function BlogDetailClient({
                   {section.paragraphs.map((para, pIdx) => (
                     <p
                       key={pIdx}
-                      className={`text-[15px] sm:text-[16px] text-[#4a4541] leading-[1.8] font-normal ${
-                        sIdx === 0 && pIdx === 0 ? "first-letter:text-4xl first-letter:font-bold first-letter:text-[#ff5d55] first-letter:mr-1 first-letter:float-left" : ""
-                      }`}
+                      className={`text-[15px] sm:text-[16px] text-[#4a4541] leading-[1.8] font-normal ${sIdx === 0 && pIdx === 0 ? "first-letter:text-4xl first-letter:font-bold first-letter:text-[#ff5d55] first-letter:mr-1 first-letter:float-left" : ""
+                        }`}
                     >
                       {para}
                     </p>
@@ -346,9 +345,8 @@ export default function BlogDetailClient({
                               {row.map((cell, cIdx) => (
                                 <td
                                   key={cIdx}
-                                  className={`py-3 px-4 text-[#4a4541] ${
-                                    cIdx === 0 ? "font-medium" : ""
-                                  }`}
+                                  className={`py-3 px-4 text-[#4a4541] ${cIdx === 0 ? "font-medium" : ""
+                                    }`}
                                 >
                                   {cell}
                                 </td>
