@@ -16,7 +16,7 @@ import {
   CalendarCheck,
 } from "lucide-react";
 import { useCart } from "@/context/CartContext";
-import { siteBrand, megaMenuItems } from "@/data/statusData";
+import { siteBrand } from "@/data/statusData";
 
 interface NavbarProps {
   onMobileMenuToggle: () => void;
@@ -28,7 +28,6 @@ interface NavbarProps {
 export default function Navbar({
   onMobileMenuToggle,
   onSearchSubmit,
-  onCategorySelect,
   forceSolid = false,
 }: NavbarProps) {
   const pathname = usePathname();

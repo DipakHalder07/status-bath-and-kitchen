@@ -1,11 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { ChevronRight, ChevronLeft } from "lucide-react";
-
-interface HeroBannerProps {
-  onCtaClick?: (slideId: string) => void;
-}
+import { ChevronRight, ChevronLeft, Phone } from "lucide-react";
+import { siteBrand } from "@/data/statusData";
 
 const slides = [
   {
@@ -13,22 +10,24 @@ const slides = [
     desktopImg: "/images/hero-kitchen-couple.webp",
     mobileImg: "/images/hero-kitchen-couple-mobile.webp",
     alt: "Couple in a custom olive-green modular kitchen by Status Bath and Kitchen",
-    ctaText: "Explore Modular Kitchens",
+    eyebrow: "Status Bath & Kitchen · Siliguri",
+    headline: "Kitchens designed around the way you cook.",
+    subtext: "Custom modular kitchens, wardrobes & fitted spaces crafted by one in-house team.",
     objectPosition: "object-center",
-    link: "#categories",
   },
   {
     id: "windows",
     desktopImg: "/images/hero-windows-family.webp",
     mobileImg: "/images/hero-windows-family-mobile.webp",
     alt: "Family relaxing by sleek black sliding windows from Status Bath and Kitchen",
-    ctaText: "Explore Sliding Windows",
+    eyebrow: "WAW Aluminium & Ambiiance uPVC",
+    headline: "Built for brighter, quieter homes.",
+    subtext: "Weatherproof sliding windows, glass railings & insect screens fitted across North Bengal.",
     objectPosition: "object-[26%_center] md:object-center",
-    link: "#categories",
   },
 ];
 
-export default function HeroBanner({ onCtaClick }: HeroBannerProps) {
+export default function HeroBanner() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -46,6 +45,8 @@ export default function HeroBanner({ onCtaClick }: HeroBannerProps) {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
+
+  const activeSlide = slides[currentSlide];
 
   return (
     <section className="relative w-full h-[75svh] sm:h-screen min-h-[520px] max-h-[1080px] bg-stone-900 overflow-hidden">
@@ -73,19 +74,32 @@ export default function HeroBanner({ onCtaClick }: HeroBannerProps) {
         ))}
       </div>
 
-      {/* Hero CTA button (bottom-right to keep left-side subjects unobstructed) */}
-      <div className="absolute bottom-14 sm:bottom-16 md:bottom-20 right-5 sm:right-10 lg:right-20 z-20">
-        <button
-          type="button"
-          onClick={() => {
-            if (onCtaClick) onCtaClick(slides[currentSlide].id);
-            const el = document.querySelector("#categories");
-            if (el) el.scrollIntoView({ behavior: "smooth" });
-          }}
-          className="px-7 sm:px-10 py-3 sm:py-3.5 bg-[#ff5247] hover:bg-[#e0453b] text-white font-medium text-xs sm:text-sm rounded-full shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
-        >
-          {slides[currentSlide].ctaText}
-        </button>
+      {/* Bottom Scrim for Legible Text & CTA Contrast */}
+      <div className="absolute inset-x-0 bottom-0 h-72 sm:h-80 bg-gradient-to-t from-black/75 via-black/35 to-transparent z-15 pointer-events-none" />
+
+      {/* Bottom Bar: Editorial Text (Left) + Primary CTA (Right) */}
+      <div className="absolute inset-x-0 bottom-12 sm:bottom-14 md:bottom-16 z-20">
+        <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6">
+          <div className="max-w-md lg:max-w-lg space-y-1.5 text-white">
+            <span className="text-[11px] sm:text-xs font-medium uppercase tracking-wider !text-white/85 block">
+              {activeSlide.eyebrow}
+            </span>
+            <h1 className="text-xl sm:text-3xl lg:text-[36px] font-medium !text-white leading-tight tracking-tight drop-shadow-sm">
+              {activeSlide.headline}
+            </h1>
+            <p className="text-xs sm:text-sm !text-white/90 leading-relaxed font-normal max-w-md">
+              {activeSlide.subtext}
+            </p>
+          </div>
+
+          <a
+            href={siteBrand.phoneHref || "tel:+919832095793"}
+            className="self-start md:self-auto inline-flex items-center gap-2.5 px-7 sm:px-10 py-3 sm:py-3.5 bg-[#ff5247] hover:bg-[#e0453b] text-white font-medium text-xs sm:text-sm rounded-full shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 shrink-0"
+          >
+            <Phone className="w-4 h-4" />
+            <span>Call {siteBrand.phone}</span>
+          </a>
+        </div>
       </div>
 
       {slides.length > 1 && (
