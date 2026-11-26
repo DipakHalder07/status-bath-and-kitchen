@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Navbar from "@/components/Header/Navbar";
 import MobileDrawer from "@/components/Header/MobileDrawer";
 import HeroBanner from "@/components/HeroBanner/HeroBanner";
-import TickerBanner from "@/components/Promo/TickerBanner";
 import AboutSection from "@/components/About/AboutSection";
 import CategoryGrid from "@/components/Categories/CategoryGrid";
 import DealsBanner from "@/components/Promo/DealsBanner";
@@ -65,10 +64,7 @@ export default function Home() {
           }}
         />
 
-        {/* 2. Promotional Bank Offer Ticker Banner */}
-        <TickerBanner />
-
-        {/* 3. About Status Bath and Kitchen */}
+        {/* 2. About Status Bath and Kitchen */}
         <AboutSection />
 
         {/* 4. How can we help you? (7 category tabs: kitchens, WAW aluminium windows, Ambiiance uPVC windows, wardrobes, glass railings, appliances, insect blinds) */}
