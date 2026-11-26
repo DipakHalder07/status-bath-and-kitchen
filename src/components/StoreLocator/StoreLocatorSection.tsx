@@ -33,10 +33,10 @@ export default function StoreLocatorSection() {
           {/* Overlaid Frosted Card on Right */}
           <div className="status-glass-dark status-card relative z-10 w-full max-w-md rounded-xl bg-black/45 backdrop-blur-md border border-white/15 p-6 sm:p-10 text-white shadow-2xl">
             <h2 className="text-xl sm:text-2xl lg:text-[28px] font-medium !text-white tracking-tight">
-              Visit our experience studio
+              Visit our Experience Studio
             </h2>
             <p className="text-xs sm:text-sm text-white/90 mt-3 sm:mt-4 leading-relaxed font-normal">
-              See shutters, countertops, fittings and finishes up close, and talk through your plans with our design team. Come visit us soon!
+              See our modular kitchens, wardrobes, and aluminium and uPVC windows in person. You can touch the finishes, try the fittings and plan your home with our design team.
             </p>
 
             <div className="mt-6 sm:mt-8">

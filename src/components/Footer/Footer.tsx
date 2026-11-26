@@ -166,21 +166,6 @@ export default function Footer({ showBlogCredit }: FooterProps = {}) {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about#principles" className="hover:text-white transition-colors">
-                    Brand Philosophy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services" className="hover:text-white transition-colors">
-                    Care &amp; Services
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about#sustainability" className="hover:text-white transition-colors">
-                    Sustainability
-                  </Link>
-                </li>
-                <li>
                   <Link href="/contact" className="hover:text-white transition-colors">
                     Experience Centres
                   </Link>
@@ -210,11 +195,6 @@ export default function Footer({ showBlogCredit }: FooterProps = {}) {
                 <li>
                   <Link href="/contact#faq" className="hover:text-white transition-colors">
                     FAQ&apos;s &amp; Queries
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="hover:text-white transition-colors">
-                    Visit Experience Studio
                   </Link>
                 </li>
               </ul>
