@@ -75,10 +75,12 @@ export interface BrandPromise {
 
 export interface CareService {
   id: string;
+  step?: string;
   title: string;
   description: string;
   icon: string;
   tag: string;
+  cta?: string;
 }
 
 export interface CategoryTab {

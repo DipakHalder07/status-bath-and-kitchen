@@ -610,31 +610,39 @@
   "services": [
     {
       "id": "consultation",
-      "title": "Design consultation",
-      "description": "Share your floor plan and how you use the space. We suggest layouts, materials and finishes that suit your budget.",
+      "step": "01",
+      "title": "Consultation",
+      "description": "Visit our studio or invite us home. Tell us how you live and your budget, and we'll suggest layouts, materials and finishes that suit you.",
       "icon": "consultation",
-      "tag": "Plan"
+      "tag": "Plan",
+      "cta": "Book a consultation"
     },
     {
       "id": "measurement",
-      "title": "Site measurement",
-      "description": "We measure on site so modular kitchens, wardrobes, windows, glass railings and insect blinds are made to fit your exact openings.",
+      "step": "02",
+      "title": "Measure & Design",
+      "description": "Our team measures your site precisely. We design your kitchen, wardrobes, doors and windows to fit your exact spaces, and you approve before we begin.",
       "icon": "measurement",
-      "tag": "Measure"
+      "tag": "Measure",
+      "cta": "Schedule a visit"
     },
     {
       "id": "installation",
+      "step": "03",
       "title": "Installation",
-      "description": "Our team installs and aligns everything, then walks you through how to use and care for it.",
+      "description": "Our own trained team fits and aligns everything, then hands over a clean, finished space with a quick guide on use and care.",
       "icon": "installation",
-      "tag": "Install"
+      "tag": "Install",
+      "cta": "Enquire now"
     },
     {
       "id": "support",
-      "title": "After-sales support",
-      "description": "Adjustments, part replacements and servicing whenever you need them after handover.",
+      "step": "04",
+      "title": "After-sales care",
+      "description": "Adjustments, servicing and part replacements whenever you need them, long after handover. We're just a call or WhatsApp away.",
       "icon": "support",
-      "tag": "Support"
+      "tag": "Support",
+      "cta": "Get support"
     }
   ],
   "articles": [
