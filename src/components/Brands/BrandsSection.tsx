@@ -17,7 +17,7 @@ const partnerBrands: BrandPartner[] = [
   },
   {
     name: "Ambiiance",
-    logo: "/images/brands/ambiiance.png",
+    logo: "/images/brands/ambiiance.webp",
     specialty: "uPVC Windows",
   },
   {
@@ -75,9 +75,9 @@ export default function BrandsSection() {
           {partnerBrands.map((brand) => (
             <div
               key={brand.name}
-              className="bg-white border border-[#e6e0d8] rounded-md px-4 py-5 flex flex-col items-center justify-between text-center min-h-[112px]"
+              className="bg-white border border-[#e6e0d8] rounded-md px-4 py-4 flex flex-col items-center justify-between text-center min-h-[124px]"
             >
-              <div className="relative w-full h-11 flex items-center justify-center">
+              <div className="relative w-full h-14 flex items-center justify-center">
                 <Image
                   src={brand.logo}
                   alt={brand.name}
