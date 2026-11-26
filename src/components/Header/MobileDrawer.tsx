@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { X, ChevronDown, ChevronRight, Phone, MapPin, Package, Info, BookOpen, Wrench } from "lucide-react";
+import { X, ChevronDown, ChevronRight, Phone, MapPin, Package, Info, BookOpen } from "lucide-react";
 import { megaMenuItems, siteBrand } from "@/data/statusData";
 
 interface MobileDrawerProps {
@@ -92,15 +92,6 @@ export default function MobileDrawer({
             className="status-btn-primary w-full py-2.5 px-4 bg-[#ff5d55] hover:bg-[#e5473f] text-white rounded-[20px_2px_2px_2px] text-xs font-semibold shadow-xs flex items-center justify-center gap-2 transition-colors"
           >
             <span>Book Free Design Consultation</span>
-          </Link>
-
-          <Link
-            href="/services"
-            onClick={onClose}
-            className="w-full py-2 px-3 border border-stone-200 hover:border-[#ff5d55] text-[#4a4541] hover:text-[#ff5d55] rounded-[16px_2px_2px_2px] text-xs font-semibold flex items-center justify-center gap-2 transition-colors bg-white shadow-xs"
-          >
-            <Wrench className="w-3.5 h-3.5 text-[#ff5d55]" />
-            <span>Care, Repairs &amp; Maintenance Services</span>
           </Link>
         </div>
 

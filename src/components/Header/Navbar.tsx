@@ -17,7 +17,6 @@ import {
   Sparkles,
   Tag,
   CalendarCheck,
-  Wrench,
 } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import { siteBrand, megaMenuItems } from "@/data/statusData";
@@ -157,15 +156,6 @@ export default function Navbar({
             >
               <Phone className="w-3.5 h-3.5" />
               <span>Contact us</span>
-            </Link>
-            <Link
-              href="/services"
-              className={`hidden md:flex items-center space-x-1.5 transition-colors ${
-                isHeaderSolid ? "text-gray-600 hover:text-[#ff5d55]" : "text-white/85 hover:text-white"
-              }`}
-            >
-              <Wrench className="w-3.5 h-3.5" />
-              <span>Services</span>
             </Link>
           </div>
         </div>

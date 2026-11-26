@@ -4,13 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  Phone,
-  Mail,
   ChevronDown,
-  Building2,
-  Truck,
-  RotateCcw,
-  Wrench,
   CheckCircle2,
   ExternalLink,
   MapPin,
@@ -25,49 +19,6 @@ import ConsultationModal from "@/components/Modals/ConsultationModal";
 import Toast from "@/components/UI/Toast";
 import { useCart } from "@/context/CartContext";
 import { siteBrand } from "@/data/statusData";
-
-const categoryChannels = [
-  {
-    id: "showroom",
-    name: "Showroom visit & purchases",
-    email: "showroom@statusbathkitchen.com",
-    phone: "+91 98320 95793",
-    whatsapp: "+91 98320 95793",
-    escalationLabel: "To escalate showroom enquiries",
-    escalationText: "Connect with our Showroom Manager:",
-    escalationAction: "Visit Our Store",
-    escalationEmail: "showroom@statusbathkitchen.com",
-  },
-  {
-    id: "offline",
-    name: "Offline order related",
-    email: "showroom@statusbathkitchen.com",
-    phone: "+91 98320 95793",
-    whatsapp: "+91 98320 95793",
-    escalationLabel: "To escalate store purchase matters",
-    escalationText: "Raise a ticket for showroom orders:",
-    escalationAction: "Raise New ticket",
-    escalationEmail: "studiohelp@statusbathkitchen.com",
-  },
-  {
-    id: "modular",
-    name: "Modular kitchens related",
-    email: "kithead@statusbathkitchen.com",
-    phone: "+91 98320 95793",
-    whatsapp: "+91 98320 95793",
-    escalationLabel: "To escalate modular service matters",
-    escalationText: "Write to our National Service Head:",
-    escalationAction: "service@statusbathkitchen.com",
-    escalationEmail: "service@statusbathkitchen.com",
-  },
-];
-
-const inquiryTypes = [
-  { id: "business", label: "General Enquiry" },
-  { id: "delivery", label: "Studio Visit & Survey" },
-  { id: "damage", label: "Design Quote" },
-  { id: "service", label: "Installation/Service" },
-];
 
 const contactFaqs = [
   {
@@ -84,25 +35,22 @@ const contactFaqs = [
   },
   {
     q: "Can I get assistance with designing my modular kitchen layout?",
-    a: "Yes! Our master design consultants provide free 3D CAD visualizations, laser on-site measurements, and ergonomic guidance to finalize your dream kitchen before manufacturing starts.",
+    a: "Yes! Our design consultants provide 3D layouts, laser on-site measurements, and ergonomic guidance to finalize your kitchen before manufacturing starts.",
   },
   {
     q: "Is there a warranty for modular kitchen components?",
-    a: "Yes, all our modular cabinetry comes with a 10-Year Comprehensive Warranty covering the BWP marine core, edgebanding, and Austrian soft-close hardware against manufacturing defects.",
+    a: "Yes, our modular cabinetry comes with comprehensive warranty coverage across BWP marine core, edgebanding, and certified German and Austrian hardware.",
   },
 ];
 
 export default function ContactPage() {
-  const { showToast, openConsultation } = useCart();
+  const { showToast } = useCart();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeChannelId, setActiveChannelId] = useState("online");
-  const [selectedInquiry, setSelectedInquiry] = useState("business");
   const [whatsappOptIn, setWhatsappOptIn] = useState(true);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // Form fields
   const [formData, setFormData] = useState({
     name: "",
     mobile: "",
@@ -110,9 +58,6 @@ export default function ContactPage() {
     city: "",
     query: "",
   });
-
-  const activeChannel =
-    categoryChannels.find((c) => c.id === activeChannelId) || categoryChannels[0];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -155,7 +100,7 @@ export default function ContactPage() {
         </div>
 
         {/* 2. HERO BANNER WITH CORAL RED BADGE */}
-        <div className="w-full relative h-48 sm:h-64 lg:h-80 overflow-hidden mb-8">
+        <div className="w-full relative h-48 sm:h-64 lg:h-80 overflow-hidden mb-10">
           <Image
             src="/images/status/contact_hero.png"
             alt="Contact Us"
@@ -166,7 +111,6 @@ export default function ContactPage() {
           />
           <div className="absolute inset-0 bg-black/10" />
 
-          {/* Red Badge pinned bottom left matching live site */}
           <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 h-full relative">
             <div className="absolute bottom-6 sm:bottom-10 left-5 sm:left-10 lg:left-20">
               <h2 className="bg-[#ff5d55] !text-white font-medium text-2xl sm:text-3xl lg:text-[42px] leading-[46.2px] px-6 sm:px-8 py-3 sm:py-3.5 shadow-md inline-block">
@@ -176,70 +120,16 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* 3. MAIN TOP-LEVEL CATEGORY TABS (Online order related | Offline order related | Modular kitchens related) */}
+        {/* 3. TWO-COLUMN LAYOUT: FORM ON LEFT, DIRECT CONTACT & STUDIO ON RIGHT */}
         <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
-          <div className="border-b border-[#dcd7d0] mb-10 overflow-x-auto no-scrollbar">
-            <ul role="tablist" className="flex items-center space-x-8 sm:space-x-12">
-              {categoryChannels.map((channel) => {
-                const isActive = activeChannelId === channel.id;
-                return (
-                  <li key={channel.id} role="tab">
-                    <button
-                      onClick={() => setActiveChannelId(channel.id)}
-                      className={`relative py-4 text-[16px] font-medium whitespace-nowrap transition-colors cursor-pointer ${
-                        isActive
-                          ? "text-[#ff5d55]"
-                          : "text-[#4a4541] hover:text-[#ff5d55]"
-                      }`}
-                    >
-                      <span>{channel.name}</span>
-                      {isActive && (
-                        <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#ff5d55]" />
-                      )}
-                    </button>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-
-          {/* 4. TWO-COLUMN LAYOUT: FORM ON LEFT (70%), CHANNELS ON RIGHT (30%) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 xl:gap-16">
-            {/* LEFT COLUMN: WHAT ARE YOU LOOKING FOR? + INTERACTIVE FORM */}
+            {/* LEFT COLUMN: FORM */}
             <div className="lg:col-span-8 space-y-6">
-              {/* Heading */}
               <h2 className="text-2xl sm:text-3xl lg:text-[42px] font-medium text-[#4a4541] leading-[46.2px] tracking-tight">
                 What are you looking for?
               </h2>
 
-              {/* Joined Segmented Toolbar (General Enquiry | Studio Visit & Survey | Design Quote | Installation/Service) */}
-              <div className="overflow-x-auto no-scrollbar pb-2 -mx-5 px-5 sm:mx-0 sm:px-0">
-                <div className="inline-flex border border-[#dcd7d0] bg-white divide-x divide-[#dcd7d0]">
-                  {inquiryTypes.map((inq) => {
-                    const isSelected = selectedInquiry === inq.id;
-                    return (
-                      <button
-                        key={inq.id}
-                        type="button"
-                        onClick={() => setSelectedInquiry(inq.id)}
-                        className={`relative px-5 sm:px-6 py-4 text-sm sm:text-[16px] lg:text-[18px] font-medium whitespace-nowrap transition-colors cursor-pointer ${
-                          isSelected
-                            ? "bg-white text-[#4a4541] font-medium"
-                            : "bg-[#faf8f5] text-[#76716d] hover:bg-white hover:text-[#4a4541]"
-                        }`}
-                      >
-                        <span>{inq.label}</span>
-                        {isSelected && (
-                          <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#ff5d55]" />
-                        )}
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {/* Sub-heading */}
-              <div className="pt-2">
+              <div className="pt-1">
                 <strong className="text-[15px] font-medium text-[#4a4541] block mb-6">
                   We’re happy to contact you!
                 </strong>
@@ -249,9 +139,8 @@ export default function ContactPage() {
                     <CheckCircle2 className="w-12 h-12 text-[#ff5d55] mx-auto" />
                     <h4 className="text-xl font-medium text-[#4a4541]">Inquiry Received</h4>
                     <p className="text-[14px] text-[#76716d] max-w-md mx-auto">
-                      Thank you, {formData.name || "Customer"}. Your query regarding{" "}
-                      <strong>{inquiryTypes.find((i) => i.id === selectedInquiry)?.label}</strong> has
-                      been dispatched to our specialist team.
+                      Thank you, {formData.name || "Customer"}. Your message has been received by our
+                      Siliguri studio team.
                     </p>
                     <p className="text-xs text-[#76716d]">
                       Our team will reach out at <strong>{formData.mobile}</strong> or email{" "}
@@ -260,7 +149,7 @@ export default function ContactPage() {
                     <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3">
                       <a
                         href={`https://wa.me/919832095793?text=${encodeURIComponent(
-                          `*Contact Query - Status Bath & Kitchen*\n\n*Name:* ${formData.name || "Customer"}\n*Mobile:* ${formData.mobile}\n*Email:* ${formData.email}\n*City:* ${formData.city || "Siliguri"}\n*Inquiry Category:* ${inquiryTypes.find((i) => i.id === selectedInquiry)?.label}\n*Message:* ${formData.query}`
+                          `*Contact Query - Status Bath & Kitchen*\n\n*Name:* ${formData.name || "Customer"}\n*Mobile:* ${formData.mobile}\n*Email:* ${formData.email}\n*City:* ${formData.city || "Siliguri"}\n*Message:* ${formData.query}`
                         )}`}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -364,7 +253,7 @@ export default function ContactPage() {
                         type="text"
                         value={formData.city}
                         onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                        placeholder="e.g. Siliguri, Jalpaiguri, Kolkata..."
+                        placeholder="e.g. Siliguri, Jalpaiguri, Darjeeling..."
                         className="status-input w-full border-b border-[#dcd7d0] py-2 text-base sm:text-[15px] text-[#4a4541] focus:border-[#ff5d55] focus:outline-hidden bg-transparent"
                       />
                     </div>
@@ -398,58 +287,43 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* RIGHT COLUMN: CONTACT US WITH ONE OF THE CHANNEL CARD */}
-            <div className="lg:col-span-4">
+            {/* RIGHT COLUMN: DIRECT CONTACT & EXPERIENCE STUDIO */}
+            <div className="lg:col-span-4 space-y-6">
               <div className="status-card status-card-cream bg-[#fbf7f4] border border-[#dcd7d0] p-6 sm:p-8 space-y-6">
                 <h4 className="font-medium text-[#4a4541] text-[18px]">
-                  Contact us with one of the channel
+                  Reach our team directly
                 </h4>
 
                 <div className="space-y-5 text-[14px] text-[#4a4541]">
                   <div>
                     <div className="text-[12px] text-[#76716d] mb-0.5">Write to us on:</div>
                     <a
-                      href={`mailto:${activeChannel.email}`}
+                      href={`mailto:${siteBrand.email}`}
                       className="font-medium text-[#4a4541] hover:text-[#ff5d55] break-all"
                     >
-                      {activeChannel.email}
+                      {siteBrand.email}
                     </a>
                   </div>
 
                   <div>
-                    <div className="text-[12px] text-[#76716d] mb-0.5">One point customer care:</div>
+                    <div className="text-[12px] text-[#76716d] mb-0.5">Call our studio:</div>
                     <a
-                      href={`tel:${activeChannel.phone}`}
+                      href={siteBrand.phoneHref || "tel:+919832095793"}
                       className="font-medium text-[#4a4541] hover:text-[#ff5d55]"
                     >
-                      {activeChannel.phone}
+                      {siteBrand.phone}
                     </a>
                   </div>
 
                   <div>
-                    <div className="text-[12px] text-[#76716d] mb-0.5">Whatsapp us on:</div>
+                    <div className="text-[12px] text-[#76716d] mb-0.5">WhatsApp us on:</div>
                     <a
-                      href={`https://wa.me/91${activeChannel.whatsapp.replace(/\D/g, "")}`}
+                      href="https://wa.me/919832095793"
                       target="_blank"
                       rel="noreferrer"
                       className="font-medium text-emerald-700 hover:underline"
                     >
-                      {activeChannel.whatsapp}
-                    </a>
-                  </div>
-
-                  <div className="pt-4 border-t border-[#dcd7d0]">
-                    <div className="text-[12px] text-[#76716d] mb-1 font-normal">
-                      {activeChannel.escalationLabel}
-                    </div>
-                    <div className="text-[13px] text-[#4a4541] mb-2 font-medium">
-                      {activeChannel.escalationText}
-                    </div>
-                    <a
-                      href={`mailto:${activeChannel.escalationEmail}`}
-                      className="inline-block text-xs font-medium text-[#ff5d55] hover:underline"
-                    >
-                      {activeChannel.escalationAction} &rarr;
+                      {siteBrand.phone}
                     </a>
                   </div>
                 </div>
@@ -486,8 +360,8 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* 5. HOW CAN WE ASSIST YOU? (FAQ ACCORDION) */}
-          <div className="mt-20 pt-12 border-t border-[#dcd7d0]">
+          {/* 4. HOW CAN WE ASSIST YOU? (FAQ ACCORDION) */}
+          <div id="faq" className="mt-20 pt-12 border-t border-[#dcd7d0] scroll-mt-24">
             <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-medium text-[#4a4541] leading-tight mb-8">
               How can we assist you?
             </h2>
