@@ -7,15 +7,12 @@ import { useSearchParams } from "next/navigation";
 import {
   Heart,
   SlidersHorizontal,
-  ChevronDown,
-  Check,
-  ShoppingBag,
   ArrowUpDown,
   Search,
   X,
   Sparkles,
   ShieldCheck,
-  Truck,
+  Store,
   RotateCcw,
 } from "lucide-react";
 import Navbar from "@/components/Header/Navbar";
@@ -119,27 +116,23 @@ function ProductsPageContent() {
   const [selectedCategory, setSelectedCategory] = useState<string>(urlCategory);
   const [searchQuery, setSearchQuery] = useState<string>(initialQuery);
   const [selectedSort, setSelectedSort] = useState<string>("featured");
-  const [priceFilter, setPriceFilter] = useState<string>("all");
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [compareList, setCompareList] = useState<string[]>([]);
 
   if (urlCategory !== prevUrlCategory) {
     setPrevUrlCategory(urlCategory);
     setSelectedCategory(urlCategory);
   }
 
-  const { addToCart, toggleWishlist, isWishlisted, showToast, openConsultation } = useCart();
+  const { toggleWishlist, isWishlisted, openConsultation } = useCart();
 
-  // Filter products
+  // Filter designs
   const filteredProducts = useMemo(() => {
     return allProductsCatalog.filter((product) => {
-      // Category filter
       if (!matchesSelectedCategory(product, selectedCategory)) {
         return false;
       }
 
-      // Search query
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase().trim();
         const matchTitle = product.name.toLowerCase().includes(q);
@@ -149,51 +142,18 @@ function ProductsPageContent() {
         if (!matchTitle && !matchCat && !matchDesc && !matchMat) return false;
       }
 
-      // Price filter
-      if (priceFilter === "under-30k" && product.price >= 30000) return false;
-      if (priceFilter === "30k-75k" && (product.price < 30000 || product.price > 75000)) return false;
-      if (priceFilter === "75k-150k" && (product.price < 75000 || product.price > 150000)) return false;
-      if (priceFilter === "above-150k" && product.price <= 150000) return false;
-
       return true;
     });
-  }, [selectedCategory, searchQuery, priceFilter]);
+  }, [selectedCategory, searchQuery]);
 
-  // Sort products
+  // Sort designs
   const sortedProducts = useMemo(() => {
     const list = [...filteredProducts];
-    if (selectedSort === "price-low") {
-      return list.sort((a, b) => a.price - b.price);
+    if (selectedSort === "name-asc") {
+      return list.sort((a, b) => a.name.localeCompare(b.name));
     }
-    if (selectedSort === "price-high") {
-      return list.sort((a, b) => b.price - a.price);
-    }
-    if (selectedSort === "rating") {
-      return list.sort((a, b) => (b.rating || 0) - (a.rating || 0));
-    }
-    if (selectedSort === "discount") {
-      return list.sort((a, b) => {
-        const discA = parseInt(a.discount) || 0;
-        const discB = parseInt(b.discount) || 0;
-        return discB - discA;
-      });
-    }
-    return list; // featured default
+    return list;
   }, [filteredProducts, selectedSort]);
-
-  const handleCompareToggle = (id: string, name: string) => {
-    if (compareList.includes(id)) {
-      setCompareList(compareList.filter((item) => item !== id));
-      showToast(`Removed "${name}" from compare`);
-    } else {
-      if (compareList.length >= 4) {
-        showToast("You can compare up to 4 products at a time");
-        return;
-      }
-      setCompareList([...compareList, id]);
-      showToast(`Added "${name}" to compare (${compareList.length + 1}/4)`);
-    }
-  };
 
   return (
     <div className="min-h-screen flex flex-col bg-white text-[#4a4541] font-sans">
@@ -303,21 +263,8 @@ function ProductsPageContent() {
               </button>
             </div>
 
-            {/* Right: Compare & Sorter */}
+            {/* Right: Sorter */}
             <div className="flex items-center space-x-4 sm:space-x-6 flex-wrap gap-y-2">
-              {/* Compare Button */}
-              {compareList.length > 0 && (
-                <div className="flex items-center gap-1.5 bg-[#f5f0ea] px-3 py-1 rounded-xs text-[12px] font-medium text-[#4a4541]">
-                  <span>Compare ({compareList.length})</span>
-                  <button
-                    onClick={() => setCompareList([])}
-                    className="p-0.5 hover:text-[#ff5d55] cursor-pointer"
-                  >
-                    <X className="w-3 h-3" />
-                  </button>
-                </div>
-              )}
-
               {/* Sort By Dropdown */}
               <div className="flex items-center space-x-1.5">
                 <span className="text-[#76716d] text-[13px]">Sort by:</span>
@@ -327,7 +274,7 @@ function ProductsPageContent() {
                   className="bg-transparent font-medium text-[#4a4541] border-b border-[#4a4541] py-0.5 text-[13px] focus:outline-hidden cursor-pointer"
                 >
                   <option value="featured">Featured</option>
-                  <option value="rating">Customer Rating</option>
+                  <option value="name-asc">Name (A–Z)</option>
                 </select>
                 <ArrowUpDown className="w-3.5 h-3.5 text-[#76716d] pointer-events-none" />
               </div>
@@ -335,7 +282,7 @@ function ProductsPageContent() {
           </div>
 
           {/* ACTIVE FILTER BADGES */}
-          {(priceFilter !== "all" || searchQuery || selectedCategory !== "All Products") && (
+          {(searchQuery || selectedCategory !== "All Products") && (
             <div className="flex flex-wrap items-center gap-2 mb-6 text-[13px]">
               <span className="text-[#76716d] font-normal">Active filters:</span>
               {selectedCategory !== "All Products" && (
@@ -345,14 +292,6 @@ function ProductsPageContent() {
                     onClick={() => setSelectedCategory("All Products")}
                     className="hover:text-[#ff5d55]"
                   >
-                    <X className="w-3 h-3" />
-                  </button>
-                </span>
-              )}
-              {priceFilter !== "all" && (
-                <span className="inline-flex items-center gap-1 bg-[#f5f0ea] text-[#4a4541] px-2.5 py-1 rounded-xs">
-                  Price: {priceFilter}
-                  <button onClick={() => setPriceFilter("all")} className="hover:text-[#ff5d55]">
                     <X className="w-3 h-3" />
                   </button>
                 </span>
@@ -368,7 +307,6 @@ function ProductsPageContent() {
               <button
                 onClick={() => {
                   setSelectedCategory("All Products");
-                  setPriceFilter("all");
                   setSearchQuery("");
                 }}
                 className="text-[#ff5d55] font-medium underline ml-2 cursor-pointer"
@@ -390,7 +328,6 @@ function ProductsPageContent() {
               <button
                 onClick={() => {
                   setSelectedCategory("All Products");
-                  setPriceFilter("all");
                   setSearchQuery("");
                 }}
                 className="px-6 py-2.5 bg-[#ff5d55] hover:bg-[#e5473f] text-white rounded-[20px_2px_2px_2px] text-xs font-medium transition-colors"
@@ -402,7 +339,6 @@ function ProductsPageContent() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
               {sortedProducts.map((product) => {
                 const inWishlist = isWishlisted(product.id);
-                const isCompared = compareList.includes(product.id);
 
                 return (
                   <div key={product.id} className="group flex flex-col">
@@ -418,30 +354,22 @@ function ProductsPageContent() {
                         />
                       </Link>
 
-                      {/* Top Left Badge (Online Exclusive / Bestseller) */}
+                      {/* Top Left Studio Category/Style Badge */}
                       {product.badge && (
                         <div className="absolute top-3 left-3 bg-[#ede7de] text-[#4a4541] text-[11px] uppercase tracking-wider font-medium px-2.5 py-0.5">
                           {product.badge}
                         </div>
                       )}
 
-                      {/* Bottom Left Rating Badge */}
-                      {product.rating && (
-                        <div className="absolute bottom-3 left-3 bg-[#ede7de] text-[#4a4541] text-[12px] font-bold px-2 py-0.5 flex items-center gap-1 shadow-xs">
-                          <span className="text-[#ff5d55]">★</span>
-                          <span>{product.rating.toFixed(1)}</span>
-                        </div>
-                      )}
-
-                      {/* Bottom Right Wishlist Icon Button */}
+                      {/* Bottom Right Save Design Button */}
                       <button
                         onClick={() => toggleWishlist(product.id)}
-                        className={`absolute bottom-3 right-3 w-8 h-8 rounded-full bg-white/95 border border-[#dcd7d0] flex items-center justify-center transition-colors shadow-xs ${
+                        className={`absolute bottom-3 right-3 w-8 h-8 rounded-full bg-white/95 border border-[#dcd7d0] flex items-center justify-center transition-colors shadow-xs cursor-pointer ${
                           inWishlist
                             ? "text-[#ff5d55] fill-[#ff5d55]"
                             : "text-[#76716d] hover:text-[#4a4541] hover:border-[#4a4541]"
                         }`}
-                        aria-label="Save to Wishlist"
+                        aria-label="Save Design"
                       >
                         <Heart
                           className={`w-4 h-4 ${inWishlist ? "fill-current text-[#ff5d55]" : ""}`}
@@ -449,7 +377,7 @@ function ProductsPageContent() {
                       </button>
                     </div>
 
-                    {/* Product Metadata & Price Block */}
+                    {/* Product Metadata & Studio Indicator */}
                     <div className="flex items-start justify-between gap-3 mt-1">
                       {/* Left: Title & Subtitle/Specs */}
                       <div className="flex-1 min-w-0">
@@ -465,61 +393,35 @@ function ProductsPageContent() {
                         </p>
                       </div>
 
-                      {/* Right: Price on Request */}
+                      {/* Right: Custom Studio Tag */}
                       <div className="text-right shrink-0">
-                        <div className="text-xs sm:text-[13px] font-medium text-[#76716d]">
-                          Price on Request
+                        <div className="text-xs sm:text-[13px] font-medium text-[#4a4541]">
+                          Custom Built
                         </div>
-                        <div className="text-[11px] text-[#ff5d55] mt-0.5 font-medium">
-                          Bespoke Quote
+                        <div className="text-[11px] text-[#76716d] mt-0.5">
+                          Studio Display
                         </div>
                       </div>
                     </div>
 
-                    {/* Bottom Variant / Compare / Add to Cart Row */}
+                    {/* Bottom View Details & Book Consultation Row */}
                     <div className="mt-3.5 pt-3 border-t border-[#f0ece6] flex items-center justify-between text-xs text-[#76716d]">
-                      <div className="flex items-center gap-2">
-                        <span className="text-[11px] uppercase tracking-wider font-medium text-[#8c857e]">
-                          {product.category === "Modular Kitchens" ? "Layout" : "Variants"}
-                        </span>
-                        <div className="flex items-center gap-1.5">
-                          <span className="w-5 h-4 border border-[#ff5d55] rounded-xs flex items-center justify-center text-[9px] font-bold text-[#ff5d55]">
-                            1
-                          </span>
-                          <span className="w-5 h-4 border border-[#dcd7d0] rounded-xs flex items-center justify-center text-[9px] font-bold text-[#8c857e]">
-                            2
-                          </span>
-                        </div>
-                      </div>
+                      <Link
+                        href={`/products/${product.id}`}
+                        className="font-medium text-[#4a4541] hover:text-[#ff5d55] transition-colors flex items-center gap-1"
+                      >
+                        <span>View Details</span>
+                        <span aria-hidden="true">&rarr;</span>
+                      </Link>
 
-                      <div className="flex items-center gap-3">
-                        <button
-                          onClick={() => handleCompareToggle(product.id, product.name)}
-                          className={`flex items-center gap-1 cursor-pointer transition-colors text-[12px] ${
-                            isCompared ? "text-[#ff5d55] font-semibold" : "text-[#76716d] hover:text-[#4a4541]"
-                          }`}
-                        >
-                          <div
-                            className={`w-3.5 h-3.5 border rounded-xs flex items-center justify-center ${
-                              isCompared ? "bg-[#ff5d55] border-[#ff5d55] text-white" : "border-[#a4a2a0]"
-                            }`}
-                          >
-                            {isCompared && <Check className="w-2.5 h-2.5" />}
-                          </div>
-                          <span>Compare</span>
-                        </button>
-
-                        <button
-                          onClick={() => {
-                            addToCart(product);
-                            showToast(`Added ${product.name} to showroom shortlist`);
-                          }}
-                          className="bg-[#ff5d55] hover:bg-[#e5473f] text-white px-3 py-1.5 rounded-[16px_2px_2px_2px] text-xs font-medium flex items-center gap-1.5 cursor-pointer shadow-xs transition-colors"
-                        >
-                          <ShoppingBag className="w-3.5 h-3.5" />
-                          <span>Shortlist</span>
-                        </button>
-                      </div>
+                      <button
+                        type="button"
+                        onClick={() => openConsultation(`Studio Consultation for ${product.name}`)}
+                        className="bg-[#ff5d55] hover:bg-[#e5473f] text-white px-3.5 py-1.5 rounded-[16px_2px_2px_2px] text-xs font-medium flex items-center gap-1.5 cursor-pointer shadow-xs transition-colors"
+                      >
+                        <Sparkles className="w-3.5 h-3.5" />
+                        <span>Book Visit</span>
+                      </button>
                     </div>
                   </div>
                 );
@@ -527,41 +429,41 @@ function ProductsPageContent() {
             </div>
           )}
 
-          {/* 6. TRUST & BRAND ASSURANCE STRIP */}
+          {/* 6. STUDIO EXPERIENCE & ASSURANCE STRIP */}
           <div className="mt-20 pt-12 border-t border-[#dcd7d0] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="flex items-start gap-3.5">
               <ShieldCheck className="w-6 h-6 text-[#ff5d55] shrink-0 mt-0.5" />
               <div>
                 <h4 className="font-medium text-sm text-[#4a4541]">Up to 10-Year Warranty</h4>
                 <p className="text-xs text-[#76716d] mt-0.5">
-                  Comprehensive coverage across all modular kitchen cabinets and precision hardware.
+                  Comprehensive coverage across modular kitchens, wardrobes, and certified hardware.
                 </p>
               </div>
             </div>
             <div className="flex items-start gap-3.5">
-              <Truck className="w-6 h-6 text-[#ff5d55] shrink-0 mt-0.5" />
+              <Store className="w-6 h-6 text-[#ff5d55] shrink-0 mt-0.5" />
               <div>
-                <h4 className="font-medium text-sm text-[#4a4541]">Free Professional Delivery</h4>
+                <h4 className="font-medium text-sm text-[#4a4541]">Siliguri Experience Studio</h4>
                 <p className="text-xs text-[#76716d] mt-0.5">
-                  Safe handling and white-glove doorstep delivery directly to your home.
+                  Explore materials, glass profiles, shutters, and finishes in person at our showroom.
                 </p>
               </div>
             </div>
             <div className="flex items-start gap-3.5">
               <Sparkles className="w-6 h-6 text-[#ff5d55] shrink-0 mt-0.5" />
               <div>
-                <h4 className="font-medium text-sm text-[#4a4541]">Free Expert Installation</h4>
+                <h4 className="font-medium text-sm text-[#4a4541]">On-Site Measurement &amp; Fitment</h4>
                 <p className="text-xs text-[#76716d] mt-0.5">
-                  Factory-trained technicians ensure seamless laser leveling and calibration.
+                  Factory-trained technicians ensure precise laser leveling and installation at your home.
                 </p>
               </div>
             </div>
             <div className="flex items-start gap-3.5">
               <RotateCcw className="w-6 h-6 text-[#ff5d55] shrink-0 mt-0.5" />
               <div>
-                <h4 className="font-medium text-sm text-[#4a4541]">Custom Design Support</h4>
+                <h4 className="font-medium text-sm text-[#4a4541]">Bespoke 3D Design Support</h4>
                 <p className="text-xs text-[#76716d] mt-0.5">
-                  3D CAD layouts and personalized material consultation with our master designers.
+                  Personalized 3D layouts and material consultation with our in-studio design team.
                 </p>
               </div>
             </div>
@@ -632,7 +534,7 @@ function ProductsPageContent() {
                 <div className="space-y-2">
                   {[
                     { value: "featured", label: "Featured" },
-                    { value: "rating", label: "Customer Rating" },
+                    { value: "name-asc", label: "Name (A–Z)" },
                   ].map((s) => (
                     <label
                       key={s.value}
@@ -658,7 +560,6 @@ function ProductsPageContent() {
               <button
                 onClick={() => {
                   setSelectedCategory("All Products");
-                  setPriceFilter("all");
                   setSelectedSort("featured");
                   setSearchQuery("");
                 }}

@@ -9,7 +9,6 @@ import {
   Camera,
   X,
   Heart,
-  ShoppingBag,
   MapPin,
   ChevronDown,
   Menu,
@@ -36,7 +35,7 @@ export default function Navbar({
   onCategorySelect,
   forceSolid = false,
 }: NavbarProps) {
-  const { cartCount, openCart, wishlist, showToast, openConsultation } = useCart();
+  const { openCart, wishlist, showToast, openConsultation } = useCart();
   const [isScrolled, setIsScrolled] = useState(false);
   const isHeaderSolid = forceSolid || isScrolled;
   const [searchQuery, setSearchQuery] = useState("");
@@ -301,29 +300,7 @@ export default function Navbar({
               )}
             </div>
 
-            {/* Wishlist Icon */}
-            <button
-              onClick={() => {
-                showToast(`Wishlist contains ${wishlist.length} item(s)`);
-                const el = document.querySelector("#categories");
-                if (el) el.scrollIntoView({ behavior: "smooth" });
-              }}
-              className={`relative p-2 rounded-full transition-colors ${
-                isHeaderSolid
-                  ? "text-gray-700 hover:text-[#ff5d55] hover:bg-gray-100"
-                  : "text-white hover:text-white hover:bg-white/15"
-              }`}
-              aria-label="Wishlist"
-            >
-              <Heart className="w-5 h-5" />
-              {wishlist.length > 0 && (
-                <span className="absolute top-1 right-1 w-4 h-4 bg-[#ff5d55] text-white text-[10px] font-bold rounded-full flex items-center justify-center">
-                  {wishlist.length}
-                </span>
-              )}
-            </button>
-
-            {/* Showroom Shortlist */}
+            {/* Saved Designs Drawer Trigger */}
             <button
               onClick={openCart}
               className={`relative p-2 rounded-full transition-colors cursor-pointer ${
@@ -331,13 +308,13 @@ export default function Navbar({
                   ? "text-gray-700 hover:text-[#ff5d55] hover:bg-gray-100"
                   : "text-white hover:text-white hover:bg-white/15"
               }`}
-              aria-label="Showroom Shortlist"
-              title="Showroom Shortlist"
+              aria-label="Saved Designs"
+              title="Saved Designs"
             >
-              <ShoppingBag className="w-5 h-5" />
-              {cartCount > 0 && (
+              <Heart className="w-5 h-5" />
+              {wishlist.length > 0 && (
                 <span className="absolute top-1 right-1 w-4 h-4 bg-[#ff5d55] text-white text-[10px] font-bold rounded-full flex items-center justify-center">
-                  {cartCount}
+                  {wishlist.length}
                 </span>
               )}
             </button>

@@ -214,7 +214,7 @@ export default function Footer({ showBlogCredit }: FooterProps = {}) {
                 </li>
                 <li>
                   <Link href="/contact" className="hover:text-white transition-colors">
-                    Order Tracking &amp; Escalation
+                    Visit Experience Studio
                   </Link>
                 </li>
               </ul>

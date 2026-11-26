@@ -56,13 +56,13 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       }
       return [...prev, { product, quantity }];
     });
-    showToast(`Added "${product.name.slice(0, 32)}..." to your cart!`);
+    showToast(`Added "${product.name.slice(0, 32)}..." to saved designs!`);
     setIsCartOpen(true);
   };
 
   const removeFromCart = (productId: string) => {
     setCart((prev) => prev.filter((item) => item.product.id !== productId));
-    showToast("Item removed from cart");
+    showToast("Removed from saved designs");
   };
 
   const updateQuantity = (productId: string, quantity: number) => {
@@ -95,10 +95,10 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const toggleWishlist = (productId: string) => {
     setWishlist((prev) => {
       if (prev.includes(productId)) {
-        showToast("Removed from Wishlist");
+        showToast("Removed from Saved Designs");
         return prev.filter((id) => id !== productId);
       } else {
-        showToast("Saved to your Wishlist!");
+        showToast("Saved to your Designs!");
         return [...prev, productId];
       }
     });

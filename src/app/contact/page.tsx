@@ -63,9 +63,9 @@ const categoryChannels = [
 ];
 
 const inquiryTypes = [
-  { id: "business", label: "Business Enquiry" },
-  { id: "delivery", label: "Delivery Related" },
-  { id: "damage", label: "Damage/Return" },
+  { id: "business", label: "General Enquiry" },
+  { id: "delivery", label: "Studio Visit & Survey" },
+  { id: "damage", label: "Design Quote" },
   { id: "service", label: "Installation/Service" },
 ];
 
@@ -212,7 +212,7 @@ export default function ContactPage() {
                 What are you looking for?
               </h2>
 
-              {/* Joined Segmented Toolbar (Business Enquiry | Delivery Related | Damage/Return | Installation/Service) */}
+              {/* Joined Segmented Toolbar (General Enquiry | Studio Visit & Survey | Design Quote | Installation/Service) */}
               <div className="overflow-x-auto no-scrollbar pb-2 -mx-5 px-5 sm:mx-0 sm:px-0">
                 <div className="inline-flex border border-[#dcd7d0] bg-white divide-x divide-[#dcd7d0]">
                   {inquiryTypes.map((inq) => {

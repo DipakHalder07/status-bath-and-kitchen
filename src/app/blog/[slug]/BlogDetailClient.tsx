@@ -406,8 +406,8 @@ export default function BlogDetailClient({
                               {prod.name}
                             </h4>
                           </Link>
-                          <div className="text-xs font-semibold text-[#76716d] uppercase tracking-wider">
-                            Price on Request
+                          <div className="text-xs font-medium text-[#76716d]">
+                            Custom Built • Studio Display
                           </div>
                           <Link
                             href={`/products/${prod.id}`}

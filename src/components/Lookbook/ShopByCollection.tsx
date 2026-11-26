@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect, useCallback } from "react";
-import { LayoutGrid, ShoppingBag, ChevronLeft, ChevronRight, X } from "lucide-react";
+import { LayoutGrid, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { collectionSets } from "@/data/statusData";
 import { Hotspot, CollectionSet } from "@/types";
 import { useCart } from "@/context/CartContext";
@@ -101,7 +101,7 @@ export default function ShopByCollection() {
         discount: "",
         image: item.image,
       });
-      showToast(`Added ${item.name} to showroom shortlist!`);
+      showToast(`Saved ${item.name} to your designs!`);
     } else {
       setActiveDrawerCol(null);
       openConsultation(item.name);
@@ -242,7 +242,7 @@ export default function ShopByCollection() {
                           </h4>
                           <div className="mt-1.5 flex items-center justify-between">
                             <span className="text-xs font-medium text-[#76716d]">
-                              Price on request
+                              Custom Built
                             </span>
                             <button
                               onClick={() => handleItemAction(spot)}
@@ -340,7 +340,7 @@ export default function ShopByCollection() {
                       <div>
                         <h4 className="text-sm font-medium text-[#4a4541]">{item.name}</h4>
                         <span className="text-xs font-medium text-[#76716d]">
-                          Price on request
+                          Custom Built
                         </span>
                       </div>
                     </div>

@@ -124,10 +124,10 @@ export default function MegaMenu({ onCategorySelect }: MegaMenuProps) {
                     Status Assured
                   </span>
                   <h4 className="font-medium text-[#4a4541] text-sm mb-1">
-                    Free Expert Delivery &amp; Assembly
+                    Siliguri Experience Studio
                   </h4>
                   <p className="text-xs text-[#76716d] leading-relaxed mb-4">
-                    Trained technicians deliver and install right inside your home.
+                    Explore materials in person &amp; get certified on-site fitment.
                   </p>
                 </div>
                 <a

@@ -8,20 +8,10 @@ import {
   Share2,
   Check,
   ShieldCheck,
-  Truck,
   Wrench,
-  RotateCcw,
-  ShoppingBag,
-  Tag,
   Sparkles,
-  MapPin,
-  Clock,
-  Layers,
-  FileText,
-  ThumbsUp,
   X,
   Store,
-  Phone,
 } from "lucide-react";
 import Navbar from "@/components/Header/Navbar";
 import MobileDrawer from "@/components/Header/MobileDrawer";
@@ -38,12 +28,11 @@ interface ProductDetailClientProps {
 }
 
 export default function ProductDetailClient({ product }: ProductDetailClientProps) {
-  const { addToCart, toggleWishlist, isWishlisted, showToast, openConsultation } = useCart();
+  const { toggleWishlist, isWishlisted, showToast, openConsultation } = useCart();
 
   const [activeImageIndex, setActiveImageIndex] = useState(0);
-  const [quantity, setQuantity] = useState(1);
   const [selectedVariant, setSelectedVariant] = useState(0);
-  const [activeTab, setActiveTab] = useState<"overview" | "specs" | "features" | "reviews">("overview");
+  const [activeTab, setActiveTab] = useState<"overview" | "specs" | "features">("overview");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showStickyBar, setShowStickyBar] = useState(false);
 
@@ -58,7 +47,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
     { label: "High Gloss Acrylic", desc: "Mirror Glass Luster" },
   ];
 
-  // Scroll listener for sticky bottom buy bar
+  // Scroll listener for sticky bottom consultation bar
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 400) {
@@ -82,13 +71,6 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
       navigator.clipboard.writeText(window.location.href);
       showToast("Product link copied to clipboard!");
     }
-  };
-
-  const handleAddToCart = () => {
-    for (let i = 0; i < quantity; i++) {
-      addToCart(product);
-    }
-    showToast(`Added ${quantity} x ${product.name} to your cart!`);
   };
 
   return (
@@ -227,34 +209,20 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                   {product.warranty || "10-Year Warranty"}, {product.finish || product.material || product.category}
                 </p>
 
-                {/* Ratings Strip */}
-                <div className="flex items-center gap-2 mt-2">
-                  <div className="flex items-center gap-1 text-[#ff5d55] text-xs font-semibold">
-                    <span>★</span>
-                    <span className="text-[#4a4541] font-bold">{(product.rating || 4.8).toFixed(1)}</span>
-                  </div>
-                  <span className="text-[#dcd7d0]">|</span>
-                  <button
-                    onClick={() => setActiveTab("reviews")}
-                    className="text-[13px] text-[#76716d] hover:text-[#4a4541] underline cursor-pointer"
-                  >
-                    {product.reviews || 42} Ratings
-                  </button>
-                </div>
               </div>
 
-              {/* Price Block: Bespoke Showroom Pricing */}
+              {/* Custom Showcase & Studio Consultation Block */}
               <div className="pt-4 border-t border-[#dcd7d0]">
                 <div className="flex items-baseline gap-3">
-                  <span className="text-[22px] sm:text-[24px] font-medium text-[#4a4541]">
-                    Price on Request
+                  <span className="text-[20px] sm:text-[22px] font-medium text-[#4a4541]">
+                    Custom Built to Your Space
                   </span>
                   <span className="text-xs bg-[#f5f0ea] text-[#76716d] px-2.5 py-1 rounded-xs font-medium">
-                    Bespoke Layout &amp; Sizing
+                    Studio Consultation
                   </span>
                 </div>
                 <p className="text-[13px] text-[#76716d] mt-1.5 leading-relaxed">
-                  Every project is custom-planned to your space and tailored joinery requirements. Visit our showroom or contact us on WhatsApp for a personalized quotation.
+                  We do not sell online. Every modular kitchen, window system, wardrobe, and railing is measured on-site and tailored at our Siliguri Experience Studio.
                 </p>
               </div>
 
@@ -288,53 +256,54 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                 </div>
               </div>
 
-              {/* In-Store Showroom Experience Notice */}
+              {/* Experience Studio Notice */}
               <div className="pt-3 border-t border-[#dcd7d0] space-y-2">
                 <div className="flex items-center gap-2 text-[13px] font-medium text-[#4a4541]">
                   <Store className="w-4 h-4 text-[#ff5d55]" />
-                  <span>Showroom Exclusive • Not Sold Online</span>
+                  <span>Siliguri Experience Studio • Custom Built</span>
                 </div>
                 <p className="text-[12px] text-[#76716d] leading-relaxed">
-                  We sell exclusively through our physical store. Visit our showroom to explore textures, finishes, and bespoke fittings in person, or enquire instantly via WhatsApp.
+                  Visit our showroom to experience finishes, profiles, and bespoke fittings in person with our design team, or message us directly on WhatsApp.
                 </p>
               </div>
 
-              {/* In-Store Purchase / Enquiry Action Buttons */}
+              {/* Studio Consultation & Enquiry Action Buttons */}
               <div className="pt-4 border-t border-[#dcd7d0] flex flex-col sm:flex-row items-center gap-3">
-                {/* WhatsApp Direct Enquiry Button */}
-                <a
-                  href={`https://wa.me/919832095793?text=${encodeURIComponent(
-                    `Hello Status Bath & Kitchen, I am interested in visiting your store for: ${product.name} (Code: ${product.id}). Please share showroom availability and pricing.`
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 w-full py-3 bg-[#25D366] hover:bg-[#20ba59] text-white font-medium text-sm tracking-wide shadow-xs transition-all flex items-center justify-center gap-2 cursor-pointer rounded-[20px_2px_2px_2px]"
-                >
-                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
-                  </svg>
-                  <span>Enquire on WhatsApp</span>
-                </a>
-
-                {/* Save to In-Store Shortlist */}
+                {/* Primary Studio Consultation Button */}
                 <button
-                  onClick={handleAddToCart}
+                  type="button"
+                  onClick={() => openConsultation(`Studio Consultation for ${product.name}`)}
+                  className="flex-1 w-full py-3 px-5 bg-[#ff5d55] hover:bg-[#e5473f] text-white font-medium text-sm tracking-wide shadow-xs transition-all flex items-center justify-center gap-2 cursor-pointer rounded-[20px_2px_2px_2px]"
+                >
+                  <Sparkles className="w-4 h-4" />
+                  <span>Book Studio Consultation</span>
+                </button>
+
+                {/* Save Design Toggle */}
+                <button
+                  type="button"
+                  onClick={() => toggleWishlist(product.id)}
                   className="status-btn-outline w-full sm:w-auto py-3 px-5 border border-[#4a4541] hover:bg-[#4a4541] hover:text-white text-[#4a4541] font-medium text-sm rounded-[20px_2px_2px_2px] transition-colors flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  <ShoppingBag className="w-4 h-4" />
-                  <span>Add to Shortlist</span>
+                  <Heart className={`w-4 h-4 ${isWishlisted(product.id) ? "fill-[#ff5d55] text-[#ff5d55]" : ""}`} />
+                  <span>{isWishlisted(product.id) ? "Saved" : "Save Design"}</span>
                 </button>
               </div>
 
-              {/* Secondary Action: Consultation */}
-              <button
-                type="button"
-                onClick={() => openConsultation(`Showroom Consultation for ${product.name}`)}
-                className="w-full py-2.5 bg-[#f5f0ea] hover:bg-[#ede7de] text-[#4a4541] font-medium text-[13px] rounded-[20px_2px_2px_2px] transition-colors flex items-center justify-center gap-2 cursor-pointer"
+              {/* WhatsApp Direct Enquiry Button */}
+              <a
+                href={`https://wa.me/919832095793?text=${encodeURIComponent(
+                  `Hello Status Bath & Kitchen, I would like to schedule a studio visit for ${product.name} (${product.id}).`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-2.5 bg-[#25D366] hover:bg-[#20ba59] text-white font-medium text-[13px] rounded-[20px_2px_2px_2px] transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-xs"
               >
-                <Sparkles className="w-4 h-4 text-[#ff5d55]" />
-                <span>Book In-Store Design Consultation</span>
-              </button>
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                </svg>
+                <span>Enquire on WhatsApp</span>
+              </a>
 
               {/* Value Propositions Strip */}
               <div className="grid grid-cols-3 gap-2 pt-4 border-t border-[#f0ece6] text-center">
@@ -357,7 +326,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
             </div>
           </div>
 
-          {/* 2. TABS SECTION: OVERVIEW, SPECS, FEATURES, REVIEWS */}
+          {/* 2. TABS SECTION: OVERVIEW, SPECS, FEATURES */}
           <div className="mt-20 pt-10 border-t border-[#dcd7d0]">
             {/* Tabs Header */}
             <div className="flex items-center space-x-8 border-b border-[#dcd7d0] overflow-x-auto no-scrollbar -mx-5 px-5 sm:mx-0 sm:px-0 text-[15px] font-medium mb-8">
@@ -390,16 +359,6 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                 }`}
               >
                 Features &amp; Highlights
-              </button>
-              <button
-                onClick={() => setActiveTab("reviews")}
-                className={`pb-3.5 border-b-2 whitespace-nowrap transition-colors cursor-pointer ${
-                  activeTab === "reviews"
-                    ? "border-[#ff5d55] text-[#4a4541] font-semibold"
-                    : "border-transparent text-[#76716d] hover:text-[#4a4541]"
-                }`}
-              >
-                Customer Reviews ({product.reviews || 42})
               </button>
             </div>
 
@@ -451,8 +410,8 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                     <span className="col-span-2 text-[#4a4541]">{product.name}</span>
                   </div>
                   <div className="grid grid-cols-3 p-3.5 bg-white">
-                    <span className="font-medium text-[#4a4541]">SKU Code</span>
-                    <span className="col-span-2 text-[#4a4541]">{product.id.toUpperCase()}-STK-2026</span>
+                    <span className="font-medium text-[#4a4541]">Design Code</span>
+                    <span className="col-span-2 text-[#4a4541]">{product.id.toUpperCase()}-SBK</span>
                   </div>
                   <div className="grid grid-cols-3 p-3.5 bg-[#fbf7f4]">
                     <span className="font-medium text-[#4a4541]">Category</span>
@@ -515,72 +474,6 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
               </div>
             )}
 
-            {/* TAB CONTENT: 4. REVIEWS */}
-            {activeTab === "reviews" && (
-              <div className="space-y-8 animate-in fade-in duration-200">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#dcd7d0]">
-                  <div>
-                    <h3 className="text-xl font-medium text-[#4a4541]">Verified Buyer Reviews</h3>
-                    <div className="flex items-center gap-2 mt-1">
-                      <div className="flex text-[#ff5d55] text-sm">★★★★★</div>
-                      <span className="text-[14px] font-bold text-[#4a4541]">{(product.rating || 4.8).toFixed(1)} out of 5</span>
-                      <span className="text-[#76716d] text-xs">({product.reviews || 42} verified ratings)</span>
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => showToast("Review form opened")}
-                    className="px-5 py-2.5 border border-[#4a4541] text-[#4a4541] hover:bg-[#4a4541] hover:text-white rounded-[20px_2px_2px_2px] text-xs font-medium transition-colors"
-                  >
-                    Write a Review
-                  </button>
-                </div>
-
-                <div className="space-y-6 max-w-3xl">
-                  {[
-                    {
-                      name: "Rajesh S., Bangalore",
-                      rating: 5,
-                      date: "Reviewed on 12 Oct 2026",
-                      verified: true,
-                      comment:
-                        "Exceptional quality! The fit and finish are top-notch. Installation team arrived on time and completed the entire assembly in 4 hours with laser leveling.",
-                    },
-                    {
-                      name: "Ananya M., Mumbai",
-                      rating: 5,
-                      date: "Reviewed on 28 Sep 2026",
-                      verified: true,
-                      comment:
-                        "We got this for our master kitchen remodel. The soft-close Blum hinges feel so premium and the waterproof core gives complete peace of mind.",
-                    },
-                    {
-                      name: "Vikram K., Hyderabad",
-                      rating: 4,
-                      date: "Reviewed on 14 Aug 2026",
-                      verified: true,
-                      comment:
-                        "Very good product. Delivery took 4 days. The material feels heavy, solid and truly durable. Highly recommended.",
-                    },
-                  ].map((rev, idx) => (
-                    <div key={idx} className="p-4 bg-[#fbf7f4] border border-[#f0ece6] space-y-2 text-[14px]">
-                      <div className="flex items-center justify-between">
-                        <span className="font-semibold text-[#4a4541]">{rev.name}</span>
-                        <span className="text-xs text-[#76716d]">{rev.date}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <div className="text-[#ff5d55] text-xs">{"★".repeat(rev.rating)}</div>
-                        {rev.verified && (
-                          <span className="text-[11px] text-emerald-800 flex items-center gap-1 font-medium">
-                            <Check className="w-3 h-3" /> Verified Buyer
-                          </span>
-                        )}
-                      </div>
-                      <p className="text-[#4a4541] leading-relaxed">{rev.comment}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
           </div>
 
           {/* 3. RELATED / CURATED PRODUCTS CAROUSEL */}
@@ -589,10 +482,10 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
               <div className="flex items-baseline justify-between mb-8">
                 <div>
                   <h2 className="text-xl sm:text-2xl font-medium text-[#4a4541]">
-                    You May Also Like
+                    Explore More Designs
                   </h2>
                   <p className="text-xs text-[#76716d] mt-1">
-                    Carefully curated selections to complement your space
+                    Curated custom installations from our Siliguri Experience Studio
                   </p>
                 </div>
                 <Link
@@ -631,7 +524,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                     </Link>
                     <div className="flex items-center gap-2 mt-1">
                       <span className="font-medium text-xs text-[#76716d]">
-                        Price on Request
+                        Custom Built • Experience Studio
                       </span>
                     </div>
                   </div>
@@ -642,7 +535,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
         </div>
       </main>
 
-      {/* 4. STICKY BOTTOM FLOATING BUY BAR */}
+      {/* 4. STICKY BOTTOM CONSULTATION BAR */}
       <div
         className={`fixed bottom-0 left-0 w-full bg-[#f5f0ea] border-t border-[#dcd7d0] z-40 transition-transform duration-300 shadow-lg ${
           showStickyBar ? "translate-y-0" : "translate-y-full"
@@ -660,25 +553,25 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
             </div>
           </div>
 
-          {/* Right: Price + Quantity Stepper + Add to Cart */}
+          {/* Right: Custom Built + WhatsApp + Studio Visit */}
           <div className="flex items-center gap-4 w-full sm:w-auto justify-between sm:justify-end">
             <div className="text-left sm:text-right">
               <div className="text-sm sm:text-base font-medium text-[#4a4541] leading-none">
-                Price on Request
+                Custom Built
               </div>
               <div className="text-[11px] text-[#8e8984] mt-0.5">
-                Bespoke Showroom Quote
+                Siliguri Experience Studio
               </div>
             </div>
 
             <div className="flex items-center gap-2">
               <a
                 href={`https://wa.me/919832095793?text=${encodeURIComponent(
-                  `Hello Status Bath & Kitchen, I am interested in visiting your store for: ${product.name} (Code: ${product.id}). Please share showroom availability and pricing.`
+                  `Hello Status Bath & Kitchen, I would like to discuss ${product.name} (${product.id}) and schedule a studio consultation.`
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-2.5 sm:py-3 bg-[#25D366] hover:bg-[#20ba59] text-white font-medium text-xs sm:text-sm tracking-wide shadow-xs transition-all flex items-center gap-2 cursor-pointer whitespace-nowrap rounded-[20px_2px_2px_2px]"
+                className="px-5 py-2.5 sm:py-3 bg-[#25D366] hover:bg-[#20ba59] text-white font-medium text-xs sm:text-sm tracking-wide shadow-xs transition-all flex items-center gap-2 cursor-pointer whitespace-nowrap rounded-[20px_2px_2px_2px]"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                   <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
@@ -687,11 +580,12 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
               </a>
 
               <button
-                onClick={handleAddToCart}
-                className="hidden sm:flex px-4 py-2.5 sm:py-3 border border-[#4a4541] hover:bg-[#4a4541] hover:text-white text-[#4a4541] font-medium text-xs sm:text-sm rounded-[20px_2px_2px_2px] transition-colors items-center gap-1.5 cursor-pointer whitespace-nowrap"
+                type="button"
+                onClick={() => openConsultation(`Studio Consultation for ${product.name}`)}
+                className="hidden sm:flex px-4 py-2.5 sm:py-3 bg-[#ff5d55] hover:bg-[#e5473f] text-white font-medium text-xs sm:text-sm rounded-[20px_2px_2px_2px] transition-colors items-center gap-1.5 cursor-pointer whitespace-nowrap shadow-xs"
               >
-                <ShoppingBag className="w-4 h-4" />
-                <span>Shortlist</span>
+                <Sparkles className="w-4 h-4" />
+                <span>Book Studio Visit</span>
               </button>
             </div>
           </div>

@@ -26,7 +26,7 @@ export default function ProductCarousel({
 }: ProductCarouselProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(25);
-  const { addToCart, toggleWishlist, isWishlisted, showToast, openConsultation } = useCart();
+  const { toggleWishlist, isWishlisted, showToast, openConsultation } = useCart();
 
   const handleScroll = () => {
     if (scrollRef.current) {
@@ -120,13 +120,13 @@ export default function ProductCarousel({
                     </p>
                   </div>
 
-                  {/* Right Column: Price on Request */}
+                  {/* Right Column: Custom Built Indicator */}
                   <div className="text-right shrink-0">
                     <div className="text-xs font-semibold text-gray-900">
-                      Price on request
+                      Custom Built
                     </div>
                     <div className="text-xs font-semibold text-[#c0262d] mt-0.5">
-                      Get a quote
+                      Book consultation
                     </div>
                   </div>
                 </div>
