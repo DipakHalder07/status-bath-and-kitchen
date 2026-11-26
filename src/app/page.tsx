@@ -52,10 +52,14 @@ export default function Home() {
 
       {/* Main Content Area */}
       <main className="flex-1 w-full">
-        {/* 1. Hero Banner (100vh full-bleed photography with CTA & live controls) */}
+        {/* 1. Hero Banner (full-bleed compressed photography with CTA & slide controls) */}
         <HeroBanner
           onCtaClick={(slideId) => {
-            showToast(`Exploring ${slideId.toUpperCase()}`);
+            if (slideId === "windows") {
+              handleCategorySelect("WAW Aluminium Windows");
+            } else {
+              handleCategorySelect("Modular Kitchens");
+            }
           }}
         />
 

@@ -26,10 +26,20 @@
       "id": "kitchens",
       "title": "Modular Kitchens, Made for You",
       "subtitle": "Modular kitchens, WAW aluminium & Ambiiance uPVC windows, wardrobes, glass railings, appliances and insect blinds — designed, supplied and installed by one team",
-      "desktopImg": "/images/hero-kitchen.jpg",
-      "mobileImg": "/images/hero-kitchen.jpg",
+      "desktopImg": "/images/hero-kitchen-couple.webp",
+      "mobileImg": "/images/hero-kitchen-couple-mobile.webp",
       "link": "#categories",
       "ctaText": "Explore Modular Kitchens",
+      "tag": "Status Bath and Kitchen"
+    },
+    {
+      "id": "windows",
+      "title": "Precision Windows for Brighter Homes",
+      "subtitle": "WAW aluminium sliding profiles and Ambiiance acoustic uPVC windows custom fitted for tropical weather resistance and effortless views",
+      "desktopImg": "/images/hero-windows-family.webp",
+      "mobileImg": "/images/hero-windows-family-mobile.webp",
+      "link": "#categories",
+      "ctaText": "Explore Sliding Windows",
       "tag": "Status Bath and Kitchen"
     }
   ],

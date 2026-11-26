@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 
 interface HeroBannerProps {
@@ -10,16 +10,34 @@ interface HeroBannerProps {
 const slides = [
   {
     id: "kitchens",
-    desktopImg: "/images/hero-kitchen.jpg",
-    mobileImg: "/images/hero-kitchen.jpg",
-    alt: "Modular Kitchen",
+    desktopImg: "/images/hero-kitchen-couple.webp",
+    mobileImg: "/images/hero-kitchen-couple-mobile.webp",
+    alt: "Couple in a custom olive-green modular kitchen by Status Bath and Kitchen",
     ctaText: "Explore Modular Kitchens",
+    objectPosition: "object-center",
+    link: "#categories",
+  },
+  {
+    id: "windows",
+    desktopImg: "/images/hero-windows-family.webp",
+    mobileImg: "/images/hero-windows-family-mobile.webp",
+    alt: "Family relaxing by sleek black sliding windows from Status Bath and Kitchen",
+    ctaText: "Explore Sliding Windows",
+    objectPosition: "object-[26%_center] md:object-center",
     link: "#categories",
   },
 ];
 
 export default function HeroBanner({ onCtaClick }: HeroBannerProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    if (slides.length <= 1) return;
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, []);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -30,7 +48,7 @@ export default function HeroBanner({ onCtaClick }: HeroBannerProps) {
   };
 
   return (
-    <section className="relative w-full h-screen min-h-[600px] max-h-[1080px] bg-stone-900 overflow-hidden">
+    <section className="relative w-full h-[75svh] sm:h-screen min-h-[520px] max-h-[1080px] bg-stone-900 overflow-hidden">
       {/* Background Hero Picture */}
       <div className="absolute inset-0 w-full h-full">
         {slides.map((slide, idx) => (
@@ -41,22 +59,22 @@ export default function HeroBanner({ onCtaClick }: HeroBannerProps) {
             }`}
           >
             <picture className="w-full h-full block">
-              <source media="(max-width: 768px)" srcSet={slide.mobileImg} />
-              <source media="(min-width: 769px)" srcSet={slide.desktopImg} />
+              <source media="(max-width: 768px)" type="image/webp" srcSet={slide.mobileImg} />
+              <source media="(min-width: 769px)" type="image/webp" srcSet={slide.desktopImg} />
               <img
                 src={slide.desktopImg}
                 alt={slide.alt}
-                fetchPriority="high"
+                fetchPriority={idx === 0 ? "high" : "auto"}
                 decoding="async"
-                className="w-full h-full object-cover object-center"
+                className={`w-full h-full object-cover ${slide.objectPosition}`}
               />
             </picture>
           </div>
         ))}
       </div>
 
-      {/* Hero CTA button (bottom-left) */}
-      <div className="absolute bottom-10 sm:bottom-16 md:bottom-20 left-5 sm:left-10 lg:left-20 z-20">
+      {/* Hero CTA button (bottom-right to keep left-side subjects unobstructed) */}
+      <div className="absolute bottom-14 sm:bottom-16 md:bottom-20 right-5 sm:right-10 lg:right-20 z-20">
         <button
           type="button"
           onClick={() => {
