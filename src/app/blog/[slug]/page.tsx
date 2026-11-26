@@ -106,7 +106,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
       "name": "Status Bath and Kitchen",
       "logo": {
         "@type": "ImageObject",
-        "url": `${siteUrl}/images/status-kw-logo-color.png`,
+        "url": `${siteUrl}/images/status-kw-logo-dark.png`,
       },
     },
     "keywords": article.tags.join(", "),
