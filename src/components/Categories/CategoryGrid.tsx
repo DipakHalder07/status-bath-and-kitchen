@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import Link from "next/link";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { howCanWeHelpTabs } from "@/data/statusData";
 import { useCart } from "@/context/CartContext";
@@ -133,47 +132,39 @@ export default function CategoryGrid({ selection }: CategoryGridProps) {
           className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth pb-4 -mx-5 px-5 sm:mx-0 sm:px-0"
         >
           {currentTab.items.map((item, i) => (
-            <div
+            <button
               key={`${currentTab.tabName}-${i}`}
-              className="shrink-0 w-64 sm:w-72 flex flex-col items-start"
+              type="button"
+              onClick={() => openConsultation(`${currentTab.tabName} — ${item.name}`)}
+              className="shrink-0 w-64 sm:w-72 group cursor-pointer block text-left"
             >
-              {/* Photo & Title */}
-              <Link
-                href={`/products?category=${encodeURIComponent(item.name)}`}
-                className="group block w-full cursor-pointer"
-              >
-                <div className="relative w-full aspect-[16/10] rounded-md overflow-hidden bg-white shadow-2xs group-hover:shadow-md transition-all duration-300">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                </div>
+              {/* Rounded rectangular photo */}
+              <span className="relative block w-full aspect-[16/10] rounded-md overflow-hidden bg-white shadow-2xs group-hover:shadow-md transition-all duration-300">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </span>
 
-                <div className="mt-3.5">
-                  <h3 className="text-base font-medium text-[#4a4541] group-hover:text-[#ff5d55] transition-colors">
-                    {item.name}
-                  </h3>
-                  <div className="w-6 h-0.5 bg-[#ff5d55] mt-1 group-hover:w-12 transition-all duration-300" />
-                  {item.subtitle && (
-                    <p className="text-xs text-[#76716d] mt-2 line-clamp-2 leading-relaxed">
-                      {item.subtitle}
-                    </p>
-                  )}
-                </div>
-              </Link>
-
-              {/* Refined Discuss in studio Pill Action */}
-              <button
-                type="button"
-                onClick={() => openConsultation(`${currentTab.tabName} — ${item.name}`)}
-                className="group/cta mt-3 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-[#dfd8cf] text-xs font-medium text-[#332f2c] hover:bg-[#ff5d55] hover:border-[#ff5d55] hover:text-white shadow-2xs transition-all duration-200 cursor-pointer"
-              >
-                <span>Discuss in studio</span>
-                <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover/cta:translate-x-0.5" />
-              </button>
-            </div>
+              {/* Minimalist title, red accent line, optional subtitle & studio CTA */}
+              <span className="block mt-3.5">
+                <span className="block text-base font-medium text-[#4a4541] group-hover:text-[#ff5d55] transition-colors">
+                  {item.name}
+                </span>
+                <span className="block w-6 h-0.5 bg-[#ff5d55] mt-1 group-hover:w-12 transition-all duration-300" />
+                {item.subtitle && (
+                  <span className="block text-xs text-[#76716d] mt-2 line-clamp-2 leading-relaxed">
+                    {item.subtitle}
+                  </span>
+                )}
+                <span className="mt-2 inline-flex items-center gap-1 text-xs text-[#76716d] group-hover:text-[#ff5d55] transition-colors">
+                  <span>Discuss in studio</span>
+                  <ArrowRight className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" />
+                </span>
+              </span>
+            </button>
           ))}
         </div>
 

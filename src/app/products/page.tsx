@@ -69,7 +69,7 @@ const solutionSections: SolutionSection[] = [
         id: "k-peninsula",
         title: "G-Shaped / Peninsula",
         description: "A U-shape with an extra counter arm for breakfast or serving.",
-        image: "/images/site/cur-k-diner.jpg",
+        image: "/images/site/kitchen-g-shaped.webp",
       },
     ],
   },
