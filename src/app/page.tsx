@@ -5,9 +5,9 @@ import Navbar from "@/components/Header/Navbar";
 import MobileDrawer from "@/components/Header/MobileDrawer";
 import HeroBanner from "@/components/HeroBanner/HeroBanner";
 import TickerBanner from "@/components/Promo/TickerBanner";
+import AboutSection from "@/components/About/AboutSection";
 import CategoryGrid from "@/components/Categories/CategoryGrid";
 import DealsBanner from "@/components/Promo/DealsBanner";
-import UpmodsBanner from "@/components/Promo/UpmodsBanner";
 import StoreLocatorSection from "@/components/StoreLocator/StoreLocatorSection";
 import CareServices from "@/components/Services/CareServices";
 import FaqAccordion from "@/components/FAQ/FaqAccordion";
@@ -62,21 +62,21 @@ export default function Home() {
         {/* 2. Promotional Bank Offer Ticker Banner */}
         <TickerBanner />
 
-        {/* 3. How can we help you? (7 category tabs: kitchens, WAW aluminium windows, Ambiiance uPVC windows, wardrobes, glass railings, appliances, insect blinds) */}
+        {/* 3. About Status Bath and Kitchen */}
+        <AboutSection />
+
+        {/* 4. How can we help you? (7 category tabs: kitchens, WAW aluminium windows, Ambiiance uPVC windows, wardrobes, glass railings, appliances, insect blinds) */}
         <CategoryGrid
           onSelectCategory={handleCategorySelect}
           selection={categorySelection}
         />
 
-        {/* 4. Kitchen & windows feature banners */}
+        {/* 5. Kitchen & windows feature banners */}
         <DealsBanner
           onDealClick={(deal) => {
             handleCategorySelect(deal);
           }}
         />
-
-        {/* 5. Your kitchen, your way banner */}
-        <UpmodsBanner />
 
         {/* 6. Visit our experience studio */}
         <StoreLocatorSection />
