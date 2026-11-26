@@ -320,12 +320,42 @@ export default function ContactPage() {
                     <a
                       href="https://wa.me/919832095793"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="font-medium text-emerald-700 hover:underline"
                     >
                       {siteBrand.phone}
                     </a>
                   </div>
+
+                  {(siteBrand.social.instagram || siteBrand.social.facebook) && (
+                    <div className="pt-2 border-t border-[#ece6de]">
+                      <div className="text-[12px] text-[#76716d] mb-1.5">Follow us:</div>
+                      <div className="flex items-center gap-4 text-[13px] font-medium">
+                        {siteBrand.social.instagram && (
+                          <a
+                            href={siteBrand.social.instagram}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[#4a4541] hover:text-[#ff5d55] transition-colors inline-flex items-center gap-1"
+                          >
+                            <span>Instagram</span>
+                            <ExternalLink className="w-3 h-3" />
+                          </a>
+                        )}
+                        {siteBrand.social.facebook && (
+                          <a
+                            href={siteBrand.social.facebook}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[#4a4541] hover:text-[#ff5d55] transition-colors inline-flex items-center gap-1"
+                          >
+                            <span>Facebook</span>
+                            <ExternalLink className="w-3 h-3" />
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
 

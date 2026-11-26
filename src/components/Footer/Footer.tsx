@@ -109,7 +109,7 @@ export default function Footer({ showBlogCredit }: FooterProps = {}) {
                     key={s.key}
                     href={siteBrand.social[s.key]}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     aria-label={s.label}
                     className="w-9 h-9 rounded-sm border border-stone-500/80 flex items-center justify-center text-stone-300 hover:text-white hover:border-white transition-colors"
                   >
@@ -199,45 +199,6 @@ export default function Footer({ showBlogCredit }: FooterProps = {}) {
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
-
-        {/* Separator */}
-        <div className="border-t border-stone-600/50" />
-
-        {/* 2 Bottom Columns: Categories & Services */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 text-xs sm:text-[13px] leading-relaxed text-stone-300">
-          {/* Categories You Love */}
-          <div className="lg:col-span-7 space-y-3">
-            <h4 className="text-sm sm:text-base font-medium !text-white mb-2">
-              Categories you love
-            </h4>
-            <p>
-              <span className="font-medium text-white">Modular kitchens:</span>{" "}
-              L-Shaped | U-Shaped | Island | Parallel | Straight | Handleless | Classic Shaker | Two-Tone
-            </p>
-            <p>
-              <span className="font-medium text-white">WAW Aluminium &amp; Ambiiance uPVC Windows:</span>{" "}
-              Sliding Systems | Casement Systems | Slide &amp; Fold | Tilt &amp; Turn | Bay Windows | Integrated Blinds | Safety Grills
-            </p>
-            <p>
-              <span className="font-medium text-white">Wardrobes &amp; Glass Railings:</span>{" "}
-              Fitted | Hinged | Walk-in | Organizers | SS316 Spigot Railings | Aluminium U-Channel | Staircase Balustrades
-            </p>
-            <p>
-              <span className="font-medium text-white">Appliances &amp; Insect Blinds:</span>{" "}
-              Chimneys | Hobs | Built-in Ovens | Dishwashers | Refrigerators | Pleated Screens | Zipline | Motorized | Black-Out Blinds | Security Mesh
-            </p>
-          </div>
-
-          {/* Our Services */}
-          <div className="lg:col-span-5 space-y-3">
-            <h4 className="text-sm sm:text-base font-medium !text-white mb-2">
-              How we work
-            </h4>
-            <p className="leading-loose">
-              Design consultation | Site measurement | Supply | Installation | After-sales support
-            </p>
           </div>
         </div>
 

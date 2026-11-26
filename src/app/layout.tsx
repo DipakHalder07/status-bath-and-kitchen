@@ -118,7 +118,9 @@ const jsonLdOrg = {
   "priceRange": "$$",
   "hasMap": "https://share.google/V1jbNPSPYTSSO7Gpq",
   "sameAs": [
-    "https://share.google/V1jbNPSPYTSSO7Gpq"
+    "https://share.google/V1jbNPSPYTSSO7Gpq",
+    "https://www.instagram.com/statuskitchensiliguri?evlk=NGR0eXJ5a3Vkd2kx",
+    "https://www.facebook.com/share/14z2nMRtZpa/?mibextid=wwXIfr"
   ],
   "address": {
     "@type": "PostalAddress",
