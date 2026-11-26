@@ -47,7 +47,7 @@
     {
       "id": "kitchens",
       "name": "Modular Kitchens",
-      "image": "/images/site/cat-kitchen-island.jpg",
+      "image": "/images/site/kitchen-island.webp",
       "count": "5 layouts",
       "featured": [
         "L-Shaped Kitchens",
@@ -650,7 +650,7 @@
       "title": "Choosing the Right Kitchen Layout: L, U, Parallel or Island?",
       "category": "Kitchen Guide",
       "readTime": "5 min read",
-      "image": "/images/site/cat-kitchen-island.jpg"
+      "image": "/images/site/kitchen-island.webp"
     },
     {
       "title": "WAW Aluminium vs Ambiiance uPVC: Picking the Right Window System",
@@ -675,23 +675,23 @@
           "items": [
             {
               "name": "L-Shaped Kitchens",
-              "image": "/images/site/cat-kitchen-l-shaped.jpg"
+              "image": "/images/site/kitchen-l-shaped.webp"
             },
             {
               "name": "U-Shaped Kitchens",
-              "image": "/images/site/cat-kitchen-u-shaped.jpg"
+              "image": "/images/site/kitchen-u-shaped.webp"
             },
             {
               "name": "Island Kitchens",
-              "image": "/images/site/cat-kitchen-island.jpg"
+              "image": "/images/site/kitchen-island.webp"
             },
             {
               "name": "Parallel Kitchens",
-              "image": "/images/site/cat-kitchen-parallel.jpg"
+              "image": "/images/site/kitchen-parallel.webp"
             },
             {
               "name": "Straight Kitchens",
-              "image": "/images/site/cat-kitchen-straight.jpg"
+              "image": "/images/site/kitchen-straight.webp"
             }
           ]
         },
@@ -897,27 +897,27 @@
       "items": [
         {
           "name": "L-Shaped Kitchens",
-          "image": "/images/site/cat-kitchen-l-shaped.jpg",
+          "image": "/images/site/kitchen-l-shaped.webp",
           "link": "#categories"
         },
         {
           "name": "U-Shaped Kitchens",
-          "image": "/images/site/cat-kitchen-u-shaped.jpg",
+          "image": "/images/site/kitchen-u-shaped.webp",
           "link": "#categories"
         },
         {
           "name": "Island Kitchens",
-          "image": "/images/site/cat-kitchen-island.jpg",
+          "image": "/images/site/kitchen-island.webp",
           "link": "#categories"
         },
         {
           "name": "Parallel Kitchens",
-          "image": "/images/site/cat-kitchen-parallel.jpg",
+          "image": "/images/site/kitchen-parallel.webp",
           "link": "#categories"
         },
         {
           "name": "Straight Kitchens",
-          "image": "/images/site/cat-kitchen-straight.jpg",
+          "image": "/images/site/kitchen-straight.webp",
           "link": "#categories"
         }
       ]

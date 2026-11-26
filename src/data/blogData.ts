@@ -51,7 +51,7 @@ export const blogArticles: BlogArticleFull[] = [
     category: "Modular Kitchens",
     readTime: "6 min read",
     publishedAt: "12th May, 2026",
-    image: "/images/site/cat-kitchen-island.jpg",
+    image: "/images/site/kitchen-island.webp",
     author: {
       name: "Pooja Singhania",
       role: "Lead Kitchen Architect",

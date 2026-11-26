@@ -39,31 +39,31 @@ const solutionSections: SolutionSection[] = [
         id: "k-l-shaped",
         title: "L-Shaped",
         description: "Uses two walls and a corner; works well in most Indian homes.",
-        image: "/images/site/cat-kitchen-l-shaped.jpg",
+        image: "/images/site/kitchen-l-shaped.webp",
       },
       {
         id: "k-u-shaped",
         title: "U-Shaped",
         description: "Counter on three sides, with the most storage and workspace.",
-        image: "/images/site/cat-kitchen-u-shaped.jpg",
+        image: "/images/site/kitchen-u-shaped.webp",
       },
       {
         id: "k-parallel",
         title: "Parallel",
         description: "Two facing counters; efficient for long, narrow kitchens.",
-        image: "/images/site/cat-kitchen-parallel.jpg",
+        image: "/images/site/kitchen-parallel.webp",
       },
       {
         id: "k-straight",
         title: "Straight / Single-wall",
         description: "Everything along one wall, ideal for compact flats.",
-        image: "/images/site/cat-kitchen-straight.jpg",
+        image: "/images/site/kitchen-straight.webp",
       },
       {
         id: "k-island",
         title: "Island",
         description: "A free-standing counter for open-plan homes and family time.",
-        image: "/images/site/cat-kitchen-island.jpg",
+        image: "/images/site/kitchen-island.webp",
       },
       {
         id: "k-peninsula",
@@ -461,11 +461,10 @@ function ProductsPageContent() {
                       setSelectedTab(tab);
                       setSearchQuery("");
                     }}
-                    className={`relative px-4 sm:px-6 py-3 text-[13px] font-medium whitespace-nowrap transition-colors cursor-pointer ${
-                      isActive
+                    className={`relative px-4 sm:px-6 py-3 text-[13px] font-medium whitespace-nowrap transition-colors cursor-pointer ${isActive
                         ? "bg-[#f5f0ea] text-[#4a4541] font-semibold"
                         : "bg-white text-[#76716d] hover:bg-[#faf8f5] hover:text-[#4a4541]"
-                    }`}
+                      }`}
                   >
                     <span>{tab}</span>
                     {isActive && (

@@ -14,7 +14,7 @@ export const allProductsCatalog: Product[] = [
     image: "/images/site/cur-k-handleless.jpg",
     gallery: [
       "/images/site/cur-k-handleless.jpg",
-      "/images/site/cat-kitchen-island.jpg",
+      "/images/site/kitchen-island.webp",
       "/images/site/banner-kitchen.jpg",
       "/images/site/cat-acc-pantry.jpg",
     ],
@@ -57,7 +57,7 @@ export const allProductsCatalog: Product[] = [
     image: "/images/site/cur-k-shaker.jpg",
     gallery: [
       "/images/site/cur-k-shaker.jpg",
-      "/images/site/cat-kitchen-l-shaped.jpg",
+      "/images/site/kitchen-l-shaped.webp",
       "/images/site/hs-k-tall.jpg",
       "/images/site/deal-kitchen.jpg",
     ],
@@ -99,7 +99,7 @@ export const allProductsCatalog: Product[] = [
     image: "/images/site/cur-k-sage.jpg",
     gallery: [
       "/images/site/cur-k-sage.jpg",
-      "/images/site/cat-kitchen-parallel.jpg",
+      "/images/site/kitchen-parallel.webp",
       "/images/site/hs-k-chimney.jpg",
     ],
     badge: "Featured Design",
@@ -138,7 +138,7 @@ export const allProductsCatalog: Product[] = [
     image: "/images/site/cur-k-dark.jpg",
     gallery: [
       "/images/site/cur-k-dark.jpg",
-      "/images/site/cat-kitchen-u-shaped.jpg",
+      "/images/site/kitchen-u-shaped.webp",
       "/images/site/hs-k-island.jpg",
     ],
     badge: "Premium Design",
@@ -177,7 +177,7 @@ export const allProductsCatalog: Product[] = [
     image: "/images/site/cur-k-wood.jpg",
     gallery: [
       "/images/site/cur-k-wood.jpg",
-      "/images/site/cat-kitchen-straight.jpg",
+      "/images/site/kitchen-straight.webp",
       "/images/site/cat-acc-spice.jpg",
     ],
     badge: "Studio Collection",
@@ -215,7 +215,7 @@ export const allProductsCatalog: Product[] = [
     image: "/images/site/cur-k-diner.jpg",
     gallery: [
       "/images/site/cur-k-diner.jpg",
-      "/images/site/cat-kitchen-island.jpg",
+      "/images/site/kitchen-island.webp",
       "/images/site/cat-acc-rail.jpg",
     ],
     badge: "Architect Pick",
