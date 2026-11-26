@@ -92,13 +92,13 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/images/status-bk-icon.png" },
-      { url: "/images/status-bk-icon.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/status-kw-icon.png" },
+      { url: "/images/status-kw-icon.png", sizes: "32x32", type: "image/png" },
     ],
     apple: [
-      { url: "/images/status-bk-apple-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/images/status-kw-apple-icon.png", sizes: "180x180", type: "image/png" },
     ],
-    shortcut: ["/images/status-bk-icon.png"],
+    shortcut: ["/images/status-kw-icon.png"],
   },
   category: "Home Architecture, Modular Kitchens, Windows & Railings",
 };
@@ -111,7 +111,7 @@ const jsonLdOrg = {
   "name": "Status Bath and Kitchen",
   "alternateName": "Status",
   "url": siteUrl,
-  "logo": `${siteUrl}/images/status-bk-logo-dark.png`,
+  "logo": `${siteUrl}/images/status-kw-logo-color.png`,
   "image": `${siteUrl}/images/hero-kitchen.jpg`,
   "description": "Status Bath & Kitchen is a premier bespoke showroom studio for modular kitchens, WAW aluminium windows, Ambiiance uPVC windows, custom wardrobes, glass railings, appliances, and Meshworkz insect blinds.",
   "telephone": "+91 98320 95793",
