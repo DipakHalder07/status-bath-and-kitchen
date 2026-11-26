@@ -4,11 +4,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://statusbathkitchen.c
 
 export const metadata: Metadata = {
   title: {
-    default: "All Products — Modular Kitchens, Windows, Wardrobes, Glass Railings & Insect Blinds",
+    default: "Designs & Solutions — Modular Kitchens, Wardrobes, Doors & Windows",
     template: "%s | Status Bath and Kitchen",
   },
   description:
-    "Explore our full collection of modular kitchens, WAW aluminium windows, Ambiiance uPVC windows, custom wardrobes, glass railings, appliances, and Meshworkz insect blinds at Status Bath & Kitchen.",
+    "Explore modular kitchen layouts, custom wardrobes, architectural doors, WAW aluminium windows, Ambiiance uPVC windows, glass railings, insect blinds, and built-in appliances in Siliguri.",
   alternates: {
     canonical: "/products",
   },
@@ -17,23 +17,23 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: `${siteUrl}/products`,
     siteName: "Status Bath and Kitchen",
-    title: "All Products — Modular Kitchens, Windows, Wardrobes, Glass Railings & Insect Blinds",
+    title: "Designs & Solutions — Status Bath and Kitchen Siliguri",
     description:
-      "Explore handcrafted modular kitchens, WAW aluminium & Ambiiance uPVC windows, fitted wardrobes, glass railings, and insect blinds. Custom-tailored and quoted on request at our showroom.",
+      "Custom designed on site and installed in Siliguri & North Bengal: modular kitchens, wardrobes, doors, WAW aluminium & Ambiiance uPVC windows, glass railings, and insect blinds.",
     images: [
       {
         url: "/images/hero-kitchen.jpg",
         width: 1200,
         height: 630,
-        alt: "Status Bath and Kitchen - All Modular Collections",
+        alt: "Status Bath and Kitchen — Custom Home Solutions",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "All Products | Status Bath and Kitchen",
+    title: "Designs & Solutions | Status Bath and Kitchen",
     description:
-      "Explore handcrafted modular kitchens, WAW & Ambiiance windows, fitted wardrobes, glass railings, and insect blinds at our showroom.",
+      "Modular kitchens, wardrobes, doors, WAW aluminium & Ambiiance uPVC windows, glass railings, and Meshworkz insect blinds.",
     images: ["/images/hero-kitchen.jpg"],
   },
 };
