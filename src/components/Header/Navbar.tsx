@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   Search,
   Mic,
@@ -10,12 +11,8 @@ import {
   X,
   Heart,
   MapPin,
-  ChevronDown,
   Menu,
   Phone,
-  HelpCircle,
-  Sparkles,
-  Tag,
   CalendarCheck,
 } from "lucide-react";
 import { useCart } from "@/context/CartContext";
@@ -34,6 +31,7 @@ export default function Navbar({
   onCategorySelect,
   forceSolid = false,
 }: NavbarProps) {
+  const pathname = usePathname();
   const { openCart, wishlist, showToast, openConsultation } = useCart();
   const [isScrolled, setIsScrolled] = useState(false);
   const isHeaderSolid = forceSolid || isScrolled;
@@ -126,7 +124,18 @@ export default function Navbar({
             : "border-white/10 text-white/90"
         }`}
       >
-        <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 h-8 sm:h-9 flex items-center justify-end">
+        <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 h-8 sm:h-9 flex items-center justify-between">
+          {/* Left: Studio Call Number */}
+          <a
+            href={siteBrand.phoneHref || "tel:+919832095793"}
+            className={`flex items-center space-x-1.5 font-medium transition-colors ${
+              isHeaderSolid ? "text-gray-700 hover:text-[#ff5d55]" : "text-white hover:text-white/90"
+            }`}
+          >
+            <Phone className="w-3.5 h-3.5" />
+            <span>{siteBrand.phone}</span>
+          </a>
+
           {/* Right Utility Links */}
           <div className="flex items-center space-x-4 sm:space-x-6 text-[11px] sm:text-xs">
             <button
@@ -312,7 +321,23 @@ export default function Navbar({
         }`}
       >
         <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
-          <ul className="flex items-center justify-center space-x-6 xl:space-x-8 text-[13px] font-medium py-2.5">
+          <ul className="flex items-center justify-center space-x-5 xl:space-x-7 text-[13px] font-medium py-2.5 whitespace-nowrap">
+            <li className="relative">
+              <Link
+                href="/"
+                className={`transition-colors py-1 hover:underline cursor-pointer ${
+                  pathname === "/"
+                    ? isHeaderSolid
+                      ? "text-[#ff5d55] font-semibold"
+                      : "text-white font-semibold"
+                    : isHeaderSolid
+                      ? "text-gray-800 hover:text-[#ff5d55]"
+                      : "text-white/90 hover:text-white"
+                }`}
+              >
+                Home
+              </Link>
+            </li>
             <li className="relative">
               <Link
                 href="/products"
@@ -329,7 +354,7 @@ export default function Navbar({
               <li key={cat.id} className="relative">
                 <Link
                   href={`/products?category=${encodeURIComponent(cat.title)}`}
-                  onClick={(e) => {
+                  onClick={() => {
                     if (onCategorySelect) {
                       onCategorySelect(cat.title);
                     }
@@ -344,6 +369,22 @@ export default function Navbar({
                 </Link>
               </li>
             ))}
+            <li className="relative">
+              <Link
+                href="/about"
+                className={`transition-colors py-1 hover:underline cursor-pointer ${
+                  pathname === "/about" || pathname === "/about-us"
+                    ? isHeaderSolid
+                      ? "text-[#ff5d55] font-semibold"
+                      : "text-white font-semibold"
+                    : isHeaderSolid
+                      ? "text-gray-800 hover:text-[#ff5d55]"
+                      : "text-white/90 hover:text-white"
+                }`}
+              >
+                About
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

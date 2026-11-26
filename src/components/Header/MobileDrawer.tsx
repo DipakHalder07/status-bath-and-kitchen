@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { X, ChevronDown, ChevronRight, Phone, MapPin, Package, Info, BookOpen } from "lucide-react";
+import { X, ChevronDown, ChevronRight, Phone, MapPin, Package, Info, Home } from "lucide-react";
 import { megaMenuItems, siteBrand } from "@/data/statusData";
 
 interface MobileDrawerProps {
@@ -53,20 +53,12 @@ export default function MobileDrawer({
         <div className="p-4 border-b border-gray-100 space-y-2.5">
           <div className="grid grid-cols-4 gap-1.5 text-[11px] font-semibold">
             <Link
-              href="/products"
+              href="/"
               onClick={onClose}
               className="flex flex-col items-center justify-center gap-1.5 p-2 rounded-lg bg-stone-50 hover:bg-red-50 hover:text-[#ff5d55] text-gray-800 transition-colors text-center"
             >
-              <Package className="w-4 h-4 text-[#ff5d55]" />
-              <span>Products</span>
-            </Link>
-            <Link
-              href="/blog"
-              onClick={onClose}
-              className="flex flex-col items-center justify-center gap-1.5 p-2 rounded-lg bg-stone-50 hover:bg-red-50 hover:text-[#ff5d55] text-gray-800 transition-colors text-center"
-            >
-              <BookOpen className="w-4 h-4 text-[#ff5d55]" />
-              <span>Ideas</span>
+              <Home className="w-4 h-4 text-[#ff5d55]" />
+              <span>Home</span>
             </Link>
             <Link
               href="/about"
@@ -75,6 +67,14 @@ export default function MobileDrawer({
             >
               <Info className="w-4 h-4 text-[#ff5d55]" />
               <span>About</span>
+            </Link>
+            <Link
+              href="/products"
+              onClick={onClose}
+              className="flex flex-col items-center justify-center gap-1.5 p-2 rounded-lg bg-stone-50 hover:bg-red-50 hover:text-[#ff5d55] text-gray-800 transition-colors text-center"
+            >
+              <Package className="w-4 h-4 text-[#ff5d55]" />
+              <span>Solutions</span>
             </Link>
             <Link
               href="/contact"
