@@ -51,11 +51,11 @@ export default function BrandsSection() {
   return (
     <section
       id="brands"
-      className="status-section py-12 sm:py-16 bg-[#fcfaf7] border-t border-stone-200/40 scroll-mt-24"
+      className="status-section py-16 sm:py-20 lg:py-24 bg-white scroll-mt-24"
     >
       <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 sm:mb-10">
           <div className="space-y-1.5">
             <span className="text-xs font-medium text-[#ff5d55] uppercase tracking-wider block">
               Authorized Partners
@@ -75,7 +75,7 @@ export default function BrandsSection() {
           {partnerBrands.map((brand) => (
             <div
               key={brand.name}
-              className="bg-white border border-[#e6e0d8] rounded-md px-4 py-4 flex flex-col items-center justify-between text-center min-h-[124px]"
+              className="bg-white border border-[#e6e0d8] rounded-xl shadow-[0_2px_10px_-4px_rgba(51,47,44,0.05)] px-4 py-4 flex flex-col items-center justify-between text-center min-h-[124px]"
             >
               <div className="relative w-full h-14 flex items-center justify-center">
                 <Image

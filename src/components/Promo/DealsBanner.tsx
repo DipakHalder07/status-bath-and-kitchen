@@ -28,13 +28,13 @@ const features = [
 
 export default function DealsBanner({ onDealClick }: DealsBannerProps) {
   return (
-    <section className="status-section w-full bg-[#fcfaf7] py-8 sm:py-12 border-b border-stone-200/40">
+    <section className="status-section w-full bg-white py-16 sm:py-20 lg:py-24">
       <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {features.map((feature) => (
             <div
               key={feature.id}
-              className="group relative cursor-pointer rounded-none sm:rounded-sm overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 aspect-[16/10] bg-stone-900"
+              className="group relative cursor-pointer rounded-md sm:rounded-lg overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 aspect-[16/10] bg-stone-900"
               onClick={() => {
                 if (onDealClick) onDealClick(feature.eyebrow);
                 const el = document.querySelector("#categories");

@@ -16,7 +16,7 @@ export default function AboutSection() {
   return (
     <section
       id="about-us"
-      className="status-section py-12 sm:py-16 bg-white border-b border-stone-200/50 scroll-mt-24"
+      className="status-section py-16 sm:py-20 lg:py-24 bg-white scroll-mt-24"
     >
       <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
@@ -35,7 +35,7 @@ export default function AboutSection() {
               everything ourselves with premium German and Austrian hardware. Hundreds of families
               across North Bengal trust us for spaces that look beautiful and last for years.
             </p>
-            <div className="pt-1">
+            <div className="pt-2">
               <Link
                 href="/about"
                 className="status-btn-outline inline-flex items-center gap-2 px-6 py-2.5 rounded-md border border-[#4a4541] bg-white hover:bg-[#4a4541] text-[#4a4541] hover:text-white font-medium text-xs sm:text-sm transition-colors"
@@ -47,7 +47,7 @@ export default function AboutSection() {
           </div>
 
           {/* Right: Showroom Interior Image */}
-          <div className="lg:col-span-6 relative aspect-[16/10] rounded-md overflow-hidden bg-stone-100 shadow-xs">
+          <div className="lg:col-span-6 relative aspect-[16/10] rounded-lg overflow-hidden bg-stone-100 shadow-xs">
             <Image
               src="/images/site/look-living.jpg"
               alt="Architectural living space with slim-frame aluminium windows and sliding glass doors"
@@ -59,7 +59,7 @@ export default function AboutSection() {
         </div>
 
         {/* Highlights Stats Strip */}
-        <div className="mt-10 pt-8 border-t border-[#ece7e1] grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <div className="mt-12 pt-8 border-t border-[#eae3da] grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {highlights.map((item) => (
             <div key={item.label} className="space-y-1">
               <div className="text-xl sm:text-2xl font-medium text-[#332f2c] tracking-tight">

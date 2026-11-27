@@ -16,10 +16,10 @@ export default function CareServices() {
   const { openConsultation } = useCart();
 
   return (
-    <section id="care-services" className="status-section py-14 sm:py-20 bg-white">
+    <section id="care-services" className="status-section py-16 sm:py-20 lg:py-24 bg-[#f5f0ea]">
       <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Header */}
-        <div className="flex items-center justify-between mb-6 sm:mb-8 gap-4">
+        <div className="flex items-center justify-between mb-8 sm:mb-10 gap-4">
           <h2 className="text-xl sm:text-2xl lg:text-[28px] font-medium text-[#332f2c] tracking-tight">
             How it works
           </h2>
@@ -34,13 +34,13 @@ export default function CareServices() {
         </div>
 
         {/* 4-Step Process Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
           {careServicesList.map((service) => {
             const Icon = icons[service.icon] ?? Wrench;
             return (
               <div
                 key={service.id}
-                className="status-card status-card-hover bg-white rounded-md sm:rounded-sm p-5 sm:p-8 border border-gray-200 hover:border-gray-300 hover:shadow-sm transition-all flex flex-col justify-between text-center group cursor-pointer"
+                className="status-card status-card-hover bg-white rounded-xl p-6 sm:p-8 border border-[#e6dfd6] hover:border-[#ff5d55]/50 hover:shadow-md transition-all flex flex-col justify-between text-center group cursor-pointer"
                 onClick={() => openConsultation(service.title)}
               >
                 <div>

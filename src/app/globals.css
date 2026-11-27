@@ -128,70 +128,72 @@ body {
 }
 
 /* 2. CONTAINERS & LAYOUTS */
-.status-container,
-.sbk-container {
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
-@media (min-width: 640px) {
+@layer components {
   .status-container,
   .sbk-container {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
-}
 
-@media (min-width: 1024px) {
-  .status-container,
-  .sbk-container {
-    padding-left: 5rem;
-    padding-right: 5rem;
+  @media (min-width: 640px) {
+    .status-container,
+    .sbk-container {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
   }
-}
 
-.status-section,
-.sbk-section {
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
-}
+  @media (min-width: 1024px) {
+    .status-container,
+    .sbk-container {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+  }
 
-@media (min-width: 640px) {
   .status-section,
   .sbk-section {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
   }
-}
 
-/* 3. CARDS & PANELS */
-.status-card,
-.sbk-card {
-  background-color: #ffffff;
-  border: 1px solid #dcd7d0;
-  transition: all 0.25s ease;
-}
+  @media (min-width: 640px) {
+    .status-section,
+    .sbk-section {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
 
-.status-card-cream,
-.sbk-card-cream {
-  background-color: #fbf7f4;
-  border: 1px solid #dcd7d0;
-}
+  /* 3. CARDS & PANELS */
+  .status-card,
+  .sbk-card {
+    background-color: #ffffff;
+    border: 1px solid #dcd7d0;
+    transition: all 0.25s ease;
+  }
 
-.status-card-sand,
-.sbk-card-sand {
-  background-color: #f5f0ea;
-  border: 1px solid #dcd7d0;
-}
+  .status-card-cream,
+  .sbk-card-cream {
+    background-color: #fbf7f4;
+    border: 1px solid #dcd7d0;
+  }
 
-.status-card-hover:hover,
-.sbk-card-hover:hover {
-  border-color: #ff5d55;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+  .status-card-sand,
+  .sbk-card-sand {
+    background-color: #f5f0ea;
+    border: 1px solid #dcd7d0;
+  }
+
+  .status-card-hover:hover,
+  .sbk-card-hover:hover {
+    border-color: #ff5d55;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+  }
 }
 
 /* 4. BADGES, TAGS & PILLS */

@@ -14,11 +14,11 @@ export default function FaqAccordion() {
   };
 
   return (
-    <section id="faqs" className="status-section py-16 sm:py-24 bg-white border-t border-gray-100">
-      <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 space-y-16">
+    <section id="faqs" className="status-section py-16 sm:py-20 lg:py-24 bg-[#f5f0ea]">
+      <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* FAQ Section: How can we assist you? */}
         <div className="w-full">
-          <div className="flex items-baseline justify-between gap-3 mb-6 sm:mb-8">
+          <div className="flex items-baseline justify-between gap-3 mb-8 sm:mb-10">
             <h2 className="text-xl sm:text-2xl lg:text-[28px] font-medium text-[#332f2c] tracking-tight">
               How can we assist you?
             </h2>
@@ -30,7 +30,7 @@ export default function FaqAccordion() {
             </button>
           </div>
 
-          <div className="w-full divide-y divide-gray-200 border-y border-gray-200">
+          <div className="w-full divide-y divide-[#dbd2c7] border-y border-[#dbd2c7]">
             {liveFaqs.map((faq, index) => {
               const isOpen = openIndex === index;
 
