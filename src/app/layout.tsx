@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
+import PageScrollBar from "@/components/UI/PageScrollBar";
 
 const outfitFont = Outfit({
   subsets: ["latin"],
@@ -201,6 +202,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col font-sans bg-white text-[#4a4541] selection:bg-red-100 selection:text-red-900">
         <CartProvider>{children}</CartProvider>
+        <PageScrollBar />
       </body>
     </html>
   );

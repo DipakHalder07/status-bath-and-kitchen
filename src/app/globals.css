@@ -23,7 +23,9 @@ body {
   background-color: #ffffff;
   color: #332f2c;
   font-family: var(--font-outfit), "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -341,23 +343,11 @@ body {
   width: 100%;
 }
 
-/* 9. SCROLLBAR UTILITIES */
+/* 9. SCROLLBAR UTILITIES (Minimalist hidden scrollbar; scrolling stays active) */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #999;
+  width: 0;
+  height: 0;
+  display: none;
 }
 
 .status-no-scrollbar::-webkit-scrollbar,
