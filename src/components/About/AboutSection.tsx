@@ -16,7 +16,7 @@ export default function AboutSection() {
   return (
     <section
       id="about-us"
-      className="status-section py-16 sm:py-20 lg:py-24 bg-white scroll-mt-24"
+      className="status-section py-12 sm:py-16 lg:py-[76px] bg-white scroll-mt-24"
     >
       <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">

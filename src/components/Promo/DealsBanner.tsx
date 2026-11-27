@@ -28,7 +28,7 @@ const features = [
 
 export default function DealsBanner({ onDealClick }: DealsBannerProps) {
   return (
-    <section className="status-section w-full bg-white py-16 sm:py-20 lg:py-24">
+    <section className="status-section w-full bg-white py-12 sm:py-16 lg:py-[76px]">
       <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {features.map((feature) => (

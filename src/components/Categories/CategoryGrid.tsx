@@ -67,10 +67,10 @@ export default function CategoryGrid({ selection }: CategoryGridProps) {
   };
 
   return (
-    <section id="categories" className="status-section py-16 sm:py-20 lg:py-24 bg-[#f5f0ea] scroll-mt-24 sm:scroll-mt-32">
+    <section id="categories" className="status-section py-12 sm:py-16 lg:py-[76px] bg-[#f5f0ea] scroll-mt-24 sm:scroll-mt-32">
       <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Section Heading + Subtle Carousel Arrows */}
-        <div className="flex items-center justify-between gap-4 mb-8 sm:mb-10">
+        <div className="flex items-center justify-between gap-4 mb-6 sm:mb-8">
           <h2 className="text-xl sm:text-2xl lg:text-[28px] font-medium text-[#332f2c] tracking-tight">
             How can we help you?
           </h2>

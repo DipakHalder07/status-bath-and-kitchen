@@ -51,11 +51,11 @@ export default function BrandsSection() {
   return (
     <section
       id="brands"
-      className="status-section py-16 sm:py-20 lg:py-24 bg-white scroll-mt-24"
+      className="status-section py-12 sm:py-16 lg:py-[76px] bg-white scroll-mt-24"
     >
       <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 sm:mb-10">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6 sm:mb-8">
           <div className="space-y-1.5">
             <span className="text-xs font-medium text-[#ff5d55] uppercase tracking-wider block">
               Authorized Partners

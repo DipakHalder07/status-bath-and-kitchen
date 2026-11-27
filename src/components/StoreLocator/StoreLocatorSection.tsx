@@ -12,7 +12,7 @@ export default function StoreLocatorSection() {
     )}`;
 
   return (
-    <section id="store-locator" className="status-section status-store-locator w-full bg-[#f5f0ea] py-16 sm:py-20 lg:py-24">
+    <section id="store-locator" className="status-section status-store-locator w-full bg-[#f5f0ea] py-12 sm:py-16 lg:py-[76px]">
       <div className="status-container max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Aspect ratio only on xl: below that, min-h + aspect-ratio widens the box past the screen */}
         <div className="relative rounded-md sm:rounded-lg overflow-hidden shadow-sm min-h-[440px] xl:aspect-[21/9] flex items-center justify-end p-6 sm:p-12 lg:p-16">
